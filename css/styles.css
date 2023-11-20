@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@400;500&display=swap');
+
+@font-face {
+	font-family: 'Croogla 4F';
+	src: url(c/ss/fonts/Croogla4F.eot) format('embedded-opentype'),
+	url(/css/fonts/Croogla4F.eot) format('embedded-opentype'),
+	url(/css/fonts/Croogla4F.woff2) format('woff2'),
+	url(/css/fonts/Croogla4F.woff) format('woff'),
+	url(/css/fonts/Croogla4F.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #1a2023;
+  
+  color: rgb(219, 219, 219);
+  animation: fadeIn 1s ease-out forwards;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Fade in from the top */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  background-color: #1a2023;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-container {
+  position: relative;
+  width: 250px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the search bar */
+  display: flex;
+}
+
+#searchBar {
+  width: 100%;
+  height: 30px; /* Adjust the height as needed */
+  border: none;
+  background-color: #f0f0f0; /* Background color for the Neumorphic effect */
+  border-radius: 8px; /* Adjust the border radius as needed */
+  padding: 8px; /* Adjust the padding as needed */
+  padding-left: 30px; /* Extra left padding for the icon */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow as needed */
+  font-family: 'Ubuntu', sans-serif; /* Use the Ubuntu font */
+  outline: none; /* Remove the default focus outline */
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+
+.search-icon {
+  position: absolute;
+  left: 6px; /* Adjust the left position as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1d82ff; /* Color for the magnifying glass icon */
+}
+
+#searchBar:focus,
+#searchBar:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the focus/hover shadow as needed */
+  background-color: #e0e0e0; /* Adjust the background color on focus/hover as needed */
+}
+
+#searchBar::placeholder {
+  color: #0073ff; /* Set the placeholder text color */
+  transition: color 0.3s ease-in-out; /* Add transition to the placeholder color */
+}
+
+#searchBar:focus::placeholder,
+#searchBar:hover::placeholder {
+  color: #558ed4; /* Adjust the placeholder color on focus/hover as needed */
+}
+#searchBar:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adjust the focus shadow as needed */
+}
+
+#searchBar.typing::placeholder {
+  opacity: 1; /* Show the placeholder with full opacity while typing */
+}
+
+
+h1 {
+  margin: 0;
+  font-family: 'Ubuntu';
+}
+h2 {
+  margin: 0;
+  font-family: 'Ubuntu';
+}
+h3 {
+  margin: 0;
+  font-family: 'Ubuntu';
+}
+h4 {
+  margin: 0;
+  font-family: 'Ubuntu';
+}
+h5 {
+  margin: 0;
+  font-family: 'Ubuntu';
+}
+#gameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gameCard {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 0px solid #ccc;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gameCard:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.gameCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.gameCard h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+svg {
+  fill: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a2023;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d82ff;
+  border-radius: 15px;
+  height: 2px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  background-color: rgba(26, 32, 35, 0.9); /* Darker and semi-transparent */
+  padding: 0px;
+  margin-top: 10px;
+  overflow: hidden;
+  text-align: center;
+
+  transition: background-color 0.3s;
+  ustify-content: center;
+  
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul:hover {
+  background-color: rgba(26, 32, 35, 0.9);
+}
+
+.navbar a {
+  color: rgb(219, 219, 219);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: left; /* 50% away from the left */
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, border-radius 0.3s; /* Added border-radius transition */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+.navbar a:hover {
+  background-color: rgb(29, 130, 255);
+  transform: scale(1.05);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 15px; /* Rounded corners on hover */
+}
+
+.navbar li {
+  float: left;
+}
+
+.navlogo {
+  position: absolute;
+  height: auto;
+  left: 10%;
+  top: 15px;
+  width: 30px;
+}
+.navtext {
+  position: absolute;
+  height: auto;
+  left: 10%;
+  top: 15px;
+  width: 30px;
+  color: rgb(29, 130, 255);
+  font-size: 30px;
+  font-family: 'Croogla 4F';
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.native {
+  color: rgb(29, 130, 255);
+  margin-top: 1%;
+  font-size: 64px;
+  font-family: 'Croogla 4F';
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Adjust the height as needed */
+}
+#randomText {
+  position: absolute;
+  color: rgb(29, 130, 255);
+  font-family: 'Ubuntu';
+  display: flex;
+  margin-top: -100px;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* Hide Nav bar on small displays*/
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: rgba(26, 32, 35, 0.9);
+    transition: all 0.3s ease;
+  }
+
+  .navbar li {
+    width: 100%; /* Make the list items full width */
+    text-align: center; /* Center the text */
+  }
+
+  .navbar li:hover {
+    background-color: rgba(26, 32, 35, 0.9);
+  }
+
+  .navbar li a {
+    display: block;
+    padding: 10px;
+    color: rgb(219, 219, 219);
+    transition: all 0.3s ease;
+  }
+
+  .navbar li a:hover {
+    background-color: rgb(29, 130, 255);
+    border-radius: 0;
+    transform: none;
+    text-shadow: none;
+  }
+
+  /* Show the collapsed navbar when the checkbox is checked */
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle:checked + .navbar ul {
+    display: block;
+  }
+
+  /* Hide the checkbox */
+  .menu-toggle {
+    display: none;
+  }
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

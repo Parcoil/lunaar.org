@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Settings | Native
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nativegames 130+ Unblocked Games">
+  <meta name="keywords" content="games, unblocked, 3kh0, freegames, proxy, ubg, github, native, nativegames">
+  <meta name="author" content="Parcoil Network">
+  <meta property="og:title" content="Native">
+  <meta property="og:description" content="Random cat images, gifs, submitting your cat, and more.">
+  <meta property="og:image" content="SOON">
+  <meta property="og:url" content="https://nativegames.net">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nativegames">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nativegames">
+  <meta name="twitter:description" content="Nativegames 130+ Unblocked Games">
+  <meta name="twitter:image" content="SOON">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:color" content="#1a2023">
+    <link rel="icon" type="image/png" sizes="512x512" href="media/img/nativelogotrans.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="media/img/nativelogotrans.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="media/img/nativelogo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="media/img/nativelogotrans.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="media/nativelogotrans.png">
+  <link rel="icon" href="favicon.png">
+  <script src="js/games.js"></script>
+  <script src="js/randomtext.js"></script>
+  <script src="js/settings.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel=stylesheet href="css/Croogla 4F.css"
+ </head>
+<body>
+
+  <nav class="navbar" >
+      <h1 class="navtext">native.</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Games</a></li>
+            <li><a href="bookmarklets.html">Bookmarklets</a></li>
+            <li><a href="apps.html">Apps</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="#">More</a></li>
+            
+        </ul>
+    </nav>
+   <h1>Settings</h1> 
+  
+   <!-- tabcloaks-->
+
+   <h4>Tab Cloaks</h4>
+<!-- Custom-->
+<input id="title" class="input" placeholder="Title" onkeyup="setTitle(this.value)">
+<input id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())">
+<!-- Premade-->
+   <select id=premadecloaks>
+  <option onclick="setCloak('Search')">Google Search</option>
+  <option onclick="setCloak('drive')">Google Drive</option>
+  <option onclick="setCloak('canvas')">Canvas</option>
+  <option onclick="setCloak('zoom')">zoom</option>
+  <option onclick="setCloak('classroom')">Google Classroom</option>
+  <option onclick="setCloak('meets')">Google Meet</option>
+  <option onclick="setCloak('teddit')">Teddit</option>
+  <option onclick="setCloak('youtube')">Youtube</option>
+  <option onclick="setCloak('cornhub')">Cornhub</option>
+  <option onclick="setCloak('nitter')">Nitter</option>
+</select>
+
+<button class="button" onclick="setCloak()">Set readymade cloak</button>
+<button class="button" onclick="resetTab()">Reset</button>
+<!-- Auto About Blank-->
+<label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+  <!-- Favicons-->
+  <script>
+    // Collect Tab Cloak data from local storage
+var tab = localStorage.getItem('tab');
+if (tab) {
+  try {
+    // Parse the data, it is in JSON
+    var tabData = JSON.parse(tab);
+  } catch {
+    var tabData = {};
+  }
+} else {
+  var tabData = {};
+}
+
+// Set the Tab title if the Tab cloak data is there
+if (tabData.title) {
+  document.title = tabData.title;
+}
+
+// Set the Tab icon if the Tab cloak data is there
+if (tabData.icon) {
+  document.querySelector('link[rel="icon"]').href = tabData.icon;
+}
+</script>
+
+<script src="js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Game Not Found!?</title>
+    <link rel="stylesheet" href="style.css">
+    <link id="favicon" rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body class="bg-gray-200 text-black antialiased dark:bg-dark dark:text-white">
+    <nav class="navbar" >
+        <h1 class="navtext">native.</h1>
+         <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html">Games</a></li>
+              <li><a href="#">Bookmarklets</a></li>
+              <li><a href="#">Apps</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">More</a></li>
+              
+          </ul>
+      </nav>
+    <div id="__next">
+        <div class="text-center flex flex-col items-center w-full h-full min-h-screen py-20 justify-center" style="background: #1a2023;">
+            <div class="flex flex-col gap-y-8 max-w-7xl w-full p-5 items-center">
+                <section class="flex-row flex w-full relative justify-center xl:justify-between" style="margin-right: -262px;">
+                    <div class="shadow-lg flex flex-col w-[960px] h-[640px] overflow-hidden">
+                        <div id="iframeContainer" class="relative w-full h-full overflow-hidden rounded-t-lg">
+                            <iframe id="gameIframe" class="w-full h-full" frameborder="0"></iframe>
+                            <button id="exitfullscreen" onclick="exitFullScreen()" style="display: none; color: #8B96CC; position: absolute; top: 10px; right: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-auto w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" alt="Exit Fullscreen">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="bg-primary flex-row w-full items-center flex justify-between px-6 py-4 rounded-b-lg">
+                            <div>
+                                <h1 class="text-white text-2xl md:text-3xl 2xl:text-4xl tracking-tighter font-extrabold" id="gamename">Game Not Found LOL!?</h1>
+                            </div>
+                            <div class="flex-row flex items-center w-fit gap-x-6">
+                                <button id="fullscreengame" onclick="toggleFullScreen()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-auto w-8 text-white transition hover:stroke-gray-300 ease-linear" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2" alt="Fullscreen">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="flex flex-col gap-y-4 justify-center max-w-[960px] xl:max-w-none w-full"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="fullscreen.js"></script>
+</body>
+
+</html>

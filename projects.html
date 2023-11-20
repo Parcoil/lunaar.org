@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Games | Native
+  </title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+    <link rel="icon" type="image/png" sizes="512x512" href="media/img/nativelogotrans.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="media/img/nativelogotrans.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="media/img/nativelogo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="media/img/nativelogotrans.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="media/nativelogotrans.png">
+  <link rel="icon" href="favicon.png">
+  <script src="js/games.js"></script>
+  <script src="js/settings.js"></script>
+  <link rel="stylesheet" href="css/styles.css"
+  
+ </head>
+<body>
+    <nav class="navbar" >
+        <h1 class="navtext">native.</h1>
+         <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html">Games</a></li>
+              <li><a href="#">Bookmarklets</a></li>
+              <li><a href="#">Apps</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">More</a></li>
+              
+          </ul>
+      </nav>
+    <h1 class="center">Games</h1>
+    <div class="search-container">
+    <span class="search-icon">&#128269;</span>
+    <input type="text" id="searchBar" placeholder="Search..">
+    </div>
+    <div id="gameContainer" rel="grow" style="font-family: Ubuntu, sans-serif;font-weight: bold;">
+        <span style="font-family: Ubuntu, sans-serif;">
+            <strong>Loading games or json error</strong>
+        </span>
+    </div>
+    <script>
+        // Collect Tab Cloak data from local storage
+    var tab = localStorage.getItem('tab');
+    if (tab) {
+      try {
+        // Parse the data, it is in JSON
+        var tabData = JSON.parse(tab);
+      } catch {
+        var tabData = {};
+      }
+    } else {
+      var tabData = {};
+    }
+    
+    // Set the Tab title if the Tab cloak data is there
+    if (tabData.title) {
+      document.title = tabData.title;
+    }
+    
+    // Set the Tab icon if the Tab cloak data is there
+    if (tabData.icon) {
+      document.querySelector('link[rel="icon"]').href = tabData.icon;
+    }
+    </script>
+</body>
+</html>
