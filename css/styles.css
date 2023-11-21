@@ -11,16 +11,22 @@
 	font-style: normal;
 	font-display: auto;
 }
+
+#favicon {
+  width: 35px;
+}
+
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
   background-color: #1a2023;
-  
+  height: 100%;
   color: rgb(219, 219, 219);
   animation: fadeIn 1s ease-out forwards;
   align-items: center;
   justify-content: center;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  
   
 }
 
@@ -52,7 +58,7 @@ header {
   width: 100%;
   height: 30px; /* Adjust the height as needed */
   border: none;
-  background-color: #f0f0f0; /* Background color for the Neumorphic effect */
+  background-color: #fff; /* Background color for the Neumorphic effect */
   border-radius: 8px; /* Adjust the border radius as needed */
   padding: 8px; /* Adjust the padding as needed */
   padding-left: 30px; /* Extra left padding for the icon */
@@ -68,7 +74,7 @@ header {
   left: 6px; /* Adjust the left position as needed */
   top: 50%;
   transform: translateY(-50%);
-  color: #1d82ff; /* Color for the magnifying glass icon */
+  color: #f0f0; /* Color for the magnifying glass icon */
 }
 
 #searchBar:focus,
@@ -78,7 +84,7 @@ header {
 }
 
 #searchBar::placeholder {
-  color: #0073ff; /* Set the placeholder text color */
+  color: #1a2023; /* Set the placeholder text color */
   transition: color 0.3s ease-in-out; /* Add transition to the placeholder color */
 }
 
@@ -252,15 +258,11 @@ svg {
   height: 50vh; /* Adjust the height as needed */
 }
 #randomText {
-  position: absolute;
   color: rgb(29, 130, 255);
   font-family: 'Ubuntu';
-  display: flex;
-  margin-top: -100px;
-  justify-content: center;
-  align-items: center;
-  left: 50%;
-  top: 50%;
+  text-align: center;
+  position: relative;
+  bottom: 160px;
 }
 .center {
   display: flex;
@@ -306,7 +308,6 @@ svg {
     text-shadow: none;
   }
 
-  /* Show the collapsed navbar when the checkbox is checked */
   .menu-toggle {
     display: block;
   }
@@ -315,7 +316,6 @@ svg {
     display: block;
   }
 
-  /* Hide the checkbox */
   .menu-toggle {
     display: none;
   }
@@ -371,11 +371,136 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.card {
+  background-color: rgb(29, 130, 255);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 850px;
+  margin: 0px auto;
+  position: absolute;
+  left: 100px;
+  top: 125px;
+  display: block;
+}
+
+#iframeContainer {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.card-body {
+	padding: 10px;
+}
+
+.card-body h2 {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #dbdbdb;
+}
+
+#gameIframe {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 0;
+  border-radius: 8px 8px 0 0;
+}
+
+#fullscreengame {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.button {
+  background-color: rgb(29, 130, 255);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+  
+}
+
+.button:hover {
+  background-color: rgba(29, 130, 255, 0.8);
+  transform: translateY(-3px);
+  
+}
+
+#premadecloaks {
+  background-color: rgb(29, 130, 255);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+  
+}
+
+#premadecloaks:hover {
+  background-color: rgba(29, 130, 255, 0.8);
+  transform: translateY(-3px);
+
+}
+#settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+}
+input[type=settings]{
+ 
+border:2px solid #aaa;
+  border-radius:4px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+}
+input[type=settings]:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+#appContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+#mathquiz {
+  position: relative;
+  top: 450px;
+}
+#widgetbot {
+
 }

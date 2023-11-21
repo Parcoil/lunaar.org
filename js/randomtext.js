@@ -8,6 +8,7 @@
         "shit",
         "What is Google Sites?",
         "No",
+        "Yes",
         "insert text here",
         "Unblocked!",
         "Welcome To The New New Native!",
@@ -16,13 +17,20 @@
         "20% Code 80% ChatGPT!",
         "Gas Gas Gas",
         "Daniel gets no girls",
-          "Pineapple Cow",
-          "chromebooks suck a$$",
-          "Lorem ipsum",
-          "😁",
-          "🙊",
-          "technoblade never dies",
-          "about:blank on top"
+        "Pineapple Cow",
+        "chromebooks suck",
+        "Lorem ipsum",
+        "technoblade never dies",
+        "about:blank on top",
+        "native now has ads???",
+        "minoa is a cracker",
+        "i love cats",
+        "dogs are better",
+        "minoa.cat is the best website (doge approved)",
+        "inchrys has testicles the size of ants",
+        "thx sandwich",
+        "Riley is not sped",
+        "we love minoa.cat"
       ];
 
       // Function to generate random index

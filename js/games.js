@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const gameContainer = document.getElementById("gameContainer");
     const searchBar = document.getElementById("searchBar");
 
-    fetch("games.json")
+    fetch("https://gms.speedpl.us/games.json")
         .then(response => response.json())
         .then(data => {
             displayGames(data);

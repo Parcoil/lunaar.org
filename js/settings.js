@@ -1,4 +1,3 @@
-// thx 3kh0
 // Check if there is a saved tab data in localStorage
 var tab = localStorage.getItem("tab");
 
@@ -8,24 +7,31 @@ if (tab) {
     var tabData = JSON.parse(tab);
   } catch {
     // If there is an error in parsing, create an empty object
-    var tabData = {};
+    var tabData = {
+
+    };
   }
 } else {
   // If there is no saved data, create an empty object
-  var tabData = {};
+  var tabData = {
+
+  };
 }
 
 // Set the title and icon fields to the values saved in tabData, if they exist
 if (tabData.title) {
   document.getElementById("title").value = tabData.title;
 }
-if (tabData.icon) {
+
+if (tabData.icon == null) {
+
+} else {
   document.getElementById("icon").value = tabData.icon;
 }
 
 // Default tab settings
 var settingsDefaultTab = {
-  title: "Settings | 3kh0",
+  title: "Settings | Native",
   icon: "/media/logo.png",
 };
 
@@ -219,4 +225,11 @@ function setTheme(theme) {
       document.querySelector("#theme_color").value = palette.color;
     }
   });
+}
+
+
+const toggleButton = document.getElementById("toggleAboutBlank");
+
+function toggleAboutBlank() {
+  console.log(toggleButton.checked)
 }

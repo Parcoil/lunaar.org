@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="300px" width="300px" version="1.1" viewBox="-300 -300 600 600" font-family="Bitstream Vera Sans,Liberation Sans, Arial, sans-serif" font-size="72" text-anchor="middle">
+  
+  <circle stroke="#AAA" stroke-width="10" r="280" fill="#FFF"/>
+  <switch style="fill:#444;">
+    <text id="trsvg3-bn" systemLanguage="bn"><tspan x="0" y="-8" id="trsvg1-bn">&#x99B;&#x9AC;&#x9BF; &#x989;&#x9AA;&#x9B2;&#x9AD;&#x9CD;&#x9AF;</tspan><tspan x="0" y="80" id="trsvg2-bn">&#x9A8;&#x9DF;</tspan></text>
+    <text id="trsvg3-id" systemLanguage="id"><tspan x="0" y="-8" id="trsvg1-id">GAMBAR TAK</tspan><tspan x="0" y="80" id="trsvg2-id">TERSEDIA</tspan></text>
+    <text id="trsvg3-en" systemLanguage="en"><tspan x="0" y="-8" id="trsvg1-en">NO IMAGE</tspan><tspan x="0" y="80" id="trsvg2-en">AVAILABLE</tspan></text>
+    
+  <text id="trsvg3-es" systemLanguage="es"><tspan x="0" y="-8" id="trsvg1-es">IMAGEN NO</tspan><tspan x="0" y="80" id="trsvg2-es">DISPONIBLE</tspan></text><text id="trsvg3-ro" systemLanguage="ro"><tspan x="0" y="-8" id="trsvg1-ro">IMAGINE</tspan><tspan x="0" y="80" id="trsvg2-ro">INDISPONIBIL&#x102;</tspan></text><text id="trsvg3-vi" systemLanguage="vi"><tspan x="0" y="-8" id="trsvg1-vi">KH&#xD4;NG</tspan><tspan x="0" y="80" id="trsvg2-vi">C&#xD3; &#x1EA2;NH</tspan></text><text id="trsvg3-ko" systemLanguage="ko"><tspan x="0" y="-8" id="trsvg1-ko">&#xC774;&#xBBF8;&#xC9C0;&#xAC00;</tspan><tspan x="0" y="80" id="trsvg2-ko">&#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;</tspan></text><text id="trsvg3"><tspan x="0" y="-8" id="trsvg1">NO IMAGE</tspan><tspan x="0" y="80" id="trsvg2">AVAILABLE</tspan></text></switch>
+</svg>

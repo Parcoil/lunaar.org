@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Home | Native
+  <title>Apps | Native
   </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,16 +47,20 @@
           
       </ul>
   </nav>
-    <center>
-      <button class="button" id="mathquiz"> Math Quiz</button>
-    </center>
-    <h1 class="native">native.</h1>
-    <div id="mathquiz">
-  </div>
-    <h5 id="randomText"></h5>
+  <h1 class="center">Apps</h1>
+  <div id="appContainer" rel="grow" style="font-family: Ubuntu, sans-serif;font-weight: bold;">
+    <div class="gameCard"><img src="/media/apps/discord.png"><h3>Discord</h3></div>
+    <div class="gameCard"><img src="/media/apps/tiktok.png"><h3>Tiktok</h3></div>
+    <div class="gameCard"><img src="/media/apps/reddit.png"><h3>Reddit</h3></div>
+    <div class="gameCard"><img src="/media/apps/nv.png"><h3>Geforce Now</h3></div>   
+    <div class="gameCard"><img src="/media/apps/spotify.png"><h3>Spotify</h3></div>
+
+    <span style="font-family: Ubuntu, sans-serif;">
+    
+    </span>
+</div>
 
 </body>
-
 <script>
   // Collect Tab Cloak data from local storage
 var tab = localStorage.getItem('tab');
@@ -80,14 +84,5 @@ document.title = tabData.title;
 if (tabData.icon) {
 document.querySelector('link[rel="icon"]').href = tabData.icon;
 }
-
 </script>
-<div id="widgetbot">
-<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-  new Crate({
-      server: '1128826318813921350', // Nativegames.net
-      channel: '1128826320722329682' // #💬・》general-chat
-  })
-</script> 
-</div>
 </html>
