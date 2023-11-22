@@ -24,8 +24,6 @@ if (tabData.title) {
 }
 
 if (tabData.icon == null) {
-
-} else {
   document.getElementById("icon").value = tabData.icon;
 }
 
@@ -33,6 +31,7 @@ if (tabData.icon == null) {
 var settingsDefaultTab = {
   title: "Settings | Native",
   icon: "/media/logo.png",
+  
 };
 
 // Function to set the document title
@@ -41,7 +40,7 @@ function setTitle(title = "") {
     document.title = title;
   } else {
     document.title = settingsDefaultTab.title;
-  }
+}
 
   // Update the saved tab data with the new title
   var tab = localStorage.getItem("tab");
@@ -197,7 +196,7 @@ function setCloak() { // applies only to premade cloaks
       break;
     case "khan": // Khan Academy
       setTitle("Dashboard | Khan Academy"); 
-      setFavicon("/media/cloaks/Khan Academy.ico");
+      setFavicon("./media/cloaks/Khan Academy.ico");
       location.reload();
       break;
   }
@@ -212,24 +211,43 @@ function resetTab() {
   localStorage.setItem("tab", JSON.stringify({}));
 }
 
-// Function to set the theme
-function setTheme(theme) {
-  localStorage.setItem("theme", theme);
-  document.body.setAttribute("theme", theme);
-  document.body.style = "";
-  localStorage.removeItem("theme_color");
+// Themes
 
-  // Find the theme color from the themes array and set the color
-  themes.forEach((palette) => {
-    if (palette.theme == theme) {
-      document.querySelector("#theme_color").value = palette.color;
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  const themeSelect = document.getElementById('themeSelect');
+
+  // Check the saved theme from local storage
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    applyTheme(savedTheme);
+    themeSelect.value = savedTheme;
+  }
+
+  // Apply selected theme
+  themeSelect.addEventListener('change', function () {
+    const selectedTheme = themeSelect.value;
+    applyTheme(selectedTheme);
+    localStorage.setItem('theme', selectedTheme);
   });
-}
+
+  function applyTheme(theme) {
+    document.body.className = ''; // Reset body classes
+    if (theme !== 'default') {
+      document.body.classList.add(theme);
+    }
+  }
+});
+
+
+// end themes
 
 
 const toggleButton = document.getElementById("toggleAboutBlank");
 
 function toggleAboutBlank() {
-  console.log(toggleButton.checked)
+  localStorage.setItem("tab", {
+      toggled: true,
+      title: document.getElementById("title"),
+      icon: document.getElementById("icon")
+  })
 }

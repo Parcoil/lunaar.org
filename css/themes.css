@@ -1,0 +1,115 @@
+/* Default Theme */
+body {
+    background-color: #1a2023;
+    color: #fff;
+  }
+  
+  /* Dark Theme */
+  body.dark {
+    background-color: #222222;
+    color: #ffffff;
+  }
+  
+  body.dark .native,
+  body.dark #randomtext,
+  body.dark .navtext {
+    color: #e6e6e6; /* Adjust colors for dark theme */
+  }
+  
+  body.dark .button {
+    background-color: #333333; /* Adjust background color for dark theme */
+    color: #ffffff; /* Text color for dark theme */
+  }
+  
+  body.dark #themeSelect,
+  body.dark #premadecloaks {
+    background-color: #444444; /* Adjust background color for dark theme */
+  }
+  
+  body.dark #themeSelect:hover,
+  body.dark #premadecloaks:hover {
+    background-color: #555555; /* Adjust hover background color for dark theme */
+  }
+  
+  body.dark .navbar a:hover {
+    background-color: #444444; /* Adjust navbar link hover background color for dark theme */
+  }
+  
+  body.dark .button:hover {
+    color: #ffffff; /* Text color on hover for dark theme */
+  }
+  
+  /* Blue Theme */
+  body.blue {
+    background-color: #6495ED;
+    color: #ffffff;
+  }
+  
+  body.blue .native,
+  body.blue #randomtext,
+  body.blue .navtext {
+    color: #a0c8f0; /* Adjust colors for blue theme */
+  }
+  
+  body.blue .button {
+    background-color: #336699; /* Adjust background color for blue theme */
+    color: #ffffff; /* Text color for blue theme */
+  }
+  
+  body.blue #themeSelect,
+  body.blue #premadecloaks {
+    background-color: #78a6d6; /* Adjust background color for blue theme */
+  }
+  
+  body.blue #themeSelect:hover,
+  body.blue #premadecloaks:hover {
+    background-color: #8fb8e0; /* Adjust hover background color for blue theme */
+  }
+  
+  body.blue .navbar a:hover {
+    background-color: #78a6d6; /* Adjust navbar link hover background color for blue theme */
+  }
+  
+  body.blue .button:hover {
+    color: #ffffff; /* Text color on hover for blue theme */
+  }
+  
+  /* Add more theme-specific styles for other themes as needed */
+  
+    /* Blue Theme */
+    body.two {
+        background-color: #212f3c;
+        color: #ffffff;
+      }
+      
+      body.two .native,
+      body.two #randomtext,
+      body.two .navtext {
+        color: #ff0f00; /* Adjust colors for blue theme */
+      }
+      
+      body.two .button {
+        background-color: #ff0f00; /* Adjust background color for blue theme */
+        color: #ffffff; /* Text color for blue theme */
+      }
+      
+      body.two #themeSelect,
+      body.two #premadecloaks {
+        background-color: #ff0f00; /* Adjust background color for blue theme */
+      }
+      
+      body.two #themeSelect:hover,
+      body.two #premadecloaks:hover {
+        background-color: #ff0f00; /* Adjust hover background color for blue theme */
+      }
+      
+      body.two .navbar a:hover {
+        background-color: #ff0f00; /* Adjust navbar link hover background color for blue theme */
+      }
+      
+      body.two .button:hover {
+        color: #ffffff; /* Text color on hover for blue theme */
+      }
+      body.two input:checked {
+        background-color: #ff0f00;
+      }

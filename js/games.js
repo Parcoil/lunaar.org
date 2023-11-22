@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     const gameContainer = document.getElementById("gameContainer");
     const searchBar = document.getElementById("searchBar");
-
-    fetch("https://gms.speedpl.us/games.json")
+    
+    fetch("games.json")
         .then(response => response.json())
         .then(data => {
             displayGames(data);
-
             searchBar.addEventListener("keyup", function() {
                 const searchTerm = searchBar.value.toLowerCase();
                 const filteredGames = data.filter(game =>

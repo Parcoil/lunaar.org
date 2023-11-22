@@ -42,7 +42,7 @@ body {
 }
 
 header {
-  background-color: #1a2023;
+  background-color: transparent;
   padding: 20px;
   text-align: center;
 }
@@ -163,26 +163,26 @@ svg {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a2023;
+  background: transparent;
   border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1d82ff;
+  background: #fff;
   border-radius: 15px;
   height: 2px;
 }
 
 .navbar ul {
   list-style-type: none;
-  background-color: rgba(26, 32, 35, 0.9); /* Darker and semi-transparent */
+  background-color: transparent; /* Darker and semi-transparent */
   padding: 0px;
   margin-top: 10px;
   overflow: hidden;
   text-align: center;
 
   transition: background-color 0.3s;
-  ustify-content: center;
+  justify-content: center;
   
 }
 .navbar {
@@ -198,7 +198,7 @@ svg {
 }
 
 .navbar ul:hover {
-  background-color: rgba(26, 32, 35, 0.9);
+  background-color: transparent;
 }
 
 .navbar a {
@@ -258,7 +258,7 @@ svg {
   height: 50vh; /* Adjust the height as needed */
 }
 #randomText {
-  color: rgb(29, 130, 255);
+  color: #fff;
   font-family: 'Ubuntu';
   text-align: center;
   position: relative;
@@ -459,12 +459,34 @@ input:checked + .slider:before {
   border-radius: 10px;
   transition: background-color 0.3s, transform 0.2s;
   margin-top: 10px;
-  
+  font-weight: 700;
 }
 
 #premadecloaks:hover {
   background-color: rgba(29, 130, 255, 0.8);
   transform: translateY(-3px);
+
+}
+
+#themeSelect {
+  background-color: rgb(29, 130, 255);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+#themeSelect:hover {
+  background-color: rgba(29, 130, 255, 0.8);
+  transform: translateY(-3px);
+  
 
 }
 #settings {
@@ -499,8 +521,16 @@ input[type=settings]:focus{
 
 #mathquiz {
   position: relative;
-  top: 450px;
+  top: 350px;
+  cursor: pointer;
 }
 #widgetbot {
+display: none;
+}
 
+.tabCloaks {
+  margin: 50px;
+}
+#themeSelect {
+  font-family: 'Ubuntu', sans-serif;
 }

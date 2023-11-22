@@ -28,59 +28,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="media/nativelogotrans.png">
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel=stylesheet href="css/Croogla 4F.css">
-  <script type="text/javascript">
-    atOptions = {
-      'key' : 'c7e01046bd341da073b2af5a9dac9f79',
-      'format' : 'iframe',
-      'height' : 60,
-      'width' : 468,
-      'params' : {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/c7e01046bd341da073b2af5a9dac9f79/invoke.js"></scr' + 'ipt>');
-  </script>
-  <script type="text/javascript">
-    atOptions = {
-      'key' : 'c7e01046bd341da073b2af5a9dac9f79',
-      'format' : 'iframe',
-      'height' : 60,
-      'width' : 468,
-      'params' : {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/c7e01046bd341da073b2af5a9dac9f79/invoke.js"></scr' + 'ipt>');
-  </script>
-  <script type="text/javascript">
-    atOptions = {
-      'key' : 'c7e01046bd341da073b2af5a9dac9f79',
-      'format' : 'iframe',
-      'height' : 60,
-      'width' : 468,
-      'params' : {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/c7e01046bd341da073b2af5a9dac9f79/invoke.js"></scr' + 'ipt>');
-  </script>
-  <script type="text/javascript">
-    atOptions = {
-      'key' : 'c7e01046bd341da073b2af5a9dac9f79',
-      'format' : 'iframe',
-      'height' : 60,
-      'width' : 468,
-      'params' : {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/c7e01046bd341da073b2af5a9dac9f79/invoke.js"></scr' + 'ipt>');
-  </script>
-
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'c7e01046bd341da073b2af5a9dac9f79',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.highcpmcreativeformat.com/c7e01046bd341da073b2af5a9dac9f79/invoke.js"></scr' + 'ipt>');
-</script>
-
+  <link rel="stylesheet" href="css/themes.css">
  </head>
 <body>
 
@@ -100,7 +48,7 @@
   <h1>Settings</h1> 
   
    <!-- tabcloaks-->
-
+   <div class="tabCloaks">
    <h4>Custom Tab Cloak</h4>
 <!-- Custom-->
 <input id="title" class="input" type="settings" placeholder="Title" onkeyup="setTitle(this.value)">
@@ -127,10 +75,22 @@
   <option value="canvas">Canvas</option>
   <option value="zoom">Zoom</option>
   <option value="khan">Khan Academy</option>
+  <option value="schoology">Schoology</option>
+  <option value="noredInk">NoRedInk</option>
+  
 </select>
+
+
 
 <button class="button" onclick="setCloak()">Set readymade cloak</button>
 <button class="button" onclick="resetTab()">Reset</button>
+  <select id="themeSelect">
+    <option value="default">Default</option>
+    <option value="dark">Dark</option>
+    <option value="blue">Ice</option>
+    <option value="two">2.0</option>
+    <!-- Add more options for different themes -->
+  </select>
 <!-- Auto About Blank-->
 <p>
 <h4>about:blank on Page Load</h4>
@@ -139,6 +99,7 @@
     <input type="checkbox" id="toggleAboutBlank" onclick="toggleAboutBlank()">
     <span class="slider round"></span>
   </label>
+</div>
 </div>
   <!-- Favicons-->
   <script>
