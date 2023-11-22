@@ -29,6 +29,7 @@
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/themes.css">
+  <style id="style"></style>
  </head>
 <body>
 
@@ -45,16 +46,21 @@
       </ul>
   </nav>
   <div id="settings">
+    <p></p>
   <h1>Settings</h1> 
-  
+  <p></p>
    <!-- tabcloaks-->
    <div class="tabCloaks">
+    <p></p>
    <h4>Custom Tab Cloak</h4>
+   <p></p>
 <!-- Custom-->
 <input id="title" class="input" type="settings" placeholder="Title" onkeyup="setTitle(this.value)">
 <input id="icon" class="input" type="settings" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())">
 <!-- Premade-->
-<h4>Premade Cloaks</h4>
+<p>
+<h3>Premade Cloaks</h3>
+<p>
 <select name="Readymade Cloaks" id="premadecloaks" title="Cloaks">
   <option value="search">Google Search</option>
   <option value="bsite">BillyBilly</option>
@@ -82,18 +88,21 @@
 
 
 
-<button class="button" onclick="setCloak()">Set readymade cloak</button>
+<button class="button" onclick="setCloak()">Set Premade cloak</button>
 <button class="button" onclick="resetTab()">Reset</button>
-  <select id="themeSelect">
+<p>
+  <h3>Themes</h3>
+  <p>
+<select id="themeSelect">
     <option value="default">Default</option>
     <option value="dark">Dark</option>
     <option value="blue">Ice</option>
-    <option value="two">2.0</option>
+    <option value="two">Red</option>
     <!-- Add more options for different themes -->
   </select>
 <!-- Auto About Blank-->
 <p>
-<h4>about:blank on Page Load</h4>
+<h3>about:blank on Page Load</h3>
 <p>
 <label class="switch">
     <input type="checkbox" id="toggleAboutBlank" onclick="toggleAboutBlank()">

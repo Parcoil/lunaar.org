@@ -496,6 +496,7 @@ input:checked + .slider:before {
   align-items: center;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
+  margin-top: 12.5vh;
 }
 input[type=settings]{
  
@@ -524,13 +525,12 @@ input[type=settings]:focus{
   top: 350px;
   cursor: pointer;
 }
+
 #widgetbot {
-display: none;
+  position: absolute;
+  top: 500px;
 }
 
-.tabCloaks {
-  margin: 50px;
-}
 #themeSelect {
   font-family: 'Ubuntu', sans-serif;
 }

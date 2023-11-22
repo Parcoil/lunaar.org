@@ -17,7 +17,7 @@ body {
   }
   
   body.dark .button {
-    background-color: #333333; /* Adjust background color for dark theme */
+    background-color: #444444; /* Adjust background color for dark theme */
     color: #ffffff; /* Text color for dark theme */
   }
   
@@ -37,6 +37,13 @@ body {
   
   body.dark .button:hover {
     color: #ffffff; /* Text color on hover for dark theme */
+  }
+  body.dark input[type=settings]:focus{
+    border-color:#555555;
+    box-shadow:0 0 8px 0 #555555;
+  }
+  body.dark ::-webkit-scrollbar-thumb {
+    background-color: #555555; /* Scrollbar thumb color for dark theme */
   }
   
   /* Blue Theme */
@@ -58,21 +65,27 @@ body {
   
   body.blue #themeSelect,
   body.blue #premadecloaks {
-    background-color: #78a6d6; /* Adjust background color for blue theme */
+    background-color: #336699; /* Adjust background color for blue theme */
   }
   
-  body.blue #themeSelect:hover,
-  body.blue #premadecloaks:hover {
-    background-color: #8fb8e0; /* Adjust hover background color for blue theme */
-  }
+
   
   body.blue .navbar a:hover {
-    background-color: #78a6d6; /* Adjust navbar link hover background color for blue theme */
+    background-color: #336699; /* Adjust navbar link hover background color for blue theme */
   }
   
   body.blue .button:hover {
     color: #ffffff; /* Text color on hover for blue theme */
   }
+  body.blue input[type=settings]:focus{
+    border-color:#336699;
+    box-shadow:0 0 8px 0 #336699;
+  }
+  body.blue ::-webkit-scrollbar-thumb {
+    background: #8fb8e0; /* Scrollbar thumb color for blue theme */
+  }
+  
+  /* Add more theme-specific styles for other themes as needed */
   
   /* Add more theme-specific styles for other themes as needed */
   
@@ -112,4 +125,8 @@ body {
       }
       body.two input:checked {
         background-color: #ff0f00;
+      }
+      body.two input[type=settings]:focus{
+        border-color:red;
+        box-shadow:0 0 8px 0 red;
       }

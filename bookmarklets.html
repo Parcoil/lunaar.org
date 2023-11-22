@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Apps | Native
-  </title>
+  <title>Home | Native</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Nativegames 130+ Unblocked Games">
   <meta name="keywords" content="games, unblocked, 3kh0, freegames, proxy, ubg, github, native, nativegames">
   <meta name="author" content="Parcoil Network">
   <meta property="og:title" content="Native">
-  <meta property="og:description" content="Random cat images, gifs, submitting your cat, and more.">
+  <meta property="og:description" content="Nativegames 130+ Unblocked Games">
   <meta property="og:image" content="SOON">
   <meta property="og:url" content="https://nativegames.net">
   <meta property="og:type" content="website">
@@ -33,7 +32,6 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/themes.css">
 
-  
  </head>
 <body>
 
@@ -49,67 +47,29 @@
           
       </ul>
   </nav>
-  <h1 class="center">Apps</h1>
-  <div id="appContainer" rel="grow" style="font-family: Ubuntu, sans-serif;font-weight: bold;">
-    <div class="gameCard"><img src="/media/apps/discord.png"><h3>Discord</h3></div>
-    <div class="gameCard"><img src="/media/apps/tiktok.png"><h3>Tiktok</h3></div>
-    <div class="gameCard"><img src="/media/apps/reddit.png"><h3>Reddit</h3></div>
-    <div class="gameCard"><img src="/media/apps/nv.png"><h3>Geforce Now</h3></div>   
-    <div class="gameCard"><img src="/media/apps/spotify.png"><h3>Spotify</h3></div>
-
-    <span style="font-family: Ubuntu, sans-serif;">
-    
-    </span>
-</div>
-
-</body>
-<script>
-  // Collect Tab Cloak data from local storage
-var tab = localStorage.getItem('tab');
-if (tab) {
-try {
-  // Parse the data, it is in JSON
-  var tabData = JSON.parse(tab);
-} catch {
-  var tabData = {};
-}
-} else {
-var tabData = {};
-}
-
-// Set the Tab title if the Tab cloak data is there
-if (tabData.title) {
-document.title = tabData.title;
-}
-
-// Set the Tab icon if the Tab cloak data is there
-if (tabData.icon) {
-document.querySelector('link[rel="icon"]').href = tabData.icon;
-}
-</script>
-<script>document.addEventListener('DOMContentLoaded', function () {
-  const themeSelect = document.getElementById('themeSelect');
-
-  // Check the saved theme from local storage
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    applyTheme(savedTheme);
-    themeSelect.value = savedTheme;
-  }
-
-  // Apply selected theme
-  themeSelect.addEventListener('change', function () {
-    const selectedTheme = themeSelect.value;
-    applyTheme(selectedTheme);
-    localStorage.setItem('theme', selectedTheme);
-  });
-
-  function applyTheme(theme) {
-    document.body.className = ''; // Reset body classes
-    if (theme !== 'default') {
-      document.body.classList.add(theme);
+  <h1></h1>
+  <script>document.addEventListener('DOMContentLoaded', function () {
+    const themeSelect = document.getElementById('themeSelect');
+  
+    // Check the saved theme from local storage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      applyTheme(savedTheme);
+      themeSelect.value = savedTheme;
     }
-  }
-});
-</script>
-</html>
+  
+    // Apply selected theme
+    themeSelect.addEventListener('change', function () {
+      const selectedTheme = themeSelect.value;
+      applyTheme(selectedTheme);
+      localStorage.setItem('theme', selectedTheme);
+    });
+  
+    function applyTheme(theme) {
+      document.body.className = ''; // Reset body classes
+      if (theme !== 'default') {
+        document.body.classList.add(theme);
+      }
+    }
+  });
+  </script>
