@@ -2,6 +2,7 @@
 body {
     background-color: #1a2023;
     color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   /* Dark Theme */
@@ -130,3 +131,41 @@ body {
         border-color:red;
         box-shadow:0 0 8px 0 red;
       }
+          /* Blue Theme */
+    body.pink {
+      background-color: pink;
+      color: #000
+    }
+    
+    body.pink .native,
+    body.pink #randomtext,
+    body.pink .navtext {
+      color: #000; /* Adjust colors for blue theme */
+    }
+    
+    body.pink .button {
+      background-color: #fff; /* Adjust background color for blue theme */
+      color: #000 /* Text color for blue theme */
+    }
+    
+    body.pink #themeSelect,
+    body.pink #premadecloaks {
+      background-color: #fff; /* Adjust background color for blue theme */
+      color: black;
+    }
+    
+    
+    body.pink .navbar a:hover {
+      background-color: #000; /* Adjust navbar link hover background color for blue theme */
+    }
+    
+    body.pink .button:hover {
+      color: #000; /* Text color on hover for blue theme */
+    }
+    body.pink input:checked {
+      background-color: #fff;
+    }
+    body.pink input[type=settings]:focus{
+      border-color:white;
+      box-shadow:0 0 8px 0 white;
+    }
