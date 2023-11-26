@@ -560,8 +560,8 @@
       "url": "https://gms.speedpl.us/shellshock"
     },
     {
-      "name": "shootz",
-      "image": "https://gms.speedpl.us/shootz/gameicon.jpg",
+      "name": "Shootz",
+      "image": "https://gms.speedpl.us/shootz/gameicon.png",
       "url": "https://gms.speedpl.us/shootz"
     },
     {
@@ -570,27 +570,27 @@
       "url": "https://gms.speedpl.us/sk"
     },
     {
-      "name": "sketchbook",
+      "name": "Sketchbook",
       "image": "https://gms.speedpl.us/sketchbook/gameicon.png",
       "url": "https://gms.speedpl.us/sketchbook"
     },
     {
-      "name": "slope",
+      "name": "Slope",
       "image": "https://gms.speedpl.us/slope/gameicon.jpg",
       "url": "https://gms.speedpl.us/slope"
     },
     {
-      "name": "slope2",
+      "name": "Slope 2 Player",
       "image": "https://gms.speedpl.us/slope2/gameicon.png",
       "url": "https://gms.speedpl.us/slope2"
     },
     {
-      "name": "sm64",
+      "name": "Super Mario 64",
       "image": "https://gms.speedpl.us/sm64/sm64.jpeg",
       "url": "https://gms.speedpl.us/sm64"
     },
     {
-      "name": "snowrider3d",
+      "name": "Snowrider 3d",
       "image": "https://gms.speedpl.us/snowrider3d/images/logo.png",
       "url": "https://gms.speedpl.us/snowrider3d"
     },
@@ -600,27 +600,27 @@
       "url": "https://gms.speedpl.us/sr"
     },
     {
-      "name": "stickclimb",
+      "name": "Stickclimb",
       "image": "https://gms.speedpl.us/stickclimb/gameicon.png",
       "url": "https://gms.speedpl.us/stickclimb"
     },
     {
-      "name": "stickman",
+      "name": "Stickman Hook",
       "image": "https://gms.speedpl.us/stickman/gameicon.jpg",
       "url": "https://gms.speedpl.us/stickman"
     },
     {
-      "name": "stuntcars",
+      "name": "Stuntcars",
       "image": "https://gms.speedpl.us/stuntcars/gameicon.png",
       "url": "https://gms.speedpl.us/stuntcars"
     },
     {
-      "name": "subwaysurfers",
+      "name": "Subway surfers",
       "image": "https://gms.speedpl.us/subwaysurfers/gameicon.jpg",
       "url": "https://gms.speedpl.us/subwaysurfers"
     },
     {
-      "name": "superhot",
+      "name": "Superhot",
       "image": "https://gms.speedpl.us/superhot/gameicon.jpg",
       "url": "https://gms.speedpl.us/superhot"
     },
@@ -655,12 +655,12 @@
       "url": "https://gms.speedpl.us/tdh"
     },
     {
-      "name": "temple-run-2",
+      "name": "Temple run 2",
       "image": "https://gms.speedpl.us/temple-run-2/gameicon.png",
       "url": "https://gms.speedpl.us/temple-run-2"
     },
     {
-      "name": "tetris",
+      "name": "Tetris",
       "image": "https://gms.speedpl.us/tetris/gameicon.png",
       "url": "tetris"
     },
