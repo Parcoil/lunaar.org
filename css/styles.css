@@ -418,11 +418,13 @@ input:checked + .slider:before {
 #fullscreengame {
   width: 50px;
   height: 50px;
-  position: absolute;
-  right: 0;
-  bottom: 0px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 8px;
+  position: fixed;
+  top: 20px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 9999;
 }
 /*Button*/
 .button {

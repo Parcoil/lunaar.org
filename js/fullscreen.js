@@ -6,8 +6,8 @@ var gameIframe = document.getElementById("gameIframe");
 
 function toggleFullScreen() {
     var iframeContainer = document.getElementById("iframeContainer");
-    var exitFullScreenBtn = document.getElementById("exitfullscreen");
-
+    var fullScreenButton = document.getElementById("fullscreengame");
+    fullScreenButton.style.display = "none";
     originalContainerStyles = {
         position: iframeContainer.style.position,
         width: iframeContainer.style.width,
@@ -28,8 +28,8 @@ function toggleFullScreen() {
 
 function exitFullScreen() {
     var iframeContainer = document.getElementById("iframeContainer");
-    var exitFullScreenBtn = document.getElementById("exitfullscreen");
-
+    var fullScreenButton = document.getElementById("fullscreengame");
+    fullScreenButton.style.display = "block";
     iframeContainer.style.position = originalContainerStyles.position;
     iframeContainer.style.width = originalContainerStyles.width;
     iframeContainer.style.height = originalContainerStyles.height;
