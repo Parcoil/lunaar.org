@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link id="favicon" rel="icon" type="image/png" href="/media/err.svg">
+    <link rel="stylesheet" href="css/themes.css">
 </head>
 
 <body>
@@ -69,6 +70,31 @@
       if (tabData.icon) {
       document.querySelector('link[rel="icon"]').href = tabData.icon;
       }
+      </script>
+      <script>document.addEventListener('DOMContentLoaded', function () {
+        const themeSelect = document.getElementById('themeSelect');
+      
+        // Check the saved theme from local storage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          applyTheme(savedTheme);
+          themeSelect.value = savedTheme;
+        }
+      
+        // Apply selected theme
+        themeSelect.addEventListener('change', function () {
+          const selectedTheme = themeSelect.value;
+          applyTheme(selectedTheme);
+          localStorage.setItem('theme', selectedTheme);
+        });
+      
+        function applyTheme(theme) {
+          document.body.className = ''; // Reset body classes
+          if (theme !== 'default') {
+            document.body.classList.add(theme);
+          }
+        }
+      });
       </script>
       <script>document.addEventListener('DOMContentLoaded', function () {
         const themeSelect = document.getElementById('themeSelect');

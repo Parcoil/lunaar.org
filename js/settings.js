@@ -1,3 +1,7 @@
+// Hey skid or contributor.
+// this is the script that sets tabcloaks, themes Located on the settings page.
+
+
 // Check if there is a saved tab data in localStorage
 var tab = localStorage.getItem("tab");
 

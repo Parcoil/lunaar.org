@@ -1,4 +1,7 @@
-      // Array of random text options
+     // Hey skid or contributor.
+     // This script uses Math.random() to get a random text option and display it on the index.html
+
+     // Array of random text options
       var textOptions = [
         "Homework whats that",
         "Rip 3kh0!",

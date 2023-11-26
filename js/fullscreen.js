@@ -1,3 +1,6 @@
+// Hey skid or contributor.
+// this is fullscreen script to fullscreen the iframe on the play.html page.
+
 var originalContainerStyles = {};
 var gameIframe = document.getElementById("gameIframe");
 

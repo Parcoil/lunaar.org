@@ -94,46 +94,19 @@
     <option value="default">Default</option>
     <option value="dark">Dark</option>
     <option value="blue">Ice</option>
+    <option value="purple">Purple</option>
     <option value="two">Red</option>
     <option value="pink">Pink</option>
+    <option value="oled">OLED</option>
     <!-- Add more options for different themes -->
   </select>
 <!-- Auto About Blank-->
-<p>
-<h3>about:blank on Page Load</h3>
-<p>
-<label class="switch">
-    <input type="checkbox" id="toggleAboutBlank" onclick="toggleAboutBlank()">
-    <span class="slider round"></span>
-  </label>
 </div>
 </div>
   <!-- Favicons-->
-  <script>
-    // Collect Tab Cloak data from local storage
-var tab = localStorage.getItem('tab');
-if (tab) {
-  try {
-    // Parse the data, it is in JSON
-    var tabData = JSON.parse(tab);
-  } catch {
-    var tabData = {};
-  }
-} else {
-  var tabData = {};
-}
-
-// Set the Tab title if the Tab cloak data is there
-if (tabData.title) {
-  document.title = tabData.title;
-}
-
-// Set the Tab icon if the Tab cloak data is there
-if (tabData.icon) {
-  document.querySelector('link[rel="icon"]').href = tabData.icon;
-}
+  
 </script>
-
+<script src="/js/core.js"></script>
 <script src="js/settings.js"></script>
 </body>
 </html>

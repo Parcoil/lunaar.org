@@ -1,8 +1,10 @@
+   // Hey skid or contributor.
+   // This script Fetches games.json.
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const gameUrl = urlParams.get('game');
 
-    fetch('games.json')
+    fetch('/games.json')
         .then(response => response.json())
         .then(data => {
             const gameData = data.find(game => game.url === gameUrl);

@@ -1,17 +1,21 @@
+/* Hey skid or contributer this is the main css file for the whole website.
+ if you are looking for themes there in "themes.css"*/
+
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@400;500&display=swap');
 
 @font-face {
 	font-family: 'Croogla 4F';
 	src: url(c/ss/fonts/Croogla4F.eot) format('embedded-opentype'),
-	url(/css/fonts/Croogla4F.eot) format('embedded-opentype'),
-	url(/css/fonts/Croogla4F.woff2) format('woff2'),
-	url(/css/fonts/Croogla4F.woff) format('woff'),
-	url(/css/fonts/Croogla4F.ttf) format('truetype');
+		url(/css/fonts/Croogla4F.eot) format('embedded-opentype'),
+		url(/css/fonts/Croogla4F.woff2) format('woff2'),
+		url(/css/fonts/Croogla4F.woff) format('woff'),
+		url(/css/fonts/Croogla4F.ttf) format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: auto;
 }
-
+/* Global */
 #favicon {
   width: 35px;
 }
@@ -40,13 +44,13 @@ body {
     transform: translateY(0);
   }
 }
-
+/* Header */
 header {
   background-color: transparent;
   padding: 20px;
   text-align: center;
 }
-
+/* Search */
 .search-container {
   position: relative;
   width: 250px; /* Adjust the width as needed */
@@ -100,34 +104,27 @@ header {
   opacity: 1; /* Show the placeholder with full opacity while typing */
 }
 
+button {
+  position: relative;
+  cursor: pointer;
+}
 
-h1 {
-  margin: 0;
-  font-family: 'Ubuntu';
+/* Headings and Links */
+h1, h2, h3, h4, h5, a, p, td, tr {
+	margin: 0;
+	font-family: 'Ubuntu';
+	font-weight: 800;
+  text-decoration: none;
+  color: white;
 }
-h2 {
-  margin: 0;
-  font-family: 'Ubuntu';
-}
-h3 {
-  margin: 0;
-  font-family: 'Ubuntu';
-}
-h4 {
-  margin: 0;
-  font-family: 'Ubuntu';
-}
-h5 {
-  margin: 0;
-  font-family: 'Ubuntu';
-}
+/* Game container */
 #gameContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
 }
-
+/* Game Card */
 .gameCard {
   width: 200px;
   margin: 10px;
@@ -156,7 +153,7 @@ h5 {
 svg {
   fill: rgb(255, 255, 255);
 }
-
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
   border-radius: 15px;
@@ -172,7 +169,7 @@ svg {
   border-radius: 15px;
   height: 2px;
 }
-
+/* Navbar */
 .navbar ul {
   list-style-type: none;
   background-color: transparent; /* Darker and semi-transparent */
@@ -233,7 +230,6 @@ svg {
 }
 .navtext {
   position: absolute;
-  height: auto;
   left: 10%;
   top: 15px;
   width: 30px;
@@ -246,6 +242,7 @@ svg {
   align-items: center;
   
 }
+/*Native logo*/
 .native {
   color: rgb(29, 130, 255);
   margin-top: 1%;
@@ -257,13 +254,15 @@ svg {
   align-items: center;
   height: 50vh; /* Adjust the height as needed */
 }
+/*Randome Text on homepage*/
 #randomText {
   color: #fff;
   font-family: 'Ubuntu';
   text-align: center;
   position: relative;
-  bottom: 160px;
+  bottom: 100px;
 }
+
 .center {
   display: flex;
   align-items: center;
@@ -297,7 +296,7 @@ svg {
   .navbar li a {
     display: block;
     padding: 10px;
-    color: rgb(42, 189, 9);
+    color: rgb(255, 255, 255);
     transition: all 0.3s ease;
   }
 
@@ -307,6 +306,7 @@ svg {
     transform: none;
     text-shadow: none;
   }
+
 
   .menu-toggle {
     display: block;
@@ -407,7 +407,7 @@ input:checked + .slider:before {
 	font-weight: bold;
 	color: #dbdbdb;
 }
-
+/*Play Page*/
 #gameIframe {
   width: 100%;
   height: 400px;
@@ -424,6 +424,7 @@ input:checked + .slider:before {
   border-bottom-right-radius: 8px;
   border-top-left-radius: 8px;
 }
+/*Button*/
 .button {
   background-color: rgb(29, 130, 255);
   border: none;
@@ -437,8 +438,8 @@ input:checked + .slider:before {
   font-size: 16px;
   border-radius: 10px;
   transition: background-color 0.3s, transform 0.2s;
-  margin-top: 10px;
-  
+  position: relative;
+  margin-top: 0;
 }
 
 .button:hover {
@@ -446,7 +447,7 @@ input:checked + .slider:before {
   transform: translateY(-3px);
   
 }
-
+/*Cloaks*/
 #premadecloaks {
   background-color: rgb(29, 130, 255);
   border: none;
@@ -467,7 +468,7 @@ input:checked + .slider:before {
   transform: translateY(-3px);
 
 }
-
+/*Themes*/
 #themeSelect {
   background-color: rgb(29, 130, 255);
   border: none;
@@ -489,6 +490,7 @@ input:checked + .slider:before {
   
 
 }
+/*Settings Page*/
 #settings {
   display: flex;
   flex-direction: column;
@@ -512,7 +514,7 @@ input[type=settings]:focus{
   border-color:dodgerBlue;
   box-shadow:0 0 8px 0 dodgerBlue;
 }
-
+/*Apps Page*/
 #appContainer {
   display: flex;
   flex-wrap: wrap;
@@ -534,3 +536,61 @@ input[type=settings]:focus{
 #themeSelect {
   font-family: 'Ubuntu', sans-serif;
 }
+
+ .rwd-table {
+      color: #aea1ce;
+      border-radius: 25px;
+      overflow: hidden;
+      margin: 0 auto;
+      max-width: 800px;
+     
+    }
+    
+    .rwd-table tr {
+      border-color: #aea1ce;
+      text-align: center;
+    }
+    
+    .rwd-table th,
+    .rwd-table td {
+      margin: .5em 1em;
+      padding: 1em;
+      background-color: #22282b;
+     
+    }
+    
+    .rwd-table td:before {
+      color: #3da6ae;
+      font-weight: bold;
+      margin-right: 0.5em;
+    }
+    
+    .rwd-table a {
+      color: rgb(29, 130, 255);
+
+    }
+    
+    
+    @media (min-width: 480px) {
+      .rwd-table th,
+      .rwd-table td {
+        display: table-cell;
+        margin: 0;
+        padding: 1em !important;
+      }
+    
+      .rwd-table th:first-child,
+      .rwd-table td:first-child {
+        padding-left: 0;
+      }
+    
+      .rwd-table th:last-child,
+      .rwd-table td:last-child {
+        padding-right: 0;
+      }
+    
+      .rwd-table td:before {
+        display: none;
+      }
+    }
+    

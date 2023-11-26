@@ -22,7 +22,7 @@
   <nav class="navbar" >
     <h1 class="navtext">native.</h1>
       <ul>
-          <li><a href="./">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="projects.html">Games</a></li>
           <li><a href="bookmarklets.html">Bookmarklets</a></li>
           <li><a href="apps.html">Apps</a></li>
@@ -33,62 +33,22 @@
   </nav>
     <h1 class="center">Games</h1>
     <div class="search-container">
-    <span class="search-icon">&#128269;</span>
-    <input type="text" id="searchBar" placeholder="Search 130+ Games..">
-    </div>
+    
+      <span class="search-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+      </span>
+      
+      <input type="text" id="searchBar" placeholder="Search 130+ Games">
+      
+      </div>
     <div id="gameContainer" rel="grow" style="font-family: Ubuntu, sans-serif;font-weight: bold;">
         <span style="font-family: Ubuntu, sans-serif;">
             <strong>Loading games or json error</strong>
         </span>
     </div>
-    <script>
-        // Collect Tab Cloak data from local storage
-    var tab = localStorage.getItem('tab');
-    if (tab) {
-      try {
-        // Parse the data, it is in JSON
-        var tabData = JSON.parse(tab);
-      } catch {
-        var tabData = {};
-      }
-    } else {
-      var tabData = {};
-    }
-    
-    // Set the Tab title if the Tab cloak data is there
-    if (tabData.title) {
-      document.title = tabData.title;
-    }
-    
-    // Set the Tab icon if the Tab cloak data is there
-    if (tabData.icon) {
-      document.querySelector('link[rel="icon"]').href = tabData.icon;
-    }
-    </script>
-    <script>document.addEventListener('DOMContentLoaded', function () {
-      const themeSelect = document.getElementById('themeSelect');
-    
-      // Check the saved theme from local storage
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        applyTheme(savedTheme);
-        themeSelect.value = savedTheme;
-      }
-    
-      // Apply selected theme
-      themeSelect.addEventListener('change', function () {
-        const selectedTheme = themeSelect.value;
-        applyTheme(selectedTheme);
-        localStorage.setItem('theme', selectedTheme);
-      });
-    
-      function applyTheme(theme) {
-        document.body.className = ''; // Reset body classes
-        if (theme !== 'default') {
-          document.body.classList.add(theme);
-        }
-      }
-    });
-    </script>
+    <center>
+    <h3 style="margin-bottom: 25px; left: 50%; ">imagine hiting the end</h3>
+  </center>
+  <script src="/js/core.js"></script
 </body>
 </html>
