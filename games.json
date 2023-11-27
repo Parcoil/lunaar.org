@@ -5,7 +5,7 @@
       "url": "request"
     },
     {
-      "name": "1v1",
+      "name": "1v1.lol",
       "image": "https://gms.speedpl.us/1v1/gameicon.jpg",
       "url": "https://gms.speedpl.us/1v1"
     },
@@ -85,12 +85,12 @@
       "url": "https://gms.speedpl.us/bigredbutton"
     },
     {
-      "name": "Bit life",
+      "name": "Bitlife",
       "image": "https://gms.speedpl.us/bitlife/gameicon.png",
       "url": "https://gms.speedpl.us/bitlife"
     },
     {
-      "name": "Block post",
+      "name": "Blockpost",
       "image": "https://gms.speedpl.us/blockpost/gameicon.png",
       "url": "https://gms.speedpl.us/blockpost"
     },
@@ -115,7 +115,7 @@
       "url": "https://gms.speedpl.us/bmd"
     },
     {
-      "name": "Bomb hopper",
+      "name": "Bombhopper",
       "image": "https://gms.speedpl.us/bombhopper/gameicon.png",
       "url": "https://gms.speedpl.us/bombhopper"
     },
@@ -276,7 +276,7 @@
     },
     {
       "name": "Ducklife 2",
-      "image": "https://gms.speedpl.us/Ducklife2/ducklife2.png",
+      "image": "https://gms.speedpl.us/ducklife2/gameicon.jpg",
       "url": "https://gms.speedpl.us/ducklife2"
     },
     {
@@ -440,12 +440,12 @@
     "url": "https://gms.speedpl.us/mariovsluigi"
     },
     {
-    "name": "Minecraft",
+    "name": "Minecraft 1.5",
     "image": "https://gms.speedpl.us/mc/gameicon.png",
     "url": "https://gms.speedpl.us/mc"
     },
     {
-    "name": "merge-round-racers",
+    "name": "Merge round racers",
     "image": "https://gms.speedpl.us/merge-round-racers/gameicon.png",
     "url": "https://gms.speedpl.us/merge-round-racers"
     },
@@ -460,42 +460,42 @@
     "url": "https://gms.speedpl.us/minitrain"
     },
     {
-    "name": "monkey-mart",
+    "name": "Monkey mart",
     "image": "https://gms.speedpl.us/monkey-mart/gameicon.png",
     "url": "https://gms.speedpl.us/monkey-mart"
     },
     {
-    "name": "motox3m",
+    "name": "Motox3m",
     "image": "https://gms.speedpl.us/motox3m/gameicon.jpg",
     "url": "https://gms.speedpl.us/motox3m"
     },
     {
-    "name": "motox3mpoolparty",
+    "name": "Motox3m poolparty",
     "image": "https://gms.speedpl.us/motox3mpoolparty/gameicon.jpg",
     "url": "https://gms.speedpl.us/motox3mpoolparty"
     },
     {
-    "name": "motox3mspookyland",
+    "name": "Motox3m spookyland",
     "image": "https://gms.speedpl.us/motox3mspookyland/gameicon.jpg",
     "url": "https://gms.speedpl.us/motox3mspookyland"
     },
     {
-    "name": "motox3mwinter",
+    "name": "Motox3m winter",
     "image": "https://gms.speedpl.us/motox3mwinter/gameicon.jpg",
     "url": "https://gms.speedpl.us/motox3mwinter"
     },
     {
-    "name": "ovo",
+    "name": "OvO",
     "image": "https://gms.speedpl.us/ovo/gameicon.png",
     "url": "https://gms.speedpl.us/ovo"
     },
     {
-    "name": "paintstrike",
+    "name": "Paint strike",
     "image": "https://gms.speedpl.us/paintstrike/gameicon.jpeg",
     "url": "https://gms.speedpl.us/paintstrike"
     },
     {
-    "name": "papasb",
+    "name": "papas Burgeria",
     "image": "https://gms.speedpl.us/papasb/gameicon.jpg",
     "url": "https://gms.speedpl.us/papasb"
     },
@@ -505,47 +505,42 @@
     "url": "https://gms.speedpl.us/papasburgeria"
     },
     {
-    "name": "papaspizzaria",
+    "name": "Papas Pizzaria",
     "image": "https://gms.speedpl.us/papaspizzaria/gameicon.jpg",
     "url": "https://gms.speedpl.us/papaspizzaria"
     },
     {
-    "name": "paperio2",
+    "name": "Paperio 2",
     "image": "https://gms.speedpl.us/paperio2/gameicon.jpg",
     "url": "https://gms.speedpl.us/paperio2"
     },
     {
-    "name": "precision-client",
+    "name": "Precision Client (minecraft) ",
     "image": "https://gms.speedpl.us/precision-client/gameicon.png",
     "url": "https://gms.speedpl.us/precision-client"
     },
     {
-      "name": "retrob",
+      "name": "Retro Bowl",
       "image": "https://gms.speedpl.us/retrob/gameicon.jpg",
       "url": "https://gms.speedpl.us/retrob"
     },
     {
-      "name": "retro-bowl",
-      "image": "https://gms.speedpl.us/retro-bowl/gameicon.jpg",
-      "url": "https://gms.speedpl.us/retro-bowl"
-    },
-    {
-      "name": "robogo",
+      "name": "Robogo",
       "image": "https://gms.speedpl.us/robogo/gameicon.png",
       "url": "https://gms.speedpl.us/robogo"
     },
     {
-      "name": "rocketsoccerderby",
+      "name": "Rocket soccer derby",
       "image": "https://gms.speedpl.us/rocketsoccerderby/gameicon.png",
       "url": "https://gms.speedpl.us/rocketsoccerderby"
     },
     {
-      "name": "rooftop",
+      "name": "Rooftop Snipers",
       "image": "https://gms.speedpl.us/rooftop/img/thumb.png",
       "url": "https://gms.speedpl.us/rooftop"
     },
     {
-      "name": "run",
+      "name": "run 3",
       "image": "https://gms.speedpl.us/run/gameicon.png",
       "url": "https://gms.speedpl.us/run"
     },
@@ -555,7 +550,7 @@
       "url": "https://gms.speedpl.us/run3"
     },
     {
-      "name": "shellshock",
+      "name": "Shellshockers",
       "image": "https://gms.speedpl.us/shellshock/gameicon.jpg",
       "url": "https://gms.speedpl.us/shellshock"
     },
@@ -610,7 +605,7 @@
       "url": "https://gms.speedpl.us/stickman"
     },
     {
-      "name": "Stuntcars",
+      "name": "Stunt cars",
       "image": "https://gms.speedpl.us/stuntcars/gameicon.png",
       "url": "https://gms.speedpl.us/stuntcars"
     },
@@ -650,7 +645,7 @@
       "url": "https://gms.speedpl.us/tanuki-sunset"
     },
     {
-      "name": "tdh",
+      "name": "Thirty dollar haircut",
       "image": "https://gms.speedpl.us/tdh/gameicon.png",
       "url": "https://gms.speedpl.us/tdh"
     },
@@ -665,72 +660,72 @@
       "url": "tetris"
     },
     {
-      "name": "ting",
+      "name": "There is no Game",
       "image": "https://gms.speedpl.us/ting/gameicon.png",
       "url": "ting"
     },
     {
-      "name": "tiny-fishing",
+      "name": "Tiny fishing",
       "image": "https://gms.speedpl.us/tiny-fishing/gameicon.png",
       "url": "tiny-fishing"
     },
     {
-      "name": "townscaper",
+      "name": "Townscaper",
       "image": "https://gms.speedpl.us/townscaper/gameicon.png",
       "url": "https://gms.speedpl.us/townscaper"
     },
     {
-      "name": "trafficjam",
+      "name": "Trafficjam 3D",
       "image": "https://gms.speedpl.us/trafficjam/gameicon.jpg",
       "url": "https://gms.speedpl.us/trafficjam"
     },
     {
-      "name": "tunnelrush",
+      "name": "Tunnelrush",
       "image": "https://gms.speedpl.us/tunnelrush/gameicon.png",
       "url": "https://gms.speedpl.us/tunnelrush"
     },
     {
-      "name": "vengeio",
+      "name": "Vengeio",
       "image": "https://gms.speedpl.us/vengeio/gameicon.png",
       "url": "https://gms.speedpl.us/vengeio"
     },
     {
-      "name": "vex3",
+      "name": "Vex3",
       "image": "https://gms.speedpl.us/vex3/gameicon.jpg",
       "url": "https://gms.speedpl.us/vex3"
     },
     {
-      "name": "vex4",
+      "name": "Vex4",
       "image": "https://gms.speedpl.us/vex4/gameicon.jpg",
       "url": "https://gms.speedpl.us/vex4"
     },
     {
-      "name": "vex5",
+      "name": "Vex5",
       "image": "https://gms.speedpl.us/vex5/gameicon.jpg",
       "url": "https://gms.speedpl.us/vex5"
     },
     {
-      "name": "vex6",
+      "name": "Vex6",
       "image": "https://gms.speedpl.us/vex6/gameicon.jpg",
       "url": "https://gms.speedpl.us/vex6"
     },
     {
-      "name": "vex7",
+      "name": "Vex7",
       "image": "https://gms.speedpl.us/vex7/gameicon.png",
       "url": "https://gms.speedpl.us/vex7"
     },
     {
-      "name": "volley-random",
+      "name": "Volley random",
       "image": "https://gms.speedpl.us/volley-random/gameicon.png",
       "url": "https://gms.speedpl.us/volley-random"
     },
     {
-      "name": "vortelli",
+      "name": "Vortelli's Pizza",
       "image": "https://gms.speedpl.us/vortelli/gameicon.png",
       "url": "https://gms.speedpl.us/vortelli"
     },
     {
-      "name": "wordle",
+      "name": "Wordle",
       "image": "https://gms.speedpl.us/wordle/gameicon.png",
       "url": "https://gms.speedpl.us/wordle"
     },

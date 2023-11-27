@@ -15,6 +15,12 @@
 	font-style: normal;
 	font-display: auto;
 }
+@font-face {
+  font-family: 'bone';
+  src: url('/css/fonts/nasalization-rg.otf') format('opentype');
+  /* Add additional font formats if needed */
+  /* Other font properties like font-weight and font-style can also be specified */
+}
 /* Global */
 #favicon {
   width: 35px;
@@ -70,15 +76,18 @@ header {
   font-family: 'Ubuntu', sans-serif; /* Use the Ubuntu font */
   outline: none; /* Remove the default focus outline */
   transition: box-shadow 0.3s, background-color 0.3s;
+  justify-content: center;
+  text-align: center;
+  color: #000;
 }
 
 
 .search-icon {
   position: absolute;
-  left: 6px; /* Adjust the left position as needed */
-  top: 50%;
+  left: 10px; /* Adjust the left position as needed */
+  top: 55%;
   transform: translateY(-50%);
-  color: #f0f0; /* Color for the magnifying glass icon */
+  color: rgba(0, 0, 0, 0); /* Color for the magnifying glass icon */
 }
 
 #searchBar:focus,
@@ -88,13 +97,13 @@ header {
 }
 
 #searchBar::placeholder {
-  color: #1a2023; /* Set the placeholder text color */
+  color: #000000; /* Set the placeholder text color */
   transition: color 0.3s ease-in-out; /* Add transition to the placeholder color */
 }
 
 #searchBar:focus::placeholder,
 #searchBar:hover::placeholder {
-  color: #558ed4; /* Adjust the placeholder color on focus/hover as needed */
+  color: #000000; /* Adjust the placeholder color on focus/hover as needed */
 }
 #searchBar:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adjust the focus shadow as needed */
@@ -140,8 +149,9 @@ h1, h2, h3, h4, h5, a, p, td, tr {
 
 .gameCard img {
   width: 100%;
-  height: auto;
+  height: 85%;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 .gameCard h3 {
@@ -455,7 +465,8 @@ input:checked + .slider:before {
   border: none;
   color: white;
   padding: 15px 32px;
-  
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -468,7 +479,7 @@ input:checked + .slider:before {
 #premadecloaks:hover {
   background-color: rgba(29, 130, 255, 0.8);
   transform: translateY(-3px);
-
+  
 }
 /*Themes*/
 #themeSelect {
@@ -492,6 +503,7 @@ input:checked + .slider:before {
   
 
 }
+
 /*Settings Page*/
 #settings {
   display: flex;
@@ -595,4 +607,38 @@ input[type=settings]:focus{
         display: none;
       }
     }
+    .search-bar {
+      width: 300px;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: none;
+    }
+    #uv-address {
+      background: none;
+      font-family: inherit;
+      padding: 0px 17px;
+      height: 48px;
+      border: 1px solid rgb(255, 255, 255, 0.2);
+      color: var(--text-color);
+      border-radius: 3px;
+      outline: none;
+      width: 350px;
+      margin-top: 5px;
+      border-radius: 50px;
+      color: #fff;
+      transition: border-radius 0.1s;
+    }
     
+    #uv-address:focus {
+      border: 1px solid rgba(253, 253, 253, 0.514);
+      border-radius: 6px;
+    }
+
+    select {
+      text-align: center;
+      text-align-last: center;
+    }
+    option {
+      text-align: left;
+    }

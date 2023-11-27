@@ -1,6 +1,3 @@
-// Hey skid or contributor.
-// This script gets the games from games.json and genarates html on the projects.html page.
-
 document.addEventListener("DOMContentLoaded", function() {
     const gameContainer = document.getElementById("gameContainer");
     const searchBar = document.getElementById("searchBar");
@@ -8,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch("/games.json")
         .then(response => response.json())
         .then(data => {
+            // Update placeholder with game count
+            searchBar.placeholder = `Search among ${data.length} games`;
+            
             displayGames(data);
             searchBar.addEventListener("keyup", function() {
                 const searchTerm = searchBar.value.toLowerCase();

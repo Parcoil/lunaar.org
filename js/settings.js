@@ -135,7 +135,7 @@ function setCloak() { // applies only to premade cloaks
       break;
     case "drive": // Google Drive
       setTitle("My Drive - Google Drive");
-      setFavicon("/media/cloaks/Google Drive.ico");
+      setFavicon("/media/cloaks/GoogleDrive.ico");
       location.reload();
       break;
       case "librex": // LibreX
@@ -165,7 +165,7 @@ function setCloak() { // applies only to premade cloaks
       break;
     case "classroom": // Google Classroom
       setTitle("Classes");
-      setFavicon("/media/cloaks/Classroom.png");
+      setFavicon("./media/cloaks/Classroom.png");
       location.reload();
       break;
     case "canvas": // Canvas 
@@ -244,7 +244,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // end themes
-
+function showccdrop() {
+  document.getElementById("ccdrop").classList.toggle("show");
+}
 
 const toggleButton = document.getElementById("toggleAboutBlank");
 
