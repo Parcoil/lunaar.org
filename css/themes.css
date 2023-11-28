@@ -68,6 +68,9 @@ body {
   {
 color: #fff
   }
+  body.dark .card {
+    background-color: #444444;
+  }
   /* Add more theme-specific styles for other themes as needed */
   
   /* Add more theme-specific styles for other themes as needed */
@@ -119,6 +122,9 @@ color: #fff
       body.two .rwd-table th,
       .rwd-table td {
         background-color: #2e3f4e;
+      }
+      body.two .card {
+        background-color: red;
       }
           /* Pink Theme */
     body.pink {
@@ -236,7 +242,9 @@ color: #fff;
     body.oled::-webkit-scrollbar-thumb {
       background: #fff;
     }
-    
+    body.oled .card{
+background-color: #1b1b1b;
+    }
     body.purple {
       background: #10002b;
     }
@@ -289,6 +297,9 @@ color: #fff;
     }
     body.purple::-webkit-scrollbar-thumb {
       background: #250758;
+    }
+    body.purple .card {
+      background-color: #5a189a;
     }
     body.bone {
       font-family: 'bone';
@@ -351,6 +362,10 @@ font-family: 'bone';
     body.bone::-webkit-scrollbar-thumb {
       background: #fff;
     }
+    body.bone .card{
+    background-color: #000;
+
+    }
     body.cat {
       background-color: #E4E4D8;
 
@@ -397,4 +412,7 @@ color: #31343A;
     body.cat #randomText {
       color: #31343A;
 
+    }
+    body.cat .card {
+      background-color: #EAE895;
     }

@@ -1,6 +1,6 @@
    // Hey skid or contributor.
    // This script Fetches games.json.
-document.addEventListener('DOMContentLoaded', function () {
+   document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const gameUrl = urlParams.get('game');
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.title = `${gameData.name} | Nativegames`;
             document.getElementById('gamename').innerText = gameData.name;
             document.getElementById('favicon').href = gameData.image;
-            document.getElementById('gameIframe').src = `${gameUrl}`;
+            document.getElementById('gameIframe').src = `https://gms.speedpl.us/${gameUrl}`;
         })
         .catch(error => console.error('Error fetching game data:', error));
 });

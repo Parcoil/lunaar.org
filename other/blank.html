@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+      function createBlank() {
+        win = window.open();
+        win.document.body.style.margin = "0";
+        win.document.body.style.height = "100vh";
+        var iframe = win.document.createElement("iframe");
+        iframe.style.border = "none";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.margin = "0";
+        iframe.referrerpolicy = "no-referrer";
+        iframe.allow = "fullscreen";
+        iframe.src = location.origin;
+        win.document.body.appendChild(iframe);
+        window.location.href = "https://www.google.com/search?q=what+day+is+today&sca_esv=581431342&sxsrf=AM9HkKnsl0feyzKIpdulkVpXQNXPwptXpw%3A1699678317841&source=hp&ei=bQhPZeiYMf3IkPIPm7uygAo&iflsig=AO6bgOgAAAAAZU8WfRg6vTkZXqusEAEvKU4ZcMXV2-8r&oq=what+day+is+tod&gs_lp=Egdnd3Mtd2l6Ig93aGF0IGRheSBpcyB0b2QqAggAMgsQABiKBRixAxiRAjIFEAAYgAQyBRAAGIAEMgUQABiABDILEAAYgAQYsQMYgwEyBRAAGIAEMgQQABgDMgUQABiABDIFEAAYgAQyBRAAGIAESOYhUIgDWJAZcAF4AJABAJgBcKAByAuqAQM5Lja4AQHIAQD4AQGoAgrCAgcQIxjqAhgnwgIHECMYigUYJ8ICDhAAGIoFGLEDGIMBGJECwgIREC4YgAQYsQMYgwEYxwEY0QPCAgsQABiKBRixAxiDAcICCBAAGIoFGJECwgILEC4YigUYsQMYgwHCAgUQLhiABMICBBAjGCfCAggQABiABBixAw&sclient=gws-wiz"
+      }
+      createBlank();
+    </script>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+</html>

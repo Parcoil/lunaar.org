@@ -3,6 +3,7 @@
 
 var originalContainerStyles = {};
 var gameIframe = document.getElementById("gameIframe");
+var exitFullscreenButton = document.getElementById("exitfullscreen");
 
 function toggleFullScreen() {
     var iframeContainer = document.getElementById("iframeContainer");
@@ -21,12 +22,16 @@ function toggleFullScreen() {
     iframeContainer.style.height = "100vh"; // Use viewport units for height
     iframeContainer.style.top = "0";
     iframeContainer.style.left = "0";
-    iframeContainer.style.zIndex = "9999";
+    iframeContainer.style.zIndex = "9998";
     gameIframe.style.height = "100%";
-    exitFullScreenBtn.style.display = "block";
+    
+    exitFullscreenButton.style.display = "block";
+    exitFullscreenButton.style.zIndex = "9999";
 }
 
-function exitFullScreen() {
+var exitFullscreenbtn = document.getElementById("exitfullscreen");
+
+exitFullscreenbtn.onclick = function() {
     var iframeContainer = document.getElementById("iframeContainer");
     var fullScreenButton = document.getElementById("fullscreengame");
     fullScreenButton.style.display = "block";
@@ -37,5 +42,7 @@ function exitFullScreen() {
     iframeContainer.style.left = originalContainerStyles.left;
     iframeContainer.style.zIndex = originalContainerStyles.zIndex;
     gameIframe.style.height = "400px";
-    exitFullScreenBtn.style.display = "none";
+    gameIframe.style.width = "100%";
+
+    exitFullscreenButton.style.display = "none";  
 }
