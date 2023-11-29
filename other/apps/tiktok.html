@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tiktok - Apps | 𝙉𝙖𝙩𝙞𝙫𝙚</title>
+
+    
+    
+    <script>
+      if (typeof navigator.serviceWorker !== "undefined") {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8NZMM8WN9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-W8NZMM8WN9");
+    </script>
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Native" />
+    <meta name="apple-mobile-web-app-title" content="Native" />
+    <meta name="theme-color" content="#0275d8" />
+    <meta name="msapplication-navbutton-color" content="#0275d8" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="msapplication-starturl" content="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="icon" type="image/png" sizes="195x253" href="images/native.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="195x253" href="images/native.png" />
+  </head>
+  <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    html {
+      background: url(./media/background.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+
+  <body>
+    <iframe
+      src="https://proxc.minoa.cat/?link=aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9leHBsb3Jl"
+      style="position: fixed; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none; margin: 0; padding: 0; overflow: hidden; z-index: 999999;"
+    >
+      Your browser doesn't support iframes
+    </iframe>
+  </body>
+</html>

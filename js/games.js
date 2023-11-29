@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const gameImg = document.createElement("img");
             gameImg.src = game.image;
             gameImg.addEventListener('click', function() {
-                window.location.href = '/play.html?game=' + encodeURIComponent(game.url);
+                window.location.href = '/play?game=' + encodeURIComponent(game.url);
             });
             gameCard.appendChild(gameImg);
 

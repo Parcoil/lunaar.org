@@ -270,7 +270,7 @@ svg {
   font-family: 'Ubuntu';
   text-align: center;
   position: relative;
-  bottom: 100px;
+  bottom: 150px;
 }
 
 .center {
@@ -547,7 +547,7 @@ input[type=settings]:focus{
 
 #mathquiz {
   position: relative;
-  top: 350px;
+  top: 450px;
   cursor: pointer;
 }
 
