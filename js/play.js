@@ -12,7 +12,7 @@
             document.title = `${gameData.name} | Nativegames`;
             document.getElementById('gamename').innerText = gameData.name;
             document.getElementById('favicon').href = gameData.image;
-            document.getElementById('gameIframe').src = `https://gms-zeta.vercel.app/${gameUrl}`;
+            document.getElementById('gameIframe').src = `https://gms-zeta.vercel.app/${gameUrl}/`;
         })
         .catch(error => console.error('Error fetching game data:', error));
 });
