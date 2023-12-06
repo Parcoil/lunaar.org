@@ -223,7 +223,6 @@ svg {
 .navbar a:hover {
   background-color: rgb(29, 130, 255);
   transform: scale(1.05);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 15px; /* Rounded corners on hover */
 }
 
@@ -434,6 +433,7 @@ top: 20px;
   background: none;
   cursor: pointer;
   z-index: 9999;
+  color: #fff;
 }
 #exitfullscreen {
   color: #800000;
@@ -651,3 +651,7 @@ input[type=settings]:focus{
     option {
       text-align: left;
     }
+
+#gamename {
+  color: white;
+}
