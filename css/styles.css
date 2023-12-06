@@ -655,3 +655,7 @@ input[type=settings]:focus{
 #gamename {
   color: white;
 }
+.adsbygoogle {
+  justify-content: center;
+  text-align: center;
+}
