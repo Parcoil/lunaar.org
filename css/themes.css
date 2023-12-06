@@ -186,6 +186,13 @@ color: #000;
     body.pink #randomText {
       color: #000;
     }
+    body.pink .card {
+      background-color: rgb(255, 209, 217);
+    }
+    body.pink #gamename, 
+    body.pink #fullscreengame {
+color: #000;
+    }
     /* Oled Theme */
     body.oled {
       background-color: #000;
@@ -415,4 +422,9 @@ color: #31343A;
     }
     body.cat .card {
       background-color: #EAE895;
+    }
+    body.cat #gamename, 
+    body.cat #fullscreengame {
+color: #31343A;
+
     }
