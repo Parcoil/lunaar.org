@@ -175,7 +175,7 @@ svg {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fff;
+  background: rgb(29, 130, 255);
   border-radius: 15px;
   height: 2px;
 }
@@ -655,7 +655,4 @@ input[type=settings]:focus{
 #gamename {
   color: white;
 }
-.adsbygoogle {
-  justify-content: center;
-  text-align: center;
-}
+
