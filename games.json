@@ -5,6 +5,24 @@
       "url": "/other/form"
     },
     {
+      "name": "Rocket Bot Royale",
+      "image": "https://gms.speedpl.us/rocketbotroyale/index.icon.png",
+      "url": "rocketbotroyale",
+      "new": true
+  },
+  {
+      "name": "Super Mario 63",
+      "image": "https://gms.speedpl.us/sm63/index.icon.png",
+      "url": "sm63",
+      "new": true
+  },
+  {
+      "name": "Thing thing arena",
+      "image": "https://gms.speedpl.us/swfs/thing-thing-arena.png",
+      "url": "/swfs/thing-thing-arena.swf",
+      "new": true
+  },
+    {
       "name": "1v1.lol",
       "image": "https://gms.speedpl.us/1v1/gameicon.jpg",
       "url": "1v1"
