@@ -92,8 +92,7 @@ header {
 
 #searchBar:focus,
 #searchBar:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the focus/hover shadow as needed */
-  background-color: #e0e0e0; /* Adjust the background color on focus/hover as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the focus/hover shadow as needed */ /* Adjust the background color on focus/hover as needed */
 }
 
 #searchBar::placeholder {
