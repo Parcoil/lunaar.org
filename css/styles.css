@@ -25,7 +25,10 @@
 #favicon {
   width: 35px;
 }
-
+:root {
+  --background:#1a2023;
+  --logo: rgb(29, 130, 255);
+}
 body {
   margin: 0;
   padding: 0;
@@ -206,7 +209,11 @@ svg {
 .navbar ul:hover {
   background-color: transparent;
 }
-
+li {
+  text-decoration: none;
+  color: rgb(219, 219, 219);
+  list-style-type: none;
+}
 .navbar a {
   color: rgb(219, 219, 219);
   text-decoration: none;
@@ -219,10 +226,12 @@ svg {
   border-radius: 5px; /* Rounded corners on hover */
 }
 
+
 .navbar a:hover {
   background-color: rgb(29, 130, 255);
   transform: scale(1.05);
-  border-radius: 15px; /* Rounded corners on hover */
+  border-radius: 15px;
+  color: #fff; /* Rounded corners on hover */
 }
 
 .navbar li {
@@ -282,7 +291,7 @@ svg {
 
 /* Hide Nav bar on small displays*/
 @media screen and (max-width: 768px) {
-  .navbar ul {
+  .navbar {
     display: none;
     position: absolute;
     top: 100%; /* Position it below the navbar */
@@ -660,4 +669,97 @@ input[type=settings]:focus{
   padding: 4px 8px;
   text-align: center;
   border-radius: 5px;
+}
+.dropbtn {
+  background-color: transparent;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  color: rgb(219, 219, 219);
+  padding: 15px;
+  font-size: 16px;
+
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  color: black;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  border-radius: 15px;
+  background-color: rgb(29, 130, 255);
+  color: #fff;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: var(--background);
+  margin: auto;
+  padding: 20px;
+  border: 2px dashed #888;
+  width: 80%;
+  height: 400px;
+  border-radius: 15px;
+  color: #000;
+}
+.modal-content h3,
+.modal-content h1 {
+
+  color: #fff;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  margin-top: -3%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

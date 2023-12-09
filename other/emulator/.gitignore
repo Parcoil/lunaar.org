@@ -1,0 +1,6 @@
+**/node_modules/
+*.db
+roms/
+yarn.lock
+package-lock.json
+.vscode/settings.json
