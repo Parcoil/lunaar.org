@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Ultraviolet | Sophisticated Web Proxy</title>
+    <meta
+      name="description"
+      content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!"
+    />
+    <meta
+      name="keywords"
+      content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#434c5e"
+    />
+    <meta name="googlebot" content="index, follow, snippet" />
+    <link rel="shortcut icon" content="favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Ultraviolet (Web Proxy)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I unblock sites using Ultraviolet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simply head to an official site featuring Ultraviolet such as Holy Unblocker or Incognito! You can also self-host Ultraviolet on your own web server for maximum privacy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if Ultraviolet is blocked or not working?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Join the Titanium Network Discord at discord.gg/unblock!"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div
+      title="Ultraviolet Logo"
+      class="flex-center logo-wrapper header-center"
+    >
+      <img class="logo" src="uv.png" alt="Ultraviolet" />
+      <h1>Ultraviolet | TN</h1>
+    </div>
+    <div class="flex-center desc">
+      <p>
+        Ultraviolet is highly sophisticated proxy used for evading internet
+        censorship.
+      </p>
+    </div>
+
+    <form id="uv-form" class="flex-center">
+      <input
+        id="uv-search-engine"
+        value="https://www.google.com/search?q=%s"
+        type="hidden"
+      />
+      <input id="uv-address" type="text" placeholder="Search the web freely" />
+    </form>
+    <div class="desc left-margin">
+      <p id="uv-error"></p>
+      <pre id="uv-error-code"></pre>
+    </div>
+    <footer>
+      <a
+        title="The TitaniumNetwork GitHub organization"
+        href="https://github.com/titaniumnetwork-dev"
+        >TitaniumNetwork</a
+      >
+      <a title="The TitaniumNetwork Discord" href="https://discord.gg/unblock"
+        >Discord</a
+      >
+      <a
+        title="The TompHTTP GitHub organization"
+        href="https://github.com/tomphttp"
+        >TompHTTP</a
+      >
+      <a
+        title="The official deployment repository for Ultraviolet"
+        href="https://github.com/titaniumnetwork-dev/Ultraviolet-App"
+        >GitHub</a
+      >
+      <a
+        title="License information"
+        href="credits.html"
+        style="margin-left: auto"
+        >Credits</a
+      >
+      <span>Ultraviolet &copy; TN 2023</span>
+    </footer>
+  </body>
+</html>
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+
+    body {
+      font-family: "Roboto", Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    .fa-magnifying-glass {
+      color: white;
+    }
+    
+    .flex-center {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .header-center {
+      align-items: center;
+      flex-direction: column;
+      margin-top: 10%;
+    }
+    
+    .left-margin {
+      margin: 0px 16px;
+    }
+    
+    #uv-error {
+      color: #ff6666 !important;
+      white-space: pre-wrap;
+    }
+    
+    #uv-error-code {
+      font-size: 12px;
+      color: #fff;
+      font-family: "Courier New", Courier, monospace;
+    }
+    
+    #uv-register-sw {
+      color: white;
+      background: #555555;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      border-radius: 6px;
+      padding: 16px 20px;
+      line-height: 16px;
+      display: none;
+    }
+    
+    #uv-register-sw:active {
+      background: #333333;
+    }
+    
+    #uv-register-sw.show {
+      display: block;
+    }
+    
+    .logo {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .logo-wrapper .text {
+      font-size: 75px;
+      color: #fff;
+    }
+    
+    .logo-wrapper h1 {
+      color: white;
+    }
+    
+    footer {
+      margin-top: auto;
+      width: 93%;
+      align-self: center;
+      height: 80px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+    
+    footer a,
+    footer span {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 15px;
+    }
+    
+    footer a {
+      cursor: pointer;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    .desc p {
+      width: 560px;
+      color: rgba(253, 253, 253, 0.514);
+    }
+    
+    #uv-address {
+      background: none;
+      font-family: inherit;
+      padding: 0px 17px;
+      height: 48px;
+      border: 1px solid rgb(255, 255, 255, 0.2);
+      color: var(--text-color);
+      border-radius: 3px;
+      outline: none;
+      width: 350px;
+      margin-top: 5px;
+      border-radius: 50px;
+      color: #fff;
+      transition: border-radius 0.1s;
+    }
+    
+    #uv-address:focus {
+      border: 1px solid rgba(253, 253, 253, 0.514);
+      border-radius: 6px;
+    }
+    
+    .credit {
+      border-radius: 10px;
+      padding: 10px;
+      display: block;
+      border: #fff 1px solid;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+    
+    .credit label {
+      margin-left: auto;
+      margin-right: 15px;
+    }
+    
+    .credit a,
+    .credit label {
+      color: white;
+      text-decoration: underline;
+      text-align: right;
+    }
+    
+    .credit pre {
+      display: none;
+      width: 100%;
+    }
+    
+    .credit label::after {
+      content: "show license";
+      cursor: pointer;
+    }
+    
+    .credit input:checked + label::after {
+      content: "hide license";
+    }
+    
+    .credit input:checked ~ pre {
+      display: block;
+    }
+    </style>
