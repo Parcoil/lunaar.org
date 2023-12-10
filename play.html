@@ -1,73 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Game Not Found!?</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel ="stylesheet" href="/css/themes.css">
-    <link rel="icon" type="image/png" sizes="512x512" id="favicon" href="/media/nativelogotrans.png">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="/css/themes.css" />
+    <link rel="icon" type="image/png" sizes="512x512" id="favicon" href="/media/nativelogotrans.png" />
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W8NZMM8WN9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-W8NZMM8WN9');
-</script>
-<nav class="navbar" >
+  </head>
+  <nav class="navbar">
     <h1 class="navtext">native.</h1>
-      <ul>
-          <li><a href="./" class="navlink">Home</a></li>
-          <li><a href="projects">Games</a></li>
-          <li><a href="bookmarklets">Bookmarklets</a></li>
-          <li><a href="apps">Apps</a></li>
-          <li><a href="/other/blank">about:blank</a></li>
-          <li><a href="settings">Settings</a></li>
-        </ul>
+    <ul>
+      <li><a href="./" class="navlink">Home</a></li>
+      <li><a href="projects">Games</a></li>
+      <li><a href="bookmarklets">Bookmarklets</a></li>
+      <li><a href="apps">Apps</a></li>
+      <li><a href="/other/blank">about:blank</a></li>
+      <li><a href="settings">Settings</a></li>
+    </ul>
   </nav>
-    <div class="card">
-        <div id="iframeContainer">
-            <iframe id="gameIframe" src="/other/gamenotfound" frameborder="0"></iframe>
-            
-        </div>
-        <div class="card-body">
-            
-            <h2 id="gamename">Game Not Found!? </h2>
-            <Button id="fullscreengame" onclick="toggleFullScreen()"><i class="fa-solid fa-expand fa-xl"></i></Button>
-        </div>
-        <button id="exitfullscreen" class="fa-solid fa-circle-xmark fa-2xl"></button>
-       <!--JS--> 
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
-       crossorigin="anonymous"></script>
-  <!-- gamespage ver -->
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-1565760898646999"
-       data-ad-slot="9039545366"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-       <script src="/js/core.js"></script>
-       <script src="/js/settings.js"></script>
-       <script src="/js/fullscreen.js"></script>
-       <script src="/js/play.js"></script>
-       <script src="/js/core.js"></script>
+  <div class="card">
+    <div id="iframeContainer">
+      <iframe id="gameIframe" src="/other/gamenotfound" frameborder="0"></iframe>
+    </div>
+    <div class="card-body">
+      <h2 id="gamename">Game Not Found!?</h2>
+      <button id="fullscreengame" onclick="toggleFullScreen()"><i class="fa-solid fa-expand fa-xl"></i></button>
+    </div>
+    <button id="exitfullscreen" class="fa-solid fa-circle-xmark fa-2xl"></button>
+    <script src="/js/settings.js"></script>
+    <script src="/js/fullscreen.js"></script>
+    <script src="/js/play.js"></script>
+    <script src="/js/core.js"></script>
     <!--School-Security-Prevent-Tab-Close-->
     <script>
-        // This small script prevents GoGuardian and any other School security Apps from closing the tab.
-        window.addEventListener('beforeunload', function (event) {
-            event.preventDefault();
-            return (event.returnValue = "");
-        });
+      // This small script prevents GoGuardian and any other School security Apps from closing the tab.
+      window.addEventListener("beforeunload", function (event) {
+        event.preventDefault();
+        return (event.returnValue = "");
+      });
     </script>
-</body>
-
+  </div>
 </html>

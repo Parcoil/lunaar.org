@@ -2,22 +2,19 @@
  if you are looking for themes there in "themes.css"*/
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@400;500&display=swap");
 
 @font-face {
-	font-family: 'Croogla 4F';
-	src: url(c/ss/fonts/Croogla4F.eot) format('embedded-opentype'),
-		url(/css/fonts/Croogla4F.eot) format('embedded-opentype'),
-		url(/css/fonts/Croogla4F.woff2) format('woff2'),
-		url(/css/fonts/Croogla4F.woff) format('woff'),
-		url(/css/fonts/Croogla4F.ttf) format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: auto;
+  font-family: "Croogla 4F";
+  src: url(c/ss/fonts/Croogla4F.eot) format("embedded-opentype"), url(/css/fonts/Croogla4F.eot) format("embedded-opentype"), url(/css/fonts/Croogla4F.woff2) format("woff2"), url(/css/fonts/Croogla4F.woff) format("woff"),
+    url(/css/fonts/Croogla4F.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
 }
 @font-face {
-  font-family: 'bone';
-  src: url('/css/fonts/nasalization-rg.otf') format('opentype');
+  font-family: "bone";
+  src: url("/css/fonts/nasalization-rg.otf") format("opentype");
   /* Add additional font formats if needed */
   /* Other font properties like font-weight and font-style can also be specified */
 }
@@ -26,7 +23,7 @@
   width: 35px;
 }
 :root {
-  --background:#1a2023;
+  --background: #1a2023;
   --logo: rgb(29, 130, 255);
 }
 body {
@@ -39,8 +36,6 @@ body {
   align-items: center;
   justify-content: center;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  
-  
 }
 
 @keyframes fadeIn {
@@ -76,14 +71,13 @@ header {
   padding: 8px; /* Adjust the padding as needed */
   padding-left: 30px; /* Extra left padding for the icon */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow as needed */
-  font-family: 'Ubuntu', sans-serif; /* Use the Ubuntu font */
+  font-family: "Ubuntu", sans-serif; /* Use the Ubuntu font */
   outline: none; /* Remove the default focus outline */
   transition: box-shadow 0.3s, background-color 0.3s;
   justify-content: center;
   text-align: center;
   color: #000;
 }
-
 
 .search-icon {
   position: absolute;
@@ -121,10 +115,18 @@ button {
 }
 
 /* Headings and Links */
-h1, h2, h3, h4, h5, a, p, td, tr {
-	margin: 0;
-	font-family: 'Ubuntu';
-	font-weight: 800;
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p,
+td,
+tr {
+  margin: 0;
+  font-family: "Ubuntu";
+  font-weight: 800;
   text-decoration: none;
   color: white;
 }
@@ -192,7 +194,6 @@ svg {
 
   transition: background-color 0.3s;
   justify-content: center;
-  
 }
 .navbar {
   display: flex;
@@ -220,12 +221,11 @@ li {
   padding: 15px;
   display: block;
   text-align: left; /* 50% away from the left */
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s, transform 0.3s, border-radius 0.3s; /* Added border-radius transition */
   border-radius: 5px; /* Rounded corners on hover */
 }
-
 
 .navbar a:hover {
   background-color: rgb(29, 130, 255);
@@ -252,19 +252,18 @@ li {
   width: 30px;
   color: rgb(29, 130, 255);
   font-size: 30px;
-  font-family: 'Croogla 4F';
+  font-family: "Croogla 4F";
   font-weight: 300;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 /*Native logo*/
 .native {
   color: rgb(29, 130, 255);
   margin-top: 1%;
   font-size: 64px;
-  font-family: 'Croogla 4F';
+  font-family: "Croogla 4F";
   font-weight: 300;
   display: flex;
   justify-content: center;
@@ -274,7 +273,7 @@ li {
 /*Randome Text on homepage*/
 #randomText {
   color: #fff;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   text-align: center;
   position: relative;
   bottom: 150px;
@@ -287,7 +286,6 @@ li {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
 
 /* Hide Nav bar on small displays*/
 @media screen and (max-width: 768px) {
@@ -324,7 +322,6 @@ li {
     text-shadow: none;
   }
 
-
   .menu-toggle {
     display: block;
   }
@@ -344,7 +341,7 @@ li {
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -358,8 +355,8 @@ li {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -370,16 +367,16 @@ li {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
@@ -415,14 +412,14 @@ input:checked + .slider:before {
 }
 
 .card-body {
-	padding: 10px;
+  padding: 10px;
 }
 
 .card-body h2 {
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	color: #dbdbdb;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #dbdbdb;
 }
 /*Play Page*/
 #gameIframe {
@@ -435,8 +432,8 @@ input:checked + .slider:before {
 #fullscreengame {
   width: 50px;
   height: 50px;
-top: 20px;
- right: -800px; 
+  top: 20px;
+  right: -800px;
   border: none;
   background: none;
   cursor: pointer;
@@ -461,7 +458,7 @@ top: 20px;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   display: inline-block;
   font-size: 16px;
@@ -474,7 +471,6 @@ top: 20px;
 .button:hover {
   background-color: rgba(29, 130, 255, 0.8);
   transform: translateY(-3px);
-  
 }
 /*Cloaks*/
 #premadecloaks {
@@ -496,7 +492,6 @@ top: 20px;
 #premadecloaks:hover {
   background-color: rgba(29, 130, 255, 0.8);
   transform: translateY(-3px);
-  
 }
 /*Themes*/
 #themeSelect {
@@ -504,7 +499,7 @@ top: 20px;
   border: none;
   color: white;
   padding: 15px 32px;
-  
+
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -517,8 +512,6 @@ top: 20px;
 #themeSelect:hover {
   background-color: rgba(29, 130, 255, 0.8);
   transform: translateY(-3px);
-  
-
 }
 
 /*Settings Page*/
@@ -527,23 +520,22 @@ top: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   text-align: center;
   margin-top: 12.5vh;
 }
-input[type=settings]{
- 
-border:2px solid #aaa;
-  border-radius:4px;
-  margin:8px 0;
-  outline:none;
-  padding:8px;
-  box-sizing:border-box;
-  transition:.3s;
+input[type="settings"] {
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
-input[type=settings]:focus{
-  border-color:dodgerBlue;
-  box-shadow:0 0 8px 0 dodgerBlue;
+input[type="settings"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
 }
 /*Apps Page*/
 #appContainer {
@@ -565,100 +557,96 @@ input[type=settings]:focus{
 }
 
 #themeSelect {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
- .rwd-table {
-      color: #aea1ce;
-      border-radius: 25px;
-      overflow: hidden;
-      margin: 0 auto;
-      max-width: 800px;
-     
-    }
-    
-    .rwd-table tr {
-      border-color: #aea1ce;
-      text-align: center;
-    }
-    
-    .rwd-table th,
-    .rwd-table td {
-      margin: .5em 1em;
-      padding: 1em;
-      background-color: #22282b;
-     
-    }
-    
-    .rwd-table td:before {
-      color: #3da6ae;
-      font-weight: bold;
-      margin-right: 0.5em;
-    }
-    
-    .rwd-table a {
-      color: rgb(29, 130, 255);
+.rwd-table {
+  color: #aea1ce;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 800px;
+}
 
-    }
-    
-    
-    @media (min-width: 480px) {
-      .rwd-table th,
-      .rwd-table td {
-        display: table-cell;
-        margin: 0;
-        padding: 1em !important;
-      }
-    
-      .rwd-table th:first-child,
-      .rwd-table td:first-child {
-        padding-left: 0;
-      }
-    
-      .rwd-table th:last-child,
-      .rwd-table td:last-child {
-        padding-right: 0;
-      }
-    
-      .rwd-table td:before {
-        display: none;
-      }
-    }
-    .search-bar {
-      width: 300px;
-      padding: 10px;
-      margin-top: 20px;
-      border-radius: 5px;
-      border: none;
-    }
-    #uv-address {
-      background: none;
-      font-family: inherit;
-      padding: 0px 17px;
-      height: 48px;
-      border: 1px solid rgb(255, 255, 255, 0.2);
-      color: var(--text-color);
-      border-radius: 3px;
-      outline: none;
-      width: 350px;
-      margin-top: 5px;
-      border-radius: 50px;
-      color: #fff;
-      transition: border-radius 0.1s;
-    }
-    
-    #uv-address:focus {
-      border: 1px solid rgba(253, 253, 253, 0.514);
-      border-radius: 6px;
-    }
+.rwd-table tr {
+  border-color: #aea1ce;
+  text-align: center;
+}
 
-    select {
-      text-align: center;
-      text-align-last: center;
-    }
-    option {
-      text-align: left;
-    }
+.rwd-table th,
+.rwd-table td {
+  margin: 0.5em 1em;
+  padding: 1em;
+  background-color: #22282b;
+}
+
+.rwd-table td:before {
+  color: #3da6ae;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.rwd-table a {
+  color: rgb(29, 130, 255);
+}
+
+@media (min-width: 480px) {
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    margin: 0;
+    padding: 1em !important;
+  }
+
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+
+  .rwd-table td:before {
+    display: none;
+  }
+}
+.search-bar {
+  width: 300px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+}
+#uv-address {
+  background: none;
+  font-family: inherit;
+  padding: 0px 17px;
+  height: 48px;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  color: var(--text-color);
+  border-radius: 3px;
+  outline: none;
+  width: 350px;
+  margin-top: 5px;
+  border-radius: 50px;
+  color: #fff;
+  transition: border-radius 0.1s;
+}
+
+#uv-address:focus {
+  border: 1px solid rgba(253, 253, 253, 0.514);
+  border-radius: 6px;
+}
+
+select {
+  text-align: center;
+  text-align-last: center;
+}
+option {
+  text-align: left;
+}
 
 #gamename {
   color: white;
@@ -672,7 +660,7 @@ input[type=settings]:focus{
 }
 .dropbtn {
   background-color: transparent;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   color: rgb(219, 219, 219);
   padding: 15px;
@@ -692,7 +680,7 @@ input[type=settings]:focus{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 10px;
 }
@@ -706,7 +694,9 @@ input[type=settings]:focus{
 .dropdown-content a:hover {
   color: black;
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -727,8 +717,8 @@ input[type=settings]:focus{
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -744,7 +734,6 @@ input[type=settings]:focus{
 }
 .modal-content h3,
 .modal-content h1 {
-
   color: #fff;
 }
 
