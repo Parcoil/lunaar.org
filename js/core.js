@@ -76,3 +76,17 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+var googleAna = document.createElement("script");
+googleAna.async = true;
+googleAna.src = "https://www.googletagmanager.com/gtag/js?id=G-W8NZMM8WN9";
+document.body.appendChild(googleAna);
+
+var googleAnaIn = document.createElement("script");
+googleAnaIn.innerHTML = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W8NZMM8WN9');
+`;
+document.body.appendChild(googleAnaIn);
