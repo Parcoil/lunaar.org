@@ -269,7 +269,18 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+	transition:0.3s;
   height: 50vh; /* Adjust the height as needed */
+}
+.native:hover { 
+color: var(--accent);
+	font-size:70px;
+}
+body {
+    --text-color: #ffffff;
+    --background: #f3a683;
+    --navbar: #e79a58;
+    --accent: rgb(29, 130, 255);
 }
 /*Randome Text on homepage*/
 #randomText {
