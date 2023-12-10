@@ -82,6 +82,12 @@ googleAna.async = true;
 googleAna.src = "https://www.googletagmanager.com/gtag/js?id=G-W8NZMM8WN9";
 document.body.appendChild(googleAna);
 
+
+var googleAds = document.createElement("script");
+googleAds.async = true;
+googleAds.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999";
+document.body.appendChild(googleAds);
+
 var googleAnaIn = document.createElement("script");
 googleAnaIn.innerHTML = `
   window.dataLayer = window.dataLayer || [];
