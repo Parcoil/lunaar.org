@@ -252,12 +252,17 @@ li {
   width: 30px;
   color: rgb(29, 130, 255);
   font-size: 30px;
+	transition:0.3s;
   font-family: 'Croogla 4F';
   font-weight: 300;
   display: flex;
   justify-content: center;
   align-items: center;
   
+}
+.navtext:hover {
+color: var(--accent);
+	font-size:40px;
 }
 /*Native logo*/
 .native {
