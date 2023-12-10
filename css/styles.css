@@ -551,11 +551,6 @@ input[type="settings"]:focus {
   cursor: pointer;
 }
 
-#widgetbot {
-  position: absolute;
-  top: 500px;
-}
-
 #themeSelect {
   font-family: "Ubuntu", sans-serif;
 }
