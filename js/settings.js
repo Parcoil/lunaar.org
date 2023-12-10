@@ -1,7 +1,6 @@
 // Hey skid or contributor.
 // this is the script that sets tabcloaks, themes Located on the settings page.
 
-
 // Check if there is a saved tab data in localStorage
 var tab = localStorage.getItem("tab");
 
@@ -11,15 +10,11 @@ if (tab) {
     var tabData = JSON.parse(tab);
   } catch {
     // If there is an error in parsing, create an empty object
-    var tabData = {
-
-    };
+    var tabData = {};
   }
 } else {
   // If there is no saved data, create an empty object
-  var tabData = {
-
-  };
+  var tabData = {};
 }
 
 // Set the title and icon fields to the values saved in tabData, if they exist
@@ -35,7 +30,6 @@ if (tabData.icon == null) {
 var settingsDefaultTab = {
   title: "Settings | Native",
   icon: "/media/logo.png",
-  
 };
 
 // Function to set the document title
@@ -44,7 +38,7 @@ function setTitle(title = "") {
     document.title = title;
   } else {
     document.title = settingsDefaultTab.title;
-}
+  }
 
   // Update the saved tab data with the new title
   var tab = localStorage.getItem("tab");
@@ -110,7 +104,8 @@ function setFavicon(icon) {
   localStorage.setItem("tab", JSON.stringify(tabData));
 }
 
-function setCloak() { // applies only to premade cloaks
+function setCloak() {
+  // applies only to premade cloaks
   var cloak = document.getElementById("premadecloaks").value; // cloak seems kind of weird when you spell it out
   switch (cloak) {
     case "search": // Google Search
@@ -118,17 +113,17 @@ function setCloak() { // applies only to premade cloaks
       setFavicon("/media/cloaks/Google Search.ico");
       location.reload();
       break;
-      case "itchio": // itch.io
+    case "itchio": // itch.io
       setTitle("Top free NSFW games for web");
       setFavicon("/media/cloaks/D23D344B-4CB0-4799-B525-F4E4F3A36728.ico");
       location.reload();
       break;
-      case "wikipedia": // wikipedia
+    case "wikipedia": // wikipedia
       setTitle("ويكيبيديا - جهاد");
       setFavicon("https://ar.wikipedia.org/favicon.ico");
       location.reload();
       break;
-      case "bsite": // billibilli
+    case "bsite": // billibilli
       setTitle("Billibilli");
       setFavicon("https://www.bilibili.com/favicon.ico");
       location.reload();
@@ -138,16 +133,16 @@ function setCloak() { // applies only to premade cloaks
       setFavicon("/media/cloaks/GoogleDrive.ico");
       location.reload();
       break;
-      case "librex": // LibreX
+    case "librex": // LibreX
       setTitle("LibreX");
       setFavicon("/media/cloaks/9A58D8BC-6595-476A-AD95-B6D8880683C8.ico");
       location.reload();
       break;
-    case "youtube": // YouTube 
+    case "youtube": // YouTube
       setTitle("YouTube");
       setFavicon("/media/cloaks/YouTube.ico");
       location.reload();
-      break;  
+      break;
     case "gmail": // Gmail
       setTitle("Gmail");
       setFavicon("/media/cloaks/Gmail.ico");
@@ -168,7 +163,7 @@ function setCloak() { // applies only to premade cloaks
       setFavicon("./media/cloaks/Classroom.png");
       location.reload();
       break;
-    case "canvas": // Canvas 
+    case "canvas": // Canvas
       setTitle("Canvas");
       setFavicon("/media/cloaks/Canvas.ico");
       location.reload();
@@ -183,23 +178,23 @@ function setCloak() { // applies only to premade cloaks
       setFavicon("/media/cloaks/63DFB320-0EEC-4F06-AF02-C50DFD2B49AB.ico");
       location.reload();
       break;
-      case "teddit": // Teddit
+    case "teddit": // Teddit
       setTitle("teddit");
       setFavicon("/media/cloaks/EB4D8FE9-10E9-44B8-A6CE-3F9A0040F94A.ico");
       location.reload();
       break;
-      case "cornhub": // Cornhub
+    case "cornhub": // Cornhub
       setTitle("Cornhub");
       setFavicon("/media/cloaks/8FE4C273-914D-431D-907E-3FCF5BB0399F.ico");
       location.reload();
       break;
-      case "indivious": // Indivious
+    case "indivious": // Indivious
       setTitle("Indivious");
       setFavicon("/media/cloaks/2255E848-AB69-43C1-B470-DBFDA40FAD10.ico");
       location.reload();
       break;
     case "khan": // Khan Academy
-      setTitle("Dashboard | Khan Academy"); 
+      setTitle("Dashboard | Khan Academy");
       setFavicon("./media/cloaks/Khan Academy.ico");
       location.reload();
       break;
@@ -217,31 +212,30 @@ function resetTab() {
 
 // Themes
 
-document.addEventListener('DOMContentLoaded', function () {
-  const themeSelect = document.getElementById('themeSelect');
+document.addEventListener("DOMContentLoaded", function () {
+  const themeSelect = document.getElementById("themeSelect");
 
   // Check the saved theme from local storage
-  const savedTheme = localStorage.getItem('theme');
+  const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     applyTheme(savedTheme);
     themeSelect.value = savedTheme;
   }
 
   // Apply selected theme
-  themeSelect.addEventListener('change', function () {
+  themeSelect.addEventListener("change", function () {
     const selectedTheme = themeSelect.value;
     applyTheme(selectedTheme);
-    localStorage.setItem('theme', selectedTheme);
+    localStorage.setItem("theme", selectedTheme);
   });
 
   function applyTheme(theme) {
-    document.body.className = ''; // Reset body classes
-    if (theme !== 'default') {
+    document.body.className = ""; // Reset body classes
+    if (theme !== "default") {
       document.body.classList.add(theme);
     }
   }
 });
-
 
 // end themes
 function showccdrop() {
@@ -252,8 +246,8 @@ const toggleButton = document.getElementById("toggleAboutBlank");
 
 function toggleAboutBlank() {
   localStorage.setItem("tab", {
-      toggled: true,
-      title: document.getElementById("title"),
-      icon: document.getElementById("icon")
-  })
+    toggled: true,
+    title: document.getElementById("title"),
+    icon: document.getElementById("icon"),
+  });
 }
