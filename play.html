@@ -36,5 +36,13 @@
     <script src="/js/fullscreen.js"></script>
     <script src="/js/play.js"></script>
     <script src="/js/core.js"></script>
+        <!--School-Security-Prevent-Tab-Close-->
+        <script>
+          // This small script prevents GoGuardian and any other School security Apps from closing the tab.
+          window.addEventListener("beforeunload", function (event) {
+            event.preventDefault();
+            return (event.returnValue = "");
+          });
+        </script>
   </div>
 </html>
