@@ -1,6 +1,36 @@
 // Hey skid or contributor.
 // this is The core script that sets the theme, favicon, tabcloak etc
 
+var googleAnaIn = document.createElement("script");
+googleAnaIn.innerHTML = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W8NZMM8WN9');
+`;
+document.body.appendChild(googleAnaIn);
+
+window.addEventListener("beforeunload", function (event) {
+  event.preventDefault();
+  return (event.returnValue = "");
+});
+
+var googleAna = document.createElement("script");
+googleAna.async = true;
+googleAna.src = "https://www.googletagmanager.com/gtag/js?id=G-W8NZMM8WN9";
+document.body.appendChild(googleAna);
+
+
+var googleAds = document.createElement("script");
+googleAds.async = true;
+googleAds.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999";
+document.body.appendChild(googleAds);
+
+var rocket = document.createElement("script");
+rocket.async = true;
+rocket.src = "/js/rocket-loader.min.js";
+document.body.appendChild(rocket);
+
 // Collect Tab Cloak data from local storage
 var tab = localStorage.getItem("tab");
 if (tab) {
@@ -50,49 +80,14 @@ document.addEventListener("DOMContentLoaded", function () {
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-};
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 };
-
-var googleAna = document.createElement("script");
-googleAna.async = true;
-googleAna.src = "https://www.googletagmanager.com/gtag/js?id=G-W8NZMM8WN9";
-document.body.appendChild(googleAna);
-
-
-var googleAds = document.createElement("script");
-googleAds.async = true;
-googleAds.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999";
-document.body.appendChild(googleAds);
-
-var googleAnaIn = document.createElement("script");
-googleAnaIn.innerHTML = `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W8NZMM8WN9');
-`;
-document.body.appendChild(googleAnaIn);

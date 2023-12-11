@@ -1,755 +1,755 @@
 [
-    {
-      "name": "Request a Game",
-      "image": "media/request.png",
-      "url": "/other/form"
-    },
-    {
-      "name": "Rocket Bot Royale",
-      "image": "https://gms.speedpl.us/rocketbotroyale/index.icon.png",
-      "url": "rocketbotroyale",
-      "new": true
+  {
+    "name": "Request a Game",
+    "image": "media/request.png",
+    "url": "/other/form"
   },
   {
-      "name": "Super Mario 63",
-      "image": "https://gms.speedpl.us/sm63/index.icon.png",
-      "url": "sm63",
-      "new": true
+    "name": "Rocket Bot Royale",
+    "image": "https://gms.speedpl.us/rocketbotroyale/index.icon.png",
+    "url": "rocketbotroyale",
+    "new": true
   },
   {
-      "name": "Thing thing arena",
-      "image": "https://gms.speedpl.us/swfs/thing-thing-arena.png",
-      "url": "/swfs/thing-thing-arena.swf",
-      "new": true
+    "name": "Super Mario 63",
+    "image": "https://gms.speedpl.us/sm63/index.icon.png",
+    "url": "sm63",
+    "new": true
   },
-    {
-      "name": "1v1.lol",
-      "image": "https://gms.speedpl.us/1v1/gameicon.jpg",
-      "url": "1v1"
-    },
-    {
-      "name": "2048",
-      "image": "https://gms.speedpl.us/2048/gameicon.png",
-      "url": "2048"
-    },
-    {
-      "name": "Angry Birds",
-      "image": "https://gms.speedpl.us/ab/gameicon.png",
-      "url": "ab"
-    },
-   {
-      "name": "A dance of fire and ice",
-      "image": "https://gms.speedpl.us/adofai/gameicon.jpg",
-      "url": "adofai"
-    },
-   {
-      "name": "Aquapark slides",
-      "image": "https://gms.speedpl.us/aquapark-slides/gameicon.png",
-      "url": "aquapark-slides"
-    },
-    {
-      "name": "Assessment",
-      "image": "https://gms.speedpl.us/assessment/gameicon.png",
-      "url": "assessment"
-    },
-    {
-      "name": "Awesome tanks 2",
-      "image": "https://gms.speedpl.us/awesometanks2/gameicon.jpg",
-      "url": "awesometanks2"
-    },
-    {
-      "name": "Backrooms",
-      "image": "https://gms.speedpl.us/backrooms/gameicon.png",
-      "url": "backrooms"
-    },
-    {
-      "name": "Bad ice cream",
-      "image": "https://gms.speedpl.us/bad-ice-cream/gameicon.png",
-      "url": "bad-ice-cream"
-    },
-    {
-      "name": "Bad ice cream 2",
-      "image": "https://gms.speedpl.us/bad-ice-cream-2/gameicon.png",
-      "url": "bad-ice-cream-2"
-    },
-    {
-      "name": "Bad ice cream 3",
-      "image": "https://gms.speedpl.us/bad-ice-cream-3/gameicon.png",
-      "url": "bad-ice-cream-3"
-    },
-    {
-      "name": "Basketbros.io",
-      "image": "https://gms.speedpl.us/basketbros-io/gameicon.jpg",
-      "url": "basketbros-io"
-    },
-    {
-      "name": "Basket random",
-      "image": "https://gms.speedpl.us/basket-random/gameicon.jpeg",
-      "url": "basket-random"
-    },
-    {
-      "name": "Baldi's basics",
-      "image": "https://gms.speedpl.us/bb/gameicon.gif",
-      "url": "bb"
-    },
-    {
-      "name": "Burger & frights",
-      "image": "https://gms.speedpl.us/bf/bf.png",
-      "url": "bf"
-    },
-    {
-      "name": "Big red button",
-      "image": "https://gms.speedpl.us/bigredbutton/gameicon.png",
-      "url": "bigredbutton"
-    },
-    {
-      "name": "Bitlife",
-      "image": "https://gms.speedpl.us/bitlife/gameicon.png",
-      "url": "bitlife"
-    },
-    {
-      "name": "Blockpost",
-      "image": "https://gms.speedpl.us/blockpost/gameicon.png",
-      "url": "blockpost"
-    },
   {
-      "name": "Bloxorz",
-      "image": "https://gms.speedpl.us/bloxorz/gameicon.png",
-      "url": "bloxorz"
-    },
-    {
-      "name": "Blumgi",
-      "image": "https://gms.speedpl.us/blumgi/gameicon.png",
-      "url": "blumgi"
-    },
-    {
-      "name": "Blumgi ball",
-      "image": "https://gms.speedpl.us/blumgiball/gameicon.png",
-      "url": "blumgiball"
-    },
-    {
-      "name": "Bacon may die",
-      "image": "https://gms.speedpl.us/bmd/gameicon.jpg",
-      "url": "bmd"
-    },
-    {
-      "name": "Bombhopper",
-      "image": "https://gms.speedpl.us/bombhopper/gameicon.png",
-      "url": "bombhopper"
-    },
-    {
-      "name": "Boxing physics 2",
-      "image": "https://gms.speedpl.us/boxing-physics2/gameicon.png",
-      "url": "boxing-physics2"
-    },
-    {
-      "name": "Boxing random",
-      "image": "https://gms.speedpl.us/boxing-random/gameicon.jpg",
-      "url": "boxing-random"
-    },
-    {
-      "name": "Breaklock",
-      "image": "https://gms.speedpl.us/breaklock/gameicon.png",
-      "url": "breaklock"
-    },
-    {
-      "name": "Breakoid",
-      "image": "https://gms.speedpl.us/breakoid/gameicon.png",
-      "url": "breakoid"
-    },
-    {
-      "name": "Btd 4",
-      "image": "https://gms.speedpl.us/btd4/gameicon.png",
-      "url": "btd4"
-    },
-    {
-      "name": "Btd 5",
-      "image": "https://gms.speedpl.us/btd5/gameicon.png",
-      "url": "btd5"
-    },
-    {
-      "name": "Bullet force",
-      "image": "https://gms.speedpl.us/bullet/gameicon.png",
-      "url": "bullet"
-    },
-    {
-      "name": "Burrito bison",
-      "image": "https://gms.speedpl.us/burritobison/gameicon.png",
-      "url": "burritobison"
-    },
-    {
-      "name": "Cannon strike",
-      "image": "https://gms.speedpl.us/canonstrike/gameicon.png",
-      "url": "canonstrike"
-    },
-    {
-      "name": "Cars simulator",
-      "image": "https://gms.speedpl.us/cars-simulator/gameicon.png",
-      "url": "cars-simulator"
-    },
-    {
-      "name": "Cell machine",
-      "image": "https://gms.speedpl.us/cell-machine/gameicon.png",
-      "url": "cell-machine"
-    },
-    {
-      "name": "Cluster rush",
-      "image": "https://gms.speedpl.us/cluster-rush/gameicon.jpg",
-      "url": "cluster-rush"
-    },
-    {
-      "name": "Cookie clicker",
-      "image": "https://gms.speedpl.us/cookieclicker/gameicon.jpg",
-      "url": "cookieclicker"
-    },
-    {
-      "name": "Crazy cars",
-      "image": "https://gms.speedpl.us/crazycars/gameicon.png",
-      "url": "crazycars"
-    },
-    {
-      "name": "Crossy road",
-      "image": "https://gms.speedpl.us/crossy/gameicon.png",
-      "url": "crossy"
-    },
-   {
-      "name": "Cubefield",
-      "image": "https://gms.speedpl.us/cubefield/gameicon.png",
-      "url": "cubefield"
-    },
-    {
-      "name": "Dadish",
-      "image": "https://gms.speedpl.us/dadish/gameicon.png",
-      "url": "dadish"
-    },
-    {
-      "name": "Dadish 2",
-      "image": "https://gms.speedpl.us/dadishtwo/gameicon.png",
-      "url": "dadishtwo"
-    },
-    {
-      "name": "Dadish 3",
-      "image": "https://gms.speedpl.us/dadish3/gameicon.png",
-      "url": "dadish3"
-    },
-    {
-      "name": "Dante",
-      "image": "https://gms.speedpl.us/dante/gameicon.png",
-      "url": "dante"
-    },
-    {
-      "name": "Deal or no deal",
-      "image": "https://gms.speedpl.us/deal-or-no-deal/gameicon.jpg",
-      "url": "deal-or-no-deal"
-    },
-    {
-      "name": "Deathrun",
-      "image": "https://gms.speedpl.us/deathrun/gameicon.jpg",
-      "url": "deathrun"
-    },
-    {
-      "name": "Dino",
-      "image": "https://gms.speedpl.us/dino/gameicon.jpg",
-      "url": "dino"
-    },
-    {
-      "name": "DogeMiner",
-      "image": "https://gms.speedpl.us/DogeMiner/gameicon.png",
-      "url": "DogeMiner"
-    },
-    {
-      "name": "Dogeminer2",
-      "image": "https://gms.speedpl.us/Dogeminer2/gameicon.jpg",
-      "url": "Dogeminer2"
-    },
-    {
-      "name": "Dogwash",
-      "image": "https://gms.speedpl.us/dogwash/gameicon.png",
-      "url": "dogwash"
-    },
-    {
-      "name": "Doodle jump",
-      "image": "https://gms.speedpl.us/doodlejump/gameicon.jpg",
-      "url": "doodlejump"
-    },
-    {
-      "name": "Dreader",
-      "image": "https://gms.speedpl.us/dreader/gameicon.jpg",
-      "url": "dreader"
-    },
-    {
-      "name": "Drift hunters",
-      "image": "https://gms.speedpl.us/drift-hunters/gameicon.png",
-      "url": "drift-hunters"
-    },
-    {
-      "name": "Drive mad",
-      "image": "https://gms.speedpl.us/drivemad/gameicon.jpg",
-      "url": "drivemad"
-    },
-    {
-      "name": "Ducklife",
-      "image": "https://gms.speedpl.us/ducklife/ducklife.png",
-      "url": "ducklife"
-    },
-    {
-      "name": "Ducklife 2",
-      "image": "https://gms.speedpl.us/ducklife2/gameicon.jpg",
-      "url": "ducklife2"
-    },
-    {
-      "name": "Ducklife 3",
-      "image": "https://gms.speedpl.us/ducklife3/duck.png",
-      "url": "ducklife3"
-    },
-    {
-      "name": "Ducklife 4",
-      "image": "https://gms.speedpl.us/ducklife4/splash.jpg",
-      "url": "ducklife4"
-    },
-    {
-      "name": "Effingworms",
-      "image": "https://gms.speedpl.us/effingworms/gameicon.png",
-      "url": "effingworms"
-    },
-      {
+    "name": "Thing thing arena",
+    "image": "https://gms.speedpl.us/swfs/thing-thing-arena.png",
+    "url": "/swfs/thing-thing-arena.swf",
+    "new": true
+  },
+  {
+    "name": "1v1.lol",
+    "image": "https://gms.speedpl.us/1v1/gameicon.jpg",
+    "url": "1v1"
+  },
+  {
+    "name": "2048",
+    "image": "https://gms.speedpl.us/2048/gameicon.png",
+    "url": "2048"
+  },
+  {
+    "name": "Angry Birds",
+    "image": "https://gms.speedpl.us/ab/gameicon.png",
+    "url": "ab"
+  },
+  {
+    "name": "A dance of fire and ice",
+    "image": "https://gms.speedpl.us/adofai/gameicon.jpg",
+    "url": "adofai"
+  },
+  {
+    "name": "Aquapark slides",
+    "image": "https://gms.speedpl.us/aquapark-slides/gameicon.png",
+    "url": "aquapark-slides"
+  },
+  {
+    "name": "Assessment",
+    "image": "https://gms.speedpl.us/assessment/gameicon.png",
+    "url": "assessment"
+  },
+  {
+    "name": "Awesome tanks 2",
+    "image": "https://gms.speedpl.us/awesometanks2/gameicon.jpg",
+    "url": "awesometanks2"
+  },
+  {
+    "name": "Backrooms",
+    "image": "https://gms.speedpl.us/backrooms/gameicon.png",
+    "url": "backrooms"
+  },
+  {
+    "name": "Bad ice cream",
+    "image": "https://gms.speedpl.us/bad-ice-cream/gameicon.png",
+    "url": "bad-ice-cream"
+  },
+  {
+    "name": "Bad ice cream 2",
+    "image": "https://gms.speedpl.us/bad-ice-cream-2/gameicon.png",
+    "url": "bad-ice-cream-2"
+  },
+  {
+    "name": "Bad ice cream 3",
+    "image": "https://gms.speedpl.us/bad-ice-cream-3/gameicon.png",
+    "url": "bad-ice-cream-3"
+  },
+  {
+    "name": "Basketbros.io",
+    "image": "https://gms.speedpl.us/basketbros-io/gameicon.jpg",
+    "url": "basketbros-io"
+  },
+  {
+    "name": "Basket random",
+    "image": "https://gms.speedpl.us/basket-random/gameicon.jpeg",
+    "url": "basket-random"
+  },
+  {
+    "name": "Baldi's basics",
+    "image": "https://gms.speedpl.us/bb/gameicon.gif",
+    "url": "bb"
+  },
+  {
+    "name": "Burger & frights",
+    "image": "https://gms.speedpl.us/bf/bf.png",
+    "url": "bf"
+  },
+  {
+    "name": "Big red button",
+    "image": "https://gms.speedpl.us/bigredbutton/gameicon.png",
+    "url": "bigredbutton"
+  },
+  {
+    "name": "Bitlife",
+    "image": "https://gms.speedpl.us/bitlife/gameicon.png",
+    "url": "bitlife"
+  },
+  {
+    "name": "Blockpost",
+    "image": "https://gms.speedpl.us/blockpost/gameicon.png",
+    "url": "blockpost"
+  },
+  {
+    "name": "Bloxorz",
+    "image": "https://gms.speedpl.us/bloxorz/gameicon.png",
+    "url": "bloxorz"
+  },
+  {
+    "name": "Blumgi",
+    "image": "https://gms.speedpl.us/blumgi/gameicon.png",
+    "url": "blumgi"
+  },
+  {
+    "name": "Blumgi ball",
+    "image": "https://gms.speedpl.us/blumgiball/gameicon.png",
+    "url": "blumgiball"
+  },
+  {
+    "name": "Bacon may die",
+    "image": "https://gms.speedpl.us/bmd/gameicon.jpg",
+    "url": "bmd"
+  },
+  {
+    "name": "Bombhopper",
+    "image": "https://gms.speedpl.us/bombhopper/gameicon.png",
+    "url": "bombhopper"
+  },
+  {
+    "name": "Boxing physics 2",
+    "image": "https://gms.speedpl.us/boxing-physics2/gameicon.png",
+    "url": "boxing-physics2"
+  },
+  {
+    "name": "Boxing random",
+    "image": "https://gms.speedpl.us/boxing-random/gameicon.jpg",
+    "url": "boxing-random"
+  },
+  {
+    "name": "Breaklock",
+    "image": "https://gms.speedpl.us/breaklock/gameicon.png",
+    "url": "breaklock"
+  },
+  {
+    "name": "Breakoid",
+    "image": "https://gms.speedpl.us/breakoid/gameicon.png",
+    "url": "breakoid"
+  },
+  {
+    "name": "Btd 4",
+    "image": "https://gms.speedpl.us/btd4/gameicon.png",
+    "url": "btd4"
+  },
+  {
+    "name": "Btd 5",
+    "image": "https://gms.speedpl.us/btd5/gameicon.png",
+    "url": "btd5"
+  },
+  {
+    "name": "Bullet force",
+    "image": "https://gms.speedpl.us/bullet/gameicon.png",
+    "url": "bullet"
+  },
+  {
+    "name": "Burrito bison",
+    "image": "https://gms.speedpl.us/burritobison/gameicon.png",
+    "url": "burritobison"
+  },
+  {
+    "name": "Cannon strike",
+    "image": "https://gms.speedpl.us/canonstrike/gameicon.png",
+    "url": "canonstrike"
+  },
+  {
+    "name": "Cars simulator",
+    "image": "https://gms.speedpl.us/cars-simulator/gameicon.png",
+    "url": "cars-simulator"
+  },
+  {
+    "name": "Cell machine",
+    "image": "https://gms.speedpl.us/cell-machine/gameicon.png",
+    "url": "cell-machine"
+  },
+  {
+    "name": "Cluster rush",
+    "image": "https://gms.speedpl.us/cluster-rush/gameicon.jpg",
+    "url": "cluster-rush"
+  },
+  {
+    "name": "Cookie clicker",
+    "image": "https://gms.speedpl.us/cookieclicker/gameicon.jpg",
+    "url": "cookieclicker"
+  },
+  {
+    "name": "Crazy cars",
+    "image": "https://gms.speedpl.us/crazycars/gameicon.png",
+    "url": "crazycars"
+  },
+  {
+    "name": "Crossy road",
+    "image": "https://gms.speedpl.us/crossy/gameicon.png",
+    "url": "crossy"
+  },
+  {
+    "name": "Cubefield",
+    "image": "https://gms.speedpl.us/cubefield/gameicon.png",
+    "url": "cubefield"
+  },
+  {
+    "name": "Dadish",
+    "image": "https://gms.speedpl.us/dadish/gameicon.png",
+    "url": "dadish"
+  },
+  {
+    "name": "Dadish 2",
+    "image": "https://gms.speedpl.us/dadishtwo/gameicon.png",
+    "url": "dadishtwo"
+  },
+  {
+    "name": "Dadish 3",
+    "image": "https://gms.speedpl.us/dadish3/gameicon.png",
+    "url": "dadish3"
+  },
+  {
+    "name": "Dante",
+    "image": "https://gms.speedpl.us/dante/gameicon.png",
+    "url": "dante"
+  },
+  {
+    "name": "Deal or no deal",
+    "image": "https://gms.speedpl.us/deal-or-no-deal/gameicon.jpg",
+    "url": "deal-or-no-deal"
+  },
+  {
+    "name": "Deathrun",
+    "image": "https://gms.speedpl.us/deathrun/gameicon.jpg",
+    "url": "deathrun"
+  },
+  {
+    "name": "Dino",
+    "image": "https://gms.speedpl.us/dino/gameicon.jpg",
+    "url": "dino"
+  },
+  {
+    "name": "DogeMiner",
+    "image": "https://gms.speedpl.us/DogeMiner/gameicon.png",
+    "url": "DogeMiner"
+  },
+  {
+    "name": "Dogeminer2",
+    "image": "https://gms.speedpl.us/Dogeminer2/gameicon.jpg",
+    "url": "Dogeminer2"
+  },
+  {
+    "name": "Dogwash",
+    "image": "https://gms.speedpl.us/dogwash/gameicon.png",
+    "url": "dogwash"
+  },
+  {
+    "name": "Doodle jump",
+    "image": "https://gms.speedpl.us/doodlejump/gameicon.jpg",
+    "url": "doodlejump"
+  },
+  {
+    "name": "Dreader",
+    "image": "https://gms.speedpl.us/dreader/gameicon.jpg",
+    "url": "dreader"
+  },
+  {
+    "name": "Drift hunters",
+    "image": "https://gms.speedpl.us/drift-hunters/gameicon.png",
+    "url": "drift-hunters"
+  },
+  {
+    "name": "Drive mad",
+    "image": "https://gms.speedpl.us/drivemad/gameicon.jpg",
+    "url": "drivemad"
+  },
+  {
+    "name": "Ducklife",
+    "image": "https://gms.speedpl.us/ducklife/ducklife.png",
+    "url": "ducklife"
+  },
+  {
+    "name": "Ducklife 2",
+    "image": "https://gms.speedpl.us/ducklife2/gameicon.jpg",
+    "url": "ducklife2"
+  },
+  {
+    "name": "Ducklife 3",
+    "image": "https://gms.speedpl.us/ducklife3/duck.png",
+    "url": "ducklife3"
+  },
+  {
+    "name": "Ducklife 4",
+    "image": "https://gms.speedpl.us/ducklife4/splash.jpg",
+    "url": "ducklife4"
+  },
+  {
+    "name": "Effingworms",
+    "image": "https://gms.speedpl.us/effingworms/gameicon.png",
+    "url": "effingworms"
+  },
+  {
     "name": "Fancypants adventures",
     "image": "https://gms.speedpl.us/fancypantsadventures/gameicon.png",
     "url": "fancypantsadventures"
-    },
-    {
+  },
+  {
     "name": "Fireboy & Watergirl",
     "image": "https://gms.speedpl.us/fbwg/gameicon.png",
     "url": "fbwg"
-    },
-    {
+  },
+  {
     "name": "Google Feud",
     "image": "https://gms.speedpl.us/feud/gameicon.png",
     "url": "feud"
-    },
-    {
+  },
+  {
     "name": "Flappy Bird",
     "image": "https://gms.speedpl.us/flappy/gameicon.png",
     "url": "flappy"
-    },
-    {
+  },
+  {
     "name": "Flappy plane",
     "image": "https://gms.speedpl.us/flappyplane/gameicon.png",
     "url": "flappyplane"
-    },
-    {
+  },
+  {
     "name": "FNAF",
     "image": "https://gms.speedpl.us/FNAF/gameicon.png",
     "url": "FNAF"
-    },
-    {
+  },
+  {
     "name": "FNAF2",
     "image": "https://gms.speedpl.us/FNAF2/gameicon.png",
     "url": "FNAF2"
-    },
-    {
+  },
+  {
     "name": "FNAF3",
     "image": "https://gms.speedpl.us/FNAF3/gameicon.png",
     "url": "FNAF3"
-    },
-    {
+  },
+  {
     "name": "FNAF4",
     "image": "https://gms.speedpl.us/FNAF4/gameicon.png",
     "url": "FNAF4"
-    },
-    {
+  },
+  {
     "name": "fnf",
     "image": "https://gms.speedpl.us/fnf/gameicon.png",
     "url": "fnf"
-    },
-    {
+  },
+  {
     "name": "Fields Of Fury",
     "image": "https://gms.speedpl.us/fof/gameicon.png",
     "url": "fof"
-    },
-    {
+  },
+  {
     "name": "Fortcraft",
     "image": "https://gms.speedpl.us/fortcraft/gameicon.png",
     "url": "fortcraft"
-    },
-    {
+  },
+  {
     "name": "Fruitninja",
     "image": "https://gms.speedpl.us/fruitninja/gameicon.png",
     "url": "fruitninja"
-    },
-    {
+  },
+  {
     "name": "Game inside of a Game",
     "image": "https://gms.speedpl.us/game-inside/img/display.png",
     "url": "game-inside"
-    },
-    {
+  },
+  {
     "name": "Glass city",
     "image": "https://gms.speedpl.us/glass-city/gameicon.png",
     "url": "glass-city"
-    },
-    {
+  },
+  {
     "name": "Hangman",
     "image": "https://gms.speedpl.us/hangman/gameicon.png",
     "url": "hangman"
-    },
-    {
-      "name": "House of hazards",
-      "image": "https://gms.speedpl.us/houseofhazards/gameicon.png",
-      "url": "houseofhazards"
-      },
-    {
+  },
+  {
+    "name": "House of hazards",
+    "image": "https://gms.speedpl.us/houseofhazards/gameicon.png",
+    "url": "houseofhazards"
+  },
+  {
     "name": "Happy wheels",
     "image": "https://gms.speedpl.us/happywheels/gameicon.png",
     "url": "happywheels"
-    },
-    {
+  },
+  {
     "name": "Hilldraw",
     "image": "https://gms.speedpl.us/hilldraw/gameicon.png",
     "url": "hilldraw"
-    },
-    {
+  },
+  {
     "name": "Hole.io",
     "image": "https://gms.speedpl.us/hole/gameicon.png",
     "url": "hole"
-    },
-    {
+  },
+  {
     "name": "Hotdoggeria",
     "image": "https://gms.speedpl.us/hotdoggeria/gameicon.png",
     "url": "hotdoggeria"
-    },
-    {
+  },
+  {
     "name": "Idle breakout",
     "image": "https://gms.speedpl.us/ib/gameicon.png",
     "url": "ib"
-    },
-    {
+  },
+  {
     "name": "Jetpack joyride",
     "image": "https://gms.speedpl.us/jetpack/gameicon.png",
     "url": "jetpack"
-    },
-    {
+  },
+  {
     "name": "justfall",
     "image": "https://gms.speedpl.us/justfall/gameicon.png",
     "url": "justfall"
-    },
-    {
+  },
+  {
     "name": "knifehit",
     "image": "https://gms.speedpl.us/knifehit/gameicon.png",
     "url": "knifehit"
-    },
-    {
+  },
+  {
     "name": "koriwalk",
     "image": "https://gms.speedpl.us/koriwalk/gameicon.png",
     "url": "koriwalk"
-    },
-    {
+  },
+  {
     "name": "ledgethrow",
     "image": "https://gms.speedpl.us/ledgethrow/gameicon.png",
     "url": "ledgethrow"
-    },
-    {
+  },
+  {
     "name": "makeitmeme",
     "image": "https://gms.speedpl.us/makeitmeme/gameicon.png",
     "url": "makeitmeme"
-    },
-    {
+  },
+  {
     "name": "mariovsluigi",
     "image": "https://gms.speedpl.us/mariovsluigi/gameicon.png",
     "url": "mariovsluigi"
-    },
-    {
+  },
+  {
     "name": "Minecraft 1.5",
     "image": "https://gms.speedpl.us/mc/gameicon.png",
     "url": "mc"
-    },
-    {
+  },
+  {
     "name": "Merge round racers",
     "image": "https://gms.speedpl.us/merge-round-racers/gameicon.png",
     "url": "merge-round-racers"
-    },
-    {
+  },
+  {
     "name": "Minecraft 1.8",
     "image": "https://gms.speedpl.us/minecraft-18/gameicon.png",
     "url": "minecraft-18"
-    },
-    {
+  },
+  {
     "name": "minitrain",
     "image": "https://gms.speedpl.us/minitrain/gameicon.png",
     "url": "minitrain"
-    },
-    {
+  },
+  {
     "name": "Monkey mart",
     "image": "https://gms.speedpl.us/monkey-mart/gameicon.png",
     "url": "monkey-mart"
-    },
-    {
+  },
+  {
     "name": "Motox3m",
     "image": "https://gms.speedpl.us/motox3m/gameicon.jpg",
     "url": "motox3m"
-    },
-    {
+  },
+  {
     "name": "Motox3m poolparty",
     "image": "https://gms.speedpl.us/motox3mpoolparty/gameicon.jpg",
     "url": "motox3mpoolparty"
-    },
-    {
+  },
+  {
     "name": "Motox3m spookyland",
     "image": "https://gms.speedpl.us/motox3mspookyland/gameicon.jpg",
     "url": "motox3mspookyland"
-    },
-    {
+  },
+  {
     "name": "Motox3m winter",
     "image": "https://gms.speedpl.us/motox3mwinter/gameicon.jpg",
     "url": "motox3mwinter"
-    },
-    {
+  },
+  {
     "name": "OvO",
     "image": "https://gms.speedpl.us/ovo/gameicon.png",
     "url": "ovo"
-    },
-    {
+  },
+  {
     "name": "Paint strike",
     "image": "https://gms.speedpl.us/paintstrike/gameicon.jpeg",
     "url": "paintstrike"
-    },
-    {
+  },
+  {
     "name": "papas Burgeria",
     "image": "https://gms.speedpl.us/papasb/gameicon.jpg",
     "url": "papasb"
-    },
-    {
+  },
+  {
     "name": "papasburgeria",
     "image": "https://gms.speedpl.us/papasburgeria/gameicon.jpg",
     "url": "papasburgeria"
-    },
-    {
+  },
+  {
     "name": "Papas Pizzaria",
     "image": "https://gms.speedpl.us/papaspizzaria/gameicon.jpg",
     "url": "papaspizzaria"
-    },
-    {
+  },
+  {
     "name": "Paperio 2",
     "image": "https://gms.speedpl.us/paperio2/gameicon.jpg",
     "url": "paperio2"
-    },
-    {
+  },
+  {
     "name": "Precision Client (minecraft) ",
     "image": "https://gms.speedpl.us/precision-client/gameicon.png",
     "url": "precision-client"
-    },
-    {
-      "name": "Retro Bowl",
-      "image": "https://gms.speedpl.us/retrob/gameicon.jpg",
-      "url": "retrob"
-    },
-    {
-      "name": "Robogo",
-      "image": "https://gms.speedpl.us/robogo/gameicon.png",
-      "url": "robogo"
-    },
-    {
-      "name": "Rocket soccer derby",
-      "image": "https://gms.speedpl.us/rocketsoccerderby/gameicon.png",
-      "url": "rocketsoccerderby"
-    },
-    {
-      "name": "Rooftop Snipers",
-      "image": "https://gms.speedpl.us/rooftop/img/thumb.png",
-      "url": "rooftop"
-    },
-    {
-      "name": "run 3",
-      "image": "https://gms.speedpl.us/run/gameicon.png",
-      "url": "run"
-    },
-    {
-      "name": "run3",
-      "image": "https://gms.speedpl.us/run3/gameicon.png",
-      "url": "run3"
-    },
-    {
-      "name": "Shellshockers",
-      "image": "https://gms.speedpl.us/shellshock/gameicon.jpg",
-      "url": "shellshock"
-    },
-    {
-      "name": "Shootz",
-      "image": "https://gms.speedpl.us/shootz/gameicon.png",
-      "url": "shootz"
-    },
-    {
-      "name": "Smash Karts",
-      "image": "https://gms.speedpl.us/sk/gameicon.jpg",
-      "url": "sk"
-    },
-    {
-      "name": "Sketchbook",
-      "image": "https://gms.speedpl.us/sketchbook/gameicon.png",
-      "url": "sketchbook"
-    },
-    {
-      "name": "Slope",
-      "image": "https://gms.speedpl.us/slope/gameicon.jpg",
-      "url": "slope"
-    },
-    {
-      "name": "Slope 2 Player",
-      "image": "https://gms.speedpl.us/slope2/gameicon.png",
-      "url": "slope2"
-    },
-    {
-      "name": "Super Mario 64",
-      "image": "https://gms.speedpl.us/sm64/sm64.jpeg",
-      "url": "sm64"
-    },
-    {
-      "name": "Snowrider 3d",
-      "image": "https://gms.speedpl.us/snowrider3d/images/logo.png",
-      "url": "snowrider3d"
-    },
-    {
-      "name": "Soccer Random",
-      "image": "https://gms.speedpl.us/sr/gameicon.png",
-      "url": "sr"
-    },
-    {
-      "name": "Stickclimb",
-      "image": "https://gms.speedpl.us/stickclimb/gameicon.png",
-      "url": "stickclimb"
-    },
-    {
-      "name": "Stickman Hook",
-      "image": "https://gms.speedpl.us/stickman/gameicon.jpg",
-      "url": "stickman"
-    },
-    {
-      "name": "Stunt cars",
-      "image": "https://gms.speedpl.us/stuntcars/gameicon.png",
-      "url": "stuntcars"
-    },
-    {
-      "name": "Subway surfers",
-      "image": "https://gms.speedpl.us/subwaysurfers/gameicon.jpg",
-      "url": "subwaysurfers"
-    },
-    {
-      "name": "Superhot",
-      "image": "https://gms.speedpl.us/superhot/gameicon.jpg",
-      "url": "superhot"
-    },
-    {
-      "name": "Sushi unroll",
-      "image": "https://gms.speedpl.us/sushi-unroll/favicon.png",
-      "url": "sushi-unroll"
-    },
-    {
-      "name": "Deepest Sword",
-      "image": "https://gms.speedpl.us/sword/gameicon.png",
-      "url": "sword"
-    },
-    {
-      "name": "Taco mia",
-      "image": "https://gms.speedpl.us/tacomia/gameicon.png",
-      "url": "tacomia"
-    },
-    {
-      "name": "Tank Trouble2",
-      "image": "https://gms.speedpl.us/tank-trouble-2/gameicon.jpeg",
-      "url": "tank-trouble-2"
-    },
-    {
-      "name": "Tanuki sunset",
-      "image": "https://gms.speedpl.us/tanuki-sunset/gameicon.png",
-      "url": "tanuki-sunset"
-    },
-    {
-      "name": "Thirty dollar haircut",
-      "image": "https://gms.speedpl.us/tdh/gameicon.png",
-      "url": "tdh"
-    },
-    {
-      "name": "Temple run 2",
-      "image": "https://gms.speedpl.us/temple-run-2/gameicon.png",
-      "url": "temple-run-2"
-    },
-    {
-      "name": "Tetris",
-      "image": "https://gms.speedpl.us/tetris/gameicon.png",
-      "url": "tetris"
-    },
-    {
-      "name": "There is no Game",
-      "image": "https://gms.speedpl.us/ting/gameicon.png",
-      "url": "ting"
-    },
-    {
-      "name": "Tiny fishing",
-      "image": "https://gms.speedpl.us/tiny-fishing/gameicon.png",
-      "url": "tiny-fishing"
-    },
-    {
-      "name": "Townscaper",
-      "image": "https://gms.speedpl.us/townscaper/gameicon.png",
-      "url": "townscaper"
-    },
-    {
-      "name": "Trafficjam 3D",
-      "image": "https://gms.speedpl.us/trafficjam/gameicon.jpg",
-      "url": "trafficjam"
-    },
-    {
-      "name": "Tunnelrush",
-      "image": "https://gms.speedpl.us/tunnelrush/gameicon.png",
-      "url": "tunnelrush"
-    },
-    {
-      "name": "Vengeio",
-      "image": "https://gms.speedpl.us/vengeio/gameicon.png",
-      "url": "vengeio"
-    },
-    {
-      "name": "Vex3",
-      "image": "https://gms.speedpl.us/vex3/gameicon.jpg",
-      "url": "vex3"
-    },
-    {
-      "name": "Vex4",
-      "image": "https://gms.speedpl.us/vex4/gameicon.jpg",
-      "url": "vex4"
-    },
-    {
-      "name": "Vex5",
-      "image": "https://gms.speedpl.us/vex5/gameicon.jpg",
-      "url": "vex5"
-    },
-    {
-      "name": "Vex6",
-      "image": "https://gms.speedpl.us/vex6/gameicon.jpg",
-      "url": "vex6"
-    },
-    {
-      "name": "Vex7",
-      "image": "https://gms.speedpl.us/vex7/gameicon.png",
-      "url": "vex7"
-    },
-    {
-      "name": "Volley random",
-      "image": "https://gms.speedpl.us/volley-random/gameicon.png",
-      "url": "volley-random"
-    },
-    {
-      "name": "Vortelli's Pizza",
-      "image": "https://gms.speedpl.us/vortelli/gameicon.png",
-      "url": "vortelli"
-    },
-    {
-      "name": "Wordle",
-      "image": "https://gms.speedpl.us/wordle/gameicon.png",
-      "url": "wordle"
-    },
-    {
-      "name": "xx142-b2exe",
-      "image": "https://gms.speedpl.us/xx142-b2exe/gameicon.jpg",
-      "url": "xx142-b2exe"
-    }
-  ]
+  },
+  {
+    "name": "Retro Bowl",
+    "image": "https://gms.speedpl.us/retrob/gameicon.jpg",
+    "url": "retrob"
+  },
+  {
+    "name": "Robogo",
+    "image": "https://gms.speedpl.us/robogo/gameicon.png",
+    "url": "robogo"
+  },
+  {
+    "name": "Rocket soccer derby",
+    "image": "https://gms.speedpl.us/rocketsoccerderby/gameicon.png",
+    "url": "rocketsoccerderby"
+  },
+  {
+    "name": "Rooftop Snipers",
+    "image": "https://gms.speedpl.us/rooftop/img/thumb.png",
+    "url": "rooftop"
+  },
+  {
+    "name": "run 3",
+    "image": "https://gms.speedpl.us/run/gameicon.png",
+    "url": "run"
+  },
+  {
+    "name": "run3",
+    "image": "https://gms.speedpl.us/run3/gameicon.png",
+    "url": "run3"
+  },
+  {
+    "name": "Shellshockers",
+    "image": "https://gms.speedpl.us/shellshock/gameicon.jpg",
+    "url": "shellshock"
+  },
+  {
+    "name": "Shootz",
+    "image": "https://gms.speedpl.us/shootz/gameicon.png",
+    "url": "shootz"
+  },
+  {
+    "name": "Smash Karts",
+    "image": "https://gms.speedpl.us/sk/gameicon.jpg",
+    "url": "sk"
+  },
+  {
+    "name": "Sketchbook",
+    "image": "https://gms.speedpl.us/sketchbook/gameicon.png",
+    "url": "sketchbook"
+  },
+  {
+    "name": "Slope",
+    "image": "https://gms.speedpl.us/slope/gameicon.jpg",
+    "url": "slope"
+  },
+  {
+    "name": "Slope 2 Player",
+    "image": "https://gms.speedpl.us/slope2/gameicon.png",
+    "url": "slope2"
+  },
+  {
+    "name": "Super Mario 64",
+    "image": "https://gms.speedpl.us/sm64/sm64.jpeg",
+    "url": "sm64"
+  },
+  {
+    "name": "Snowrider 3d",
+    "image": "https://gms.speedpl.us/snowrider3d/images/logo.png",
+    "url": "snowrider3d"
+  },
+  {
+    "name": "Soccer Random",
+    "image": "https://gms.speedpl.us/sr/gameicon.png",
+    "url": "sr"
+  },
+  {
+    "name": "Stickclimb",
+    "image": "https://gms.speedpl.us/stickclimb/gameicon.png",
+    "url": "stickclimb"
+  },
+  {
+    "name": "Stickman Hook",
+    "image": "https://gms.speedpl.us/stickman/gameicon.jpg",
+    "url": "stickman"
+  },
+  {
+    "name": "Stunt cars",
+    "image": "https://gms.speedpl.us/stuntcars/gameicon.png",
+    "url": "stuntcars"
+  },
+  {
+    "name": "Subway surfers",
+    "image": "https://gms.speedpl.us/subwaysurfers/gameicon.jpg",
+    "url": "subwaysurfers"
+  },
+  {
+    "name": "Superhot",
+    "image": "https://gms.speedpl.us/superhot/gameicon.jpg",
+    "url": "superhot"
+  },
+  {
+    "name": "Sushi unroll",
+    "image": "https://gms.speedpl.us/sushi-unroll/favicon.png",
+    "url": "sushi-unroll"
+  },
+  {
+    "name": "Deepest Sword",
+    "image": "https://gms.speedpl.us/sword/gameicon.png",
+    "url": "sword"
+  },
+  {
+    "name": "Taco mia",
+    "image": "https://gms.speedpl.us/tacomia/gameicon.png",
+    "url": "tacomia"
+  },
+  {
+    "name": "Tank Trouble2",
+    "image": "https://gms.speedpl.us/tank-trouble-2/gameicon.jpeg",
+    "url": "tank-trouble-2"
+  },
+  {
+    "name": "Tanuki sunset",
+    "image": "https://gms.speedpl.us/tanuki-sunset/gameicon.png",
+    "url": "tanuki-sunset"
+  },
+  {
+    "name": "Thirty dollar haircut",
+    "image": "https://gms.speedpl.us/tdh/gameicon.png",
+    "url": "tdh"
+  },
+  {
+    "name": "Temple run 2",
+    "image": "https://gms.speedpl.us/temple-run-2/gameicon.png",
+    "url": "temple-run-2"
+  },
+  {
+    "name": "Tetris",
+    "image": "https://gms.speedpl.us/tetris/gameicon.png",
+    "url": "tetris"
+  },
+  {
+    "name": "There is no Game",
+    "image": "https://gms.speedpl.us/ting/gameicon.png",
+    "url": "ting"
+  },
+  {
+    "name": "Tiny fishing",
+    "image": "https://gms.speedpl.us/tiny-fishing/gameicon.png",
+    "url": "tiny-fishing"
+  },
+  {
+    "name": "Townscaper",
+    "image": "https://gms.speedpl.us/townscaper/gameicon.png",
+    "url": "townscaper"
+  },
+  {
+    "name": "Trafficjam 3D",
+    "image": "https://gms.speedpl.us/trafficjam/gameicon.jpg",
+    "url": "trafficjam"
+  },
+  {
+    "name": "Tunnelrush",
+    "image": "https://gms.speedpl.us/tunnelrush/gameicon.png",
+    "url": "tunnelrush"
+  },
+  {
+    "name": "Vengeio",
+    "image": "https://gms.speedpl.us/vengeio/gameicon.png",
+    "url": "vengeio"
+  },
+  {
+    "name": "Vex3",
+    "image": "https://gms.speedpl.us/vex3/gameicon.jpg",
+    "url": "vex3"
+  },
+  {
+    "name": "Vex4",
+    "image": "https://gms.speedpl.us/vex4/gameicon.jpg",
+    "url": "vex4"
+  },
+  {
+    "name": "Vex5",
+    "image": "https://gms.speedpl.us/vex5/gameicon.jpg",
+    "url": "vex5"
+  },
+  {
+    "name": "Vex6",
+    "image": "https://gms.speedpl.us/vex6/gameicon.jpg",
+    "url": "vex6"
+  },
+  {
+    "name": "Vex7",
+    "image": "https://gms.speedpl.us/vex7/gameicon.png",
+    "url": "vex7"
+  },
+  {
+    "name": "Volley random",
+    "image": "https://gms.speedpl.us/volley-random/gameicon.png",
+    "url": "volley-random"
+  },
+  {
+    "name": "Vortelli's Pizza",
+    "image": "https://gms.speedpl.us/vortelli/gameicon.png",
+    "url": "vortelli"
+  },
+  {
+    "name": "Wordle",
+    "image": "https://gms.speedpl.us/wordle/gameicon.png",
+    "url": "wordle"
+  },
+  {
+    "name": "xx142-b2exe",
+    "image": "https://gms.speedpl.us/xx142-b2exe/gameicon.jpg",
+    "url": "xx142-b2exe"
+  }
+]
