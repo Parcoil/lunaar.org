@@ -15,16 +15,21 @@ window.addEventListener("beforeunload", function (event) {
   return (event.returnValue = "");
 });
 
-var googleAna = document.createElement("script");
-googleAna.async = true;
-googleAna.src = "https://www.googletagmanager.com/gtag/js?id=G-W8NZMM8WN9";
-document.body.appendChild(googleAna);
+// Fetch the JSON configuration from the URL
+fetch("https://gist.githubusercontent.com/3kh0/6dd52e0bc4cf407769e89ea2d5957d49/raw/config.json?time=" + Date.now())
+  .then((response) => response.json())
+  .then((config) => {
+    // Use the obtained values to set the id attributes
+    var googleAna = document.createElement("script");
+    googleAna.async = true;
+    googleAna.src = "https://www.googletagmanager.com/gtag/js?id=" + config.googleAna;
+    document.body.appendChild(googleAna);
 
-
-var googleAds = document.createElement("script");
-googleAds.async = true;
-googleAds.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999";
-document.body.appendChild(googleAds);
+    var googleAds = document.createElement("script");
+    googleAds.async = true;
+    googleAds.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + config.adsenseID;
+    document.body.appendChild(googleAds);
+  });
 
 var rocket = document.createElement("script");
 rocket.async = true;
@@ -80,11 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function () {
-  modal.style.display = "none";
-};
 
 window.onclick = function (event) {
   if (event.target == modal) {
