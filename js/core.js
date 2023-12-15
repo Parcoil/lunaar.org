@@ -92,6 +92,8 @@ window.onclick = function (event) {
   }
 };
 
+
+
 function createBlank() {
   win = window.open();
   win.document.body.style.margin = "0";
@@ -105,6 +107,9 @@ function createBlank() {
   iframe.allow = "fullscreen";
   iframe.src = location.origin;
   win.document.body.appendChild(iframe);
-  window.location.href = "https://www.google.com/search?q=what+day+is+today"
+  window.location.href = "https://www.google.com/search?q=what+day+is+today";
 }
-createBlank();
+
+if (window.location.pathname !== "/") {
+  createBlank();
+}
