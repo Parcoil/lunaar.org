@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayNoFavoritesMessage() {
     const noFavoritesMessage = document.createElement("h5");
-    noFavoritesMessage.textContent = "No Favorites if you can add favorites. by clicking on the favorites button on a game.";
+    noFavoritesMessage.textContent = "No Favorites you can add favorites. by clicking on the favorites button on a game.";
     favoriteGamesContainer.appendChild(noFavoritesMessage);
   }
 });
