@@ -110,6 +110,3 @@ function createBlank() {
   window.location.href = "https://www.google.com/search?q=what+day+is+today";
 }
 
-if (window.location.pathname !== "/") {
-  createBlank();
-}
