@@ -795,6 +795,7 @@ option {
   font-size: 20px;
   color: #ffffff; /* Adjust the color as needed */
   transition: color 0.3s ease-in-out;
+  top: -7%;
 }
 
 .favoriteButton:hover,
