@@ -83,38 +83,50 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }
 
-  function displayFavorites(favorites) {
-    favoriteGamesContainer.innerHTML = "";
+  function displayGames(games) {
+    gameContainer.innerHTML = "";
   
-    favorites.forEach((favorite) => {
-      const game = games.find((game) => game.name === favorite);
-      if (game) {
-        const favoriteGameCard = document.createElement("div");
-        favoriteGameCard.classList.add("favoriteGameCard");
+    games.forEach((game) => {
+      const gameCard = document.createElement("div");
+      gameCard.classList.add("gameCard");
   
-        const gameImg = document.createElement("img");
-        gameImg.src = game.image;
-        gameImg.alt = game.name;
-        gameImg.addEventListener("click", function () {
-          window.location.href = "/play?game=" + encodeURIComponent(game.url);
-        });
+      const gameImg = document.createElement("img");
+      gameImg.src = game.image;
+      gameImg.addEventListener("click", function () {
+        window.location.href = "/play?game=" + encodeURIComponent(game.url);
+      });
+      gameCard.appendChild(gameImg);
   
-        const gameTitle = document.createElement("h3");
-        gameTitle.textContent = game.name;
+      const gameTitle = document.createElement("h3");
+      gameTitle.textContent = game.name;
   
-        const unfavoriteButton = document.createElement("button");
-        unfavoriteButton.innerHTML = '<i class="fas fa-heart-broken"></i>';
-        unfavoriteButton.classList.add("unfavoriteButton");
-        unfavoriteButton.addEventListener("click", function (event) {
-          event.stopPropagation();
-          toggleFavorite(game.name, favoriteGameCard);
-        });
-  
-        favoriteGameCard.appendChild(gameImg);
-        favoriteGameCard.appendChild(gameTitle);
-        favoriteGameCard.appendChild(unfavoriteButton);
-        favoriteGamesContainer.appendChild(favoriteGameCard);
+      if (favorites.includes(game.name)) {
+        gameCard.classList.add("favorited");
       }
+  
+      const favoriteButton = document.createElement("button");
+      favoriteButton.innerHTML = '<i class="fas fa-heart"></i>';
+      favoriteButton.classList.add("favoriteButton");
+      favoriteButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        toggleFavorite(game.name, gameCard);
+      });
+  
+      gameCard.appendChild(gameTitle);
+      gameCard.appendChild(favoriteButton);
+  
+      // Check if game is new and add 'New' badge with spaces
+      if (game.new) {
+        const newBadge = document.createElement("span");
+        newBadge.classList.add("badge");
+        newBadge.textContent = "New";
+  
+        // Add two blank spaces before the badge
+        gameTitle.appendChild(document.createTextNode("\u00A0\u00A0"));
+        gameTitle.appendChild(newBadge);
+      }
+  
+      gameContainer.appendChild(gameCard);
     });
   }
 
