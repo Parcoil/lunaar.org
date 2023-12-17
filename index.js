@@ -67,6 +67,17 @@ app.get('/sitemap.gay', (req, res) => {
     }
   });
 });
+
+app.get('/games.lol', (req, res) => {
+  const filePath = path.join(publicPath, 'games.json');
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      console.error(err);
+      res.status(404).send('Games not found');
+    }
+  });
+});
+
 app.get('/games', (req, res) => {
   const filePath = path.join(publicPath, 'games.json');
   res.sendFile(filePath, (err) => {
