@@ -58,7 +58,7 @@ app.get('/credits', (req, res) => {
 });
 // Hand
 
-app.get('/sitemap.lol', (req, res) => {
+app.get('/sitemap.gay', (req, res) => {
   const filePath = path.join(publicPath, 'other/sitemap.xml');
   res.sendFile(filePath, (err) => {
     if (err) {
