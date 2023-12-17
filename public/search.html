@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Apps | Native</title>
+    <title>Settings | Native</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Nativegames 130+ Unblocked Games" />
@@ -21,65 +21,102 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:color" content="#1a2023" />
     <link rel="icon" type="image/png" sizes="512x512" href="/media/nativelogotrans.png" />
-    <link rel="icon" href="favicon.png" />
-    <script src="js/games.js"></script>
-    <script src="js/randomtext.js"></script>
-    <script src="js/settings.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/themes.css" />
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="/uv/uv.sw.js" defer></script>
+    <style id="style"></style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
      crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body onload="registerSW()">
     <nav class="navbar">
       <h1 class="navtext">native.</h1>
       <li><a href="./" class="navlink">Home</a></li>
       <li><a href="projects">Games</a></li>
       <li><a href="bookmarklets">Bookmarklets</a></li>
       <li><a href="apps">Apps</a></li>
+      <li><a href="search">Search</a></li>
       <li><a href="#" onclick="createBlank();">about:blank</a></li>
       <li><a href="settings">Settings</a></li>
       <li><a href="other/">More</a></li>
     </nav>
-    <h1 class="center">Apps</h1>
-    <div id="appContainer" rel="grow" style="font-family: Ubuntu, sans-serif; font-weight: bold;">
-      <div class="gameCard">
-        <img src="/media/apps/discord.png" />
-        <h3>Discord</h3>
-      </div>
-      <div class="gameCard">
-        <img src="/media/apps/tiktok.png" />
-        <h3>Tiktok</h3>
-      </div>
-      <div class="gameCard">
-        <img src="/media/apps/reddit.png" href="/other/apps/reddit" />
-        <h3>Reddit</h3>
-      </div>
-      <div class="gameCard">
-        <img src="/media/apps/nv.png" href="/other/apps/geforce" />
-        <h3>Geforce Now</h3>
-      </div>
-      <div class="gameCard">
-        <img src="/media/apps/spotify.png" href="/other/apps/spotify" />
-        <h3>Spotify</h3>
-      </div>
-      <div class="gameCard">
-        <img src="/media/apps/youtube.png" href="/other/apps/youtube" />
-        <h3>Youtube</h3>
-      </div>
-      <div class="gameCard">
-        <img src="/media/apps/x.png" href="/other/apps/x" />
-        <h3>X</h3>
-      </div>
-      <div class="gameCard">
-        <img src="/media/apps/twitch.png" href="/other/apps/twitch" />
-        <h3>Twitch</h3>
-      </div>
-      <div class="gameCard">
-        <img src="/media/apps/sflix.png" href="/other/apps/sflix" />
-        <h3>Sflix</h3>
-      </div>
-    </div>
+    <h1 align="center" class="Search">Search ( 𝙥𝙧0𝙭𝙮 )</h1>
+    <form id="uv-form" class="flex-center">
+        <input
+          id="uv-search-engine"
+          value="https://www.google.com/search?q=%s"
+          type="hidden"
+        />
+       
+        <div class="search-box">
+          <input id="uv-address" type="text" placeholder="Surf the web freely" />
+        </div>
+
+        <p id="uv-error"></p>
+        <pre id="uv-error-code"></pre>
+        <button id="uv-register-sw" value="Register service worker">
+          Register ServiceWorker
+        </button>
+        
+        <h5 align="center" class="coil">Powered by <a href="https://shorturl.at/oPSZ0" class="blue">Coil</a></h5>
+        <style>
+            #uv-error {
+  color: #ff6666 !important;
+  white-space: pre-wrap;
+}
+
+#uv-error-code {
+  font-size: 12px;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#uv-register-sw {
+  color: white;
+  background: #555555;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 16px 20px;
+  line-height: 16px;
+  display: none;
+}
+
+#uv-register-sw:active {
+  background: #333333;
+}
+
+#uv-register-sw.show {
+  display: block;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* Style for the footer */
+.coil {
+  margin-top: 20%;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+position:fixed;
+}
+.search { 
+  margin-top: 10px;
+}
+.blue {
+  color: var(--logo);
+}
+        </style>
   </body>
-  <script src="/js/core.js"></script>
-</html>
+  </html>

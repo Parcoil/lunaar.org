@@ -218,6 +218,11 @@
     "url": "cubefield"
   },
   {
+    "name": "Download Simulator",
+    "image": "https://gms.speedpl.us/dlsm/index.icon.png",
+    "url": "dlsm"
+  },
+  {
     "name": "Dadish",
     "image": "https://gms.speedpl.us/dadish/gameicon.png",
     "url": "dadish"

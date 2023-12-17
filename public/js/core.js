@@ -10,10 +10,7 @@ googleAnaIn.innerHTML = `
 `;
 document.body.appendChild(googleAnaIn);
 
-window.addEventListener("beforeunload", function (event) {
-  event.preventDefault();
-  return (event.returnValue = "");
-});
+
 
 // Fetch the JSON configuration from the URL
 fetch("https://gist.githubusercontent.com/3kh0/6dd52e0bc4cf407769e89ea2d5957d49/raw/config.json?time=" + Date.now())
@@ -86,11 +83,7 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+
 
 
 
@@ -109,4 +102,6 @@ function createBlank() {
   win.document.body.appendChild(iframe);
   window.location.href = "https://www.google.com/search?q=what+day+is+today";
 }
-
+setTimeout(() => {
+  console.warn("Thanks for using Native Games.... skid");
+}, 3000);

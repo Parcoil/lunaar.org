@@ -1,5 +1,8 @@
 /* Hey skid or contributor this is the main css file for the whole website.
- if you are looking for themes there in "themes.css"*/
+ if you are looking for themes there in "themes.css
+ 
+ 
+ "*/
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Ubuntu:wght@400;500&display=swap");
@@ -654,25 +657,24 @@ input[type="settings"]:focus {
   border-radius: 5px;
   border: none;
 }
-#uv-address {
-  background: none;
-  font-family: inherit;
-  padding: 0px 17px;
-  height: 48px;
-  border: 1px solid rgb(255, 255, 255, 0.2);
-  color: var(--text-color);
-  border-radius: 3px;
-  outline: none;
-  width: 350px;
-  margin-top: 5px;
-  border-radius: 50px;
-  color: #fff;
-  transition: border-radius 0.1s;
+.container {
+  text-align: center;
 }
 
-#uv-address:focus {
-  border: 1px solid rgba(253, 253, 253, 0.514);
-  border-radius: 6px;
+.search-box {
+  margin-top: 100px;
+  display: inline-block;
+  max-width: 400px;
+}
+
+input[type="text"] {
+  width: calc(100% - 90px);
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  width: 300px;
 }
 
 select {
