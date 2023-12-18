@@ -219,8 +219,8 @@
   },
   {
     "name": "Download Simulator",
-    "image": "https://gms.speedpl.us/dlsm/index.icon.png",
-    "url": "dlsm"
+    "image": "https://gms.speedpl.us/dlsim/index.icon.png",
+    "url": "dlsim"
   },
   {
     "name": "Dadish",
