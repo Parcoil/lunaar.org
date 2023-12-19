@@ -105,3 +105,12 @@ function createBlank() {
 setTimeout(() => {
   console.warn("Thanks for using Native Games.... skid");
 }, 3000);
+
+// Check if the page is loaded within an iframe
+if (window !== window.top) {
+  // Page is in an iframe, find and delete the nav element
+  var navElement = document.querySelector('nav.navbar');
+  if (navElement) {
+    navElement.parentNode.removeChild(navElement);
+  }
+}
