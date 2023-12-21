@@ -1,6 +1,26 @@
 // Hey skid or contributor.
 // this is The core script that sets the theme, favicon, tabcloak etc
 
+document.addEventListener('DOMContentLoaded', function() {
+  var navHTML = `
+  <nav class="navbar">
+    <h1 class="navtext">native.</h1>
+    <li><a href="./" class="navlink">Home</a></li>
+    <li><a href="projects">Games</a></li>
+    <li><a href="bookmarklets">Bookmarklets</a></li>
+    <li><a href="apps">Apps</a></li>
+    <li><a href="search">Search</a></li>
+    <li><a href="#" onclick="createBlank();">about:blank</a></li>
+    <li><a href="settings">Settings</a></li>
+    <li><a href="other/">More</a></li>
+  </nav>
+  `;
+
+  var bodyElement = document.querySelector('body');
+  bodyElement.insertAdjacentHTML('afterbegin', navHTML);
+});
+
+
 var googleAnaIn = document.createElement("script");
 googleAnaIn.innerHTML = `
   window.dataLayer = window.dataLayer || [];
