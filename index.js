@@ -131,7 +131,6 @@ server.on("listening", () => {
   console.log();
   console.log(`Nativegames Running on port ${address.port}`);
   console.log();
-  console.log(`http://localhost:${address.port}`);
 });
 
 // https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html

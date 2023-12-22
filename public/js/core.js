@@ -1,6 +1,31 @@
 // Hey skid or contributor.
 // this is The core script that sets the theme, favicon, tabcloak etc
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  var headElement = document.querySelector('head');
+
+  var htmlToInject = `
+  <script type='text/javascript' src='//pl21870208.toprevenuegate.com/f0/f8/e8/f0f8e80a2dd8358ff9829f32fabc970b.js'></script>
+  <script type="text/javascript">
+	atOptions = {
+		'key' : '877589d1b5c546635d299e457d63145b',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/877589d1b5c546635d299e457d63145b/invoke.js"></scr' + 'ipt>');
+</script>
+<script async="async" data-cfasync="false" src="//pl21870249.toprevenuegate.com/4c931ccbd0c0555668605954e879401a/invoke.js"></script>
+<div id="container-4c931ccbd0c0555668605954e879401a"></div>
+  `;
+
+  headElement.insertAdjacentHTML('beforeend', htmlToInject);
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // Check the number of existing navbars
   var existingNavs = document.querySelectorAll('.navbar');
@@ -18,39 +43,29 @@ document.addEventListener('DOMContentLoaded', function() {
               <li><a href="settings">Settings</a></li>
               <li><a href="other/">More</a></li>
           </nav>
-      `;
+          <div id='stars'></div>
+          <div id='stars2'></div>
+          <div id='stars3'></div>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+          <link rel="stylesheet" href="/css/stars.css"></link>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
+     crossorigin="anonymous"></script>
+<!-- main -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1565760898646999"
+     data-ad-slot="3394614244"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+          `;
   
       var bodyElement = document.querySelector('body');
       bodyElement.insertAdjacentHTML('afterbegin', navHTML);
   }
 });
-
-var googleAnaIn = document.createElement("script");
-googleAnaIn.innerHTML = `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W8NZMM8WN9');
-`;
-document.body.appendChild(googleAnaIn);
-
-
-
-// Fetch the JSON configuration from the URL
-fetch("https://gist.githubusercontent.com/3kh0/6dd52e0bc4cf407769e89ea2d5957d49/raw/config.json?time=" + Date.now())
-  .then((response) => response.json())
-  .then((config) => {
-    // Use the obtained values to set the id attributes
-    var googleAna = document.createElement("script");
-    googleAna.async = true;
-    googleAna.src = "https://www.googletagmanager.com/gtag/js?id=" + config.googleAna;
-    document.body.appendChild(googleAna);
-
-    var googleAds = document.createElement("script");
-    googleAds.async = true;
-    googleAds.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + config.adsenseID;
-    document.body.appendChild(googleAds);
-  });
 
 var rocket = document.createElement("script");
 rocket.async = true;
