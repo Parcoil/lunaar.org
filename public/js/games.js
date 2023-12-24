@@ -10,6 +10,27 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.json())
     .then((data) => {
       games = data; // Assign data to games array
+  // Iterate over each game
+  games.forEach(game => {
+    // Create a new element for each game
+    let gameElement = document.createElement('div');
+    gameElement.classList.add('game');
+
+    // Create and set the game title, including the 'New' badge if applicable
+    let gameTitle = document.createElement('h3');
+    if (game.new === true) {
+      gameTitle.innerHTML = game.name + ' <span class="badge">New</span>';
+    } else {
+      gameTitle.textContent = game.name;
+    }
+    gameElement.appendChild(gameTitle);
+
+    // Append other game details here...
+
+    // Finally, append the game element to the game container
+    gameContainer.appendChild(gameElement);
+  });
+
 
       searchBar.placeholder = `Search among ${games.length} games`;
 
