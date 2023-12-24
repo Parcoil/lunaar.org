@@ -805,3 +805,7 @@ option {
 .unfavoriteButton:hover {
   color: #FF0000; /* Adjust the hover color as needed */
 }
+.starstext {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

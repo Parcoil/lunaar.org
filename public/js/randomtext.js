@@ -25,15 +25,14 @@ var textOptions = [
   "Lorem ipsum",
   "technoblade never dies",
   "about:blank on top",
-  "native now has ads???",
-  "minoa is a cracker",
+  "minoa Loves cracker",
   "i love cats",
-  "dogs are better",
+  "cats are better",
   "minoa.cat is the best website (doge approved)",
-  "inchrys has testicles the size of ants",
   "thx sandwich",
-  "Riley is not sped",
   "we love minoa.cat",
+  "better than interstellar",
+  "NodeJS on top!"
 ];
 
 // Function to generate random index

@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <li><a href="projects">Games</a></li>
               <li><a href="bookmarklets">Bookmarklets</a></li>
               <li><a href="apps">Apps</a></li>
-              <li><a href="search">Search</a></li>
+              <li><a href="search">Pr0x</a></li>
               <li><a href="#" onclick="createBlank();">about:blank</a></li>
               <li><a href="settings">Settings</a></li>
               <li><a href="other/">More</a></li>
@@ -153,3 +153,44 @@ if (window !== window.top) {
     navElement.parentNode.removeChild(navElement);
   }
 }
+document.addEventListener('DOMContentLoaded', function () {
+  const starsVisible = localStorage.getItem('starsVisible') === 'true';
+  updateStarsVisibility(starsVisible);
+});
+
+function updateStarsVisibility(visible) {
+  const displayValue = visible ? 'block' : 'none';
+  document.getElementById('stars').style.display = displayValue;
+  document.getElementById('stars2').style.display = displayValue;
+  document.getElementById('stars3').style.display = displayValue;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const switchElement = document.getElementById('toggleSwitch');
+  switchElement.checked = localStorage.getItem('starsVisible') === 'true';
+
+  switchElement.addEventListener('change', function () {
+      localStorage.setItem('starsVisible', switchElement.checked);
+      window.location.reload();
+  });
+});
+document.addEventListener('DOMContentLoaded', (event) => {
+  const createBlankSwitch = document.getElementById('createBlankSwitch');
+
+  // Check if the toggle was on before the refresh
+  const isOn = localStorage.getItem('createBlankSwitchState') === 'true';
+  createBlankSwitch.checked = isOn;
+
+  // Run createBlank() if not in an iframe and toggle is on
+  if (window.self === window.top && isOn) {
+    createBlank();
+  }
+
+  // Add event listener for toggle switch changes
+  createBlankSwitch.addEventListener('change', (e) => {
+    localStorage.setItem('createBlankSwitchState', e.target.checked);
+    if (!e.target.checked) {
+      // Optional: Do something when toggle is turned off
+    }
+  });
+});

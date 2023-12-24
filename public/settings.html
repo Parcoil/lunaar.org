@@ -85,15 +85,37 @@
             <option value="pink">Pink</option>
             <option value="oled">OLED</option>
             <option value="bone">BONELAB</option>
+            <option value="craft">Minecraft</option>
             <!-- Add more options for different themes -->
           </select>
+          
+          <h3 class="starstext"> Stars (Dont use if in  about:blank)</h3>
+          <label class="switch">
+            <input type="checkbox" id="toggleSwitch">
+            <span class="slider round"></span>
+          </label>
+         <h3 class="starstext">about:blank on page load </h3>
+          <label class="switch">
+            <input type="checkbox" id="createBlankSwitch">
+            <span class="slider round"></span>
+        </label>
+  
         </p>
 
-        <h6><a href="https://github.com/Parcoil/nativegames.net">v3.2.1</a></h6>
+        <h6><a href="https://github.com/Parcoil/nativegames.net">v3.3.0</a></h6>
         <!-- Auto About Blank-->
       </div>
     </div>
     <script src="/js/core.js"></script>
     <script src="js/settings.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+      const switchElement = document.getElementById('toggleSwitch');
+      switchElement.checked = localStorage.getItem('starsVisible') === 'true';
+  
+      switchElement.addEventListener('change', function () {
+          localStorage.setItem('starsVisible', switchElement.checked);
+      });
+  });
+  </script>
   </body>
 </html>
