@@ -20,28 +20,12 @@ import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 
 const bare = createBareServer("/bare/");
 const app = express();
-const allowedRootDomains = ['nativegames.net', 'undefined.tk', 'nativegms.lol'];
 
 // Load our publicPath first and prioritize it over UV.
 app.use(express.static(publicPath));
 // Load vendor files last.
 // The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
-
-app.use((req, res, next) => {
-  const hostParts = req.hostname.split('.');
-  const subdomain = hostParts[0];
-  const rootDomain = hostParts.slice(1).join('.');
-
-  if (allowedRootDomains.includes(rootDomain)) {
-    // Handle the subdomain routing here
-    // You can define specific logic for each subdomain
-    // For demonstration, let's just send a response
-    res.send(`You accessed subdomain: ${subdomain} on domain: ${rootDomain}`);
-  } else {
-    res.status(404).send('Not Found');
-  }
-});
 
 app.get('/emulator', (req, res) => {
   const filePath = path.join(publicPath, 'other/emulator/index.html');
@@ -113,8 +97,6 @@ app.get('/games', (req, res) => {
     }
   });
 });
-
-
 // Handle clean URLs
 app.get('/:page', (req, res) => {
   const page = req.params.page;
