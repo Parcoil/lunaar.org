@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (existingNavs.length === 0) {
       var navHTML = `
           <nav class="navbar">
-              <h1 class="navtext">native.🎄</h1>
+              <h1 class="navtext">native.</h1>
               <li><a href="./" class="navlink">Home</a></li>
               <li><a href="projects">Games</a></li>
               <li><a href="bookmarklets">Bookmarklets</a></li>
