@@ -1,0 +1,13 @@
+name: Node
+on: push
+jobs:
+   first-job:
+   name: Build and Test
+   runs-on: ubuntu-latest
+   container: node:lts
+   steps:
+  - run: node --version
+  - run: npm --version
+  - run: npm install
+  - run: node index.js
+
