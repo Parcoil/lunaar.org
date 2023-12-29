@@ -20,6 +20,7 @@ import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 
 const bare = createBareServer("/bare/");
 const app = express();
+const allowedRootDomains = ['nativegames.net', 'undefined.tk', 'nativegms.lol'];
 
 // Load our publicPath first and prioritize it over UV.
 app.use(express.static(publicPath));
@@ -27,22 +28,20 @@ app.use(express.static(publicPath));
 // The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
 
-const allowedRoots = ['nativegames.net', 'undifined.tk', 'nativegms.lol','localhost', '127.0.0.1'];
-
 app.use((req, res, next) => {
-  const hostname = req.hostname;
+  const hostParts = req.hostname.split('.');
+  const subdomain = hostParts[0];
+  const rootDomain = hostParts.slice(1).join('.');
 
-  if (hostname.split('.').length > 2) {
-    const rootDomain = hostname.split('.').slice(-2).join('.');
-
-    if (allowedRoots.includes(rootDomain)) {
-      return res.redirect(301, `https://${rootDomain}`);
-    } 
+  if (allowedRootDomains.includes(rootDomain)) {
+    // Handle the subdomain routing here
+    // You can define specific logic for each subdomain
+    // For demonstration, let's just send a response
+    res.send(`You accessed subdomain: ${subdomain} on domain: ${rootDomain}`);
+  } else {
+    res.status(404).send('Not Found');
   }
-
-  next();
 });
-
 
 app.get('/emulator', (req, res) => {
   const filePath = path.join(publicPath, 'other/emulator/index.html');
@@ -114,6 +113,8 @@ app.get('/games', (req, res) => {
     }
   });
 });
+
+
 // Handle clean URLs
 app.get('/:page', (req, res) => {
   const page = req.params.page;
