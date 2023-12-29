@@ -27,6 +27,23 @@ app.use(express.static(publicPath));
 // The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
 
+const allowedRoots = ['nativegames.net', 'undifined.tk', 'nativegms.lol','localhost', '127.0.0.1'];
+
+app.use((req, res, next) => {
+  const hostname = req.hostname;
+
+  if (hostname.split('.').length > 2) {
+    const rootDomain = hostname.split('.').slice(-2).join('.');
+
+    if (allowedRoots.includes(rootDomain)) {
+      return res.redirect(301, `https://${rootDomain}`);
+    } 
+  }
+
+  next();
+});
+
+
 app.get('/emulator', (req, res) => {
   const filePath = path.join(publicPath, 'other/emulator/index.html');
   res.sendFile(filePath, (err) => {
@@ -70,6 +87,16 @@ app.get('/sitemap.gay', (req, res) => {
 
 app.get('/games.lol', (req, res) => {
   const filePath = path.join(publicPath, 'games.json');
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      console.error(err);
+      res.status(404).send('Games not found');
+    }
+  });
+});
+
+app.get('/games1', (req, res) => {
+  const filePath = path.join(__dirname, 'games.json');
   res.sendFile(filePath, (err) => {
     if (err) {
       console.error(err);
