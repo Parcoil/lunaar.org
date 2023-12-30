@@ -1,13 +1,22 @@
 {
   "version": 2,
-  "builds": [{
-    "src": "./index.js",
-    "use": "@vercel/node"
-  }],
-  "routes": [{"handle": "filesystem"},
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
     {
       "src": "/.*",
       "dest": "index.js"
+    },
+    {
+      "src": "/arc-sw.js",
+      "dest": "https://arc.io/arc-sw.js"
     }
   ]
 }
