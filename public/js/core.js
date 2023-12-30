@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/877589d1b5c546635d299e457d63145b/invoke.js"></scr' + 'ipt>');
 </script>
 <script async="async" data-cfasync="false" src="//pl21870249.toprevenuegate.com/4c931ccbd0c0555668605954e879401a/invoke.js"></script>
+<script async src="https://arc.io/widget.min.js#5XPTU21J"></script>
 <div id="container-4c931ccbd0c0555668605954e879401a"></div>
   `;
 
