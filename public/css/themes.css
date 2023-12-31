@@ -3,131 +3,35 @@
 
 /* Default Theme */
 body {
-  background-color: #1a2023;
-  color: #fff;
+  --background: #1a2023;
+  --textcolor: #fff;
+  --button: rgb(29, 130, 255);
+  --buttonhover: rgba(29, 130, 255, 0.8);
+  --alt:  #22282b;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Dark Theme */
 body.dark {
-  background-color: #222222;
-  color: #ffffff;
-}
+  --background: #222222;
+  --textcolor: #ffffff;
+  --button: #444444;
+  --alt: #444444;
+  --logo: #e6e6e6;
+  --buttonhover: #444444;
 
-body.dark .native,
-body.dark #randomtext,
-body.dark .navtext {
-  color: #e6e6e6; /* Adjust colors for dark theme */
 }
-
-body.dark .button,
-body.dark input:checked + .slider {
-  background-color: #444444; /* Adjust background color for dark theme */
-  color: #ffffff; /* Text color for dark theme */
-}
-
-body.dark #themeSelect,
-body.dark #premadecloaks {
-  background-color: #444444; /* Adjust background color for dark theme */
-}
-
-body.dark #themeSelect:hover,
-body.dark #premadecloaks:hover {
-  background-color: #555555; /* Adjust hover background color for dark theme */
-}
-
-body.dark .navbar a:hover {
-  background-color: #444444; /* Adjust navbar link hover background color for dark theme */
-}
-
-body.dark .button:hover {
-  color: #ffffff; /* Text color on hover for dark theme */
-}
-body.dark input[type="settings"]:focus {
-  border-color: #555555;
-  box-shadow: 0 0 8px 0 #555555;
-}
-body.dark::-webkit-scrollbar-thumb {
-  background-color: #555555; /* Scrollbar thumb color for dark theme */
-}
-body.blue .rwd-table a {
-  color: #ffffff;
-}
-body.dark .rwd-table th,
-body.dark .rwd-table td {
-  background-color: #444444;
-}
-body.dark td {
-  color: #ffffff;
-}
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark a,
-body.dark h4,
-body.dark h5 {
-  color: #fff;
-}
-body.dark .card {
-  background-color: #444444;
-}
-
-/* Add more theme-specific styles for other themes as needed */
-
-/* Add more theme-specific styles for other themes as needed */
 
 /* Red Theme */
 body.two {
-  background-color: #212f3c;
-  color: #ffffff;
+  --background: #212f3c;
+  --textcolor: #ffffff;
+  --button: #ff0f00;
+  --logo: #ff0f00;
+  --alt: #2e3f4e;
+  --buttonhover: #ff0f00;
 }
 
-body.two .native,
-body.two #randomtext,
-body.two .navtext {
-  color: #ff0f00; /* Adjust colors for blue theme */
-}
-
-body.two .button,
-body.two input:checked + .slider {
-  background-color: #ff0f00; /* Adjust background color for blue theme */
-  color: #ffffff; /* Text color for blue theme */
-}
-
-body.two #themeSelect,
-body.two #premadecloaks {
-  background-color: #ff0f00; /* Adjust background color for blue theme */
-}
-
-body.two #themeSelect:hover,
-body.two #premadecloaks:hover {
-  background-color: #ff0f00; /* Adjust hover background color for blue theme */
-}
-
-body.two .navbar a:hover {
-  background-color: #ff0f00; /* Adjust navbar link hover background color for blue theme */
-}
-
-body.two .button:hover {
-  color: #ffffff; /* Text color on hover for blue theme */
-}
-body.two input:checked {
-  background-color: #ff0f00;
-}
-body.two input[type="settings"]:focus {
-  border-color: red;
-  box-shadow: 0 0 8px 0 red;
-}
-body.two .rwd-table a {
-  color: #ff0f00;
-}
-body.two .rwd-table th,
-.rwd-table td {
-  background-color: #2e3f4e;
-}
-body.two .card {
-  background-color: red;
-}
 /* Pink Theme */
 body.pink {
   background-color: pink;

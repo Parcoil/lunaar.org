@@ -32,7 +32,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #1a2023;
+  background-color: var(--background);
   height: 100%;
   color: rgb(219, 219, 219);
   animation: fadeIn 1s ease-out forwards;
@@ -222,7 +222,7 @@ svg {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(29, 130, 255);
+  background: var(--button);
   border-radius: 15px;
   height: 2px;
 }
@@ -271,7 +271,7 @@ li {
 }
 
 .navbar a:hover {
-  background-color: rgb(29, 130, 255);
+  background-color: var(--button);
   transform: scale(1.05);
   border-radius: 15px;
   color: #fff; /* Rounded corners on hover */
@@ -293,7 +293,7 @@ li {
   left: 10%;
   top: 15px;
   width: 30px;
-  color: rgb(29, 130, 255);
+  color: var(--logo);
   font-size: 30px;
   font-family: "Croogla 4F";
   font-weight: 300;
@@ -303,7 +303,7 @@ li {
 }
 /*Native logo*/
 .native {
-  color: rgb(29, 130, 255);
+  color: var(--logo);
   margin-top: 1%;
   font-size: 64px;
   font-family: "Croogla 4F";
@@ -495,7 +495,7 @@ input:checked + .slider:before {
 }
 /*Button*/
 .button {
-  background-color: rgb(29, 130, 255);
+  background-color: var(--button);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -512,12 +512,12 @@ input:checked + .slider:before {
 }
 
 .button:hover {
-  background-color: rgba(29, 130, 255, 0.8);
+  background-color: var(--buttonhover);
   transform: translateY(-3px);
 }
 /*Cloaks*/
 #premadecloaks {
-  background-color: rgb(29, 130, 255);
+  background-color: var(--button);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -533,12 +533,12 @@ input:checked + .slider:before {
 }
 
 #premadecloaks:hover {
-  background-color: rgba(29, 130, 255, 0.8);
+  background-color: var(--buttonhover);
   transform: translateY(-3px);
 }
 /*Themes*/
 #themeSelect {
-  background-color: rgb(29, 130, 255);
+  background-color: var(--button);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -553,7 +553,7 @@ input:checked + .slider:before {
 }
 
 #themeSelect:hover {
-  background-color: rgba(29, 130, 255, 0.8);
+  background-color: var(--buttonhover);
   transform: translateY(-3px);
 }
 
@@ -615,7 +615,7 @@ input[type="settings"]:focus {
 .rwd-table td {
   margin: 0.5em 1em;
   padding: 1em;
-  background-color: #22282b;
+  background-color: var(--alt);
 }
 
 .rwd-table td:before {
@@ -625,7 +625,7 @@ input[type="settings"]:focus {
 }
 
 .rwd-table a {
-  color: rgb(29, 130, 255);
+  color: var(--logo);
 }
 
 @media (min-width: 480px) {
@@ -808,4 +808,11 @@ option {
 .starstext {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+
+
+/* Add smooth transition for the moving effect */
+.navbarex a {
+  transition: transform 0.3s ease, font-size 0.3s ease;
 }
