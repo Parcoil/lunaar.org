@@ -23,6 +23,7 @@ var textOptions = [
   "Pineapple Cow",
   "chromebooks suck",
   "Lorem ipsum",
+  "Snappier is bad at american truck simulator",
   "technoblade never dies",
   "about:blank on top",
   "minoa Loves cracker",
