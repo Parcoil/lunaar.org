@@ -24,6 +24,7 @@ var textOptions = [
   "chromebooks suck",
   "Lorem ipsum",
   "Snappier is bad at american truck simulator",
+  "Doge does not understand why this does not white",
   "technoblade never dies",
   "about:blank on top",
   "minoa Loves cracker",
