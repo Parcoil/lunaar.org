@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const gameContainer = document.getElementById("gameContainer");
   const searchBar = document.getElementById("searchBar");
-  const favoriteGamesContainer = document.getElementById("favoriteGamesContainer");
+  const favoriteGamesContainer = document.getElementById(
+    "favoriteGamesContainer"
+  );
   let games = []; // Define games array in the outer scope
 
   let favorites = [];
@@ -10,34 +12,35 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.json())
     .then((data) => {
       games = data; // Assign data to games array
-  // Iterate over each game
-  games.forEach(game => {
-    // Create a new element for each game
-    let gameElement = document.createElement('div');
-    gameElement.classList.add('game');
+      // Iterate over each game
+      games.forEach((game) => {
+        // Create a new element for each game
+        let gameElement = document.createElement("div");
+        gameElement.classList.add("game");
 
-    // Create and set the game title, including the 'New' badge if applicable
-    let gameTitle = document.createElement('h3');
-    if (game.new === true) {
-      gameTitle.innerHTML = game.name + ' <span class="badge">New</span>';
-    } else {
-      gameTitle.textContent = game.name;
-    }
-    gameElement.appendChild(gameTitle);
+        // Create and set the game title, including the 'New' badge if applicable
+        let gameTitle = document.createElement("h3");
+        if (game.new === true) {
+          gameTitle.innerHTML = game.name + ' <span class="badge">New</span>';
+        } else {
+          gameTitle.textContent = game.name;
+        }
+        gameElement.appendChild(gameTitle);
 
-    // Append other game details here...
+        // Append other game details here...
 
-    // Finally, append the game element to the game container
-    gameContainer.appendChild(gameElement);
-  });
-
+        // Finally, append the game element to the game container
+        gameContainer.appendChild(gameElement);
+      });
 
       searchBar.placeholder = `Search among ${games.length} games`;
 
       displayGames(games);
       searchBar.addEventListener("keyup", function () {
         const searchTerm = searchBar.value.toLowerCase();
-        const filteredGames = games.filter((game) => game.name.toLowerCase().includes(searchTerm));
+        const filteredGames = games.filter((game) =>
+          game.name.toLowerCase().includes(searchTerm)
+        );
         displayGames(filteredGames);
       });
 
@@ -106,23 +109,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayFavorites(favorites) {
     favoriteGamesContainer.innerHTML = "";
-  
+
     favorites.forEach((favorite) => {
       const game = games.find((game) => game.name === favorite);
       if (game) {
         const favoriteGameCard = document.createElement("div");
         favoriteGameCard.classList.add("favoriteGameCard");
-  
+
         const gameImg = document.createElement("img");
         gameImg.src = game.image;
         gameImg.alt = game.name;
         gameImg.addEventListener("click", function () {
           window.location.href = "/play?game=" + encodeURIComponent(game.url);
         });
-  
+
         const gameTitle = document.createElement("h3");
         gameTitle.textContent = game.name;
-  
+
         const unfavoriteButton = document.createElement("button");
         unfavoriteButton.innerHTML = '<i class="fas fa-heart-broken"></i>';
         unfavoriteButton.classList.add("unfavoriteButton");
@@ -130,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
           event.stopPropagation();
           toggleFavorite(game.name, favoriteGameCard);
         });
-  
+
         favoriteGameCard.appendChild(gameImg);
         favoriteGameCard.appendChild(gameTitle);
         favoriteGameCard.appendChild(unfavoriteButton);
@@ -141,7 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayNoFavoritesMessage() {
     const noFavoritesMessage = document.createElement("h5");
-    noFavoritesMessage.textContent = "No Favorites you can add favorites. by clicking on the favorites button on a game.";
+    noFavoritesMessage.textContent =
+      "No Favorites you can add favorites. by clicking on the favorites button on a game.";
     favoriteGamesContainer.appendChild(noFavoritesMessage);
   }
 });

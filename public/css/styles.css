@@ -9,7 +9,10 @@
 
 @font-face {
   font-family: "Croogla 4F";
-  src: url(c/ss/fonts/Croogla4F.eot) format("embedded-opentype"), url(/css/fonts/Croogla4F.eot) format("embedded-opentype"), url(/css/fonts/Croogla4F.woff2) format("woff2"), url(/css/fonts/Croogla4F.woff) format("woff"),
+  src: url(c/ss/fonts/Croogla4F.eot) format("embedded-opentype"),
+    url(/css/fonts/Croogla4F.eot) format("embedded-opentype"),
+    url(/css/fonts/Croogla4F.woff2) format("woff2"),
+    url(/css/fonts/Croogla4F.woff) format("woff"),
     url(/css/fonts/Croogla4F.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -266,7 +269,8 @@ li {
   text-align: left; /* 50% away from the left */
   font-family: "Ubuntu", sans-serif;
   font-weight: 600;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s, border-radius 0.3s; /* Added border-radius transition */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s,
+    border-radius 0.3s; /* Added border-radius transition */
   border-radius: 5px; /* Rounded corners on hover */
 }
 
@@ -798,19 +802,17 @@ option {
   color: #ffffff; /* Adjust the color as needed */
   transition: color 0.3s ease-in-out;
   top: -7%;
-  left : -13%;
+  left: -13%;
 }
 
 .favoriteButton:hover,
 .unfavoriteButton:hover {
-  color: #FF0000; /* Adjust the hover color as needed */
+  color: #ff0000; /* Adjust the hover color as needed */
 }
 .starstext {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-
 
 /* Add smooth transition for the moving effect */
 .navbarex a {

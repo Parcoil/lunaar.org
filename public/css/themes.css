@@ -7,7 +7,7 @@ body {
   --textcolor: #fff;
   --button: rgb(29, 130, 255);
   --buttonhover: rgba(29, 130, 255, 0.8);
-  --alt:  #22282b;
+  --alt: #22282b;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -19,12 +19,15 @@ body.dark {
   --alt: #444444;
   --logo: #e6e6e6;
   --buttonhover: #444444;
-
 }
 
 body.ghost {
-  background: rgb(0,0,0);
-  background: linear-gradient(153deg, rgba(0,0,0,1) 0%, rgba(149,43,43,1) 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    153deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(149, 43, 43, 1) 100%
+  );
   --textcolor: #5e5e5e;
   --button: rgb(90, 48, 48);
   --logo: white;
@@ -288,15 +291,14 @@ body.bone .card {
 }
 
 body.craft {
-  background-image: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Dirt_%28texture%29_JE2_BE2.png'); /* Replace with your image path */
+  background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Dirt_%28texture%29_JE2_BE2.png"); /* Replace with your image path */
   background-size: auto; /* This will maintain the image's original size */
   background-repeat: repeat; /* This will make the image repeat */
   background-position: top left; /* This will start the image from the top left corner */
 }
 
-
 body.craft .navbar a:hover,
-body.craft  button,
+body.craft button,
 body.craft select,
 body.craft input:checked + .slider {
   background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/a7/Cobblestone_%28texture%29_JE5_BE3.png");
@@ -306,8 +308,4 @@ body.craft .native,
 body.craft #randomtext,
 body.craft .navtext {
   color: #69a93f; /* Adjust colors for blue theme */
-  
-
 }
-
-

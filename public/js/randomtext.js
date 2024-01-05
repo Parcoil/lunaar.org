@@ -34,7 +34,7 @@ var textOptions = [
   "thx sandwich",
   "we love minoa.cat",
   "better than interstellar",
-  "NodeJS on top!"
+  "NodeJS on top!",
 ];
 
 // Function to generate random index

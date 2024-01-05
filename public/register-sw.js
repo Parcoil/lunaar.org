@@ -26,12 +26,11 @@ async function registerSW() {
 
   try {
     const registration = await navigator.serviceWorker.register(stockSW, {
-      scope: '/uv/'
+      scope: "/uv/",
     });
 
-    console.log('Service Worker registered:', registration);
+    console.log("Service Worker registered:", registration);
   } catch (error) {
-    console.error('Service Worker registration failed:', error);
+    console.error("Service Worker registration failed:", error);
   }
 }
-

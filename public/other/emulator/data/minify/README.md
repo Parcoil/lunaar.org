@@ -1,4 +1,3 @@
-
 # Minifying
 
 Before pushing the script files onto your production <br>
@@ -19,16 +18,15 @@ load times as well as bandwidth.
 
 2. Install the dependencies with:
 
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 
 3. Start the minification with:
 
-    ```sh
-    node index.js
-    ```
-
+   ```sh
+   node index.js
+   ```
 
 <!----------------------------------------------------------------------------->
 

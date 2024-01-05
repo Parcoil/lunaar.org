@@ -1,9 +1,8 @@
 // Hey skid or contributor.
 // this is The core script that sets the theme, favicon, tabcloak etc
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  var headElement = document.querySelector('head');
+document.addEventListener("DOMContentLoaded", function () {
+  var headElement = document.querySelector("head");
 
   var htmlToInject = `
   <script type='text/javascript' src='//pl21870208.toprevenuegate.com/f0/f8/e8/f0f8e80a2dd8358ff9829f32fabc970b.js'></script>
@@ -23,17 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <script type='text/javascript' src='//rethinkexercisesupplement.com/9b/12/b6/9b12b654a0756ef700a2fefad51de046.js'></script>
   `;
 
-  headElement.insertAdjacentHTML('beforeend', htmlToInject);
+  headElement.insertAdjacentHTML("beforeend", htmlToInject);
 });
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Check the number of existing navbars
-  var existingNavs = document.querySelectorAll('.navbar');
+  var existingNavs = document.querySelectorAll(".navbar");
 
   if (existingNavs.length === 0) {
-      var navHTML = `
+    var navHTML = `
           <nav class="navbar">
               <h1 class="navtext">native.</h1>
               <li><a href="./" class="navlink">Home</a></li>
@@ -63,9 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
           `;
-  
-      var bodyElement = document.querySelector('body');
-      bodyElement.insertAdjacentHTML('afterbegin', navHTML);
+
+    var bodyElement = document.querySelector("body");
+    bodyElement.insertAdjacentHTML("afterbegin", navHTML);
   }
 });
 
@@ -124,10 +121,6 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-
-
-
-
 function createBlank() {
   win = window.open();
   win.document.body.style.margin = "0";
@@ -150,37 +143,37 @@ setTimeout(() => {
 // Check if the page is loaded within an iframe
 if (window !== window.top) {
   // Page is in an iframe, find and delete the nav element
-  var navElement = document.querySelector('nav.navbar');
+  var navElement = document.querySelector("nav.navbar");
   if (navElement) {
     navElement.parentNode.removeChild(navElement);
   }
 }
-document.addEventListener('DOMContentLoaded', function () {
-  const starsVisible = localStorage.getItem('starsVisible') === 'true';
+document.addEventListener("DOMContentLoaded", function () {
+  const starsVisible = localStorage.getItem("starsVisible") === "true";
   updateStarsVisibility(starsVisible);
 });
 
 function updateStarsVisibility(visible) {
-  const displayValue = visible ? 'block' : 'none';
-  document.getElementById('stars').style.display = displayValue;
-  document.getElementById('stars2').style.display = displayValue;
-  document.getElementById('stars3').style.display = displayValue;
+  const displayValue = visible ? "block" : "none";
+  document.getElementById("stars").style.display = displayValue;
+  document.getElementById("stars2").style.display = displayValue;
+  document.getElementById("stars3").style.display = displayValue;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const switchElement = document.getElementById('toggleSwitch');
-  switchElement.checked = localStorage.getItem('starsVisible') === 'true';
+document.addEventListener("DOMContentLoaded", function () {
+  const switchElement = document.getElementById("toggleSwitch");
+  switchElement.checked = localStorage.getItem("starsVisible") === "true";
 
-  switchElement.addEventListener('change', function () {
-      localStorage.setItem('starsVisible', switchElement.checked);
-      window.location.reload();
+  switchElement.addEventListener("change", function () {
+    localStorage.setItem("starsVisible", switchElement.checked);
+    window.location.reload();
   });
 });
-document.addEventListener('DOMContentLoaded', (event) => {
-  const createBlankSwitch = document.getElementById('createBlankSwitch');
+document.addEventListener("DOMContentLoaded", (event) => {
+  const createBlankSwitch = document.getElementById("createBlankSwitch");
 
   // Check if the toggle was on before the refresh
-  const isOn = localStorage.getItem('createBlankSwitchState') === 'true';
+  const isOn = localStorage.getItem("createBlankSwitchState") === "true";
   createBlankSwitch.checked = isOn;
 
   // Run createBlank() if not in an iframe and toggle is on
@@ -189,8 +182,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   // Add event listener for toggle switch changes
-  createBlankSwitch.addEventListener('change', (e) => {
-    localStorage.setItem('createBlankSwitchState', e.target.checked);
+  createBlankSwitch.addEventListener("change", (e) => {
+    localStorage.setItem("createBlankSwitchState", e.target.checked);
     if (!e.target.checked) {
       // Optional: Do something when toggle is turned off
     }
