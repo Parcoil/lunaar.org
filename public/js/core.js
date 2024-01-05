@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script async="async" data-cfasync="false" src="//pl21870249.toprevenuegate.com/4c931ccbd0c0555668605954e879401a/invoke.js"></script>
 <script async src="https://arc.io/widget.min.js#5XPTU21J"></script>
 <div id="container-4c931ccbd0c0555668605954e879401a"></div>
+<script type='text/javascript' src='//rethinkexercisesupplement.com/9b/12/b6/9b12b654a0756ef700a2fefad51de046.js'></script>
   `;
 
   headElement.insertAdjacentHTML('beforeend', htmlToInject);
