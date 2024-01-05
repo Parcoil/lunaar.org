@@ -33,7 +33,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background);
-  height: 100%;
+  height: 100vh;
   color: rgb(219, 219, 219);
   animation: fadeIn 1s ease-out forwards;
   align-items: center;

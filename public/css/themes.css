@@ -22,6 +22,16 @@ body.dark {
 
 }
 
+body.ghost {
+  background: rgb(0,0,0);
+  background: linear-gradient(153deg, rgba(0,0,0,1) 0%, rgba(149,43,43,1) 100%);
+  --textcolor: #5e5e5e;
+  --button: rgb(90, 48, 48);
+  --logo: white;
+  --alt: #313131;
+  --buttonhover: rgb(59, 31, 31);
+}
+
 /* Red Theme */
 body.two {
   --background: #212f3c;
@@ -276,57 +286,7 @@ body.bone::-webkit-scrollbar-thumb {
 body.bone .card {
   background-color: #000;
 }
-body.cat {
-  background-color: #e4e4d8;
-}
-body.cat h1,
-body.cat h2,
-body.cat h3,
-body.cat a,
-body.cat h4,
-body.cat h5 {
-  color: #31343a;
-}
-body.cat .navbar a:hover {
-  background-color: #dddabb;
-}
-body.cat #themeSelect,
-body.cat #premadecloaks {
-  background-color: #eae895; /* Adjust background color for blue theme */
-  color: #31343a;
-}
-body.cat .button,
-body.cat input:checked + .slider {
-  background-color: #eae895; /* Adjust background color for blue theme */
-  color: #31343a; /* Text color for blue theme */
-}
-body.cat .rwd-table a {
-  color: #ffffff;
-}
-body.cat .rwd-table th,
-body.cat .rwd-table td {
-  background-color: #a09e87;
-}
-body.cat td {
-  color: #ffffff;
-}
-body.cat input[type="settings"]:focus {
-  border-color: white;
-  box-shadow: 0 0 8px 0 #eae895;
-}
-body.cat::-webkit-scrollbar-thumb {
-  background: #dddabb;
-}
-body.cat #randomText {
-  color: #31343a;
-}
-body.cat .card {
-  background-color: #eae895;
-}
-body.cat #gamename,
-body.cat #fullscreengame {
-  color: #31343a;
-}
+
 body.craft {
   background-image: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Dirt_%28texture%29_JE2_BE2.png'); /* Replace with your image path */
   background-size: auto; /* This will maintain the image's original size */
