@@ -20,6 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
 <script async src="https://arc.io/widget.min.js#5XPTU21J"></script>
 <div id="container-4c931ccbd0c0555668605954e879401a"></div>
 <script type='text/javascript' src='//rethinkexercisesupplement.com/9b/12/b6/9b12b654a0756ef700a2fefad51de046.js'></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '29160e432a29104bb65cd13fd5dca1f1',
+		'format' : 'iframe',
+		'height' : 300,
+		'width' : 160,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//rethinkexercisesupplement.com/29160e432a29104bb65cd13fd5dca1f1/invoke.js"></scr' + 'ipt>');
+</script>
   `;
 
   headElement.insertAdjacentHTML("beforeend", htmlToInject);
@@ -46,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div id='stars2'></div>
           <div id='stars3'></div>
           <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-          <link rel="stylesheet" href="/css/stars.css"></link>
+          <link rel="stylesheet" href="/css/stars.cs"></link>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
      crossorigin="anonymous"></script>
 <!-- main -->
