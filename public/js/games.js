@@ -66,7 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gameCard.classList.add("gameCard");
 
       const gameImg = document.createElement("img");
-      gameImg.src = game.image;
+      gameImg.src = `https://3kh0-assets-topaz.vercel.app/${game.url}/${game.image}`;
+
       gameImg.addEventListener("click", function () {
         window.location.href = "/play?game=" + encodeURIComponent(game.url);
       });
@@ -117,7 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
         favoriteGameCard.classList.add("favoriteGameCard");
 
         const gameImg = document.createElement("img");
-        gameImg.src = game.image;
+        gameImg.src = `https://3kh0-assets-topaz.vercel.app/${game.url}/${game.image}`;
+
         gameImg.alt = game.name;
         gameImg.addEventListener("click", function () {
           window.location.href = "/play?game=" + encodeURIComponent(game.url);
