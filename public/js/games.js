@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const gameContainer = document.getElementById("gameContainer");
   const searchBar = document.getElementById("searchBar");
+  const serverUrl1 = "https://3kh0-assets-topaz.vercel.app";
+  const serverUrl2 = "https://3kh0-assets-topaz.vercel.app";
   const favoriteGamesContainer = document.getElementById(
     "favoriteGamesContainer"
   );
@@ -66,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gameCard.classList.add("gameCard");
 
       const gameImg = document.createElement("img");
-      gameImg.src = `https://3kh0-assets-topaz.vercel.app/${game.url}/${game.image}`;
+      gameImg.src = `${serverUrl1}/${game.url}/${game.image}`;
 
       gameImg.addEventListener("click", function () {
         window.location.href = "/play?game=" + encodeURIComponent(game.url);
