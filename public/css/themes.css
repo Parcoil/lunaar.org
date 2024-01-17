@@ -10,6 +10,13 @@ body {
   --alt: #22282b;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+body.orange {
+  background: radial-gradient(
+    circle,
+    rgba(255, 131, 0, 1) 8%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
 
 /* Dark Theme */
 body.dark {
