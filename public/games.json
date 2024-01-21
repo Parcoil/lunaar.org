@@ -1,10 +1,5 @@
 [
   {
-    "name": "Request a Game",
-    "image": "media/request.png",
-    "url": "/form"
-  },
-  {
     "name": "1v1lol",
     "image": "logo.png",
     "url": "1v1lol",

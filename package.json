@@ -20,8 +20,7 @@
     "@titaniumnetwork-dev/ultraviolet": "^2.0.0",
     "@tomphttp/bare-server-node": "^2.0.0",
     "cd": "^0.3.3",
-    "express": "^4.18.2",
-    "http-proxy-middleware": "^2.0.6"
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "eslint": "^8.36.0",

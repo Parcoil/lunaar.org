@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let favorites = [];
 
-  fetch("/games")
+  fetch("/games.json")
     .then((response) => response.json())
     .then((data) => {
       games = data; // Assign data to games array
@@ -96,6 +96,17 @@ document.addEventListener("DOMContentLoaded", function () {
       gameContainer.appendChild(gameCard);
     });
   }
+  gameCard.addEventListener("click", function () {
+    // Get the text content of the h3 element inside the div
+    const h3Text = this.querySelector("h3").textContent;
+
+    // Check if the h3 text is "Request a Game"
+    if (h3Text === "Request a Game") {
+      // Redirect to /form when the h3 text is "Request a Game"
+      window.location.href = "/form";
+    }
+    // No action taken if the h3 text is not "Request a Game"
+  });
 
   function toggleFavorite(gameName, gameCard) {
     const index = favorites.indexOf(gameName);
