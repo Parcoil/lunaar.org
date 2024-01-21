@@ -29,7 +29,7 @@
   width: 35px;
 }
 * {
-  font-family: var(--font) !important;
+  font-family: var(--font);
 }
 :root {
   --background: #1a2023;

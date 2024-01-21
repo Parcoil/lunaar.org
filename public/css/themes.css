@@ -1,6 +1,9 @@
 /* Hey skid or contributer this is the Themes file.
  if you are looking for Main Css file its in "styles.css"*/
-
+@font-face {
+  font-family: "bone";
+  src: url("/css/fonts/nasalization-rg.otf") format("opentype");
+}
 /* Default Theme */
 body {
   --background: #1a2023;
@@ -83,13 +86,16 @@ body.purple {
 }
 
 body.bone {
-  --font: "bone";
+  font-family: "bone";
   --background: #000;
   --textcolor: #fff;
   --button: #1b1b1b;
   --logo: var(--textcolor);
   --alt: rgb(56, 56, 56);
   --buttonhover: #6e6e6e;
+}
+body.bone * {
+  font-family: "bone";
 }
 
 body.craft {
