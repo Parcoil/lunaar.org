@@ -8,6 +8,7 @@ body {
   --button: rgb(29, 130, 255);
   --buttonhover: rgba(29, 130, 255, 0.8);
   --alt: #22282b;
+  --font: ubuntu;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 body.orange {
