@@ -9,6 +9,7 @@ import { join, dirname } from "node:path";
 import { hostname } from "node:os";
 import { fileURLToPath } from "url";
 import path from "path";
+import { createProxyMiddleware } from "http-proxy-middleware";
 
 // Get the directory path of the current module file
 const __filename = fileURLToPath(import.meta.url);
@@ -20,6 +21,14 @@ import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 const bare = createBareServer("/bare/");
 const app = express();
 
+const proxy = createProxyMiddleware("/games", {
+  target: "https://gitlab.com/Thedogecraft/assets/-/raw/main/games.json",
+  changeOrigin: true, // Change the origin to match the target's origin
+  pathRewrite: {
+    "^/games": "", // Remove the '/games' path prefix
+  },
+});
+app.use("/games", proxy);
 // Load our publicPath first and prioritize it over UV.
 app.use(express.static(publicPath));
 // Load vendor files last.
@@ -87,15 +96,6 @@ app.get("/games1", (req, res) => {
   });
 });
 
-app.get("/games", (req, res) => {
-  const filePath = path.join(publicPath, "games.json");
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.error(err);
-      res.status(404).send("Games not found");
-    }
-  });
-});
 // Handle clean URLs
 app.get("/:page", (req, res) => {
   const page = req.params.page;
