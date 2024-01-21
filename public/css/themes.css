@@ -54,247 +54,41 @@ body.two {
 
 /* Pink Theme */
 body.pink {
-  background-color: pink;
-  color: #000;
+  --background: pink;
+  --textcolor: black;
+  --button: #fff;
+  --logo: #000;
+  --alt: rgb(255, 209, 217);
+  --buttonhover: #000;
 }
 
-body.pink .native,
-body.pink #randomtext,
-body.pink .navtext {
-  color: #000; /* Adjust colors for blue theme */
-}
-
-body.pink .button,
-body.pink input:checked + .slider {
-  background-color: #fff; /* Adjust background color for blue theme */
-  color: #000; /* Text color for blue theme */
-}
-
-body.pink #themeSelect,
-body.pink #premadecloaks {
-  background-color: #fff; /* Adjust background color for blue theme */
-  color: black;
-}
-
-body.pink .navbar a:hover {
-  background-color: #ffffff; /* Adjust navbar link hover background color for blue theme */
-}
-
-body.pink .button:hover {
-  color: #000; /* Text color on hover for blue theme */
-}
-body.pink input:checked {
-  background-color: #fff;
-}
-body.pink input[type="settings"]:focus {
-  border-color: white;
-  box-shadow: 0 0 8px 0 white;
-}
-body.pink .rwd-table a {
-  color: #000000;
-}
-body.pink .rwd-table th,
-body.pink .rwd-table td {
-  background-color: rgb(255, 209, 217);
-}
-body.pink td {
-  color: #000;
-}
-body.pink h1,
-body.pink h2,
-body.pink h3,
-body.pink a,
-body.pink h4,
-body.pink h5 {
-  color: #000;
-}
-body.pink #randomText {
-  color: #000;
-}
-body.pink .card {
-  background-color: rgb(255, 209, 217);
-}
-body.pink #gamename,
-body.pink #fullscreengame {
-  color: #000;
-}
 /* Oled Theme */
 body.oled {
-  background-color: #000;
-}
-body.oled h1,
-body.oled h2,
-body.oled h3,
-body.oled a,
-body.oled h4,
-body.oled h5 {
-  color: #fff;
-}
-body.oled .native,
-body.oled #randomtext,
-body.oled .navtext {
-  color: #fff; /* Adjust colors for blue theme */
-}
-body.oled #randomText {
-  color: #ffffff;
-}
-body.oled .button,
-body.oled input:checked + .slider {
-  background-color: #1b1b1b; /* Adjust background color for blue theme */
-  color: #ffffff; /* Text color for blue theme */
-}
-body.oled .button:hover {
-  color: #ffffff; /* Text color on hover for blue theme */
-}
-body.oled input:checked {
-  background-color: #fff;
-}
-body.oled input[type="settings"]:focus {
-  border-color: white;
-  box-shadow: 0 0 8px 0 white;
-}
-body.oled #themeSelect,
-body.oled #premadecloaks {
-  background-color: #1b1b1b; /* Adjust background color for blue theme */
-  color: #fff;
-}
-body.oled .navbar a:hover {
-  background-color: #1b1b1b; /* Adjust navbar link hover background color for blue theme */
-}
-body.oled .rwd-table a {
-  color: #ffffff;
-}
-body.oled .rwd-table th,
-body.oled .rwd-table td {
-  background-color: rgb(56, 56, 56);
-}
-body.oled td {
-  color: #ffffff;
-}
-body.oled::-webkit-scrollbar-thumb {
-  background: #fff;
-}
-body.oled .card {
-  background-color: #1b1b1b;
-}
-body.purple {
-  background: #10002b;
-}
-body.purple .button,
-body.purple input:checked + .slider {
-  background-color: #5a189a; /* Adjust background color for blue theme */
-  color: #ffffff; /* Text color for blue theme */
-}
-body.purple .button:hover {
-  color: #ffffff; /* Text color on hover for blue theme */
-}
-body.purple h1,
-body.purple h2,
-body.purple h3,
-body.purple a,
-body.purple h4,
-body.purple h5 {
-  color: #fff;
+  --background: #000;
+  --textcolor: #fff;
+  --button: #1b1b1b;
+  --logo: var(--textcolor);
+  --alt: rgb(56, 56, 56);
+  --buttonhover: #6e6e6e;
 }
 
-body.purple #themeSelect,
-body.purple #premadecloaks {
-  background-color: #5a189a; /* Adjust background color for blue theme */
-  color: #fff;
+body.purple {
+  --background: #10002b;
+  --textcolor: #fff;
+  --button: #5a189a;
+  --logo: #5a189a;
+  --alt: #1b0542;
+  --buttonhover: #431274;
 }
-body.purple .navbar a:hover {
-  background-color: #5a189a; /* Adjust navbar link hover background color for blue theme */
-}
-body.purple .native,
-body.purple #randomtext,
-body.purple .navtext {
-  color: #5a189a; /* Adjust colors for blue theme */
-}
-body.purple #randomText {
-  color: #5a189a;
-}
-body.purple input[type="settings"]:focus {
-  border-color: #5a189a;
-  box-shadow: 0 0 8px 0 #5a189a;
-}
-body.purple .rwd-table a {
-  color: #ffffff;
-}
-body.purple .rwd-table th,
-body.purple .rwd-table td {
-  background-color: #1b0542;
-}
-body.purple td {
-  color: #ffffff;
-}
-body.purple::-webkit-scrollbar-thumb {
-  background: #250758;
-}
-body.purple .card {
-  background-color: #5a189a;
-}
+
 body.bone {
-  font-family: "bone";
-}
-body.bone h1,
-body.bone h2,
-body.bone h3,
-body.bone a,
-body.bone h4,
-body.bone h5 {
-  color: #ffffff;
-  font-family: "bone";
-}
-body.bone .native,
-body.bone #randomtext,
-body.bone .navtext {
-  color: #fff; /* Adjust colors for blue theme */
-  font-family: "bone";
-}
-body.bone #randomText {
-  color: #fff;
-  font-family: "bone";
-}
-body.bone #themeSelect,
-body.bone #premadecloaks {
-  background-color: #ffffff; /* Adjust background color for blue theme */
-  color: #000;
-  font-family: "bone";
-}
-body.bone .button,
-body.bone input:checked + .slider {
-  background-color: #ffffff; /* Adjust background color for blue theme */
-  color: #000; /* Text color for blue theme */
-  font-family: "bone";
-}
-body.bone {
-  background: #000000;
-}
-body.bone .navbar a:hover {
-  background-color: #ffffff; /* Adjust navbar link hover background color for blue theme */
-}
-body.bone input[type="settings"]:focus {
-  border-color: white;
-  box-shadow: 0 0 8px 0 white;
-}
-body.bone #searchBar {
-  font-family: "bone";
-}
-body.bone .rwd-table a {
-  color: #ffffff;
-}
-body.bone .rwd-table th,
-body.bone .rwd-table td {
-  background-color: rgb(22, 22, 22);
-}
-body.bone td {
-  color: #ffffff;
-}
-body.bone::-webkit-scrollbar-thumb {
-  background: #fff;
-}
-body.bone .card {
-  background-color: #000;
+  --font: "bone";
+  --background: #000;
+  --textcolor: #fff;
+  --button: #1b1b1b;
+  --logo: var(--textcolor);
+  --alt: rgb(56, 56, 56);
+  --buttonhover: #6e6e6e;
 }
 
 body.craft {

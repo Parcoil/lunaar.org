@@ -28,11 +28,15 @@
 #favicon {
   width: 35px;
 }
+* {
+  font-family: var(--font) !important;
+}
 :root {
   --background: #1a2023;
   --logo: rgb(29, 130, 255);
 }
 body {
+  font-family: var(--font);
   margin: 0;
   padding: 0;
   background-color: var(--background);
