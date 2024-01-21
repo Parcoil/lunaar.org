@@ -1,5 +1,10 @@
 [
   {
+    "name": "Request a Game",
+    "image": "media/request.png",
+    "url": "/form"
+  },
+  {
     "name": "1v1lol",
     "image": "logo.png",
     "url": "1v1lol",
@@ -1233,6 +1238,12 @@
     "name": "Ruffle",
     "image": "splash.png",
     "url": "ruffle",
+    "new": false
+  },
+  {
+    "name": "Slap The Monkey",
+    "image": "slap-the-monkey.png",
+    "url": "slap-the-monkey",
     "new": false
   },
   {
