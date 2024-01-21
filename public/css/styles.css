@@ -303,7 +303,7 @@ li {
   width: 30px;
   color: var(--logo);
   font-size: 30px;
-  font-family: "Croogla 4F";
+  font-family: "Croogla 4F" !important;
   font-weight: 300;
   display: flex;
   justify-content: center;
@@ -314,7 +314,7 @@ li {
   color: var(--logo);
   margin-top: 1%;
   font-size: 64px;
-  font-family: "Croogla 4F";
+  font-family: "Croogla 4F" !important;
   font-weight: 300;
   display: flex;
   justify-content: center;
