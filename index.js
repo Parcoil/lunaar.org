@@ -77,7 +77,6 @@ app.use((req, res) => {
   res.status(404);
   res.sendFile(join(publicPath, "404.html"));
 });
-
 app.get("/games", (req, res) => {
   const filePath = path.join(publicPath, "games.json");
   res.sendFile(filePath, (err) => {
@@ -87,6 +86,7 @@ app.get("/games", (req, res) => {
     }
   });
 });
+
 const server = createServer();
 
 server.on("request", (req, res) => {
