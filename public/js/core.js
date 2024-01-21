@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (existingNavs.length === 0) {
     var navHTML = `
+         <marquee><a href="https://discord.gg/fbjT5wG4za" class="red">NATIVE DISCORD SERVER GOT NUKED ITS BACK JOIN NOW!
+  (click me to join)
+</a></marquee>
           <nav class="navbar">
               <h1 class="navtext">native.</h1>
               <li><a href="/./" class="navlink">Home</a></li>
