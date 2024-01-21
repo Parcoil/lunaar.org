@@ -818,3 +818,6 @@ option {
 .navbarex a {
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
+.red {
+  color: red;
+}
