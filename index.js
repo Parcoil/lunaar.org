@@ -77,6 +77,16 @@ app.get("/games.lol", (req, res) => {
   });
 });
 
+app.get("/daniel", (req, res) => {
+  const filePath = path.join(publicPath, "media/daniel.jpg");
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      console.error(err);
+      res.status(404).send("Games not found");
+    }
+  });
+});
+
 app.get("/games1", (req, res) => {
   const filePath = path.join(__dirname, "games.json");
   res.sendFile(filePath, (err) => {
