@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("favicon").href = gameData.image;
       document.getElementById(
         "gameIframe"
-      ).src = `https://3kh0-assets-topaz.vercel.app/${gameUrl}/`;
+      ).src = `https://assets-taupe.vercel.app/${gameUrl}/`;
     })
     .catch((error) => console.error("Error fetching game data:", error));
 });
