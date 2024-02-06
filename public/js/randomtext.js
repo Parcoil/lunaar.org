@@ -35,6 +35,13 @@ var textOptions = [
   "we love minoa.cat",
   "better than interstellar",
   "NodeJS on top!",
+  "Aiden Has a foot fetish",
+  "Or what!",
+  "Geeeeeeeeeeeeeetar!!!!!!",
+  "Powerade Sucks!",
+  "Do not insert text here",
+  "Doge Loves Metallica",
+  "Oh yeah or whatever",
 ];
 
 // Function to generate random index
