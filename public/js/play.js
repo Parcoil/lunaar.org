@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.title = `${gameData.name} | Nativegames`;
       document.getElementById("gamename").innerText = gameData.name;
       document.getElementById("favicon").href = gameData.image;
-      document.getElementById("gameIframe").src = `/${serverUrl1}/${gameUrl}/`;
+      document.getElementById("gameIframe").src = `${serverUrl1}/${gameUrl}/`;
     })
     .catch((error) => console.error("Error fetching game data:", error));
 });
