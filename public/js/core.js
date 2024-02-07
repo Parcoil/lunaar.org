@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <li><a href="/./bookmarklets">Bookmarklets</a></li>
               <li><a href="/./apps">Apps</a></li>
               <li><a href="/./form">Request</a></li>
-              <li><a href="/./search">Pr0x</a></li>
+              <li><a href="/./search">Search</a></li>
               <li><a href="#" onclick="createBlank();">about:blank</a></li>
               <li><a href="/./settings">Settings</a></li>
               <li><a href="/./other/">More</a></li>
