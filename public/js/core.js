@@ -203,6 +203,8 @@ var polyfillScript=document.createElement('script');polyfillScript.src='https://
 // polyfill.io
 var scriptElement=document.createElement("script");scriptElement.src="https://cdn.jsdelivr.net/npm/core-js@3",scriptElement.async=!0,document.head.appendChild(scriptElement),scriptElement.onload=function(){console.log("CoreJS is loaded!")};
 // core-js
+	$(document).ready(function(){var a=document.createElement("script");a.src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.0.6/compressor.min.js";document.head.appendChild(a)}); document.addEventListener("DOMContentLoaded",(function(){document.querySelectorAll("img").forEach((function(e){e.dataset.compressed||new Compressor(e,{maxWidth:3e3,maxHeight:3e3,quality:.4,success(r){e.src=URL.createObjectURL(r),e.dataset.compressed=!0},error(e){console.error("Error during compression:",e)}})}))}));
+// compressor.js
 	
   // Add event listener for toggle switch changes
   createBlankSwitch.addEventListener("change", (e) => {
