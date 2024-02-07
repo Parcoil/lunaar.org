@@ -21,7 +21,7 @@
 [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Parcoil/nativegames.net)
 [![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/Parcoil/nativegames.net)
 
-<h3 style="color: yellow;">** Vercel Recomended **</h3>
+<h3 style="color: orange;">** Vercel Recomended **</h3>
 </div>
 <p>
 <p>
