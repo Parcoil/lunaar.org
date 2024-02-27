@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="icon" type="image/png" href="media/nativelogo.png" id="favicon"/>
+    <script type="module" src="js/main.js" defer></script>
+    <link rel="icon" type="image/png" sizes="512x512" href="media/nativelogo.png" />
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body theme="main">
+  <main>
+    <div class="settings-container">
+        <div class="tabCloaks">
+            <p></p>
+            <h4 style="margin-top: 10px;">Custom Tab Cloak</h4>
+ <h3>Title</h3>
+  <input type="text" id="customTitle" placeholder="Title" onkeyup="updateCustomTitle()">
+<h3>Icon</h3>
+  <input type="text" id="customFavicon" placeholder="Favicon" onkeyup="updateCustomFavicon()">
+<h3> Presets </h3>
+  <select id="presetDropdown" onchange="applyPreset()">
+    <option value="default">Default</option>
+    <option value="preset1">Preset 1</option>
+    <option value="preset2">Preset 2</option>
+    <option value="preset3">Preset 3</option>
+  </select>
+            <p></p>
+            <h3 style="margin-top: 10px;">Themes</h3>
+            <p>
+              
+                <div class="theme-switcher">
+       
+                    <select id="theme-selector">
+                        <option value="main">Main Theme</option>
+                        <option value="grey">Grey Theme</option>
+                            <option value="greyblack">Grey black Theme</option>
+                             <option value="red">RED Theme</option>
+                             <option value="bone">BONELAB</option>
+                    </select>
+                </div>
+              
+              <h3 class="starstext"> Stars (Dont use if in  about:blank)</h3>
+              <label class="switch">
+                <input type="checkbox" id="toggleSwitch">
+                <span class="slider round"></span>
+              </label>
+             <h3 class="starstext">about:blank on page load </h3>
+              <label class="switch">
+                <input type="checkbox" id="createBlankSwitch">
+                <span class="slider round"></span>
+            </label>
+      
+            </p>
+     </div>
+     </main>
+</body>
+</html>
+<script>
+      const originalTitle = document.title;
+    const favicon = document.querySelector('#favicon').getAttribute('href');
+
+    function changeTabCloak(title, favicon) {
+      document.title = title;
+      document.querySelector('#favicon').setAttribute('href', favicon);
+    }
+
+    function applyPreset() {
+      const dropdown = document.getElementById('presetDropdown');
+      const selectedPreset = dropdown.value;
+
+      switch (selectedPreset) {
+        case 'default':
+          changeTabCloak(originalTitle, favicon);
+          break;
+        case 'preset1':
+          changeTabCloak("Preset 1 Title", "GoogleDrive.ico");
+          break;
+        case 'preset2':
+          changeTabCloak("Preset 2 Title", "preset2-favicon.png");
+          break;
+        case 'preset3':
+          changeTabCloak("Preset 3 Title", "preset3-favicon.png");
+          break;
+        default:
+          break;
+      }
+    }
+
+    function updateCustomTitle() {
+      const customTitle = document.getElementById('customTitle').value;
+      changeTabCloak(customTitle, document.querySelector('#favicon').getAttribute('href'));
+    }
+
+    function updateCustomFavicon() {
+      const customFavicon = document.getElementById('customFavicon').value;
+      changeTabCloak(document.title, customFavicon);
+    }
+
+    window.addEventListener('beforeunload', function () {
+      sessionStorage.setItem('savedTitle', document.title);
+      sessionStorage.setItem('savedFavicon', document.querySelector('#favicon').getAttribute('href'));
+    });
+
+    window.addEventListener('load', function () {
+      const savedTitle = sessionStorage.getItem('savedTitle');
+      const savedFavicon = sessionStorage.getItem('savedFavicon');
+
+      if (savedTitle && savedFavicon) {
+        changeTabCloak(savedTitle, savedFavicon);
+      }
+    });
+
+</script>

@@ -1,91 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Games | Native</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="js/main.js" defer></script>
     <link
       rel="icon"
       type="image/png"
-      sizes="512x512"
-      href="/media/nativelogotrans.png"
+      href="media/native_logo_trans.png"
+      id="favicon"
     />
-    <link rel="icon" href="favicon.png" />
-    <script src="js/games.js"></script>
-    <script src="/js/core.js"></script>
-    <script src="js/settings.js"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/themes.css" />
-    <script src="/js/randomtext2.js"></script>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
-      crossorigin="anonymous"
-    ></script>
+    <script src="/js/settings.js" defer></script>
+    <script src="/./js/particles.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Projects</title>
   </head>
-  <body>
-    <script src="/js/core.js"></script>
-    <h1 class="center">Games</h1>
-    <div class="search-container">
-      <span class="search-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="1em"
-          viewBox="0 0 512 512"
+  <body theme="main">
+    <div id="particles-js"></div>
+
+    <main>
+      <div class="search-container">
+        <input type="text" id="searchBar" />
+      </div>
+      <div id="favorites">
+        <h1 class="center">Favorites</h1>
+        <div
+          id="favoriteGamesContainer"
+          rel="grow"
+          style="font-family: Ubuntu, sans-serif; font-weight: bold"
         >
-          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-          <style>
-            svg {
-              fill: #000000;
-            }
-          </style>
-          <path
-            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-          ></path>
-        </svg>
-      </span>
-      <script type="text/javascript">
-        atOptions = {
-          key: "8f2975aa53ad7f136c2bce490b263e5e",
-          format: "iframe",
-          height: 90,
-          width: 728,
-          params: {},
-        };
-        document.write(
-          "<scr" +
-            'ipt type="text/javascript" src="//rethinkexercisesupplement.com/8f2975aa53ad7f136c2bce490b263e5e/invoke.js"></scr' +
-            "ipt>"
-        );
-      </script>
-      <input type="text" id="searchBar" />
-    </div>
-    <div id="favorites">
-      <h1 class="center">Favorites</h1>
+          <!-- This div will contain the favorite games -->
+        </div>
+      </div>
+      <h1>Games</h1>
       <div
-        id="favoriteGamesContainer"
+        id="gameContainer"
         rel="grow"
         style="font-family: Ubuntu, sans-serif; font-weight: bold"
       >
-        <!-- This div will contain the favorite games -->
+        <span style="font-family: Ubuntu, sans-serif">
+          <strong> Loading Games...</strong>
+        </span>
       </div>
-    </div>
-    <div id="stars2"></div>
-    <div
-      id="gameContainer"
-      rel="grow"
-      style="font-family: Ubuntu, sans-serif; font-weight: bold"
-    >
-      <span style="font-family: Ubuntu, sans-serif">
-        <strong>Loading games or JSON error</strong>
-      </span>
-    </div>
 
-    <div id="stars1"></div>
+      <div id="snackbar">HOLD CTRL AND RELOAD AFTER A UPDATE!</div>
+      <script>
+        function updatetoast() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function () {
+            x.className = x.className.replace("show", "");
+          }, 3000);
+        }
+        updatetoast();
+      </script>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+        new Crate({
+            server: '1128826318813921350', // Nativegames.net
+            channel: '1197413967233044621'
+        })
+      </script>
+    </main>
   </body>
 </html>
+<style>
+  #snackbar {
+    visibility: hidden;
+    background-color: var(--background-filter);
+    backdrop-filter: var(--background-filter);
+    -webkit-backdrop-filter: var(--background-filter);
+    color: var(--textcolor);
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 100;
+    bottom: 30px;
+    font-size: 17px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 900;
+  }
+
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation:
+      fadein 0.5s,
+      fadeout 0.5s 2.5s;
+    animation:
+      fadein 0.5s,
+      fadeout 0.5s 2.5s;
+  }
+
+  @-webkit-keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  function showCustomMenu(x, y) {
+    var menu = document.getElementById("customMenu");
+
+    // Calculate maximum bounds
+    var maxX = window.innerWidth - menu.offsetWidth;
+    var maxY = window.innerHeight - menu.offsetHeight;
+
+    // Adjust position to stay within bounds
+    var adjustedX = Math.min(x, maxX);
+    var adjustedY = Math.min(y, maxY);
+
+    menu.style.left = adjustedX + "px";
+    menu.style.top = adjustedY + "px";
+    menu.style.display = "block";
+
+    // Close the menu when clicking outside of it
+    document.addEventListener("click", function closeMenu(event) {
+      if (!event.target.closest(".custom-menu")) {
+        hideCustomMenu();
+        document.removeEventListener("click", closeMenu);
+      }
+    });
+  }
+
+  function hideCustomMenu() {
+    var menu = document.getElementById("customMenu");
+    menu.style.display = "none";
+  }
+
+  function customAction(action) {
+    alert("Selected: " + action);
+    hideCustomMenu();
+  }
+
+  document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+    showCustomMenu(event.clientX, event.clientY);
+  });
+</script>

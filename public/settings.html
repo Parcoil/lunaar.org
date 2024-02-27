@@ -1,128 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Settings | Native</title>
+    <title>Native</title>
+    <script
+      rel="preload"
+      src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Nativegames 200+ Unblocked Games" />
-    <meta name="keywords" content="games, unblocked, 3kh0, freegames, proxy, ubg, github, native, nativegames" />
-    <meta name="author" content="Parcoil Network" />
-    <meta property="og:title" content="Native" />
-    <meta property="og:description" content="Nativegames 200+ Unblocked Games" />
-    <meta property="og:image" content="SOON" />
-    <meta property="og:url" content="https://nativegames.net" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Nativegames" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nativegames" />
-    <meta name="twitter:description" content="Nativegames 200+ Unblocked Games" />
-    <meta name="twitter:image" content="SOON" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:color" content="#1a2023" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/media/nativelogotrans.png" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/themes.css" />
-    <style id="style"></style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
-     crossorigin="anonymous"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="media/native_logo_trans.png"
+      id="favicon"
+    />
+    <script type="module" src="js/main.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="media/native_logo_trans.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-
-    <div id="settings">
-      <p></p>
-      <h1>Settings</h1>
-      <p></p>
-      <!-- tabcloaks-->
-      <div class="tabCloaks">
-        <p></p>
-        <h4 style="margin-top: 10px;">Custom Tab Cloak</h4>
-        <p></p>
-        <!-- Custom-->
-        <div class="buttons">
-          <input id="title" class="input" type="settings" placeholder="Title" onkeyup="setTitle(this.value)" />
-          <input id="icon" class="input" type="settings" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())" />
-        </div>
-        <!-- Premade-->
-        <p></p>
-        <h3 style="margin-top: 10px;">Premade Cloaks</h3>
-        <p>
-          <select name="Readymade Cloaks" id="premadecloaks" title="Cloaks">
-            <option value="search">Google Search</option>
-            <option value="bsite">Billibilli</option>
-            <option value="itchio">ItchiIo</option>
-            <option value="wikipedia">Wikipedia</option>
-            <option value="search">Google Search</option>
-            <option value="cornhub">Cornhub</option>
-            <option value="librex">LibreX</option>
-            <option value="nitter">Nitter</option>
-            <option value="indivious">Indivious</option>
-            <option value="teddit">Teddit</option>
-            <option value="drive">Google Drive</option>
-            <option value="youtube">YouTube</option>
-            <option value="gmail">Gmail</option>
-            <option value="calendar">Google Calendar</option>
-            <option value="meets">Google Meet</option>
-            <option value="classroom">Google Classroom</option>
-            <option value="canvas">Canvas</option>
-            <option value="zoom">Zoom</option>
-            <option value="khan">Khan Academy</option>
-          </select>
-
-          <button class="button" onclick="setCloak()">Set Premade cloak</button>
-          <button class="button" onclick="resetTab()">Reset</button>
-        </p>
-
-        <p></p>
-        <h3 style="margin-top: 10px;">Themes</h3>
-        <p>
-          <select id="themeSelect">
-            <option value="default">Default</option>
-            <option value="cat">minoa.cat</option>
-            <option value="dark">Dark</option>
-            <option value="purple">Purple</option>
-            <option value="two">Red</option>
-            <option value="pink">Pink</option>
-            <option value="oled">OLED</option>
-            <option value="bone">BONELAB</option>
-            <option value="craft">Minecraft</option>
-            <option value="ghost">uhhh yeah red</option>
-            <!-- Add more options for different themes -->
-          </select>
-          
-          <h3 class="starstext"> Stars (Dont use if in  about:blank)</h3>
+  <body theme="main">
+    <div id="particles-js"></div>
+    <main>
+      <div class="containers">
+        <div class="settingscontainer">
+          <br />
+          <p style="font-weight: bold; font-size: 30px">Clickoff Cloak</p>
+          <p style="font-size: 19px">
+            When you click out of this tab, it will automatically Cloaks
+          </p>
           <label class="switch">
-            <input type="checkbox" id="toggleSwitch">
+            <input type="checkbox" id="clickoffcloak" />
             <span class="slider round"></span>
           </label>
-         <h3 class="starstext">about:blank on page load </h3>
-          <label class="switch">
-            <input type="checkbox" id="createBlankSwitch">
-            <span class="slider round"></span>
-        </label>
-  
-        </p>
-
-        <h6><a href="https://github.com/Parcoil/nativegames.net">v3.3.0</a></h6>
-        <!-- Auto About Blank-->
+        </div>
+        <div class="settingscontainer">
+          <p style="font-weight: bold; font-size: 30px">Tab Cloak</p>
+          <p style="font-size: 19px">Changes the icon and text of your tab</p>
+          <select id="presetDropdown" onchange="applyPreset()">
+            <option value="default">Default</option>
+            <option value="preset1">GoogleDrive</option>
+            <option value="preset2">Gmail</option>
+            <option value="preset3">Google Search</option>
+                 <option value="preset4">Zoom</option>
+          </select>
+        </div>
+        <div class="settingscontainer">
+          <p style="font-weight: bold; font-size: 30px">About:Blank Cloak</p>
+          <span class="badge">Recommended</span>
+          <p style="font-size: 19px">Hides the page in a about:blank URL</p>
+          <button class="button" onclick="createBlank()">Launch</button>
+        </div>
+        <div class="settingscontainer">
+          <p style="font-weight: bold; font-size: 30px">Themes</p>
+          <div class="select">
+          <select id="theme-selector">
+            <option value="main">Main Theme</option>
+            <option value="grey">Grey Theme</option>
+            <option value="greyblack">Grey black Theme</option>
+            <option value="red">RED Theme</option>
+            <option value="bone">BONELAB</option>
+            <option value="ghost">uhh yeah red</option>
+          </select>
+          </div>
+        </div>
+        <div class="settingscontainer">
       </div>
-    </div>
-    <script src="/js/core.js"></script>
-    <script src="js/settings.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', function () {
-      const switchElement = document.getElementById('toggleSwitch');
-      switchElement.checked = localStorage.getItem('starsVisible') === 'true';
-  
-      switchElement.addEventListener('change', function () {
-          localStorage.setItem('starsVisible', switchElement.checked);
-      });
-  });
-  </script>
-  <style>
-    body {
-      overflow: hidden;
-    }
-  </style>
-  
+    </main>
+    <script src="/./js/particles.js" defer></script>
   </body>
 </html>
+<script>
+  const originalTitle = document.title;
+  const favicon = document
+    .querySelector("#favicon")
+    .getAttribute("href");
+
+  function changeTabCloak(title, favicon) {
+    document.title = title;
+    document.querySelector("#favicon").setAttribute("href", favicon);
+  }
+
+  function applyPreset() {
+    const dropdown = document.getElementById("presetDropdown");
+    const selectedPreset = dropdown.value;
+
+    switch (selectedPreset) {
+      case "default":
+        changeTabCloak(originalTitle, favicon);
+        break;
+      case "preset1":
+        changeTabCloak("Preset 1 Title", "/media/cloaks/GoogleDrive.ico");
+        break;
+      case "preset2":
+     changeTabCloak("Inbox (162) - Gmail ", "/media/cloaks/Gmail.ico");
+        break;
+      case "preset3":
+        changeTabCloak("Google", "/media/cloaks/Google Search.ico");
+        break;
+        case "preset4":
+          changeTabCloak("Zoom", "/media/cloaks/Zoom.ico");
+          break;
+      default:
+        break;
+    }
+  }
+
+  function createBlank() {
+  win = window.open();
+  win.document.body.style.margin = "0";
+  win.document.body.style.height = "100vh";
+  var iframe = win.document.createElement("iframe");
+  iframe.style.border = "none";
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.margin = "0";
+  iframe.referrerpolicy = "no-referrer";
+  iframe.allow = "fullscreen";
+  iframe.src = location.origin;
+  win.document.body.appendChild(iframe);
+  window.location.href = "https://www.google.com/search?q=what+day+is+today";
+}
+
+  function updateCustomTitle() {
+    const customTitle = document.getElementById("customTitle").value;
+    changeTabCloak(
+      customTitle,
+      document.querySelector("#favicon").getAttribute("href")
+    );
+  }
+
+  function updateCustomFavicon() {
+    const customFavicon = document.getElementById("customFavicon").value;
+    changeTabCloak(document.title, customFavicon);
+  }
+
+  window.addEventListener("beforeunload", function () {
+    sessionStorage.setItem("savedTitle", document.title);
+    sessionStorage.setItem(
+      "savedFavicon",
+      document.querySelector("#favicon").getAttribute("href")
+    );
+  });
+
+  window.addEventListener("load", function () {
+    const savedTitle = sessionStorage.getItem("savedTitle");
+    const savedFavicon = sessionStorage.getItem("savedFavicon");
+
+    if (savedTitle && savedFavicon) {
+      changeTabCloak(savedTitle, savedFavicon);
+    }
+  });
+</script>
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Store the original title and favicon
+    var originalTitle = document.title;
+    var favicon = document.getElementById("favicon").href;
+
+    // Check local storage for toggle state
+    var switchState = localStorage.getItem("toggleSwitchState");
+    if (switchState === "enabled") {
+        document.getElementById("clickoffcloak").checked = true;
+        addTabEventListener();
+    }
+
+    // Add event listener to toggle switch
+    document.getElementById("clickoffcloak").addEventListener("change", function() {
+        var isChecked = this.checked;
+        if (isChecked) {
+            localStorage.setItem("toggleSwitchState", "enabled");
+            addTabEventListener();
+        } else {
+            localStorage.setItem("toggleSwitchState", "disabled");
+            removeTabEventListener();
+        }
+    });
+
+    // Function to change tab name and icon
+    function changeTabNameAndIcon(enabled) {
+        var tabTitle = enabled ? "Inbox (162) - Gmail" : originalTitle;
+        var tabIcon = enabled ? "media/cloaks/Gmail.ico" : favicon;
+        document.title = tabTitle;
+        document.getElementById("favicon").href = tabIcon;
+    }
+
+    // Add event listener to update tab name and icon when leaving the page
+    function addTabEventListener() {
+        window.addEventListener("blur", function(event) {
+            var switchState = localStorage.getItem("toggleSwitchState");
+            if (switchState === "enabled") {
+                changeTabNameAndIcon(true);
+            }
+        });
+
+        window.addEventListener("focus", function(event) {
+            var switchState = localStorage.getItem("toggleSwitchState");
+            if (switchState === "enabled") {
+                changeTabNameAndIcon(false); // Revert to original name and icon
+            }
+        });
+    }
+
+    // Remove event listener for tab name and icon change
+    function removeTabEventListener() {
+        window.removeEventListener("blur");
+        window.removeEventListener("focus");
+    }
+});
+</script> -->
+<style>
+  * {
+    transition: 0.35s ease;
+  }
+main {
+  margin-top: 7% !important;  
+}
+</style>

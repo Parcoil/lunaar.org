@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let favorites = [];
 
-  fetch("/games.json")
+  fetch("/games")
     .then((response) => response.json())
     .then((data) => {
       games = data; // Assign data to games array
@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const gameImg = document.createElement("img");
       gameImg.src = `${serverUrl1}/${game.url}/${game.image}`;
+      gameImg.loading = `lazy`;
 
       gameImg.addEventListener("click", function () {
         window.location.href = "/play?game=" + encodeURIComponent(game.url);
@@ -96,17 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
       gameContainer.appendChild(gameCard);
     });
   }
-  gameCard.addEventListener("click", function () {
-    // Get the text content of the h3 element inside the div
-    const h3Text = this.querySelector("h3").textContent;
-
-    // Check if the h3 text is "Request a Game"
-    if (h3Text === "Request a Game") {
-      // Redirect to /form when the h3 text is "Request a Game"
-      window.location.href = "/form";
-    }
-    // No action taken if the h3 text is not "Request a Game"
-  });
 
   function toggleFavorite(gameName, gameCard) {
     const index = favorites.indexOf(gameName);
@@ -160,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function displayNoFavoritesMessage() {
     const noFavoritesMessage = document.createElement("h5");
     noFavoritesMessage.textContent =
-      "No Favorites you can add favorites. by clicking on the favorites button on a game.";
+      "When You favorite a game, it will appear here";
     favoriteGamesContainer.appendChild(noFavoritesMessage);
   }
 });

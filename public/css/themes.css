@@ -1,119 +1,111 @@
-/* Hey skid or contributer this is the Themes file.
- if you are looking for Main Css file its in "styles.css"*/
+/*
+This file defines CSS variables for different color themes on the site.
+
+There are currently two themes defined - 'main' and 'grey'. More themes can be added by defining new CSS rules.
+
+To use a theme, add the 'theme' attribute to the <body> tag, e.g. <body theme="grey">
+*/
 @font-face {
   font-family: "bone";
-  src: url("/css/fonts/nasalization-rg.otf") format("opentype");
+  src: url("/fonts/nasalization-rg.otf") format("opentype");
 }
-/* Default Theme */
+:root {
+  --font: Ubuntu, sans-serif;
+  --background-filter: blur(3px) brightness(80%);
+}
+
 body {
-  --background: #1a2023;
+  --bg: #10002b;
+  --alt: rgba(15, 0, 38, 0.5);
+  --button: #5a189a;
   --textcolor: #fff;
-  --button: rgb(29, 130, 255);
-  --buttonhover: rgba(29, 130, 255, 0.8);
-  --alt: #22282b;
-  --font: ubuntu;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  --font: Ubuntu, sans-serif !important;
 }
-body.orange {
-  background: radial-gradient(
-    circle,
-    rgba(255, 131, 0, 1) 8%,
+body[theme="main"] {
+  /* --bg: #240063; */
+  --bg: #3b039c;
+  --alt: rgba(15, 0, 38, 0.5);
+  --button: #330386;
+  --border: #330386;
+  --textcolor: #fff;
+  --font: Ubuntu, sans-serif;
+}
+body[theme="grey"] {
+  --bg: #222222;
+  --alt: rgba(27, 27, 27, 0.5);
+  --button: #444444;
+  --textcolor: #fff;
+}
+body[theme="grey"] {
+  --bg: #222222;
+  --alt: rgba(27, 27, 27, 0.5);
+  --button: #444444;
+  --textcolor: #fff;
+}
+
+body[theme="greyblack"] {
+  background: rgb(106, 97, 97);
+  background: linear-gradient(
+    156deg,
+    rgba(106, 97, 97, 1) 0%,
     rgba(0, 0, 0, 1) 100%
   );
-}
-
-/* Dark Theme */
-body.dark {
-  --background: #222222;
-  --textcolor: #ffffff;
+  --bg: rgb(106, 97, 97);
+  --alt: rgba(27, 27, 27, 0.5);
   --button: #444444;
-  --alt: #444444;
-  --logo: #e6e6e6;
-  --buttonhover: #444444;
+  --textcolor: #fff;
 }
 
-body.ghost {
+body[theme="ghost"] {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     153deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(149, 43, 43, 1) 100%
   );
-  --textcolor: #5e5e5e;
+  --bg: rgb(0, 0, 0);
+  --textcolor: #fff;
   --button: rgb(90, 48, 48);
   --logo: white;
   --alt: #313131;
-  --buttonhover: rgb(59, 31, 31);
+  background-attachment: fixed;
 }
 
-/* Red Theme */
-body.two {
-  --background: #212f3c;
+body[theme="red"] {
+  background: rgb(144, 42, 42);
+  --bg: rgb(144, 42, 42);
+  background: radial-gradient(
+    circle,
+    rgba(144, 42, 42, 1) 31%,
+    rgba(102, 39, 39, 1) 47%
+  );
+  --alt: rgba(0, 0, 0, 0.5);
+  --button: rgb(87, 0, 0);
   --textcolor: #ffffff;
-  --button: #ff0f00;
-  --logo: #ff0f00;
-  --alt: #2e3f4e;
-  --buttonhover: #ff0f00;
 }
-
-/* Pink Theme */
-body.pink {
-  --background: pink;
-  --textcolor: black;
-  --button: #fff;
-  --logo: #000;
-  --alt: rgb(255, 209, 217);
-  --buttonhover: #000;
+body[theme="yourthemename"] {
+  --bg: #00b6ad4b;
+  --alt: rgba(27, 27, 27, 0.5);
+  --button: #444444;
+  --textcolor: #fff;
 }
-
-/* Oled Theme */
-body.oled {
-  --background: #000;
+body[theme="bone"] {
+  /* transition: all 0.6s; */
+  --background-filter: #0c0c0c;
+  font-family: "bone" !important;
+  --bg: #000;
   --textcolor: #fff;
   --button: #1b1b1b;
-  --logo: var(--textcolor);
   --alt: rgb(56, 56, 56);
-  --buttonhover: #6e6e6e;
+  --border: var(--button);
+}
+/* Set font-family to "bone" for specific elements when the theme is "bone" */
+[theme="bone"] h1,
+[theme="bone"] a,
+[theme="bone"] select,
+[theme="bone"] input {
+  font-family: "bone" !important;
 }
 
-body.purple {
-  --background: #10002b;
-  --textcolor: #fff;
-  --button: #5a189a;
-  --logo: #5a189a;
-  --alt: #1b0542;
-  --buttonhover: #431274;
-}
-
-body.bone {
-  font-family: "bone";
-  --background: #000;
-  --textcolor: #fff;
-  --button: #1b1b1b;
-  --logo: var(--textcolor);
-  --alt: rgb(56, 56, 56);
-  --buttonhover: #6e6e6e;
-}
-body.bone * {
-  font-family: "bone";
-}
-
-body.craft {
-  background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Dirt_%28texture%29_JE2_BE2.png"); /* Replace with your image path */
-  background-size: auto; /* This will maintain the image's original size */
-  background-repeat: repeat; /* This will make the image repeat */
-  background-position: top left; /* This will start the image from the top left corner */
-}
-
-body.craft .navbar a:hover,
-body.craft button,
-body.craft select,
-body.craft input:checked + .slider {
-  background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/a7/Cobblestone_%28texture%29_JE5_BE3.png");
-  background-color: transparent;
-}
-body.craft .native,
-body.craft #randomtext,
-body.craft .navtext {
-  color: #69a93f; /* Adjust colors for blue theme */
-}
+/* background: rgb(108,28,217);
+background: linear-gradient(153deg, rgba(108,28,217,1) 0%, rgba(16,0,43,1) 93%, rgba(0,0,0,1) 99%); */

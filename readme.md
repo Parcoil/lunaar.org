@@ -1,7 +1,7 @@
 <div align=center>
-<img align="center" src="https://i.imgur.com/jGUrpkz.png">
+<img align="center" src="public/media/native_logo.png">
 
-<h1 align="center"> Nativegames 3.0</h1>
+<h1 align="center"> Nativegames v4</h1>
 
 <h4 align="center">Nativegames is a new unblocked games site that has a proxy, loads of games, a sleek look, and much much more for you to see yourself!</h4>
 <p>Ultraviolet based proxy.</p>
@@ -17,6 +17,8 @@
 
 [![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/Parcoil/nativegames.net)
 [![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/Parcoil/nativegames.net)
+<a target="_blank" href="https://railway.app/new/template?template=https://github.com/parcoil/nativegames.net"><img alt="Deploy on Railway" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg"></a>
+<a target="_blank" href="https://glitch.com/edit/#!/import/github/parcoil/nativegames.net"><img alt="Remix on Glitch" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg"></a>
 [![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Parcoil/nativegames.net&branch=main&name=Native)
 [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Parcoil/nativegames.net)
 [![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/Parcoil/nativegames.net)

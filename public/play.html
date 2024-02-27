@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -7,7 +7,11 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Game Not Found!?</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="module" src="js/main.js" defer></script>
+    <script src="/js/games.js" defer></script>
+    <script src="/js/settings.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -27,24 +31,10 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <nav class="navbar">
-    <h1 class="navtext">native.</h1>
-    <li><a href="./" class="navlink">Home</a></li>
-    <li><a href="projects">Games</a></li>
-    <li><a href="bookmarklets">Bookmarklets</a></li>
-    <li><a href="apps">Apps</a></li>
-    <li><a href="search">Search</a></li>
-    <li><a href="#" onclick="createBlank();">about:blank</a></li>
-    <li><a href="settings">Settings</a></li>
-    <li><a href="other/">More</a></li>
-  </nav>
+
   <div class="card">
     <div id="iframeContainer">
-      <iframe
-        id="gameIframe"
-        src="/other/gamenotfound"
-        frameborder="0"
-      ></iframe>
+      <iframe id="gameIframe" src="/loading" frameborder="0"></iframe>
     </div>
     <div class="card-body">
       <h2 id="gamename">Game Not Found!?</h2>
@@ -70,4 +60,97 @@
       });
     </script>
   </div>
+  <script
+    type="text/javascript"
+    src="//rethinkexercisesupplement.com/8c/97/34/8c9734fdacb1d1c2ac7390e35d8b6897.js"
+  ></script>
 </html>
+<script>
+  // Hey skid or contributor.
+  // This script Fetches games.json.
+  document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const gameUrl = urlParams.get("game");
+    const serverUrl1 = "https://assets-taupe.vercel.app";
+    fetch("/games.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const gameData = data.find((game) => game.url === gameUrl);
+
+        document.title = `${gameData.name} | Nativegames`;
+        document.getElementById("gamename").innerText = gameData.name;
+        document.getElementById("favicon").href = gameData.image;
+        document.getElementById("gameIframe").src = `${serverUrl1}/${gameUrl}/`;
+      })
+      .catch((error) => console.error("Error fetching game data:", error));
+  });
+</script>
+<script>
+  // Hey skid or contributor.
+  // this is fullscreen script to fullscreen the iframe on the play.html page.
+
+  // var originalContainerStyles = {};
+  // var gameIframe = document.getElementById("gameIframe");
+  // var exitFullscreenButton = document.getElementById("exitfullscreen");
+
+  // function toggleFullScreen() {
+  //   var iframeContainer = document.getElementById("iframeContainer");
+  //   var fullScreenButton = document.getElementById("fullscreengame");
+  //   fullScreenButton.style.display = "none";
+  //   originalContainerStyles = {
+  //     position: iframeContainer.style.position,
+  //     width: iframeContainer.style.width,
+  //     height: iframeContainer.style.height,
+  //     top: iframeContainer.style.top,
+  //     left: iframeContainer.style.left,
+  //     zIndex: iframeContainer.style.zIndex,
+  //   };
+  //   iframeContainer.style.position = "fixed";
+  //   iframeContainer.style.width = "100vw"; // Use viewport units for width
+  //   iframeContainer.style.height = "100vh"; // Use viewport units for height
+  //   iframeContainer.style.top = "0";
+  //   iframeContainer.style.left = "0";
+  //   iframeContainer.style.zIndex = "99999";
+  //   gameIframe.style.height = "100%";
+
+  //   exitFullscreenButton.style.display = "block";
+  //   exitFullscreenButton.style.zIndex = "9999";
+  // }
+
+  // var exitFullscreenbtn = document.getElementById("exitfullscreen");
+
+  // exitFullscreenbtn.onclick = function () {
+  //   var iframeContainer = document.getElementById("iframeContainer");
+  //   var fullScreenButton = document.getElementById("fullscreengame");
+  //   fullScreenButton.style.display = "flex";
+  //   iframeContainer.style.position = originalContainerStyles.position;
+  //   iframeContainer.style.width = originalContainerStyles.width;
+  //   iframeContainer.style.height = originalContainerStyles.height;
+  //   iframeContainer.style.top = originalContainerStyles.top;
+  //   iframeContainer.style.left = originalContainerStyles.left;
+  //   iframeContainer.style.zIndex = originalContainerStyles.zIndex;
+  //   gameIframe.style.height = "400px";
+  //   gameIframe.style.width = "100%";
+
+  //   exitFullscreenButton.style.display = "none";
+  // };
+</script>
+<script>
+  const fullScreenButton = document.getElementById("fullscreengame");
+  const iframe = document.getElementById("gameIframe");
+
+  fullScreenButton.addEventListener("click", () => {
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) {
+      // Firefox
+      iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) {
+      // Chrome, Safari and Opera
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) {
+      // IE/Edge
+      iframe.msRequestFullscreen();
+    }
+  });
+</script>

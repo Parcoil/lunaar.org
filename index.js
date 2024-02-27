@@ -1,93 +1,26 @@
-// THE PARCOIL NETWORK //
-// THE PARCOIL NETWORK //
-// THE PARCOIL NETWORK //
-// THE PARCOIL NETWORK //
 import { createBareServer } from "@tomphttp/bare-server-node";
-import express from "express";
 import { createServer } from "node:http";
 import { join, dirname } from "node:path";
 import { hostname } from "node:os";
-import { fileURLToPath } from "url";
+
+import express from "express";
 import path from "path";
-
-// Get the directory path of the current module file
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const publicPath = join(__dirname, "public");
-import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
+import { fileURLToPath } from "url";
 
 const bare = createBareServer("/bare/");
+
 const app = express();
 
-// Load our publicPath first and prioritize it over UV.
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const publicPath = join(__dirname, "public");
+import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
+// Serve static files from the "public" directory
 app.use(express.static(publicPath));
-// Load vendor files last.
-// The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
+app.use("/", express.static(path.join(__dirname, "/")));
 
-app.get("/emulator", (req, res) => {
-  const filePath = path.join(publicPath, "other/emulator/index.html");
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.error(err);
-      res.status(404).send("Games not found");
-    }
-  });
-});
-
-app.get("/form", (req, res) => {
-  const filePath = path.join(publicPath, "other/form.html");
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.error(err);
-      res.status(404).send("Games not found");
-    }
-  });
-});
-
-app.get("/credits", (req, res) => {
-  const filePath = path.join(publicPath, "other/credits.html");
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.error(err);
-      res.status(404).send("Games not found");
-    }
-  });
-});
-// Hand
-
-app.get("/sitemap.gay", (req, res) => {
-  const filePath = path.join(publicPath, "other/sitemap.xml");
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.error(err);
-      res.status(404).send("Games not found");
-    }
-  });
-});
-
-app.get("/games.lol", (req, res) => {
-  const filePath = path.join(publicPath, "games.json");
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.error(err);
-      res.status(404).send("Games not found");
-    }
-  });
-});
-
-app.get("/daniel", (req, res) => {
-  const filePath = path.join(publicPath, "media/daniel.jpg");
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.error(err);
-      res.status(404).send("Games not found");
-    }
-  });
-});
-
-app.get("/games1", (req, res) => {
+app.get("/games", (req, res) => {
   const filePath = path.join(__dirname, "games.json");
   res.sendFile(filePath, (err) => {
     if (err) {
@@ -96,17 +29,28 @@ app.get("/games1", (req, res) => {
     }
   });
 });
-
-app.get("/games", (req, res) => {
-  const filePath = path.join(publicPath, "games.json");
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      console.error(err);
-      res.status(404).send("Games not found");
-    }
-  });
+// APPS
+app.get("/discord", (req, res) => {
+  res.redirect("/uv/service/hvtrs8%2F-dksaopd%2Ccmm-arp");
 });
-// Handle clean URLs
+
+app.get("/google", (req, res) => {
+  res.redirect("/uv/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2Fue%60hr");
+});
+app.get("/youtube", (req, res) => {
+  res.redirect("/uv/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-");
+});
+app.get("/tiktok", (req, res) => {
+  res.redirect("/uv/service/hvtrs8%2F-wuw%2Ctkkvoi.aoo%2Fgxrlmrg");
+});
+app.get("/x", (req, res) => {
+  res.redirect("/uv/service/hvtrs8%2F-tuivtgr%2Ccmm-");
+});
+app.get("/chess", (req, res) => {
+  res.redirect("/uv/service/hvtrs8%2F-wuw%2Ccjeqs%2Ccmm-");
+});
+//
+// Define a route for handling pages using the ":page" parameter
 app.get("/:page", (req, res) => {
   const page = req.params.page;
   res.sendFile(path.join(__dirname, `public/${page}.html`));
@@ -118,7 +62,7 @@ app.use((req, res) => {
 });
 
 const server = createServer();
-
+// Start the server
 server.on("request", (req, res) => {
   if (bare.shouldRoute(req)) {
     bare.routeRequest(req, res);
