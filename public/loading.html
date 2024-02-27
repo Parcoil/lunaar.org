@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css"/>
 
     <script src="/./js/particles.js" defer></script>
-    <script type="module" src="js/main.js" defer></script>
+
     <script src="/uv/uv.sw.js" defer></script>   
 
 
@@ -27,5 +27,28 @@
     <center>
     <h1>Loading...</h1>
     </center>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const themeSelector = document.getElementById("theme-selector");
+
+  // Function to change the theme
+  function setTheme(themeName) {
+    document.body.setAttribute("theme", themeName);
+    localStorage.setItem("selectedTheme", themeName); // Store theme in localStorage
+  }
+
+  // Check for a previously selected theme in localStorage
+  const savedTheme = localStorage.getItem("selectedTheme");
+  if (savedTheme) {
+    setTheme(savedTheme);
+    themeSelector.value = savedTheme; // Set dropdown value
+  }
+
+  // Event listener to switch themes
+  themeSelector.addEventListener("change", function () {
+    setTheme(themeSelector.value);
+  });
+});
+    </script>
   </body>
   

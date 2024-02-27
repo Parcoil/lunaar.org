@@ -10,13 +10,13 @@
     <script type="module" src="js/main.js" defer></script>
     <script src="/js/games.js" defer></script>
     <script src="/js/settings.js" defer></script>
-
-    <link rel="stylesheet" href="css/style.css" />
+    <script src="/./js/particles.js" defer></script>
+    <link rel="stylesheet" href="/./css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="/css/themes.css" />
+    <link rel="stylesheet" href="/./css/themes.css" />
     <link
       rel="icon"
       type="image/png"
@@ -31,39 +31,41 @@
       crossorigin="anonymous"
     ></script>
   </head>
+  <body theme="main">
+    <div id="particles-js"></div>
+    <div class="card">
+      <div id="iframeContainer">
+        <iframe id="gameIframe" src="/loading" frameborder="0"></iframe>
+      </div>
+      <div class="card-body">
+        <h2 id="gamename">Game Not Found!?</h2>
 
-  <div class="card">
-    <div id="iframeContainer">
-      <iframe id="gameIframe" src="/loading" frameborder="0"></iframe>
+        <button id="fullscreengame" onclick="toggleFullScreen()">
+          <i class="fa-solid fa-expand fa-xl"></i>
+        </button>
+      </div>
+      <button
+        id="exitfullscreen"
+        class="fa-solid fa-circle-xmark fa-2xl"
+      ></button>
+      <script src="/js/settings.js"></script>
+      <script src="/js/fullscreen.js"></script>
+      <script src="/js/play.js"></script>
+      <script src="/js/core.js"></script>
+      <!--School-Security-Prevent-Tab-Close-->
+      <script>
+        // This small script prevents GoGuardian and any other School security Apps from closing the tab.
+        window.addEventListener("beforeunload", function (event) {
+          event.preventDefault();
+          return (event.returnValue = "");
+        });
+      </script>
     </div>
-    <div class="card-body">
-      <h2 id="gamename">Game Not Found!?</h2>
-
-      <button id="fullscreengame" onclick="toggleFullScreen()">
-        <i class="fa-solid fa-expand fa-xl"></i>
-      </button>
-    </div>
-    <button
-      id="exitfullscreen"
-      class="fa-solid fa-circle-xmark fa-2xl"
-    ></button>
-    <script src="/js/settings.js"></script>
-    <script src="/js/fullscreen.js"></script>
-    <script src="/js/play.js"></script>
-    <script src="/js/core.js"></script>
-    <!--School-Security-Prevent-Tab-Close-->
-    <script>
-      // This small script prevents GoGuardian and any other School security Apps from closing the tab.
-      window.addEventListener("beforeunload", function (event) {
-        event.preventDefault();
-        return (event.returnValue = "");
-      });
-    </script>
-  </div>
-  <script
-    type="text/javascript"
-    src="//rethinkexercisesupplement.com/8c/97/34/8c9734fdacb1d1c2ac7390e35d8b6897.js"
-  ></script>
+    <script
+      type="text/javascript"
+      src="//rethinkexercisesupplement.com/8c/97/34/8c9734fdacb1d1c2ac7390e35d8b6897.js"
+    ></script>
+  </body>
 </html>
 <script>
   // Hey skid or contributor.
