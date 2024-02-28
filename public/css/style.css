@@ -472,9 +472,10 @@ input:checked + .slider:before {
   transition: all 0.3s ease;
   display: none;
   position: absolute;
-  background-color: rgba(51, 50, 50, 0.322);
+  background-color: var(--bg);
+  /* background-color: rgba(51, 50, 50, 0.322);
   backdrop-filter: var(--background-filter);
-  -webkit-backdrop-filter: var(--background-filter);
+  -webkit-backdrop-filter: var(--background-filter); */
   border: 1.5px solid #9e9e9e4b;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
