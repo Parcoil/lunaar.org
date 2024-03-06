@@ -28,23 +28,23 @@
     <main>
       <div class="containers">
         <div class="settingscontainer">
-          <br />
+          <br>
           <p style="font-weight: bold; font-size: 30px">Clickoff Cloak</p>
           <p style="font-size: 19px">
             When you click out of this tab, it will automatically Cloaks
           </p>
           <label class="switch">
-            <input type="checkbox" id="clickoffcloak" />
+            <input type="checkbox" id="clickoffcloak">
             <span class="slider round"></span>
           </label>
         </div>
         <div class="settingscontainer">
           <p style="font-weight: bold; font-size: 30px">Tab Cloak</p>
-          <p style="font-size: 19px">Changes the icon and text of your tab</p>
-          <select id="presetDropdown" onchange="applyPreset()">
-            <option value="default">Default</option>
+          <p style="font-size: 19px">Changes the icon and text of your tab</p><br><input type="text" id="customTitle" placeholder="Title" onkeyup="updateCustomTitle()" style="width:200px; height:0.000001px; font-size:12px; margin:0"><input type="text" id="customFavicon" placeholder="Favicon" onkeyup="updateCustomFavicon()" style="width:200px; height:0.000001px; font-size:12px; margin:0px;"><br><br>
+          <select id="presetDropdown" onchange="applyPreset()" style="height:35px; background-size:3px; background-position-y:6px; padding:5px; font-size:10px; border:0; border-radius:10px;">
+            
             <option value="preset1">GoogleDrive</option>
-            <option value="preset2">Gmail</option>
+            <option value="default">Default</option><option value="preset2">Gmail</option>
             <option value="preset3">Google Search</option>
                  <option value="preset4">Zoom</option>
           </select>
@@ -69,7 +69,7 @@
           </div>
         </div>
 
-    </main>
+    </div></main>
     <script src="/./js/particles.js" defer></script>
   </body>
 </html>
