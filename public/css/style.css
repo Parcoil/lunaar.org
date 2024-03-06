@@ -220,7 +220,7 @@ input::placeholder {
 /* Game Card */
 .gameCard,
 .favoriteGameCard {
-  width: 200px;
+  width: 14%;
   margin: 10px;
   padding: 10px;
   border: 0px solid var(--alt);
