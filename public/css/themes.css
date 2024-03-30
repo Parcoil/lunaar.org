@@ -14,14 +14,9 @@ To use a theme, add the 'theme' attribute to the <body> tag, e.g. <body theme="g
   --background-filter: blur(3px) brightness(80%);
 }
 
-body {
-  --bg: #10002b;
-  --alt: rgba(15, 0, 38, 0.5);
-  --button: #5a189a;
-  --textcolor: #fff;
-  --font: Ubuntu, sans-serif !important;
-}
+
 body[theme="main"] {
+  --background-filter: blur(3px) brightness(80%);
   /* --bg: #240063; */
   --bg: #3b039c;
   --alt: rgba(15, 0, 38, 0.5);
@@ -30,13 +25,9 @@ body[theme="main"] {
   --textcolor: #fff;
   --font: Ubuntu, sans-serif;
 }
+
 body[theme="grey"] {
-  --bg: #222222;
-  --alt: rgba(27, 27, 27, 0.5);
-  --button: #444444;
-  --textcolor: #fff;
-}
-body[theme="grey"] {
+  --background-filter: blur(3px) brightness(80%);
   --bg: #222222;
   --alt: rgba(27, 27, 27, 0.5);
   --button: #444444;
@@ -44,6 +35,7 @@ body[theme="grey"] {
 }
 
 body[theme="greyblack"] {
+  --background-filter: blur(3px) brightness(80%);
   background: rgb(106, 97, 97);
   background: linear-gradient(
     156deg,
@@ -54,9 +46,11 @@ body[theme="greyblack"] {
   --alt: rgba(27, 27, 27, 0.5);
   --button: #444444;
   --textcolor: #fff;
+  background-attachment: fixed;
 }
 
 body[theme="ghost"] {
+  --background-filter: blur(3px) brightness(80%);
   background: rgb(0, 0, 0);
   background: linear-gradient(
     153deg,
@@ -70,33 +64,67 @@ body[theme="ghost"] {
   --alt: #313131;
   background-attachment: fixed;
 }
-
-body[theme="red"] {
-  background: rgb(144, 42, 42);
-  --bg: rgb(144, 42, 42);
-  background: radial-gradient(
-    circle,
-    rgba(144, 42, 42, 1) 31%,
-    rgba(102, 39, 39, 1) 47%
-  );
-  --alt: rgba(0, 0, 0, 0.5);
-  --button: rgb(87, 0, 0);
-  --textcolor: #ffffff;
-}
 body[theme="yourthemename"] {
+  --background-filter: blur(3px) brightness(80%);
   --bg: #00b6ad4b;
   --alt: rgba(27, 27, 27, 0.5);
   --button: #444444;
   --textcolor: #fff;
 }
 body[theme="bone"] {
+  --background-filter: blur(3px) brightness(80%);
   /* transition: all 0.6s; */
-  --background-filter: #0c0c0c;
-  font-family: "bone" !important;
+  --background-filter: blur(3px) brightness(80%);
+    font-family: "bone" !important;
   --bg: #000;
   --textcolor: #fff;
   --button: #1b1b1b;
   --alt: rgb(56, 56, 56);
+  --border: var(--button);
+}
+body[theme="gb"] {
+  /* transition: all 0.6s; */
+  --background-filter: blur(3px) brightness(80%);
+  --bg: #4a4e69;
+  --textcolor: #f2e9e4;
+  --button: #22223b;
+  --alt: rgb(56, 56, 56);
+  --border: var(--button);
+}
+body[theme="gg"] {
+  /* transition: all 0.6s; */
+  --background-filter: blur(3px) brightness(80%);
+  --bg: #2f3e46;
+  --textcolor: #cad2c5;
+  --button: #2f3e46;
+  --alt: rgb(56, 56, 56);
+  --border: var(--button);
+}
+body[theme="brown"] {
+  /* transition: all 0.6s; */
+  --background-filter: blur(3px) brightness(80%);
+  --bg: #463f3a;
+  --textcolor: #f4f3ee;
+  --button: #8a817c;
+  --alt: rgb(56, 56, 56);
+  --border: var(--button);
+}
+body[theme="dg"] {
+  /* transition: all 0.6s; */
+  --background-filter: blur(3px) brightness(80%);
+  --bg: #293241;
+  --textcolor: #e0fbfc;
+  --button: #ee6c4d;
+  --alt: rgb(56, 56, 56);
+  --border: var(--button);
+}
+body[theme="moon"] {
+  /* transition: all 0.6s; */
+  --background-filter: blur(3px) brightness(80%);
+  --bg: #22223b;
+  --textcolor: #f2e9e4;
+  --button: #4a4e69;
+  --alt: rgb(151, 151, 151);
   --border: var(--button);
 }
 /* Set font-family to "bone" for specific elements when the theme is "bone" */
