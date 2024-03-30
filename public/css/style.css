@@ -12,17 +12,14 @@
   font-style: normal;
   font-display: auto;
 }
-/* @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-} */
+
 html {
   background-repeat: repeat-x;
   background-attachment: fixed;
 }
 * {
   color: var(--textcolor);
-  /* transition: 0.35s ease; */
+
   text-decoration: none !important;
 }
 body {
@@ -86,7 +83,7 @@ input::placeholder {
   margin: 15px;
   z-index: 100;
   position: fixed;
-  color: white;
+  color: #ffffff;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -114,7 +111,6 @@ input::placeholder {
   display: block;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
   border-radius: 15px;
@@ -133,7 +129,7 @@ input::placeholder {
 }
 
 .navbar a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   padding: 10px 15px;
   font-size: 16px;
@@ -169,8 +165,8 @@ input::placeholder {
   font-family: "Croogla 4F";
 }
 .badge {
-  background-color: red;
-  color: white;
+  background-color: #ff0000;
+  color: #ffffff;
   padding: 4px 8px;
   text-align: center;
   border-radius: 5px;
@@ -217,7 +213,7 @@ input::placeholder {
   justify-content: center;
   padding: 20px;
 }
-/* Game Card */
+
 .gameCard,
 .favoriteGameCard {
   width: 200px;
@@ -254,7 +250,7 @@ input::placeholder {
   background: none;
   cursor: pointer;
   font-size: 20px;
-  color: #ffffff; /* Adjust the color as needed */
+  color: #ffffff;
   transition: color 0.3s ease-in-out;
   top: -7%;
   left: -13%;
@@ -262,7 +258,7 @@ input::placeholder {
 
 .favoriteButton:hover,
 .unfavoriteButton:hover {
-  color: #ff0000; /* Adjust the hover color as needed */
+  color: #ff0000;
 }
 #particles-js {
   height: 10000px;
@@ -279,7 +275,7 @@ input::placeholder {
   text-align: center;
   box-shadow: 0px 8px 11px 0px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  /* background-color: var(--bg); */
+
   backdrop-filter: var(--background-filter);
   -webkit-backdrop-filter: var(--background-filter);
   height: 300px;
@@ -373,7 +369,7 @@ button:hover {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: #ffffff;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -392,7 +388,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -430,7 +425,7 @@ input:checked + .slider:before {
   font-weight: bold;
   color: #dbdbdb;
 }
-/*Play Page*/
+
 #gameIframe {
   width: 100%;
   height: 400px;
@@ -473,9 +468,7 @@ input:checked + .slider:before {
   display: none;
   position: absolute;
   background-color: var(--bg);
-  /* background-color: rgba(51, 50, 50, 0.322);
-  backdrop-filter: var(--background-filter);
-  -webkit-backdrop-filter: var(--background-filter); */
+
   border: 1.5px solid #9e9e9e4b;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -491,7 +484,7 @@ input:checked + .slider:before {
   background-color: var(--alt);
 }
 #particles-js {
-  position: fixed; /* Change this to 'fixed' */
+  position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -540,7 +533,7 @@ select:-webkit-autofill:focus {
   text-align: center;
   box-shadow: 0px 8px 11px 0px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  /* background-color: var(--bg); */
+
   backdrop-filter: var(--background-filter);
   -webkit-backdrop-filter: var(--background-filter);
   height: 300px;
@@ -549,19 +542,12 @@ select:-webkit-autofill:focus {
   border: 2px solid var(--border);
 }
 .footer {
-  margin: 10px auto; /* Adjust the auto margin to center horizontally */
+  margin: 10px auto;
   bottom: 0;
-  justify-content: center; /* Assuming this is inside a flex container */
+  justify-content: center;
   text-align: center;
-  align-items: center; /* Assuming this is inside a flex container */
+  align-items: center;
   position: fixed;
-  left: 50%; /* Set the left position to center horizontally */
-  transform: translateX(
-    -50%
-  ); /* Move the element back by half of its width to center perfectly */
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-/* #version {
-  bottom: 0;
-  position: fixed;
-} */

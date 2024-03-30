@@ -1,18 +1,15 @@
 import "/js/games.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Store the original title and favicon
   var originalTitle = document.title;
   var favicon = document.getElementById("favicon").href;
 
-  // Check local storage for toggle state
   var switchState = localStorage.getItem("toggleSwitchState");
   if (switchState === "enabled") {
     document.getElementById("clickoffcloak").checked = true;
     addTabEventListener();
   }
 
-  // Add event listener to toggle switch
   document
     .getElementById("clickoffcloak")
     .addEventListener("change", function () {
@@ -26,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-  // Function to change tab name and icon
   function changeTabNameAndIcon(enabled) {
     var tabTitle = enabled ? "Inbox (162) - Gmail" : originalTitle;
     var tabIcon = enabled ? "media/cloaks/Gmail.ico" : favicon;
@@ -34,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("favicon").href = tabIcon;
   }
 
-  // Add event listener to update tab name and icon when leaving the page
   function addTabEventListener() {
     window.addEventListener("blur", function (event) {
       var switchState = localStorage.getItem("toggleSwitchState");
@@ -46,36 +41,31 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("focus", function (event) {
       var switchState = localStorage.getItem("toggleSwitchState");
       if (switchState === "enabled") {
-        changeTabNameAndIcon(false); // Revert to original name and icon
+        changeTabNameAndIcon(false);
       }
     });
   }
 
-  // Remove event listener for tab name and icon change
   function removeTabEventListener() {
     window.removeEventListener("blur");
     window.removeEventListener("focus");
   }
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const themeSelector = document.getElementById("theme-selector");
 
-  // Function to change the theme
   function setTheme(themeName) {
     document.body.setAttribute("theme", themeName);
-    localStorage.setItem("selectedTheme", themeName); // Store theme in localStorage
+    localStorage.setItem("selectedTheme", themeName);
   }
 
-  // Check for a previously selected theme in localStorage
   const savedTheme = localStorage.getItem("selectedTheme");
   if (savedTheme) {
     setTheme(savedTheme);
-    themeSelector.value = savedTheme; // Set dropdown value
+    themeSelector.value = savedTheme;
   }
 
-  // Event listener to switch themes
   themeSelector.addEventListener("change", function () {
     setTheme(themeSelector.value);
   });
@@ -101,15 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Check the number of existing navbars
   var existingNavs = document.querySelectorAll(".navbar");
 
   if (existingNavs.length === 0) {
-    // Fetch the content of navbar.html
     fetch("/./navbar.html")
       .then((response) => response.text())
       .then((navHTML) => {
-        // Insert the fetched HTML into the body element
         var bodyElement = document.querySelector("body");
         bodyElement.insertAdjacentHTML("afterbegin", navHTML);
       })
@@ -157,22 +144,17 @@ var textOptions = [
   "Oh yeah or whatever",
 ];
 
-// Function to generate random index
 function getRandomIndex(max) {
   return Math.floor(Math.random() * max);
 }
 
-// Function to update the text
 function updateText() {
   var randomIndex = getRandomIndex(textOptions.length);
   var randomText = textOptions[randomIndex];
   document.getElementById("randomText").textContent = randomText;
 }
 
-// Call the function when the page loads
 window.onload = updateText;
-
-// Tab Cloak
 
 const originalTitle = "Native";
 const favicon = document.querySelector("#favicon").getAttribute("href");
@@ -237,11 +219,9 @@ window.addEventListener("load", function () {
 function showCustomMenu(x, y) {
   var menu = document.getElementById("customMenu");
 
-  // Calculate maximum bounds
   var maxX = window.innerWidth - menu.offsetWidth;
   var maxY = window.innerHeight - menu.offsetHeight;
 
-  // Adjust position to stay within bounds
   var adjustedX = Math.min(x, maxX);
   var adjustedY = Math.min(y, maxY);
 
@@ -249,7 +229,6 @@ function showCustomMenu(x, y) {
   menu.style.top = adjustedY + "px";
   menu.style.display = "block";
 
-  // Close the menu when clicking outside of it
   document.addEventListener("click", function closeMenu(event) {
     if (!event.target.closest(".custom-menu")) {
       hideCustomMenu();
@@ -281,6 +260,7 @@ window.addEventListener("load", function () {
     changeTabCloak(savedTitle, savedFavicon);
   }
 });
+
 function createBlank() {
   win = window.open();
   win.document.body.style.margin = "0";
@@ -296,7 +276,6 @@ function createBlank() {
   win.document.body.appendChild(iframe);
   window.location.href = "https://www.google.com/search?q=what+day+is+today";
 }
-// console.clear();
 
 var asciiv4 = `
 
