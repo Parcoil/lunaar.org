@@ -157,6 +157,7 @@ input::placeholder {
   transition:
     transform 0.3s ease,
     font-size 0.3s ease;
+  color: var(--textcolor);
 }
 
 .nativenav {
