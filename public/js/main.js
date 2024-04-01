@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const savedTheme = localStorage.getItem("selectedTheme");
+
   if (savedTheme) {
     setTheme(savedTheme);
     themeSelector.value = savedTheme;
@@ -161,7 +162,9 @@ function updateText() {
   document.getElementById("randomText").textContent = randomText;
 }
 
-window.onload = updateText;
+if (window.location.pathname === "/") {
+  window.onload = updateText;
+}
 
 const originalTitle = "Native";
 const favicon = document.querySelector("#favicon").getAttribute("href");
@@ -284,32 +287,27 @@ function createBlank() {
   window.location.href = "https://www.google.com/search?q=what+day+is+today";
 }
 
-var asciiv4 = `
-
-███╗   ██╗ █████╗ ████████╗██╗██╗   ██╗███████╗    ██╗   ██╗██╗  ██╗
-████╗  ██║██╔══██╗╚══██╔══╝██║██║   ██║██╔════╝    ██║   ██║██║  ██║
-██╔██╗ ██║███████║   ██║   ██║██║   ██║█████╗      ██║   ██║███████║
-██║╚██╗██║██╔══██║   ██║   ██║╚██╗ ██╔╝██╔══╝      ╚██╗ ██╔╝╚════██║
-██║ ╚████║██║  ██║   ██║   ██║ ╚████╔╝ ███████╗     ╚████╔╝      ██║
-╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═══╝  ╚══════╝      ╚═══╝       ╚═╝
-                                                                    
-                                                                
-
-                                                  
-
+const asciiv4 = `
+\x1b[35m███╗   ██╗ █████╗ ████████╗██╗██╗   ██╗███████╗    ██╗   ██╗██╗  ██╗
+\x1b[35m████╗  ██║██╔══██╗╚══██╔══╝██║██║   ██║██╔════╝    ██║   ██║██║  ██║
+\x1b[35m██╔██╗ ██║███████║   ██║   ██║██║   ██║█████╗      ██║   ██║███████║
+\x1b[35m██║╚██╗██║██╔══██║   ██║   ██║╚██╗ ██╔╝██╔══╝      ╚██╗ ██╔╝╚════██║
+\x1b[35m██║ ╚████║██║  ██║   ██║   ██║ ╚████╔╝ ███████╗     ╚████╔╝      ██║
+\x1b[35m╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═══╝  ╚══════╝      ╚═══╝       ╚═╝
 `;
+
 console.log(asciiv4);
 
-var asciiv3 = `                                  
-                                  
-       ++++++++++                 
-      ++#++++++##++               
-     +##++     ++#++              
-    ++##+       +##+              
-    +###+       +##++             
-    +###+       +###+             
-    +###+       +###+   +++++     
-    +###+       +###+   ++##+     
-    +++++       +++++    ++++     
-                                  `;
-console.log(asciiv3);
+// var asciiv3 = `
+
+//        ++++++++++
+//       ++#++++++##++
+//      +##++     ++#++
+//     ++##+       +##+
+//     +###+       +##++
+//     +###+       +###+
+//     +###+       +###+   +++++
+//     +###+       +###+   ++##+
+//     +++++       +++++    ++++
+//                                   `;
+// console.log(asciiv3);
