@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const favoriteButton = document.createElement("button");
-        favoriteButton.innerHTML = '<i class="fas fa-heart"></i>';
+        favoriteButton.innerHTML = '<i class="fa-solid fa-plus"></i>';
         favoriteButton.classList.add("favoriteButton");
         favoriteButton.addEventListener("click", function (event) {
           event.stopPropagation();
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
           gameTitle.textContent = game.name;
 
           const unfavoriteButton = document.createElement("button");
-          unfavoriteButton.innerHTML = '<i class="fas fa-heart-broken"></i>';
+          unfavoriteButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
           unfavoriteButton.classList.add("unfavoriteButton");
           unfavoriteButton.addEventListener("click", function (event) {
             event.stopPropagation();
