@@ -118,6 +118,42 @@ body[theme="moon"] {
   --alt: rgb(151, 151, 151);
   --border: var(--button);
 }
+body[theme="red"] {
+  /* transition: all 0.6s; */
+  --background-filter: blur(3px) brightness(80%);
+  --bg: #a4161a;
+  --textcolor: #ffffff;
+  --button: #660708;
+  --alt: rgb(151, 151, 151);
+  --border: var(--button);
+}
+body[theme="sblue"] {
+  /* transition: all 0.6s; */
+  --background-filter: blur(3px) brightness(80%);
+  --bg: #001f54;
+  --textcolor: #fefcfb;
+  --button: #034078;
+  --alt: rgb(151, 151, 151);
+  --border: var(--button);
+}
+body[theme="candy"] {
+  /* transition: all 0.6s; */
+  --background-filter: blur(3px) brightness(80%);
+  --bg: #bdb2ff;
+  --textcolor: #fefcfb;
+  --button: #ffc6ff;
+  --alt: rgb(151, 151, 151);
+  --border: var(--button);
+}
+body[theme="lgray"] {
+  /* transition: all 0.6s; */
+  --background-filter: blur(3px) brightness(80%);
+  --bg: #ced4da;
+  --textcolor: #212529;
+  --button: #6c757d;
+  --alt: rgb(151, 151, 151);
+  --border: var(--button);
+}
 /* Set font-family to "bone" for specific elements when the theme is "bone" */
 [theme="bone"] h1,
 [theme="bone"] a,

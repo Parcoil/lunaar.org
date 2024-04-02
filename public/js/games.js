@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let favorites = [];
 
-    fetch("/games")
+    fetch("/games.json")
       .then((response) => response.json())
       .then((data) => {
         games = data; // Assign data to games array
