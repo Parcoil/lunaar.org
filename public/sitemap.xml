@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://lunaar.org/</loc>
+    <lastmod>2024-04-03T20:07:13+00:00</lastmod>
+  </url>
+
+  <!-- Add more URLs here -->
+  <url>
+    <loc>https://lunaar.org/projects</loc>
+    <lastmod>2024-04-03T20:10:00+00:00</lastmod>
+  </url>
+
+  <url>
+    <loc>https://lunaar.org/apps</loc>
+    <lastmod>2024-04-03T20:15:00+00:00</lastmod>
+  </url>
+
+  <url>
+    <loc>https://lunaar.org/settings</loc>
+    <lastmod>2024-04-03T20:15:00+00:00</lastmod>
+  </url>
+
+  <url>
+    <loc>https://lunaar.org/extra</loc>
+    <lastmod>2024-04-03T20:15:00+00:00</lastmod>
+  </url>
+
+</urlset>
