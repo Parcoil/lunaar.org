@@ -18,11 +18,14 @@ body[theme="main"] {
   --background-filter: blur(3px) brightness(80%);
   /* --bg: #240063; */
   --bg: #3b039c;
-  --alt: rgba(15, 0, 38, 0.5);
+  --alt: rgb(69, 9, 174);
   --button: #330386;
   --border: #330386;
   --textcolor: #fff;
   --font: Ubuntu, sans-serif;
+  #SvgjsG1596 path {
+    fill: rgb(93, 0, 255) !important;
+  }
 }
 
 body[theme="greyblack"] {
@@ -35,7 +38,7 @@ body[theme="greyblack"] {
   );
   --bg: rgb(106, 97, 97);
   --alt: rgba(27, 27, 27, 0.5);
-  --button: #444444;
+  --button: #707070;
   --textcolor: #fff;
   background-attachment: fixed;
 }
@@ -52,7 +55,7 @@ body[theme="ghost"] {
   --textcolor: #fff;
   --button: rgb(90, 48, 48);
   --logo: #ffffff;
-  --alt: #313131;
+  --alt: #000000;
   background-attachment: fixed;
 }
 body[theme="yourthemename"] {
@@ -87,8 +90,8 @@ body[theme="gg"] {
   --background-filter: blur(3px) brightness(80%);
   --bg: #2f3e46;
   --textcolor: #cad2c5;
-  --button: #2f3e46;
-  --alt: rgb(56, 56, 56);
+  --button: #48606d;
+  --alt: rgb(94, 153, 155);
   --border: var(--button);
 }
 body[theme="brown"] {
@@ -106,7 +109,7 @@ body[theme="dg"] {
   --bg: #293241;
   --textcolor: #e0fbfc;
   --button: #ee6c4d;
-  --alt: rgb(56, 56, 56);
+  --alt: rgb(116, 116, 116);
   --border: var(--button);
 }
 body[theme="moon"] {
@@ -115,7 +118,7 @@ body[theme="moon"] {
   --bg: #22223b;
   --textcolor: #f2e9e4;
   --button: #4a4e69;
-  --alt: rgb(151, 151, 151);
+  --alt: #37375f;
   --border: var(--button);
 }
 body[theme="red"] {
@@ -124,7 +127,7 @@ body[theme="red"] {
   --bg: #a4161a;
   --textcolor: #ffffff;
   --button: #660708;
-  --alt: rgb(151, 151, 151);
+  --alt: rgb(15, 15, 15);
   --border: var(--button);
 }
 body[theme="sblue"] {
@@ -133,7 +136,7 @@ body[theme="sblue"] {
   --bg: #001f54;
   --textcolor: #fefcfb;
   --button: #034078;
-  --alt: rgb(151, 151, 151);
+  --alt: rgb(0, 72, 180);
   --border: var(--button);
 }
 body[theme="candy"] {
@@ -142,7 +145,7 @@ body[theme="candy"] {
   --bg: #bdb2ff;
   --textcolor: #fefcfb;
   --button: #ffc6ff;
-  --alt: rgb(151, 151, 151);
+  --alt: rgb(255, 255, 255);
   --border: var(--button);
 }
 body[theme="lgray"] {
@@ -160,6 +163,9 @@ body[theme="lgray"] {
 [theme="bone"] select,
 [theme="bone"] input {
   font-family: "bone" !important;
+}
+#SvgjsG1596 {
+  color: red;
 }
 
 /* background: rgb(108,28,217);

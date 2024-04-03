@@ -1,16 +1,17 @@
 <div align=center>
-<img align="center" src="public/media/native_logo.png">
 
-<h1 align="center"> Nativegames v4</h1>
+<img align="center" src="public/media/lunaar.svg" width="100">
 
-<h4 align="center">Nativegames is a new unblocked games site that has a proxy, loads of games, a sleek look, and much much more for you to see yourself!</h4>
+<h1 align="center"> Lunaar v4</h1>
+
+<h4 align="center">Lunaar is a new unblocked games site that has a proxy, loads of games, a sleek look, and much much more for you to see yourself!</h4>
 <p>Ultraviolet based proxy.</p>
 
 <h1 align="center"> Domains </h1>
 <a href="https://discord.gg/k7jzF4jFpr" align="center"> The list of Domains can be found Here </a>
 
 <h2> Deployment</h2>
-<p> Native is Dynamic you can deploy here</p>
+<p> Lunaar is Dynamic you can deploy here</p>
 <p>Requires NodeJS</p>
 
 <p>
@@ -33,7 +34,7 @@
 <h5> Clone the repo </h5>
 
 ```
-$ git clone https://github.com/Parcoil/nativegames.net
+$ git clone https://github.com/Parcoil/lunaar.org
 ```
 
 <h5> Install </h5>

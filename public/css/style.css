@@ -91,7 +91,14 @@ input::placeholder {
   text-align: left;
   transition: 0.35s ease;
 }
-
+#g-1 path {
+  fill: var(
+    --alt
+  ) !important; /* Change the color of the paths inside the SVG */
+}
+#SvgjsG1596 path {
+  fill: var(--button) !important;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -468,8 +475,8 @@ input:checked + .slider:before {
   transition: all 0.3s ease;
   display: none;
   position: absolute;
-  background-color: var(--bg);
-
+  /* background-color: var(--bg); */
+  backdrop-filter: var(--background-filter);
   border: 1.5px solid #9e9e9e4b;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;

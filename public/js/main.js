@@ -120,7 +120,7 @@ var textOptions = [
   "insert text here",
   "Placeholder text at its finest!",
   "Unblocked!",
-  "Welcome To The New New Native!",
+  "Welcome To Lunaar!",
   "Did you know we are open source? Fork US!",
   "https://discord.gg/fbjT5wG4za",
   "404: Productivity not found.",
@@ -150,6 +150,7 @@ var textOptions = [
   "Do not insert text here",
   "Sandwich Loves Metallica",
   "Oh yeah or whatever",
+  "the name lunaar is a tribute to my cat luna that has sadly passed away - doge",
 ];
 
 function getRandomIndex(max) {
@@ -166,7 +167,7 @@ if (window.location.pathname === "/") {
   window.onload = updateText;
 }
 
-const originalTitle = "Native";
+const originalTitle = "Lunaar";
 const favicon = document.querySelector("#favicon").getAttribute("href");
 
 function changeTabCloak(title, favicon) {
@@ -288,12 +289,15 @@ function createBlank() {
 }
 
 const asciiv4 = `
-\x1b[35m███╗   ██╗ █████╗ ████████╗██╗██╗   ██╗███████╗    ██╗   ██╗██╗  ██╗
-\x1b[35m████╗  ██║██╔══██╗╚══██╔══╝██║██║   ██║██╔════╝    ██║   ██║██║  ██║
-\x1b[35m██╔██╗ ██║███████║   ██║   ██║██║   ██║█████╗      ██║   ██║███████║
-\x1b[35m██║╚██╗██║██╔══██║   ██║   ██║╚██╗ ██╔╝██╔══╝      ╚██╗ ██╔╝╚════██║
-\x1b[35m██║ ╚████║██║  ██║   ██║   ██║ ╚████╔╝ ███████╗     ╚████╔╝      ██║
-\x1b[35m╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═══╝  ╚══════╝      ╚═══╝       ╚═╝
+
+\x1b[35m██╗     ██╗   ██╗███╗   ██╗ █████╗  █████╗ ██████╗     ██╗   ██╗██╗  ██╗
+\x1b[35m██║     ██║   ██║████╗  ██║██╔══██╗██╔══██╗██╔══██╗    ██║   ██║██║  ██║
+\x1b[35m██║     ██║   ██║██╔██╗ ██║███████║███████║██████╔╝    ██║   ██║███████║
+\x1b[35m██║     ██║   ██║██║╚██╗██║██╔══██║██╔══██║██╔══██╗    ╚██╗ ██╔╝╚════██║
+\x1b[35m███████╗╚██████╔╝██║ ╚████║██║  ██║██║  ██║██║  ██║     ╚████╔╝      ██║
+\x1b[35m╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝      ╚═══╝       ╚═╝
+                                                                        
+
 `;
 
 console.log(asciiv4);
