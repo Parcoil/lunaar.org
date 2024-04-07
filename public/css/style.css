@@ -59,7 +59,7 @@ input::placeholder {
   display: none;
 }
 
-#native {
+#lunaar {
   font-family: "Croogla 4F";
   font-size: 55px;
   font-weight: 500;
@@ -167,7 +167,7 @@ input::placeholder {
   color: var(--textcolor);
 }
 
-.nativenav {
+.lunaarnav {
   font-weight: 300;
 
   font-family: "Croogla 4F";

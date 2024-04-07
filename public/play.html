@@ -77,7 +77,7 @@
       .then((data) => {
         const gameData = data.find((game) => game.url === gameUrl);
 
-        document.title = `${gameData.name} | Nativegames`;
+        document.title = `${gameData.name} | Lunaar`;
         document.getElementById("gamename").innerText = gameData.name;
         document.getElementById("favicon").href = gameData.image;
         document.getElementById("gameIframe").src = `${serverUrl1}/${gameUrl}/`;
