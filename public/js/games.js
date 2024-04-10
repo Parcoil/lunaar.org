@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname === "/projects") {
     const gameContainer = document.getElementById("gameContainer");
     const searchBar = document.getElementById("searchBar");
-    const serverUrl1 = "https://gms.speedpl.us/";
+    const serverUrl1 = "https://gpsd.onrender.com/";
     const serverUrl2 = "";
     const favoriteGamesContainer = document.getElementById(
       "favoriteGamesContainer"

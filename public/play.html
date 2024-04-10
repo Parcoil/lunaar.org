@@ -71,7 +71,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const gameUrl = urlParams.get("game");
-    const serverUrl1 = "https://gms.speedpl.us/";
+    const serverUrl1 = "https://gpsd.onrender.com/";
     fetch("/games.json")
       .then((response) => response.json())
       .then((data) => {
