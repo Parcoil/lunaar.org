@@ -325,26 +325,29 @@ select > option {
   font-family: var(--font);
 }
 button {
-  cursor: pointer;
-  border: 2px;
-  transition: 0.2s;
-  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 12px;
+  box-shadow:
+    var(--coilui-shadow),
+    0 0 0 0 transparent;
   background-color: var(--button);
-  padding: 0.5rem;
-  border-radius: 0.375rem;
   color: var(--textcolor);
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  height: 13%;
+  font-size: 16px;
+  transition: all 0.1s ease;
+  font-weight: 600;
   font-family: var(--font);
-  font-weight: 900;
-  height: 50px;
-  font-size: 15px;
-  width: 35%;
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.2s;
 }
-button:hover {
-  transform: scale(1.1);
+button:active,
+.press:active {
+  transform: scale(0.95); /* Scale down when held down */
 }
+
 .switch {
   position: relative;
   display: inline-block;
