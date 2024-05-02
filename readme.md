@@ -1,6 +1,6 @@
 <div align=center>
 
-<img align="center" src="public/media/lunaar.svg" width="100">
+<img align="center" src="public/media/logggo.svg" width="100">
 
 <h1 align="center"> Lunaar v4</h1>
 

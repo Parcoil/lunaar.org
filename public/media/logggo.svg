@@ -1,62 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" ">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Lunaar 200+ Unblocked Games" />
-    <meta name="keywords" content="games, unblocked, 3kh0, freegames, proxy, ubg, github, Lunaar, lunaar, lunaargames" />
-    <meta name="author" content="Parcoil Network" />
-    <meta property="og:title" content="Lunaar" />
-    <meta property="og:description" content="Lunaar 200+ Unblocked Games" />
-    <meta property="og:image" content="media/lunaara.png" />
-    <meta property="og:url" content="https://lunaar.org" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Lunaar" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Lunaar" />
-    <meta name="twitter:description" content="Lunaar 200+ Unblocked Games" />
-    <meta name="twitter:image" content="SOON" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:color" content="#3b039c" />
-    <title>Lunaar</title>
-   <link
-      rel="icon"
-      type="image/png"
-      href="media/lunaar.svg"
-      id="favicon"
-    />
-    <link rel="stylesheet" href="css/style.css"/>
-
-    <script src="/./uv/uv.bundle.js" defer></script>
-    <script src="/./uv/uv.config.js" defer></script>
-    <script src="/./uv/register-sw.js" defer></script>
-    <script src="/./uv/search.js" defer></script>
-    <script src="/./uv/index.js" defer></script>
-    <script src="/./js/particles.js" defer></script>
-    <script type="module" src="js/main.js" defer></script>
-    <script src="/uv/uv.sw.js" defer></script>
-   
-
-
-     <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-    <script>
-  
-    </script>
-    
-  <script type='text/javascript' src='//rethinkexercisesupplement.com/5f/9a/b6/5f9ab663ac9b6fd33c437dba58f8682b.js'></script></head>
-  
-  <body theme="main" onload="registerSW()" class="noscroll">
-<div id="particles-js"></div>
-
-
-<script  src="/./particles.js"></script>
-
-<main>
-          <form id="uv-form" class="flex-center">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    viewBox="0 0.587 494.972 413.945"
    version="1.1"
-
+   id="svg5"
    sodipodi:docname="logggo.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -123,42 +69,3 @@
     </g>
   </g>
 </svg>
-  <h1 id="lunaar">lunaar.</h1>
-
-    <p id="randomText"></p>
-  
-      <input
-        id="uv-search-engine"
-        value="https://www.google.com/search?q=%s"
-        type="hidden"
-      />
-      <input type="checkbox" id="clickoffcloak" style="display: none;"/>
-      <div class="search-box">
-        <input id="w-search" type="text" placeholder="Surf the web freely" />
-      </div>
-
-      <p id="uv-error"></p>
-      <pre id="uv-error-code"></pre>
-      <button id="uv-register-sw" value="Register service worker">
-        Register ServiceWorker
-      </button>
-
-<!-- main -->
-
-    
-
-<div class="github"><a href="https://github.com/parcoil/lunaar.org"><i class="fa-brands fa-github"></i></a></div>
-
-<script>
-  registerSW()
-</script>
-
-<div class="footer">
-<p id="version"></p>
-</div>
-</main>
-<script type='text/javascript' src='//rethinkexercisesupplement.com/f7/32/53/f73253aa6c42bc3c0dc426d6f074a5dd.js'></script>
-  <script type='text/javascript' src='//rethinkexercisesupplement.com/f7/32/53/f73253aa6c42bc3c0dc426d6f074a5dd.js'></script>
-  </body>
-</html>
-
