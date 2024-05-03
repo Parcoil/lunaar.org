@@ -499,7 +499,7 @@
   },
   {
     "name": "Drift Boss",
-    "image": "media/cover-start.jpg",
+    "image": "logo.png",
     "url": "drift-boss",
     "new": false
   },
@@ -631,8 +631,8 @@
   },
   {
     "name": "Flappy Bird",
-    "image": "img/thumb.png",
-    "url": "flappybird",
+    "image": "flappybird.jpg",
+    "url": "flappy-bird",
     "new": false
   },
   {
@@ -650,7 +650,7 @@
   {
     "name": "Five Nights at Wario's (FNAW)",
     "image": "splash.png",
-    "url": "FNAW",
+    "url": "fnaw",
     "new": false
   },
   {
@@ -1003,7 +1003,7 @@
   },
   {
     "name": "Moto X3M 2",
-    "image": "",
+    "image": "Moto-X3M-2.webp",
     "url": "motox3m2",
     "new": false
   },
@@ -1214,7 +1214,7 @@
   {
     "name": "Rolling Forests",
     "image": "icon.png",
-    "url": "rollingforests",
+    "url": "rolling-forests",
     "new": false
   },
   {
@@ -1236,9 +1236,9 @@
     "new": false
   },
   {
-    "name": "Spank The Monkey",
-    "image": "spank-the-monkey.jpg",
-    "url": "spank-the-monkey",
+    "name": "Slap The Monkey",
+    "image": "slap-the-monkey.jpg",
+    "url": "slap-the-monkey",
     "new": false
   },
   {
@@ -1291,8 +1291,8 @@
   },
   {
     "name": "Sleeping Beauty",
-    "image": "",
-    "url": "splash.png",
+    "image": "splash.png",
+    "url": " sleepingbeauty",
     "new": false
   },
   {
@@ -1317,12 +1317,6 @@
     "name": "Slope Ball",
     "image": "icon.jpg",
     "url": "slope-ball",
-    "new": false
-  },
-  {
-    "name": "Super Mario 64 (SM64)",
-    "image": "logo.png",
-    "url": "supermario64",
     "new": false
   },
   {
@@ -1358,7 +1352,7 @@
   {
     "name": "Soldier Legend",
     "image": "images/logo.jpg",
-    "url": "soldierlegend",
+    "url": "soldier-legend",
     "new": false
   },
   {
@@ -1382,7 +1376,7 @@
   {
     "name": "Space Company",
     "image": "whiteLogo.png",
-    "url": "spacecompany",
+    "url": "space-company",
     "new": false
   },
   {
@@ -1544,25 +1538,25 @@
   {
     "name": "Tanuki Sunset",
     "image": "img/logo.png",
-    "url": "tanukisunset",
+    "url": "tanuki-sunset",
     "new": false
   },
   {
     "name": "Temple Run 2",
     "image": "img/temple-run-2-256.png",
-    "url": "templerun2",
+    "url": "temple-run-2",
     "new": false
   },
   {
     "name": "The Final Earth",
     "image": "images.png",
-    "url": "thefinalearth",
+    "url": "the-final-earth",
     "new": false
   },
   {
     "name": "The Hotel",
     "image": "splash.png",
-    "url": "thehotel",
+    "url": "the-hotel",
     "new": false
   },
   {
@@ -1694,12 +1688,12 @@
   {
     "name": "WebGL Fluid Simulation",
     "image": "promo_back.png",
-    "url": "webglfluidsimulation",
+    "url": "webgl-fluid-simulation",
     "new": false
   },
   {
     "name": "WebRetro",
-    "image": "",
+    "image": "assets/icons/iconm256.png",
     "url": "webretro",
     "new": false
   },
