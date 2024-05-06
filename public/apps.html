@@ -35,8 +35,33 @@
     <link rel="stylesheet" href="css/style.css" />
   <script type='text/javascript' src='//rethinkexercisesupplement.com/5f/9a/b6/5f9ab663ac9b6fd33c437dba58f8682b.js'></script></head>
   <body theme="main">
+    <form id="uv-form" class="flex-center">
     <div id="particles-js"></div>
     <h1>Apps</h1>
+    <p>*may be buggy*</p>
+        <script src="/./uv/uv.bundle.js" defer></script>
+    <script src="/./uv/uv.config.js" defer></script>
+    <script src="/./uv/register-sw.js" defer></script>
+    <script src="/./uv/search.js" defer></script>
+    <script src="/./uv/index.js" defer></script>
+    <script src="/./js/particles.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
+    <script src="/uv/uv.sw.js" defer></script>
+    <input
+        id="uv-search-engine"
+        value="https://www.google.com/search?q=%s"
+        type="hidden"
+      />
+      <input type="checkbox" id="clickoffcloak" style="display: none;"/>
+      <div class="search-box">
+        <input id="w-search" type="text" placeholder="Enter custom app URL" />
+      </div>
+
+      <p id="uv-error"></p>
+      <pre id="uv-error-code"></pre>
+      <button id="uv-register-sw" value="Register service worker">
+        Register ServiceWorker
+      </button>
     <div
       class="gameContainer"
       rel="grow"
