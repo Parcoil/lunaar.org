@@ -22,6 +22,7 @@ html {
 
   text-decoration: none !important;
 }
+
 body {
   animation: fadeIn ease-out 1s;
   background-color: var(--bg);
@@ -91,12 +92,28 @@ input::placeholder {
   text-align: left;
   transition: 0.35s ease;
 }
-#g-1 path {
+svg {
+    height: 100px;
+    width: 100px;
+}
+.st0 {
+ fill: rgb(93, 0, 255) !important;
+}
+.st1 {
+ fill: rgb(75, 0, 206) !important;
+}
+#path1 {
+ fill: var(--button)!important;
+}
+#path3, #path2, #path4 {
+ fill: var(--alt) !important;
+}
+#st0 path {
   fill: var(
     --alt
   ) !important; /* Change the color of the paths inside the SVG */
 }
-#SvgjsG1596 path {
+#st1 path {
   fill: var(--button) !important;
 }
 .dropdown {
