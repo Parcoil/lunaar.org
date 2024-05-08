@@ -1,157 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <title>Game Not Found!?</title>
-    <script type="module" src="js/main.js" defer></script>
-    <script src="/js/games.js" defer></script>
-
-    <script src="/./js/particles.js" defer></script>
-    <link rel="stylesheet" href="/./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="/./css/themes.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      id="favicon"
-      href="/media/nativelogotrans.png"
-    />
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
-      crossorigin="anonymous"
-    ></script>
-  <script type='text/javascript' src='//rethinkexercisesupplement.com/5f/9a/b6/5f9ab663ac9b6fd33c437dba58f8682b.js'></script></head>
-  <body theme="main">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel="icon" type="image/x-icon" id="favicon" href="/media/logggo.svg">
+    <link rel="stylesheet" href="/./main.css">
+</head>
+<body>
     <div id="particles-js"></div>
-    <div class="card">
-      <div id="iframeContainer">
-        <iframe id="gameIframe" src="/loading" frameborder="0"></iframe>
-      </div>
-      <div class="card-body">
-        <h2 id="gamename">Game Not Found!?</h2>
-
-        <button id="fullscreengame" onclick="toggleFullScreen()">
-          <i class="fa-solid fa-expand fa-xl"></i>
-        </button>
-      </div>
-      <button
-        id="exitfullscreen"
-        class="fa-solid fa-circle-xmark fa-2xl"
-      ></button>
-      <script src="/js/settings.js"></script>
-      <script src="/js/games.js"></script>
-
-      <!--School-Security-Prevent-Tab-Close-->
-      <script>
-        // This small script prevents GoGuardian and any other School security Apps from closing the tab.
-        window.addEventListener("beforeunload", function (event) {
-          event.preventDefault();
-          return (event.returnValue = "");
-        });
-      </script>
+    <main class="center">
+        
+        <div class="card" style="width: 1100px; height: 720px;">
+    <iframe id="gameFrame" width="100%" height="100%" frameborder="0"></iframe>
+    <h1 id="gameName"></h1>
+    <button onclick="toggleFullScreen()" class="nobg"><i class="ti ti-maximize"></i></button>
     </div>
 
-    <input type="checkbox" id="clickoffcloak" style="display: none" />
+    <script>
+       const urlParams = new URLSearchParams(window.location.search);
+const gameUrl = urlParams.get('game');
+
+fetch('games.json')
+  .then(response => response.json())
+  .then(data => {
+    const game = data.find(game => game.url === gameUrl);
+    if (game) {
+      const gameNameElement = document.getElementById('gameName');
+      gameNameElement.textContent = game.name;
+
+      const gameFrame = document.getElementById('gameFrame');
+      gameFrame.src = `https://gpsd.onrender.com/${gameUrl}/`;
+    } else {
+      console.error('Game not found');
+    }
+  })
+  .catch(error => console.error('Error fetching game data:', error));
+
+      function toggleFullScreen() {
+      var iframe = document.getElementById("gameFrame");
+
+      if (!document.fullscreenElement) {
+        iframe.requestFullscreen().catch(err => {
+          alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+    
+    </script>
+        <script>
+      
+        window.addEventListener('beforeunload', function (event) {
+            event.preventDefault();
+            return (event.returnValue = "");
+        });
+    </script>
+    </main>
+        <script src="js/main.js" defer></script>
+<input type="checkbox" id="clickoffcloak" style="display: none;"/>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script  src="js/particles.js"></script>
   <script type='text/javascript' src='//rethinkexercisesupplement.com/f7/32/53/f73253aa6c42bc3c0dc426d6f074a5dd.js'></script>
+  <style>
+    body {
+      overflow: hidden;
+    }
+  </style>
   </body>
 </html>
-<script>
-  // Hey skid or contributor.
-  // This script Fetches games.json.
-  document.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const gameUrl = urlParams.get("game");
-    const serverUrl1 = "https://gpsd.onrender.com/";
-    fetch("/games.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const gameData = data.find((game) => game.url === gameUrl);
-
-        document.title = `${gameData.name} | Lunaar`;
-        document.getElementById("gamename").innerText = gameData.name;
-        document.getElementById("favicon").href = gameData.image;
-        document.getElementById("gameIframe").src = `${serverUrl1}/${gameUrl}/`;
-      })
-      .catch((error) => console.error("Error fetching game data:", error));
-  });
-</script>
-<script>
-  // Hey skid or contributor.
-  // this is fullscreen script to fullscreen the iframe on the play.html page.
-
-  // var originalContainerStyles = {};
-  // var gameIframe = document.getElementById("gameIframe");
-  // var exitFullscreenButton = document.getElementById("exitfullscreen");
-
-  // function toggleFullScreen() {
-  //   var iframeContainer = document.getElementById("iframeContainer");
-  //   var fullScreenButton = document.getElementById("fullscreengame");
-  //   fullScreenButton.style.display = "none";
-  //   originalContainerStyles = {
-  //     position: iframeContainer.style.position,
-  //     width: iframeContainer.style.width,
-  //     height: iframeContainer.style.height,
-  //     top: iframeContainer.style.top,
-  //     left: iframeContainer.style.left,
-  //     zIndex: iframeContainer.style.zIndex,
-  //   };
-  //   iframeContainer.style.position = "fixed";
-  //   iframeContainer.style.width = "100vw"; // Use viewport units for width
-  //   iframeContainer.style.height = "100vh"; // Use viewport units for height
-  //   iframeContainer.style.top = "0";
-  //   iframeContainer.style.left = "0";
-  //   iframeContainer.style.zIndex = "99999";
-  //   gameIframe.style.height = "100%";
-
-  //   exitFullscreenButton.style.display = "block";
-  //   exitFullscreenButton.style.zIndex = "9999";
-  // }
-
-  // var exitFullscreenbtn = document.getElementById("exitfullscreen");
-
-  // exitFullscreenbtn.onclick = function () {
-  //   var iframeContainer = document.getElementById("iframeContainer");
-  //   var fullScreenButton = document.getElementById("fullscreengame");
-  //   fullScreenButton.style.display = "flex";
-  //   iframeContainer.style.position = originalContainerStyles.position;
-  //   iframeContainer.style.width = originalContainerStyles.width;
-  //   iframeContainer.style.height = originalContainerStyles.height;
-  //   iframeContainer.style.top = originalContainerStyles.top;
-  //   iframeContainer.style.left = originalContainerStyles.left;
-  //   iframeContainer.style.zIndex = originalContainerStyles.zIndex;
-  //   gameIframe.style.height = "400px";
-  //   gameIframe.style.width = "100%";
-
-  //   exitFullscreenButton.style.display = "none";
-  // };
-</script>
-<script>
-  const fullScreenButton = document.getElementById("fullscreengame");
-  const iframe = document.getElementById("gameIframe");
-
-  fullScreenButton.addEventListener("click", () => {
-    if (iframe.requestFullscreen) {
-      iframe.requestFullscreen();
-    } else if (iframe.mozRequestFullScreen) {
-      // Firefox
-      iframe.mozRequestFullScreen();
-    } else if (iframe.webkitRequestFullscreen) {
-      // Chrome, Safari and Opera
-      iframe.webkitRequestFullscreen();
-    } else if (iframe.msRequestFullscreen) {
-      // IE/Edge
-      iframe.msRequestFullscreen();
-    }
-  });
-</script>

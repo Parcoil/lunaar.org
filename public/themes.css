@@ -7,7 +7,7 @@ To use a theme, add the 'theme' attribute to the <body> tag, e.g. <body theme="g
 */
 @font-face {
   font-family: "bone";
-  src: url("/fonts/nasalization-rg.otf") format("opentype");
+  src: url("/media/nasalization-rg.otf") format("opentype");
 }
 :root {
   --font: Ubuntu, sans-serif;
@@ -23,11 +23,19 @@ body[theme="main"] {
   --border: #330386;
   --textcolor: #fff;
   --font: Ubuntu, sans-serif;
-  #SvgjsG1596 path {
-    fill: rgb(93, 0, 255) !important;
-  }
+.st0 {
+ fill: rgb(93, 0, 255) !important;
 }
-
+.st1 {
+ fill: rgb(75, 0, 206) !important;
+}
+}
+.st0 {
+ fill: var(--alt) !important;
+}
+.st1 {
+ fill: var(--button) !important;
+}
 body[theme="greyblack"] {
   --background-filter: blur(3px) brightness(80%);
   background: rgb(106, 97, 97);
@@ -127,7 +135,7 @@ body[theme="red"] {
   --bg: #a4161a;
   --textcolor: #ffffff;
   --button: #660708;
-  --alt: rgb(15, 15, 15);
+  --alt: rgb(71, 0, 0);
   --border: var(--button);
 }
 body[theme="sblue"] {
@@ -157,7 +165,7 @@ body[theme="lgray"] {
   --alt: rgb(151, 151, 151);
   --border: var(--button);
 }
-/* Set font-family to "bone" for specific elements when the theme is "bone" */
+
 [theme="bone"] h1,
 [theme="bone"] a,
 [theme="bone"] select,

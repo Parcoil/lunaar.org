@@ -15,7 +15,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const __filename = fileURLToPath(import.meta.url);
 const publicPath = join(__dirname, "public");
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
-// Serve static files from the "public" directory
+
 app.use(express.static(publicPath));
 app.use("/uv/", express.static(uvPath));
 app.use("/", express.static(path.join(__dirname, "/")));
@@ -29,7 +29,7 @@ app.get("/games", (req, res) => {
     }
   });
 });
-// APPS
+
 app.get("/discord", (req, res) => {
   res.redirect("/uv/service/hvtrs8%2F-dksaopd%2Ccmm-arp");
 });
@@ -37,32 +37,39 @@ app.get("/discord", (req, res) => {
 app.get("/google", (req, res) => {
   res.redirect("/uv/service/hvtrs8%2F-wuw%2Cgmoelg.aoo%2Fue%60hr");
 });
+
 app.get("/youtube", (req, res) => {
   res.redirect("/uv/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-");
 });
+
 app.get("/tiktok", (req, res) => {
   res.redirect("/uv/service/hvtrs8%2F-wuw%2Ctkkvoi.aoo%2Fgxrlmrg");
 });
+
 app.get("/x", (req, res) => {
   res.redirect("/uv/service/hvtrs8%2F-tuivtgr%2Ccmm-");
 });
+
 app.get("/chess", (req, res) => {
   res.redirect("/uv/service/hvtrs8%2F-wuw%2Ccjeqs%2Ccmm-");
 });
-//
-// Define a route for handling pages using the ":page" parameter
+
 app.get("/:page", (req, res) => {
   const page = req.params.page;
-  res.sendFile(path.join(__dirname, `public/${page}.html`));
-});
-// Error for everything else
-app.use((req, res) => {
-  res.status(404);
-  res.sendFile(join(publicPath, "404.html"));
+  const filePath = path.join(__dirname, `public/${page}.html`);
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      if (err.code === 'ENOENT') {
+        res.status(404).sendFile(path.join(__dirname, 'public/404.html'));
+      } else {
+        res.status(500).send('Internal Server Error');
+      }
+    }
+  });
 });
 
 const server = createServer();
-// Start the server
+
 server.on("request", (req, res) => {
   if (bare.shouldRoute(req)) {
     bare.routeRequest(req, res);
@@ -95,7 +102,6 @@ server.on("listening", () => {
   console.log();
 });
 
-// https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 
@@ -106,6 +112,4 @@ function shutdown() {
   process.exit(0);
 }
 
-server.listen({
-  port,
-});
+server.listen({ port });
