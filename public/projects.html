@@ -27,14 +27,13 @@
     </main>
         <script src="/./js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Parcoil/toast-lib@main/toast-lib.js">
     <script  src="js/particles.js"></script>
 <script>
   const gamesContainer = document.getElementById('games-container');
   const favoritesContainer = document.getElementById('favorites-container');
   let gamesData;
 
-fetch('games.json')
+  fetch('games.json')
     .then(response => response.json())
     .then(data => {
       gamesData = data.sort((a, b) => b.new - a.new);
@@ -46,37 +45,20 @@ fetch('games.json')
 
 function displayGames(games) {
     gamesContainer.innerHTML = `<a href="/./req"><div class="game">
-            <img loading="lazy" src="/./media/req.svg" alt="Request a Game" width="100">
+            <img loading="lazy" src="/./media/req.svg" alt="100ng" width="100">
             <h3>Request a Game</h3>
             </div></a>`;
     games.forEach(game => {
         const gameElement = document.createElement('div');
         gameElement.classList.add('game');
         gameElement.innerHTML = `
-            <img loading="lazy" src="https://gpsd.onrender.com/${game.url}/${game.image}" alt="${game.name}" width="100">
+            <img loading="lazy" src="https://stop-looking-you-skid.onrender.com/${game.url}/${game.image}" alt="${game.name}" width="100">
             <h3>${game.name}</h3>
             <button class="favbutton" onclick="toggleFavorite('${game.name}')">${isFavorite(game.name) ? '<i class="ti ti-heart-filled"></i>' : '<i class="ti ti-heart"></i>'}</button>
         `;
-        
-        const imgElement = gameElement.querySelector('img');
-        imgElement.addEventListener('click', function() {
+        gameElement.querySelector('img').addEventListener('click', function() {
             window.location.href = `/play.html?game=${game.url}`;
         });
-
-        imgElement.addEventListener('error', function(e) {
-            fetch(imgElement.src)
-                .then(response => {
-                    if (!response.ok && response.status !== 404) {
-                        e.preventDefault();
-                        showToast("Game servers appear to be down :(","warning",5000);
-                    }
-                })
-                .catch(error => {
-                    e.preventDefault();
-                    showToast("Game servers appear to be down :(","warning",5000);
-                });
-        });
-
         gamesContainer.appendChild(gameElement);
     });
 }
@@ -111,7 +93,7 @@ function displayFavorites() {
             const favoriteElement = document.createElement('div');
             favoriteElement.classList.add('game', 'favorites');
             favoriteElement.innerHTML = `
-                <img src="https://stop-looking-you-skid.onrender.com/${favoriteGame.url}/${favoriteGame.image}" alt="${favorite}" width="100">
+                <img src="https://gpsd.onrender.com/${favoriteGame.url}/${favoriteGame.image}" alt="${favorite}" width="100">
                 <h3>${favorite}</h3>
                 <button class="favbutton" onclick="toggleFavorite('${favorite}')"><i class="ti ti-heart-filled"></i></button>
             `;
