@@ -88,6 +88,7 @@ body {
     background-color: var(--button) !important;
 }
 .nav {
+  border: 2px solid var(--button);
   top: 10px;
   left: 50%; 
   transform: translateX(-50%); 
@@ -370,4 +371,9 @@ select:-webkit-autofill:focus {
  flex-direction: column;
 top: 6%;
 
+}
+
+.game img {
+border: 2px solid var(--button);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
