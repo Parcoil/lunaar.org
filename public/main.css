@@ -94,14 +94,14 @@ body {
   transform: translateX(-50%); 
   position: fixed;
   background: var(--background-filter);
-  border-radius: 10px;
+  border-radius: 15px;
   color: var(--textcolor);
   font-family: var(--font) !important;
   padding: 17px 20px;
   display: flex;
   text-align: center;
   justify-content: center; 
-  width: 500px; 
+  width: 580px; 
   box-sizing: border-box; 
   font-weight: 600;
   text-transform: uppercase;
@@ -178,6 +178,10 @@ main {
 #randomText {
   color: var(--font);
 margin: 10px;
+}
+.ad  {
+  margin-top: 15px;
+  border-radius: 10px;
 }
 #favorites-container {
   display: flex;
@@ -317,7 +321,7 @@ margin: 10px;
 input {
   padding: 20px;
   width: 550px;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: var(--bg);
   text-align: center;
   font-size: 24px;
@@ -337,7 +341,7 @@ input {
   color: #ffffff;
   padding: 4px 8px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 .nobg {
   background: transparent;

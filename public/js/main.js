@@ -122,6 +122,7 @@ var navbarHTML = `
                     <a href="/./apps"><i class="ti ti-apps">&nbsp;</i>Apps</a>
                     <a href="/./settings"><i class="ti ti-settings">&nbsp;</i>Settings</a>
                     <a href="/./extra"><i class="ti ti-menu-2">&nbsp;</i>Extras</a>
+                    <a href="https://dsc.gg/lunaargms"><i class="ti ti-brand-discord">&nbsp;</i>Discord</a>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 
             </div>
