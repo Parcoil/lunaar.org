@@ -19,22 +19,32 @@ body[theme="main"] {
   /* --bg: #240063; */
   --bg: #3b039c;
   --alt: rgb(69, 9, 174);
-  --button: #330386;
+  --button: #36028f;
   --border: #330386;
   --textcolor: #fff;
   --font: Ubuntu, sans-serif;
+  .st0 {
+    fill: rgb(93, 0, 255) !important;
+  }
+  .st1 {
+    fill: rgb(75, 0, 206) !important;
+  }
+}
+:root {
+  --background-filter: blur(3px) brightness(80%);
+  /* --bg: #240063; */
+  --bg: #3b039c;
+  --alt: rgb(69, 9, 174);
+  --button: #36028f;
+  --border: #330386;
+  --textcolor: #fff;
+  --font: Ubuntu, sans-serif;
+}
 .st0 {
- fill: rgb(93, 0, 255) !important;
+  fill: var(--alt) !important;
 }
 .st1 {
- fill: rgb(75, 0, 206) !important;
-}
-}
-.st0 {
- fill: var(--alt) !important;
-}
-.st1 {
- fill: var(--button) !important;
+  fill: var(--button) !important;
 }
 body[theme="greyblack"] {
   --background-filter: blur(3px) brightness(80%);

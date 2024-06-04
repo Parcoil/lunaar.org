@@ -1,10 +1,9 @@
-@import url('https://rawcdn.githack.com/Parcoil/Coil-UI/365f568ba103d4d5d137091b1534e35adf73f8a5/dist.css');
+@import url("https://rawcdn.githack.com/Parcoil/Coil-UI/365f568ba103d4d5d137091b1534e35adf73f8a5/dist.css");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 @import url("themes.css");
 @font-face {
   font-family: "Croogla 4F";
-  src:
-    url(/./media/Croogla4F.ttf) format("truetype");
+  src: url(/./media/Croogla4F.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: auto;
@@ -14,15 +13,8 @@
   transition: 0.35s ease;
 }
 :root {
-  --coilui-primary: var('--button') !important;
-  --button: #330386;
-  --bg: #3b039c;
-  --alt: rgb(69, 9, 174);
-  --textcolor: #fff;
-  --border: #330386;
-  --font: Ubuntu, sans-serif;
 }
-::-moz-selection { 
+::-moz-selection {
   color: rgb(255, 255, 255);
   background: var(--button);
 }
@@ -41,8 +33,8 @@
   position: fixed;
 }
 svg {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
 .footer {
   margin: 10px auto;
@@ -68,30 +60,32 @@ svg {
   float: left;
   position: fixed;
   margin-left: 10px;
-bottom: 11px;
-cursor: pointer;
+  bottom: 11px;
+  cursor: pointer;
 }
 * {
-    font-family: var(--font);
+  font-family: var(--font);
 }
 body {
-    margin: 0;
+  margin: 0;
 
-    height: 100vh;
-        justify-content: center;
-    align-items: center; 
-    text-align: center;
-    background-color: var(--bg);
-    color: var(--textcolor);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg);
+  color: var(--textcolor);
 }
 .btn-primary {
-    background-color: var(--button) !important;
+  background-color: var(--button) !important;
 }
 .nav {
   border: 2px solid var(--button);
   top: 10px;
-  left: 50%; 
-  transform: translateX(-50%); 
+  left: 10px;
+  right: 20px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   position: fixed;
   background: var(--background-filter);
   border-radius: 15px;
@@ -100,13 +94,13 @@ body {
   padding: 17px 20px;
   display: flex;
   text-align: center;
-  justify-content: center; 
-  width: 580px; 
-  box-sizing: border-box; 
+  justify-content: center;
+  width: 99%;
+  box-sizing: border-box;
   font-weight: 600;
   text-transform: uppercase;
   backdrop-filter: var(--background-filter);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
@@ -123,10 +117,10 @@ body {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .nav a:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .nohov {
   transform: none !important;
@@ -147,7 +141,7 @@ transform: scale(1.1);
 }
 
 #uv-register-sw:hover {
-display: block;
+  display: block;
 }
 main {
   margin-top: 13vh;
@@ -159,7 +153,6 @@ main {
   right: 0;
   top: 10%;
   flex-direction: column;
-
 }
 .home {
   display: flex;
@@ -177,9 +170,9 @@ main {
 }
 #randomText {
   color: var(--font);
-margin: 10px;
+  margin: 10px;
 }
-.ad  {
+.ad {
   margin-top: 15px;
   border-radius: 10px;
 }
@@ -189,7 +182,6 @@ margin: 10px;
   justify-content: center;
   text-align: center;
   padding: 20px;
-
 }
 
 #games-container {
@@ -207,7 +199,7 @@ margin: 10px;
   border: 0px solid var(--alt);
   transition: 0.35s ease;
   z-index: 10;
-  border-radius: 15px;  
+  border-radius: 15px;
 }
 .game img {
   min-width: 200px;
@@ -219,27 +211,25 @@ margin: 10px;
   transform: scale(1.1);
   cursor: pointer;
 }
-    /* .favorites {
+/* .favorites {
       color: red;
     } */
-    .favbutton {
-      background: none;
-      border: none;
-      font-size: 30px;
-      color: var(--button);
-      
-      cursor: pointer;
-    }
-    iframe {
-      border-radius: 10px;
+.favbutton {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: var(--button);
 
-    }
-    a {
-      text-decoration: none;
-      color: var(--textcolor);
-
-    }
-    select {
+  cursor: pointer;
+}
+iframe {
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+  color: var(--textcolor);
+}
+select {
   padding: 20px;
   border-radius: 5px;
   background: var(--button);
@@ -262,21 +252,20 @@ margin: 10px;
 .noscroll {
   overflow: hidden;
 }
-    .card {
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      background-color: var(--background-filter);
-      backdrop-filter: var(--background-filter);
-      outline: solid 0.3px var(--button);
-      display: flex;
-      flex-direction: column;
-   height: fit-content;
-   width: fit-content;
-      overflow: hidden;
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: var(--background-filter);
+  backdrop-filter: var(--background-filter);
+  outline: solid 0.3px var(--button);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  overflow: hidden;
+}
 
-    }
-
-    .partnericon {
+.partnericon {
   width: 60px;
   border-radius: 100px;
 }
@@ -287,7 +276,7 @@ margin: 10px;
   flex-direction: column;
   margin-left: 10px;
 }
-        .setting-card {
+.setting-card {
   text-align: center;
   box-shadow: 0px 8px 11px 0px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -298,8 +287,8 @@ margin: 10px;
   margin: 20px;
   width: 400px;
   border: 2px solid var(--button);
-    }
-    ::-webkit-scrollbar {
+}
+::-webkit-scrollbar {
   width: 15px;
   border-radius: 15px;
   background: transparent;
@@ -315,9 +304,9 @@ margin: 10px;
   border-radius: 15px;
   height: 2px;
 }
-    .card input[type="text"] {
-      width: 70%;
-    }
+.card input[type="text"] {
+  width: 70%;
+}
 input {
   padding: 20px;
   width: 550px;
@@ -326,7 +315,7 @@ input {
   text-align: center;
   font-size: 24px;
   border: 1px solid var(--button);
-  
+
   outline: none;
   color: var(--textcolor);
   background: var(--background-filter);
@@ -334,9 +323,10 @@ input {
   -webkit-backdrop-filter: var(--background-filter);
   font-family: var(--font);
   font-weight: 900;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.badge { /* thx w3 schools */
+.badge {
+  /* thx w3 schools */
   background-color: #ff0000;
   color: #ffffff;
   padding: 4px 8px;
@@ -368,16 +358,15 @@ select:-webkit-autofill:focus {
   color: var(--coilui-primary);
 }
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
- flex-direction: column;
-top: 6%;
-
+  flex-direction: column;
+  top: 6%;
 }
 
 .game img {
-border: 4px solid var(--button);
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 4px solid var(--button);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
