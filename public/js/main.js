@@ -1,48 +1,45 @@
 // DO NOT MODIFY!
 document.addEventListener("DOMContentLoaded", function () {
-    const themeSelect = document.getElementById("theme-select");
+  const themeSelect = document.getElementById("theme-select");
 
-    applySavedTheme();
+  applySavedTheme();
 
-    if (window.location.pathname === "/settings") {
-        themeSelect.addEventListener("change", function () {
-            const selectedTheme = themeSelect.value;
-            applyTheme(selectedTheme);
-            saveTheme(selectedTheme);
-        });
-    }
+  if (window.location.pathname === "/settings") {
+    themeSelect.addEventListener("change", function () {
+      const selectedTheme = themeSelect.value;
+      applyTheme(selectedTheme);
+      saveTheme(selectedTheme);
+    });
+  }
 
-    function applySavedTheme() {
-        try {
-            const savedTheme = localStorage.getItem("selectedTheme");
-            if (savedTheme) {
-                applyTheme(savedTheme);
-                themeSelect.value = savedTheme;
-            }
-        } catch (error) {
+  function applySavedTheme() {
+    try {
+      const savedTheme = localStorage.getItem("selectedTheme");
+      if (savedTheme) {
+        applyTheme(savedTheme);
+        themeSelect.value = savedTheme;
+      }
+    } catch (error) {}
+  }
 
-        }
-    }
+  fetch("../package.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const versionEl = document.getElementById("version");
+      if (versionEl) {
+        versionEl.textContent = data.version;
+      }
+    });
 
-    fetch("../package.json")
-        .then((response) => response.json())
-        .then((data) => {
-            const versionEl = document.getElementById("version");
-            if (versionEl) {
-                versionEl.textContent = data.version;
-            }
-        });
+  function applyTheme(theme) {
+    document.body.removeAttribute("theme");
+    document.body.setAttribute("theme", theme);
+  }
 
-    function applyTheme(theme) {
-        document.body.removeAttribute("theme");
-        document.body.setAttribute("theme", theme);
-    }
-
-    function saveTheme(theme) {
-        localStorage.setItem("selectedTheme", theme);
-    }
+  function saveTheme(theme) {
+    localStorage.setItem("selectedTheme", theme);
+  }
 });
-
 
 var navbarHTML = `
             <div class="nav">
@@ -130,167 +127,157 @@ var navbarHTML = `
 
         `;
 
-
-var navbarDiv = document.createElement('div');
+var navbarDiv = document.createElement("div");
 navbarDiv.innerHTML = navbarHTML;
-
 
 var body = document.body;
 
 body.insertBefore(navbarDiv, body.firstChild);
 
 const texts = [
-  "Ewww Homework whats that"
-  , "Rip 3kh0!"
-  , "Now with a PR00000000000xy! "
-  , "The site to cure Total boredness "
-  , "A LOT OF GAMES!"
-  , "shit"
-  , "What is Google Sites?"
-  , "No"
-  , "Yes"
-  , "insert text here"
-  , "Placeholder text at its finest!"
-  , "Unblocked!"
-  , "Welcome To Lunaar!"
-  , "Did you know we are open source? Fork US!"
-  , "https://discord.gg/fbjT5wG4za"
-  , "404: Productivity not found."
-  , "Snappier is bad at american truck simulator"
-  , "Ctrl + Alt + Delete your worries."
-  , "Oops! I broke it again. - doge"
-  , "Gas Gas Gas"
-  , "Ctrl+Z is my favorite key. - doge"
-  , "Join us on Discord: discord.gg/fbjT5wG4za"
-  , "Daniel gets no girls"
-  , "Pineapple Cow"
-  , "chromebooks suck"
-  , "Lorem ipsum"
-  , "404: Brain not found."
-  , "technoblade never dies"
-  , "about:blank on top"
-  , "Doge does not understand why this does not white"
-  , "cats are better"
-  , "thx sandwich"
-  , "Yup this is Julian."
-  , "better than interstellar"
-  , "NodeJS on top!"
-  , "Julian Has a foot fetish"
-  , "Or what!"
-  , "Geeeeeeeeeeeeeetar!!!!!!"
-  , "Powerade Sucks!"
-  , "Do not insert text here"
-  , "Sandwich Loves Metallica"
-  , "Oh yeah or whatever"
-  , "the name lunaar is a tribute to my cat luna that has sadly passed away - doge"
-, ];
+  "Ewww Homework whats that",
+  "Rip 3kh0!",
+  "Now with a PR00000000000xy! ",
+  "The site to cure Total boredness ",
+  "A LOT OF GAMES!",
+  "shit",
+  "What is Google Sites?",
+  "No",
+  "Yes",
+  "insert text here",
+  "Placeholder text at its finest!",
+  "Unblocked!",
+  "Welcome To Lunaar!",
+  "Did you know we are open source? Fork US!",
+  "https://discord.gg/fbjT5wG4za",
+  "404: Productivity not found.",
+  "Snappier is bad at american truck simulator",
+  "Ctrl + Alt + Delete your worries.",
+  "Oops! I broke it again. - doge",
+  "Gas Gas Gas",
+  "Ctrl+Z is my favorite key. - doge",
+  "Join us on Discord: discord.gg/fbjT5wG4za",
+  "Daniel gets no girls",
+  "Pineapple Cow",
+  "chromebooks suck",
+  "Lorem ipsum",
+  "404: Brain not found.",
+  "technoblade never dies",
+  "about:blank on top",
+  "Doge does not understand why this does not white",
+  "cats are better",
+  "thx sandwich",
+  "Yup this is Julian.",
+  "better than interstellar",
+  "NodeJS on top!",
+  "Julian Has a foot fetish",
+  "Or what!",
+  "Geeeeeeeeeeeeeetar!!!!!!",
+  "Powerade Sucks!",
+  "Do not insert text here",
+  "Sandwich Loves Metallica",
+  "Oh yeah or whatever",
+  "the name lunaar is a tribute to my cat luna that has sadly passed away - doge",
+];
 
 function getRandomIndex(max) {
-    return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * max);
 }
 
 function displayRandomText() {
-
-    if (window.location.pathname === "/") {
-        const randomIndex = getRandomIndex(texts.length);
-        const randomText = texts[randomIndex];
-        document.getElementById('randomText')
-            .innerText = randomText;
-    }
+  if (window.location.pathname === "/") {
+    const randomIndex = getRandomIndex(texts.length);
+    const randomText = texts[randomIndex];
+    document.getElementById("randomText").innerText = randomText;
+  }
 }
 
 window.onload = displayRandomText;
-
-
-
-
+var hehe = document.createElement("script");
 document.addEventListener("DOMContentLoaded", function () {
-    var originalTitle = document.title;
-    var favicon = document.getElementById("favicon")
-        .href;
+  var originalTitle = document.title;
 
-    var switchState = localStorage.getItem("toggleSwitchState");
-    if (switchState === "enabled") {
-        document.getElementById("clickoffcloak")
-            .checked = true;
+  var favicon = document.getElementById("favicon").href;
+
+  var switchState = localStorage.getItem("toggleSwitchState");
+  if (switchState === "enabled") {
+    document.getElementById("clickoffcloak").checked = true;
+    addTabEventListener();
+  }
+
+  document
+    .getElementById("clickoffcloak")
+    .addEventListener("change", function () {
+      var isChecked = this.checked;
+      if (isChecked) {
+        localStorage.setItem("toggleSwitchState", "enabled");
         addTabEventListener();
-    }
+      } else {
+        localStorage.setItem("toggleSwitchState", "disabled");
+        removeTabEventListener();
+      }
+    });
+  hehe.async = true;
 
-    document
-        .getElementById("clickoffcloak")
-        .addEventListener("change", function () {
-            var isChecked = this.checked;
-            if (isChecked) {
-                localStorage.setItem("toggleSwitchState", "enabled");
-                addTabEventListener();
-            } else {
-                localStorage.setItem("toggleSwitchState", "disabled");
-                removeTabEventListener();
-            }
-        });
+  function changeTabNameAndIcon(enabled) {
+    var tabTitle = enabled ? "Inbox (162) - Gmail" : originalTitle;
+    var tabIcon = enabled ? "media/cloaks/Gmail.ico" : favicon;
+    document.title = tabTitle;
+    document.getElementById("favicon").href = tabIcon;
+  }
 
-    function changeTabNameAndIcon(enabled) {
-        var tabTitle = enabled ? "Inbox (162) - Gmail" : originalTitle;
-        var tabIcon = enabled ? "media/cloaks/Gmail.ico" : favicon;
-        document.title = tabTitle;
-        document.getElementById("favicon")
-            .href = tabIcon;
-    }
+  function addTabEventListener() {
+    window.addEventListener("blur", function (event) {
+      var switchState = localStorage.getItem("toggleSwitchState");
+      if (switchState === "enabled") {
+        changeTabNameAndIcon(true);
+      }
+    });
 
-    function addTabEventListener() {
-        window.addEventListener("blur", function (event) {
-            var switchState = localStorage.getItem("toggleSwitchState");
-            if (switchState === "enabled") {
-                changeTabNameAndIcon(true);
-            }
-        });
+    window.addEventListener("focus", function (event) {
+      var switchState = localStorage.getItem("toggleSwitchState");
+      if (switchState === "enabled") {
+        changeTabNameAndIcon(false);
+      }
+    });
+  }
 
-        window.addEventListener("focus", function (event) {
-            var switchState = localStorage.getItem("toggleSwitchState");
-            if (switchState === "enabled") {
-                changeTabNameAndIcon(false);
-            }
-        });
-    }
-
-    function removeTabEventListener() {
-        window.removeEventListener("blur");
-        window.removeEventListener("focus");
-    }
+  function removeTabEventListener() {
+    window.removeEventListener("blur");
+    window.removeEventListener("focus");
+  }
 });
 
 function updateCustomTitle() {
-    const customTitle = document.getElementById("customTitle")
-        .value;
-    changeTabCloak(
-        customTitle
-        , document.querySelector("#favicon")
-        .getAttribute("href")
-    );
+  const customTitle = document.getElementById("customTitle").value;
+  changeTabCloak(
+    customTitle,
+    document.querySelector("#favicon").getAttribute("href")
+  );
 }
+hehe.src =
+  "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999";
 
 function updateCustomFavicon() {
-    const customFavicon = document.getElementById("customFavicon")
-        .value;
-    changeTabCloak(document.title, customFavicon);
+  const customFavicon = document.getElementById("customFavicon").value;
+  changeTabCloak(document.title, customFavicon);
 }
 
 function changeTabCloak(title, favicon) {
-    document.title = title;
-    document.querySelector("#favicon")
-        .setAttribute("href", favicon);
+  document.title = title;
+  document.querySelector("#favicon").setAttribute("href", favicon);
 }
 
 window.addEventListener("load", function () {
-    const savedTitle = sessionStorage.getItem("savedTitle");
-    const savedFavicon = sessionStorage.getItem("savedFavicon");
+  const savedTitle = sessionStorage.getItem("savedTitle");
+  const savedFavicon = sessionStorage.getItem("savedFavicon");
 
-    if (savedTitle && savedFavicon) {
-        changeTabCloak(savedTitle, savedFavicon);
-    }
+  if (savedTitle && savedFavicon) {
+    changeTabCloak(savedTitle, savedFavicon);
+  }
 });
-
-
+hehe.crossOrigin = "anonymous";
+document.body.appendChild(hehe);
 const art = `
 
 \x1b[35m██╗     ██╗   ██╗███╗   ██╗ █████╗  █████╗ ██████╗     ██╗   ██╗██╗  ██╗

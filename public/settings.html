@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,9 +16,8 @@
     <div id="particles-js"></div>
     <main
       class="center"
-      style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap;"
+      style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap"
     >
-   
       <div class="setting-card card">
         <h1>Theme</h1>
         <select id="theme-select">
@@ -62,7 +61,7 @@
           </select>
         </div>
       </div>
-      <div class="setting-card card" style="gap: 10px;">
+      <div class="setting-card card" style="gap: 10px">
         <div>
           <h1>Custom Cloak</h1>
           <input
@@ -110,7 +109,10 @@
             changeTabCloak(originalTitle, favicon);
             break;
           case "preset1":
-            changeTabCloak("My Drive - Google Drive", "/media/cloaks/GoogleDrive.ico");
+            changeTabCloak(
+              "My Drive - Google Drive",
+              "/media/cloaks/GoogleDrive.ico"
+            );
             break;
           case "preset2":
             changeTabCloak("Inbox (162) - Gmail ", "/media/cloaks/Gmail.ico");
@@ -131,7 +133,9 @@
 
       function saveSettings() {
         const customTitle = document.getElementById("title-input").value;
-        const customFavicon = document.getElementById("custom-favicon-input").value;
+        const customFavicon = document.getElementById(
+          "custom-favicon-input"
+        ).value;
 
         sessionStorage.setItem("savedTitle", customTitle);
         sessionStorage.setItem("savedFavicon", customFavicon);
@@ -152,26 +156,22 @@
         iframe.allow = "fullscreen";
         iframe.src = location.origin;
         win.document.body.appendChild(iframe);
-        window.location.href = "https://www.google.com/search?q=what+day+is+today";
+        window.location.href =
+          "https://www.google.com/search?q=what+day+is+today";
       }
     </script>
     <script>
       function resetSettings() {
+        localStorage.clear();
 
-          localStorage.clear();
+        sessionStorage.clear();
 
-          sessionStorage.clear();
-
-          alert("All settings have been reset.");
-          window.location.reload()
+        alert("All settings have been reset.");
+        window.location.reload();
       }
     </script>
     <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/particles.js"></script>
-    <script
-      type="text/javascript"
-      src="//rethinkexercisesupplement.com/f7/32/53/f73253aa6c42bc3c0dc426d6f074a5dd.js"
-    ></script>
   </body>
 </html>

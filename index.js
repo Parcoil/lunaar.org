@@ -59,10 +59,10 @@ app.get("/:page", (req, res) => {
   const filePath = path.join(__dirname, `public/${page}.html`);
   res.sendFile(filePath, (err) => {
     if (err) {
-      if (err.code === 'ENOENT') {
-        res.status(404).sendFile(path.join(__dirname, 'public/404.html'));
+      if (err.code === "ENOENT") {
+        res.status(404).sendFile(path.join(__dirname, "public/404.html"));
       } else {
-        res.status(500).send('Internal Server Error');
+        res.status(500).send("Internal Server Error");
       }
     }
   });
@@ -92,13 +92,13 @@ if (isNaN(port)) port = 8080;
 
 server.on("listening", () => {
   const address = server.address();
-
+  console.log(`[+] Starting Lunaar...`);
   console.log();
-  console.log(`Made by The Parcoil Network :`);
+  console.log(`[+] Made by The Parcoil Network:`);
   console.log();
-  console.warn(`https://github.com/Parcoil/lunaar.org`);
+  console.warn(`[+] https://github.com/Parcoil/lunaar.org`);
   console.log();
-  console.log(`Lunaar Running on port ${address.port}`);
+  console.log(`[+] Lunaar Running on port ${address.port}`);
   console.log();
 });
 
@@ -106,7 +106,7 @@ process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 
 function shutdown() {
-  console.log("SIGTERM signal received: closing HTTP server");
+  console.log("[-] SIGTERM signal received: closing HTTP server");
   server.close();
   bare.close();
   process.exit(0);
