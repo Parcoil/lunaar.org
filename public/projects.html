@@ -1,166 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
-    <link rel="icon" type="image/x-icon" id="favicon" href="/media/logggo.svg">
-    <link rel="stylesheet" href="/./main.css">
-</head>
-<body>
-    
+    <link
+      rel="icon"
+      type="image/x-icon"
+      id="favicon"
+      href="/media/logggo.svg"
+    />
+    <link rel="stylesheet" href="/./main.css" />
+    <script
+      type="text/javascript"
+      src="//rethinkexercisesupplement.com/5f/9a/b6/5f9ab663ac9b6fd33c437dba58f8682b.js"
+    ></script>
+  </head>
+  <body>
     <div id="particles-js"></div>
     <main>
       <div class="center">
-      <h1>Games</h1>
-      <p>JOIN THE <a href="https://dsc.gg/parcoil" class="link">DISCORD SERVER</a> TO VOTE ON A NEW NAME </h1>
-            <div class="search-container">
-        <input id="game-search" type="text" placeholder="Search through ${gamesData.length} games" oninput="searchGames(this.value)" />
+        <h1>Games</h1>
+
+        <div class="search-container">
+          <input
+            id="game-search"
+            type="text"
+            placeholder="Search through ${gamesData.length} games"
+            oninput="searchGames(this.value)"
+          />
+        </div>
       </div>
-      </div>
-<!-- 
+      <!-- 
     <h2>Favorites</h2> -->
-    <div id="favorites-container"></div>
+      <div id="favorites-container"></div>
 
-  <!-- <h1>Game List</h1> -->
-    <div id="games-container"></div>
-<input type="checkbox" id="clickoffcloak" style="display: none;"/>
+      <!-- <h1>Game List</h1> -->
+      <div id="games-container"></div>
+      <input type="checkbox" id="clickoffcloak" style="display: none" />
     </main>
-        <script src="/./js/main.js" defer></script>
+    <script src="/./js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Parcoil/toast-lib@main/toast-lib.js">
-    <script  src="js/particles.js"></script>
-<script>
-  const gamesContainer = document.getElementById('games-container');
-  const favoritesContainer = document.getElementById('favorites-container');
-  let gamesData;
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/Parcoil/toast-lib@main/toast-lib.js"
+    />
+    <script src="js/particles.js"></script>
+    <script>
+      const gamesContainer = document.getElementById("games-container");
+      const favoritesContainer = document.getElementById("favorites-container");
+      let gamesData;
 
-fetch('games.json')
-    .then(response => response.json())
-    .then(data => {
-      gamesData = data.sort((a, b) => b.new - a.new);
-      displayGames(gamesData);
-      updatePlaceholder(gamesData.length);
-      displayFavoritesFromStorage();
-    })
-    .catch(error => console.error('Error fetching games:', error));
+      fetch("games.json")
+        .then((response) => response.json())
+        .then((data) => {
+          gamesData = data.sort((a, b) => b.new - a.new);
+          displayGames(gamesData);
+          updatePlaceholder(gamesData.length);
+          displayFavoritesFromStorage();
+        })
+        .catch((error) => console.error("Error fetching games:", error));
 
-function displayGames(games) {
-    gamesContainer.innerHTML = `<a href="/./req"><div class="game">
+      function displayGames(games) {
+        gamesContainer.innerHTML = `<a href="/./req"><div class="game">
             <img loading="lazy" src="/./media/req.svg" alt="Request a Game" width="100">
             <h3>Request a Game</h3>
             </div></a>`;
-    games.forEach(game => {
-        const gameElement = document.createElement('div');
-        gameElement.classList.add('game');
-        gameElement.innerHTML = `
-            <img loading="lazy" src="https://parcoil-assets.onrender.com/${game.url}/${game.image}" alt="${game.name}" width="100">
+        games.forEach((game) => {
+          const gameElement = document.createElement("div");
+          gameElement.classList.add("game");
+          gameElement.innerHTML = `
+            <img loading="lazy" src="https://parcoil-assets.onrender.com/${
+              game.url
+            }/${game.image}" alt="${game.name}" width="100">
             <h3>${game.name}</h3>
-            <button class="favbutton" onclick="toggleFavorite('${game.name}')">${isFavorite(game.name) ? '<i class="ti ti-heart-filled"></i>' : '<i class="ti ti-heart"></i>'}</button>
+            <button class="favbutton" onclick="toggleFavorite('${
+              game.name
+            }')">${
+              isFavorite(game.name)
+                ? '<i class="ti ti-heart-filled"></i>'
+                : '<i class="ti ti-heart"></i>'
+            }</button>
         `;
-        
-        const imgElement = gameElement.querySelector('img');
-        imgElement.addEventListener('click', function() {
+
+          const imgElement = gameElement.querySelector("img");
+          imgElement.addEventListener("click", function () {
             window.location.href = `/play.html?game=${game.url}`;
-        });
+          });
 
-        imgElement.addEventListener('error', function(e) {
+          imgElement.addEventListener("error", function (e) {
             fetch(imgElement.src)
-                .then(response => {
-                    if (!response.ok && response.status !== 404) {
-                        e.preventDefault();
-                        showToast("Game servers appear to be down :(","warning",5000);
-                    }
-                })
-                .catch(error => {
-                    e.preventDefault();
-                    showToast("Game servers appear to be down :(","warning",5000);
-                });
+              .then((response) => {
+                if (!response.ok && response.status !== 404) {
+                  e.preventDefault();
+                  showToast(
+                    "Game servers appear to be down :(",
+                    "warning",
+                    5000
+                  );
+                }
+              })
+              .catch((error) => {
+                e.preventDefault();
+                showToast("Game servers appear to be down :(", "warning", 5000);
+              });
+          });
+
+          gamesContainer.appendChild(gameElement);
         });
+      }
 
-        gamesContainer.appendChild(gameElement);
-    });
-}
+      const favorites = new Set(
+        JSON.parse(localStorage.getItem("favorites")) || []
+      );
 
+      function updatePlaceholder(count) {
+        const searchInput = document.getElementById("game-search");
+        searchInput.placeholder = `Search through ${count} games`;
+      }
 
-  const favorites = new Set(JSON.parse(localStorage.getItem('favorites')) || []);
+      function toggleFavorite(name) {
+        if (favorites.has(name)) {
+          favorites.delete(name);
+        } else {
+          favorites.add(name);
+        }
+        displayFavorites();
+        saveFavoritesToStorage();
+      }
 
-  function updatePlaceholder(count) {
-    const searchInput = document.getElementById('game-search');
-    searchInput.placeholder = `Search through ${count} games`;
-  }
+      function isFavorite(name) {
+        return favorites.has(name);
+      }
 
-  function toggleFavorite(name) {
-    if (favorites.has(name)) {
-      favorites.delete(name);
-    } else {
-      favorites.add(name);
-    }
-    displayFavorites();
-    saveFavoritesToStorage();
-  }
-
-  function isFavorite(name) {
-    return favorites.has(name);
-  }
-
-function displayFavorites() {
-    favoritesContainer.innerHTML = ``;
-    favorites.forEach(favorite => {
-        const favoriteGame = gamesData.find(game => game.name === favorite);
-        if (favoriteGame) {
-            const favoriteElement = document.createElement('div');
-            favoriteElement.classList.add('game', 'favorites');
+      function displayFavorites() {
+        favoritesContainer.innerHTML = ``;
+        favorites.forEach((favorite) => {
+          const favoriteGame = gamesData.find((game) => game.name === favorite);
+          if (favoriteGame) {
+            const favoriteElement = document.createElement("div");
+            favoriteElement.classList.add("game", "favorites");
             favoriteElement.innerHTML = `
                 <img src="https://parcoil-assets.onrender.com/${favoriteGame.url}/${favoriteGame.image}" alt="${favorite}" width="100">
                 <h3>${favorite}</h3>
                 <button class="favbutton" onclick="toggleFavorite('${favorite}')"><i class="ti ti-heart-filled"></i></button>
             `;
-            favoriteElement.querySelector('img').addEventListener('click', function() {
+            favoriteElement
+              .querySelector("img")
+              .addEventListener("click", function () {
                 window.location.href = `/play.html?game=${favorite}`;
-            });
+              });
             favoritesContainer.appendChild(favoriteElement);
-        }
-    });
-}
-
-  function displayFavoritesFromStorage() {
-    const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    savedFavorites.forEach(favorite => {
-      if (gamesData.some(game => game.name === favorite)) {
-        favorites.add(favorite);
+          }
+        });
       }
-    });
-    displayFavorites();
-  }
 
-  function saveFavoritesToStorage() {
-    localStorage.setItem('favorites', JSON.stringify(Array.from(favorites)));
-  }
+      function displayFavoritesFromStorage() {
+        const savedFavorites =
+          JSON.parse(localStorage.getItem("favorites")) || [];
+        savedFavorites.forEach((favorite) => {
+          if (gamesData.some((game) => game.name === favorite)) {
+            favorites.add(favorite);
+          }
+        });
+        displayFavorites();
+      }
 
-  function searchGames(query) {
-    const filteredGames = gamesData.filter(game => game.name.toLowerCase().includes(query.toLowerCase()));
-    displayGames(filteredGames);
-  }
-</script>
+      function saveFavoritesToStorage() {
+        localStorage.setItem(
+          "favorites",
+          JSON.stringify(Array.from(favorites))
+        );
+      }
+
+      function searchGames(query) {
+        const filteredGames = gamesData.filter((game) =>
+          game.name.toLowerCase().includes(query.toLowerCase())
+        );
+        displayGames(filteredGames);
+      }
+    </script>
     <script>
-  const originalTitle = document.title;
-  const favicon = document
-    .querySelector("#favicon")
-    .getAttribute("href");
+      const originalTitle = document.title;
+      const favicon = document.querySelector("#favicon").getAttribute("href");
 
-  function changeTabCloak(title, favicon) {
-    document.title = title;
-    document.querySelector("#favicon").setAttribute("href", favicon);
-  }
-
-
-
-
-
-</script>
-
-
-
+      function changeTabCloak(title, favicon) {
+        document.title = title;
+        document.querySelector("#favicon").setAttribute("href", favicon);
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//rethinkexercisesupplement.com/f7/32/53/f73253aa6c42bc3c0dc426d6f074a5dd.js"
+    ></script>
   </body>
 </html>
