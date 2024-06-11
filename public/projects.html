@@ -54,7 +54,7 @@ function displayGames(games) {
         const gameElement = document.createElement('div');
         gameElement.classList.add('game');
         gameElement.innerHTML = `
-            <img loading="lazy" src="https://stop-looking-you-skid.onrender.com/${game.url}/${game.image}" alt="${game.name}" width="100">
+            <img loading="lazy" src="https://parcoil-assets.onrender.com/${game.url}/${game.image}" alt="${game.name}" width="100">
             <h3>${game.name}</h3>
             <button class="favbutton" onclick="toggleFavorite('${game.name}')">${isFavorite(game.name) ? '<i class="ti ti-heart-filled"></i>' : '<i class="ti ti-heart"></i>'}</button>
         `;
@@ -112,7 +112,7 @@ function displayFavorites() {
             const favoriteElement = document.createElement('div');
             favoriteElement.classList.add('game', 'favorites');
             favoriteElement.innerHTML = `
-                <img src="https://stop-looking-you-skid.onrender.com/${favoriteGame.url}/${favoriteGame.image}" alt="${favorite}" width="100">
+                <img src="https://parcoil-assets.onrender.com/${favoriteGame.url}/${favoriteGame.image}" alt="${favorite}" width="100">
                 <h3>${favorite}</h3>
                 <button class="favbutton" onclick="toggleFavorite('${favorite}')"><i class="ti ti-heart-filled"></i></button>
             `;
