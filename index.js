@@ -30,6 +30,10 @@ app.get("/games", (req, res) => {
   });
 });
 
+app.get("/ads.txt", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/media/ads.txt"));
+});
+
 app.get("/discord", (req, res) => {
   res.redirect("/uv/service/hvtrs8%2F-dksaopd%2Ccmm-arp");
 });
