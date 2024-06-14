@@ -8,7 +8,7 @@
 <p>Ultraviolet based proxy.</p>
 
 <h1 align="center"> Domains </h1>
-<a href="https://discord.gg/k7jzF4jFpr" align="center"> The list of Domains can be found Here </a>
+<a href="https://discord.gg/parcoil" align="center"> The list of Domains can be found Here </a>
 
 <h2> Deployment</h2>
 <p> Lunaar is Dynamic you can deploy here</p>
