@@ -104,56 +104,34 @@
       </div>
     </main>
     <script>
-      const originalTitle = document.title;
-      const favicon = document.querySelector("#favicon").getAttribute("href");
+      function updateCustomTitle() {
+        const customTitle = document.getElementById("customTitle").value;
+        changeTabCloak(
+          customTitle,
+          document.querySelector("#favicon").getAttribute("href")
+        );
+      }
+      hehe.src =
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999";
+
+      function updateCustomFavicon() {
+        const customFavicon = document.getElementById("customFavicon").value;
+        changeTabCloak(document.title, customFavicon);
+      }
 
       function changeTabCloak(title, favicon) {
         document.title = title;
         document.querySelector("#favicon").setAttribute("href", favicon);
       }
 
-      function applyPreset() {
-        const dropdown = document.getElementById("presetDropdown");
-        const selectedPreset = dropdown.value;
+      window.addEventListener("load", function () {
+        const savedTitle = sessionStorage.getItem("savedTitle");
+        const savedFavicon = sessionStorage.getItem("savedFavicon");
 
-        switch (selectedPreset) {
-          case "default":
-            changeTabCloak(originalTitle, favicon);
-            break;
-          case "preset1":
-            changeTabCloak(
-              "My Drive - Google Drive",
-              "/media/cloaks/GoogleDrive.ico"
-            );
-            break;
-          case "preset2":
-            changeTabCloak("Inbox (162) - Gmail ", "/media/cloaks/Gmail.ico");
-            break;
-          case "preset3":
-            changeTabCloak("Google", "/media/cloaks/Google Search.ico");
-            break;
-          case "preset4":
-            changeTabCloak("Zoom", "/media/cloaks/Zoom.ico");
-            break;
-          case "preset5":
-            changeTabCloak("Google Meet", "/media/cloaks/Meet.ico");
-            break;
-          default:
-            break;
+        if (savedTitle && savedFavicon) {
+          changeTabCloak(savedTitle, savedFavicon);
         }
-      }
-
-      function saveSettings() {
-        const customTitle = document.getElementById("title-input").value;
-        const customFavicon = document.getElementById(
-          "custom-favicon-input"
-        ).value;
-
-        sessionStorage.setItem("savedTitle", customTitle);
-        sessionStorage.setItem("savedFavicon", customFavicon);
-
-        changeTabCloak(customTitle, customFavicon);
-      }
+      });
 
       function createBlank() {
         win = window.open();

@@ -444,6 +444,12 @@
     "new": false
   },
   {
+    "name": "Dr Doe's Chemistry Quiz",
+    "image": "image.png",
+    "url": "drdoe/content/www.newgrounds.com/portal/view/724772/",
+    "new": true
+  },
+  {
     "name": "Deal or No Deal",
     "image": "index.jpg",
     "url": "deal-or-no-deal",
