@@ -32,6 +32,7 @@
   z-index: -1;
   position: fixed;
 }
+
 svg {
   height: 100px;
   width: 100px;
@@ -47,12 +48,12 @@ svg {
   transform: translateX(-50%);
 }
 
-/* .st0 {
- fill: rgb(93, 0, 255) !important;
+.st0 {
+  fill: rgb(93, 0, 255);
 }
 .st1 {
- fill: rgb(75, 0, 206) !important;
-} */
+  fill: rgb(75, 0, 206) ;
+}
 #svg5 {
   width: 30px;
   height: 30px;
