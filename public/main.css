@@ -12,7 +12,11 @@
 * {
   transition: 0.35s ease;
 }
-:root {
+.github {
+  position: fixed;
+  top: 95%;
+  left: 15px;
+  font-size: 30px;
 }
 ::-moz-selection {
   color: rgb(255, 255, 255);
@@ -52,7 +56,7 @@ svg {
   fill: rgb(93, 0, 255);
 }
 .st1 {
-  fill: rgb(75, 0, 206) ;
+  fill: rgb(75, 0, 206);
 }
 #svg5 {
   width: 30px;
