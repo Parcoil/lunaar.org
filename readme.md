@@ -26,6 +26,12 @@
 
 <h3 style="color: orange;">** Vercel Recomended **</h3>
 </div>
+
+### Press the button to join our discord server
+
+<a href="https://dsc.gg/parcoil">
+<img alt="Discord" src="https://img.shields.io/discord/1128826318813921350?style=for-the-badge&logo=discord&label=Join%20Discord&labelColor=white&color=%09%237289da">
+</a>
 <p>
 <p>
 
