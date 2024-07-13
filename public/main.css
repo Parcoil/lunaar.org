@@ -9,9 +9,9 @@
   font-display: auto;
 }
 
-* {
+/* * {
   transition: 0.35s ease;
-}
+} */
 .github {
   position: fixed;
   top: 95%;
@@ -93,7 +93,7 @@ body {
   /* transform: translateX(-50%); */
   position: fixed;
   background: var(--background-filter);
-  border-radius: 15px;
+  border-radius: var(--rounded);
   color: var(--textcolor);
   font-family: var(--font) !important;
   padding: 17px 20px;
@@ -179,7 +179,7 @@ main {
 }
 .ad {
   margin-top: 15px;
-  border-radius: 10px;
+  border-radius: var(--rounded);
 }
 #favorites-container {
   display: flex;
@@ -204,12 +204,12 @@ main {
   border: 0px solid var(--alt);
   transition: 0.35s ease;
   z-index: 10;
-  border-radius: 15px;
+  border-radius: var(--rounded);
 }
 .game img {
   min-width: 200px;
   min-height: 200px;
-  border-radius: 40px;
+  border-radius: var(--rounded2);
 }
 
 .game:hover {
@@ -228,7 +228,7 @@ main {
   cursor: pointer;
 }
 iframe {
-  border-radius: 10px;
+  border-radius: var(--rounded);
 }
 a {
   text-decoration: none;
@@ -245,7 +245,7 @@ select {
   font-family: var(--font);
   font-weight: 900;
   text-align: center;
-  border-radius: 15px;
+  border-radius: var(--rounded);
   cursor: pointer;
   appearance: none;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDwhLS0hRm9udCBBd2Vzb21lIEZyZWUgNi41LjEgYnkgQGZvbnRhd2Vzb21lIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20gTGljZW5zZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tL2xpY2Vuc2UvZnJlZSBDb3B5cmlnaHQgMjAyNCBGb250aWNvbnMsIEluYy4tLT4KCiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIwIiBpZD0ic3ZnXzEiIGQ9Im0xMzcuNCwzNzQuNmMxMi41LDEyLjUgMzIuOCwxMi41IDQ1LjMsMGwxMjgsLTEyOGM5LjIsLTkuMiAxMS45LC0yMi45IDYuOSwtMzQuOXMtMTYuNiwtMTkuOCAtMjkuNiwtMTkuOGwtMjU2LDAuMWMtMTIuOSwwIC0yNC42LDcuOCAtMjkuNiwxOS44cy0yLjIsMjUuNyA2LjksMzQuOWwxMjgsMTI4bDAuMSwtMC4xeiIvPgogIDxwYXRoIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzAwMCIgb3BhY2l0eT0iTmFOIiBkPSJtNzEzLjk0NTAzLDk1LjgzNDkxIiBpZD0ic3ZnXzIiLz4KIDwvZz4KPC9zdmc+");
@@ -284,7 +284,7 @@ select {
 .setting-card {
   text-align: center;
   box-shadow: 0px 8px 11px 0px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  border-radius: var(--rounded);
 
   backdrop-filter: var(--background-filter);
   -webkit-backdrop-filter: var(--background-filter);
@@ -295,18 +295,18 @@ select {
 }
 ::-webkit-scrollbar {
   width: 15px;
-  border-radius: 15px;
+  border-radius: var(--rounded);
   background: transparent;
 }
 
 ::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: 15px;
+  border-radius: var(--rounded);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--button);
-  border-radius: 15px;
+  border-radius: var(--rounded);
   height: 2px;
 }
 .card input[type="text"] {
@@ -315,7 +315,7 @@ select {
 input {
   padding: 20px;
   width: 550px;
-  border-radius: 15px;
+  border-radius: var(--rounded);
   background-color: var(--bg);
   text-align: center;
   font-size: 24px;
@@ -336,7 +336,7 @@ input {
   color: #ffffff;
   padding: 4px 8px;
   text-align: center;
-  border-radius: 15px;
+  border-radius: var(--rounded);
 }
 .nobg {
   background: transparent;

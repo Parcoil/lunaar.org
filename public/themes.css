@@ -12,6 +12,8 @@ To use a theme, add the 'theme' attribute to the <body> tag, e.g. <body theme="g
 :root {
   --font: Ubuntu, sans-serif;
   --background-filter: blur(3px) brightness(80%);
+  --rounded: 15px;
+  --rounded2: 40px;
 }
 
 body[theme="main"] {
@@ -174,6 +176,74 @@ body[theme="lgray"] {
   --button: #6c757d;
   --alt: rgb(151, 151, 151);
   --border: var(--button);
+}
+body[theme="yellow"] {
+  --bg: #fff248;
+  --button: #8a8701;
+  --alt: rgb(119, 111, 0);
+  --textcolor: #000;
+  --rounded: 0px !important;
+  --rounded2: 0px !important;
+}
+
+body[theme="yellow"] .btn {
+  border-radius: 0px;
+}
+body[theme="yellow"] #particles-js {
+  filter: invert(100%);
+}
+body[theme="fancy"] {
+  --bg: #09090b;
+  --textcolor: #dca54c;
+  --alt: #171618;
+  --button: #331800;
+  --rounded: 80px !important;
+  --rounded2: 100px !important;
+}
+body[theme="fancy"] .btn {
+  border-radius: 100px;
+  color: var(--textcolor);
+}
+
+body[theme="light"] {
+  --bg: #fff;
+  --textcolor: #000;
+  --alt: #000;
+  --button: #000;
+}
+body[theme="light"] #particles-js {
+  filter: invert(100%);
+}
+body[theme="light"] select {
+  color: #fff;
+}
+
+body[theme="mocha"] {
+  --bg: #1e1e2e;
+  --button: #caa6f7;
+  --alt: #a6adc9;
+  --rounded: 50px !important;
+  --rounded2: 50px !important;
+}
+body[theme="orange"] {
+  --bg: #000;
+  --button: rgb(255, 166, 0);
+  --alt: var(--button);
+}
+body[theme="youtube"] {
+  --bg: #ff;
+  --button: red;
+  --alt: var(--button);
+  --textcolor: #000;
+}
+body[theme="youtube"] #particles-js {
+  filter: invert(100%);
+}
+body[theme="youtube-dark"] {
+  --bg: #000;
+  --button: red;
+  --alt: var(--button);
+  --textcolor: #fff;
 }
 
 [theme="bone"] h1,
