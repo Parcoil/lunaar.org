@@ -149,7 +149,7 @@ const texts = [
   "Unblocked!",
   "Welcome To Lunaar!",
   "Did you know we are open source? Fork US!",
-  "Join the discord: https://dsc.gg/parcoil",
+  'Join the discord: <a href="https://dsc.gg/parcoil">https://dsc.gg/parcoil</a>',
   "404: Productivity not found.",
   "Snappier is bad at american truck simulator",
   "Ctrl + Alt + Delete your worries.",
@@ -170,6 +170,18 @@ const texts = [
   "thx sandwich",
   "Yup this is Julian.",
   "they not like us",
+  "What's up brother!",
+  "Do not insert text here",
+  "They not like us",
+  "1 + 1 = 11",
+  "LUNAARR",
+  "My CPU is 156 degrees :)",
+  "Spicy Nacho Doritos are good",
+  "Yo so games are cool",
+  "Aiden does questionable things...",
+  "Bonelab = Garys mod",
+  "Elden Ring on top - wavy ",
+  'Join our Discord: <a href="https://dsc.gg/parcoil">https://dsc.gg/parcoil</a>',
   "better than interstellar",
   "thats tuff",
   "NodeJS on top!",
@@ -192,7 +204,7 @@ function displayRandomText() {
   if (window.location.pathname === "/") {
     const randomIndex = getRandomIndex(texts.length);
     const randomText = texts[randomIndex];
-    document.getElementById("randomText").innerText = randomText;
+    document.getElementById("randomText").innerHTML = randomText;
   }
 }
 
