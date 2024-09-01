@@ -107,7 +107,7 @@
           const gameElement = document.createElement("div");
           gameElement.classList.add("game");
           gameElement.innerHTML = `
-            <img loading="lazy" src="https://parcoil-assets.onrender.com/${
+            <img loading="lazy" src="https://glcdn.githack.com/Thedogecraft/assets/-/raw/main/public/${
               game.url
             }/${game.image}" alt="${game.name}" width="100">
             <h3>${game.name}</h3>
@@ -178,7 +178,7 @@
             const favoriteElement = document.createElement("div");
             favoriteElement.classList.add("game", "favorites");
             favoriteElement.innerHTML = `
-                <img src="https://parcoil-assets.onrender.com/${favoriteGame.url}/${favoriteGame.image}" alt="${favorite}" width="100">
+                <img src="https://glcdn.githack.com/Thedogecraft/assets/-/raw/main/public/${favoriteGame.url}/${favoriteGame.image}" alt="${favorite}" width="100">
                 <h3>${favorite}</h3>
                 <button class="favbutton" onclick="toggleFavorite('${favorite}')"><i class="ti ti-heart-filled"></i></button>
             `;
