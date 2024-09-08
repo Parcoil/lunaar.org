@@ -209,7 +209,6 @@ function displayRandomText() {
 }
 
 window.onload = displayRandomText;
-var hehe = document.createElement("script");
 document.addEventListener("DOMContentLoaded", function () {
   var originalTitle = document.title;
 
@@ -233,7 +232,6 @@ document.addEventListener("DOMContentLoaded", function () {
         removeTabEventListener();
       }
     });
-  hehe.async = true;
 
   function changeTabNameAndIcon(enabled) {
     var tabTitle = enabled ? "Inbox (162) - Gmail" : originalTitle;
@@ -271,8 +269,6 @@ function updateCustomTitle() {
     document.querySelector("#favicon").getAttribute("href")
   );
 }
-hehe.src =
-  "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999";
 
 function updateCustomFavicon() {
   const customFavicon = document.getElementById("customFavicon").value;
@@ -292,8 +288,7 @@ window.addEventListener("load", function () {
     changeTabCloak(savedTitle, savedFavicon);
   }
 });
-hehe.crossOrigin = "anonymous";
-document.body.appendChild(hehe);
+
 const art = `
 
 \x1b[35m██╗     ██╗   ██╗███╗   ██╗ █████╗  █████╗ ██████╗     ██╗   ██╗██╗  ██╗
