@@ -96,13 +96,13 @@ if (isNaN(port)) port = 8080;
 
 server.on("listening", () => {
   const address = server.address();
-  console.log(`[+] Starting Lunaar...`);
+  console.log(`[+] Starting Nativegames...`);
   console.log();
   console.log(`[+] Made by The Parcoil Network:`);
   console.log();
-  console.warn(`[+] https://github.com/Parcoil/lunaar.org`);
+  console.warn(`[+] https://github.com/Parcoil/nativegames.net`);
   console.log();
-  console.log(`[+] Lunaar Running on port ${address.port}`);
+  console.log(`[+] Nativegames Running on port ${address.port}`);
   console.log();
 });
 

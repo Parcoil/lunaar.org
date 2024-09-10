@@ -147,7 +147,7 @@ const texts = [
   "insert text here",
   "Placeholder text at its finest!",
   "Unblocked!",
-  "Welcome To Lunaar!",
+  "Welcome To Nativegames!",
   "Did you know we are open source? Fork US!",
   'Join the discord: <a href="https://dsc.gg/parcoil">https://dsc.gg/parcoil</a>',
   "404: Productivity not found.",
@@ -158,6 +158,20 @@ const texts = [
   "Ctrl+Z is my favorite key. - doge",
   "Join us on Discord: discord.gg/fbjT5wG4za",
   "Daniel gets no girls",
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+  "Welcome back nativegames we missed you!",
+
   "Pineapple Cow",
   "chromebooks suck",
   "Lorem ipsum",
@@ -193,7 +207,7 @@ const texts = [
   "Do not insert text here",
   "Sandwich Loves Metallica",
   "Oh yeah or whatever",
-  "the name lunaar is a tribute to my cat luna that has sadly passed away - doge",
+  "the name nativegames is a tribute to my cat luna that has sadly passed away - doge",
 ];
 
 function getRandomIndex(max) {
