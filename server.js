@@ -1,4 +1,4 @@
-import { build } from "vite";
+// import { build } from "vite";
 import { consola } from "consola";
 import httpProxy from "http-proxy";
 import path from "node:path";
@@ -19,7 +19,7 @@ const HttpProxy = httpProxy.createProxyServer();
 async function startServer() {
   consola.start("Building 🔨");
 
-  await build();
+  // await build();
 
   app.use(express.static("dist"));
   app.use("/uv/", express.static(uvPath));
