@@ -1,24 +1,47 @@
 {
-  "name": "nativegames",
-  "version": "4.5.3",
-  "description": "The Future of Unblocked Gaming!",
+  "name": "nativegames-next",
+  "private": true,
+  "version": "5.0.0",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@titaniumnetwork-dev/ultraviolet": "^2.0.0",
-    "@tomphttp/bare-server-node": "2.0.0",
-    "express": "^4.18.2",
-    "nodemon": "^3.0.2"
+    "@mercuryworkshop/bare-mux": "^2.0.4",
+    "@mercuryworkshop/epoxy-transport": "^2.1.8",
+    "@titaniumnetwork-dev/ultraviolet": "^3.2.7",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.5.0",
+    "consola": "^3.2.3",
+    "express": "^4.19.2",
+    "fuse.js": "^7.0.0",
+    "http-proxy": "^1.18.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-lazy-load-image-component": "^1.6.2",
+    "react-router-dom": "^6.26.1",
+    "react-toastify": "^10.0.5",
+    "theme-change": "^2.5.0",
+    "wisp-server-node": "^1.1.3"
   },
   "devDependencies": {
-    "prettier": "3.1.1"
-  },
-  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.10",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.44",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.4.1"
+  }
 }

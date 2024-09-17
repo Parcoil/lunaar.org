@@ -24,13 +24,5 @@ async function registerSW() {
     throw new Error("Your browser doesn't support service workers.");
   }
 
-  try {
-    const registration = await navigator.serviceWorker.register(stockSW, {
-      scope: "/uv/",
-    });
-
-    console.log("Service Worker registered:", registration);
-  } catch (error) {
-    console.error("Service Worker registration failed:", error);
-  }
+  await navigator.serviceWorker.register(stockSW);
 }
