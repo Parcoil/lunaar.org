@@ -12,6 +12,7 @@
   "dependencies": {
     "@mercuryworkshop/bare-mux": "^2.0.4",
     "@mercuryworkshop/epoxy-transport": "^2.1.8",
+    "@rollup/rollup-linux-x64-gnu": "^4.21.3",
     "@titaniumnetwork-dev/ultraviolet": "^3.2.7",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.21.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
