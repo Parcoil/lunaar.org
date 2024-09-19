@@ -40,7 +40,7 @@
         gameTitleElement.innerText = gameData.name;
 
         const gameIframeElement = document.getElementById("gameiframe");
-        gameIframeElement.src = `${serverUrl}/${gameData.url}/`;
+        gameIframeElement.src = `${serverUrl}/${gameData.url}/index.html`;
       } else {
         console.error("Game not found in games.json");
       }
