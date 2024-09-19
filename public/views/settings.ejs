@@ -1,0 +1,180 @@
+
+<main>
+  <h1>Settings</h1>
+
+<div class="cards">
+<div class="card">
+  <h1>Themes</h1>
+  <p>Changes the theme of native</p>
+  <select id="theme-select">
+    <option value="default">Main Theme</option>
+    <option value="grey">Cool Grey</option>
+    <option value="light">Light (NEW)</option>
+    <option value="mocha">Mocha (NEW)</option>
+    <option value="new" hidden>???</option>
+    <option value="orange">Orange (NEW)</option>
+    <option value="youtube-dark">Youtube Dark (NEW)</option>
+    <option value="greyblack">Grey black Theme</option>
+    <option value="3kh0">3kh0</option>
+    <option value="artclass">Artclass</option>
+    <option value="bone">BONELAB theme</option>
+    <option value="ghost">Black &amp; Red Theme</option>
+    <option value="gb">Greyish Blue</option>
+    <option value="gg">Greyish Green</option>
+    <option value="brown">Brown</option>
+    <option value="dg">Dark Orange</option>
+    <option value="moon">Moon</option>
+    <option value="red">Red Theme (static)</option>
+    <option value="sblue">Sahara Blue Theme</option>
+    <option value="candy">Cotton Candy Theme</option>
+
+  </select>
+</div>
+<div class="card">
+  <h1>About:blank</h1>
+  <p> Opens Native in About:blank</p>
+ <button onclick="aboutBlank()">Launch</button>
+</div>
+<div class="card">
+  <h1>Tab Cloak</h1>
+  <p>Cloaks the tab bar of Native</p>
+  <select name="cloak" id="cloakSelect">
+  <option value="default">Default Cloak</option>
+  <option value="drive">Google Drive</option>
+  <option value="classroom">Google Classroom</option>
+  <option value="zoom">Zoom</option>
+</select>
+<p  class="small">Made with <a href="https://github.com/Parcoil/cloak">CloakJS</a></p>
+</div>
+<div class="card">
+  <h1>Search Engine</h1>
+  <p>Changes the search engine of Native</p>
+<select name="" id="seToggle">
+  <option value="google">Google</option>
+    <option value="bing">Bing</option>
+      <option value="brave">Brave</option>
+        <option value="ddg">DuckDuckGo</option>
+</select>
+</div>
+<div class="card">
+  <h1>Stars Toggle</h1>
+  <p>Toggles the display of stars in the background of Native</p>
+  <button class="filled" onclick='setStars("on")'>Set on</button>
+  <button class="filled" onclick='setStars("off")''>Set off</button>
+</div>
+<div class="card">
+  <h1>Reset Settings</h1>
+  <p>Resets all settings to their default values</p>
+  <button class="filled" onclick='resetSettings()'>Reset</button>
+</div>
+<div class="card">
+  <h1>???</h1>
+  <p>???</p>
+  <button class="filled" onclick='hmm()'>???</button>
+</div>
+</div>
+  <div class="footer">
+    <a id="version" href="https://github.com/parcoil/native.org"
+      >Loading version</a
+    >
+  </div>
+</main> 
+<script>
+  const searchengine = localStorage.getItem('se');
+  const seToggle = document.getElementById('seToggle')
+  seToggle.addEventListener("change", (event) => {
+    localStorage.setItem("se", event.target.value);
+  })
+
+</script>
+<script>   
+function setStars(state) {
+  if (state === "on") {
+    console.log(llogo,state)
+    localStorage.setItem("stars", true)
+  } else {
+    console.log(llogo,state)
+    localStorage.setItem("stars", false)
+  }
+   document.location.reload();
+}
+function hmm() {
+  let checkTheme = localStorage.getItem("theme");
+
+  if (checkTheme === "new") {
+    alert("01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01100100 01110011 01100011 00101110 01100111 01100111 00101111 01110000 01100001 01110010 01100011 01101111 01101001 01101100");
+  } else {
+
+    localStorage.setItem("theme", "new");
+    window.location.reload();
+  }
+}
+
+</script>
+<script>
+  const theme = localStorage.getItem("theme");
+  const themeSelect = document.getElementById("theme-select");
+  themeSelect.addEventListener("change", (event) => {
+    localStorage.setItem("theme", event.target.value);
+    setTheme(event.target.value);
+  });
+
+  function loadSettings() {
+    const themeSelect = document.getElementById("theme-select");
+    const seToggle = document.getElementById('seToggle')
+    const searchengine = localStorage.getItem('se');
+    themeSelect.value = theme;
+    seToggle.value = searchengine;
+  }
+  loadSettings();
+  function resetSettings() {
+    
+    const reset = confirm("Are you sure you want to reset all settings?")
+    if (reset) {
+   localStorage.clear();
+    document.location.reload();
+    } else {
+      
+    }
+ 
+  }
+function aboutBlank() {
+    // Open a new about:blank window
+    const newWindow = window.open();
+
+    // Set styles for the body of the new window
+    newWindow.document.body.style.margin = "0";
+    newWindow.document.body.style.height = "100vh";
+
+    // Create and style the iframe element
+    const iframe = newWindow.document.createElement("iframe");
+    iframe.style.border = "none";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.referrerpolicy = "no-referrer";
+    iframe.style.margin = "0";
+    iframe.src = window.location.href;
+    history.replaceState(null, '', '');
+    window.location.replace('https://www.google.com/search?q=what+day+is+today')
+
+    // Append the iframe to the body of the new window
+    newWindow.document.body.appendChild(iframe);
+}
+
+</script>
+<script>
+    const cloaks = [
+    { name: "default", icon: "./media/logo.svg", title: "Native" },
+    { name: "drive", icon: "./media/cloaks/googledrive.png", title: "Home - Google Drive" },
+    { name: "classroom", icon: "./media/cloaks/classroom.png", title: "Home" },
+    { name: "zoom", icon: "./media/cloaks/zoom.png", title: "Zoom" },
+  ];
+</script><script>
+  document.body.style.overflow = "hidden";
+
+  fetch("../package.json")
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById("version").textContent = data.version;
+    });
+</script>

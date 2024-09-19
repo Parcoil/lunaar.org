@@ -32,24 +32,24 @@ const errorCode = document.getElementById("uv-error-code");
   }
 })();
 
-// form.addEventListener("submit", async (event) => {
-//   event.preventDefault();
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-//   try {
-//     await registerSW();
-//   } catch (err) {
-//     error.textContent = "Failed to register service worker.";
-//     errorCode.textContent = err.toString();
-//     throw err;
-//   }
+  try {
+    await registerSW();
+  } catch (err) {
+    error.textContent = "Failed to register service worker.";
+    errorCode.textContent = err.toString();
+    throw err;
+  }
 
-//   const url = search(address.value, searchEngine.value);
-//   sessionStorage.setItem("rawurl", address.value);
-//   sessionStorage.setItem(
-//     "lpurl",
-//     __uv$config.prefix + __uv$config.encodeUrl(url)
-//   );
-//   let frame = document.getElementById("frame");
+  const url = search(address.value, searchEngine.value);
+  sessionStorage.setItem("rawurl", address.value);
+  sessionStorage.setItem(
+    "lpurl",
+    __uv$config.prefix + __uv$config.encodeUrl(url)
+  );
+  let frame = document.getElementById("frame");
 
-//   window.location = "/go";
-// });
+  window.location = "/go";
+});

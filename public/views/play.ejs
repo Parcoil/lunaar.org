@@ -1,0 +1,53 @@
+<main>
+  <div class="playcontainer">
+    <div class="loader"></div>
+    <iframe id="gameiframe" src="" frameborder="0"> </iframe>
+    <div class="gameinfo">
+      <h1 id="gametitle"></h1>
+      <button
+        title="Fullscreen's the game"
+        style="font-size: 30px"
+        onclick="tryFullscreen()"
+      >
+        <i class="fa-solid fa-expand"></i>
+      </button>
+    </div>
+  </div>
+</main>
+
+<script>
+  function tryFullscreen() {
+    const gameIframeElement = document.getElementById("gameiframe");
+    try {
+      gameIframeElement.requestFullscreen();
+    } catch (err) {
+      alert(`there was a error: ${err}`);
+    }
+  }
+  const url = new URL(window.location.href);
+  const gameUrl = url.searchParams.get("game");
+  const serverUrl = localStorage.getItem("serverurl");
+
+  async function setGameContent() {
+    try {
+      const response = await fetch("./json/games.json");
+      const games = await response.json();
+
+      const gameData = games.find((game) => game.url === gameUrl);
+
+      if (gameData) {
+        const gameTitleElement = document.getElementById("gametitle");
+        gameTitleElement.innerText = gameData.name;
+
+        const gameIframeElement = document.getElementById("gameiframe");
+        gameIframeElement.src = `${serverUrl}/${gameData.url}/`;
+      } else {
+        console.error("Game not found in games.json");
+      }
+    } catch (error) {
+      console.error("Error fetching games.json:", error);
+    }
+  }
+
+  setGameContent();
+</script>

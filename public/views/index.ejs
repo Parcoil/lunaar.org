@@ -1,0 +1,33 @@
+<main id="main">
+  <div class="home">
+    <%- include('../components/logo') -%>
+    <h1 class="lsans main-logo">native.</h1>
+    <p id="rng"></p>
+    <form id="uv-form">
+      <input
+        id="uv-search-engine"
+        value="https://www.google.com/search?q=%s"
+        type="hidden"
+      />
+      <input id="uv-address" type="text" placeholder="Surf the web freely." />
+      <button class="search-right" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+  </div>
+  <div class="footer">
+    <a id="version" href="https://github.com/parcoil/native.org"
+      >Loading version</a
+    >
+  </div>
+</main>
+<iframe src="" frameborder="0" id="frame"></iframe>
+<script>
+  document.body.style.overflow = "hidden";
+
+  fetch("../package.json")
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById("version").textContent = data.version;
+    });
+</script>

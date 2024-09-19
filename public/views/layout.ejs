@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Native</title>
+    <meta name="google-adsense-account" content="ca-pub-1565760898646999" />
+    <meta
+      name="description"
+      content="Discover the top unblocked games like Slope, 1v1.lol, Cookie Clicker, Geometry Dash, and more. Enjoy seamless gaming experiences at school or work."
+    />
+    <meta
+      name="keywords"
+      content="unblocked games, slope unblocked, 1v1.lol unblocked, cookie clicker unblocked, geometry dash unblocked, roblox unblocked, minecraft unblocked, tetris unblocked, retro bowl unblocked, unblocked anime websites"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      id="favicon"
+      href="/./media/logo.svg"
+    />
+    <link rel="stylesheet" href="/./css/main.css" />
+    <script src="/./baremux/index.js" defer></script>
+    <script src="/./epoxy/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script src="/./uv/uv.bundle.js" defer></script>
+    <script src="/./uv/uv.config.js" defer></script>
+    <script src="/./uv/register-sw.js" defer></script>
+    <script src="/./uv/search.js" defer></script>
+    <script src="/./uv/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/Parcoil/cloak@main/index.min.js"></script>
+    <script src="/./js/preload.js" defer></script>
+    <script src="/./js/main.js" defer></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+  </head>
+  <%- include('../components/nav') -%>
+  <body>
+    <%- body %>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const activePage = window.location.pathname;
+      const navLinks = document.querySelectorAll(".navlinks a");
+
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === activePage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-L85G2B6HL5"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-L85G2B6HL5");
+  </script>
+</html>

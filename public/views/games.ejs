@@ -1,0 +1,69 @@
+<main class="main">
+  <h1>Games</h1>
+  <input type="text" id="searchBar" placeholder="Search games..." />
+  <div class="games"></div>
+</main>
+
+<script>
+  async function fetchGames() {
+    const serverUrl = localStorage.getItem("serverurl");
+
+    try {
+      const response = await fetch("./json/games.json");
+      const games = await response.json();
+      window.gamesData = games;
+
+      displayGames(games);
+      updateSearchBarPlaceholder(games.length); // Update placeholder with total games
+    } catch (error) {
+      console.error("Error fetching games:", error);
+    }
+  }
+
+  function displayGames(games) {
+    const gamesContainer = document.querySelector(".games");
+    gamesContainer.innerHTML = "";
+
+    if (games.length === 0) {
+      gamesContainer.innerHTML = '<p class="no-games">No games found</p>';
+      return;
+    }
+
+    games.forEach((game) => {
+      const gameDiv = document.createElement("div");
+      gameDiv.className = "game";
+      gameDiv.innerHTML = `
+        <img src="${localStorage.getItem("serverurl")}/${game.url}/${
+        game.image
+      }" alt="${game.name}" />
+        <p>${game.name}</p>
+      `;
+
+      const imageElement = gameDiv.querySelector("img");
+      imageElement.addEventListener("click", () => {
+        window.location.href = `./play?game=${game.url}`;
+      });
+      gamesContainer.appendChild(gameDiv);
+    });
+  }
+
+  function searchGames(searchTerm) {
+    const filteredGames = window.gamesData.filter((game) =>
+      game.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    displayGames(filteredGames);
+    updateSearchBarPlaceholder(filteredGames.length); // Update placeholder with filtered games count
+  }
+
+  function updateSearchBarPlaceholder(count) {
+    const searchBar = document.getElementById("searchBar");
+    searchBar.placeholder = `Search for ${count} games`;
+  }
+
+  document.getElementById("searchBar").addEventListener("input", (event) => {
+    searchGames(event.target.value);
+  });
+
+  fetchGames();
+</script>

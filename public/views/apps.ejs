@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App List</title>
+  </head>
+  <body>
+    <main>
+      <h1>Apps</h1>
+      <input type="text" id="search" placeholder="Search apps..." />
+      <div class="apps"></div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const appsContainer = document.querySelector(".apps");
+        const searchInput = document.querySelector("#search");
+
+        let appsData = [];
+
+        fetch("./json/apps.json")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            appsData = data;
+            displayApps(appsData);
+          })
+          .catch((error) => console.error("Error fetching apps data:", error));
+
+        searchInput.addEventListener("input", (event) => {
+          const query = event.target.value.toLowerCase();
+          const filteredApps = appsData.filter(
+            (app) =>
+              app.name.toLowerCase().includes(query) ||
+              app.url.toLowerCase().includes(query)
+          );
+          displayApps(filteredApps);
+        });
+
+        function displayApps(apps) {
+          appsContainer.innerHTML = "";
+
+          apps.forEach((app) => {
+            const appDiv = document.createElement("div");
+            appDiv.className = "app";
+
+            // Add onclick event to the appDiv to handle navigation
+            appDiv.addEventListener("click", () => {
+              sessionStorage.setItem(
+                "lpurl",
+                __uv$config.prefix + __uv$config.encodeUrl(app.url)
+              );
+              sessionStorage.setItem("rawurl", app.url);
+              window.location.href = "/./go";
+            });
+
+            const image = document.createElement("img");
+            image.src = app.image;
+            image.alt = app.name;
+
+            const title = document.createElement("h2");
+            title.textContent = app.name;
+
+            appDiv.appendChild(image);
+            appDiv.appendChild(title);
+
+            appsContainer.appendChild(appDiv);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
