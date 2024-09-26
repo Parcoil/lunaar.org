@@ -35,10 +35,6 @@ if (!hasVisited) {
   localStorage.setItem("cloakTitle", "Home");
   console.log("FIRST VISIT");
 }
-localStorage.setItem(
-  "serverurl",
-  "https://glcdn.githack.com/Thedogecraft/assets/-/raw/main/public/"
-);
 
 const stars = localStorage.getItem("stars");
 

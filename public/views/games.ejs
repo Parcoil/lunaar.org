@@ -6,8 +6,6 @@
 
 <script>
   async function fetchGames() {
-    const serverUrl = localStorage.getItem("serverurl");
-
     try {
       const response = await fetch("./json/games.json");
       const games = await response.json();
@@ -33,9 +31,7 @@
       const gameDiv = document.createElement("div");
       gameDiv.className = "game";
       gameDiv.innerHTML = `
-        <img src="${localStorage.getItem("serverurl")}/${game.url}/${
-        game.image
-      }" alt="${game.name}" />
+        <img src="/cdn/${game.url}/${game.image}" alt="${game.name}" />
         <p>${game.name}</p>
       `;
 

@@ -1,15 +1,19 @@
 import express from "express";
 import { createServer } from "node:http";
 import chalk from "chalk";
+import httpProxy from 'http-proxy';
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { join, dirname } from "node:path";
-import { hostname } from "node:os";
 import wisp from "wisp-server-node";
+import http from "node:http";
 import expressLayouts from "express-ejs-layouts";
 import { fileURLToPath } from "url";
 import packageJson from "./package.json" with { type: "json" };
+
+const httpserver = http.createServer();
+const cdnProxy = httpProxy.createProxyServer();
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicPath = join(__dirname, "public");
@@ -23,9 +27,14 @@ app.use("/uv/", express.static(uvPath));
 app.use("/epoxy/", express.static(epoxyPath));
 app.use("/baremux/", express.static(baremuxPath));
 
-// these are the paths for the site :D
 app.get("/", (req, res) => {
   res.render("index");
+});
+app.use('/cdn', (req, res) => {
+  cdnProxy.web(req, res, {
+    target: 'https://glcdn.githack.com/Thedogecraft/assets/-/raw/main/public/',
+    changeOrigin: true
+  });
 });
 app.get("/science", (req, res) => {
   res.render("games");
@@ -39,7 +48,6 @@ app.get("/math", (req, res) => {
 app.get("/settings", (req, res) => {
   res.render("settings");
 });
-
 app.get("/go", (req, res) => {
   res.render("go");
 });
@@ -63,15 +71,12 @@ server.on("upgrade", (req, socket, head) => {
 });
 
 let port = parseInt(process.env.PORT || "");
-
 if (isNaN(port)) port = 8080;
 
 server.on("listening", () => {
   const address = server.address();
   console.clear();
-  console.log(
-    chalk.green(`🚀 Native Listening on http://localhost:${address.port}`)
-  );
+  console.log(chalk.green(`🚀 Native Listening on http://localhost:${address.port}`));
   console.log();
   console.log(chalk.magenta(`🌙 Made by the Parcoil Network`));
   console.log();
@@ -87,6 +92,4 @@ function shutdown() {
   process.exit(0);
 }
 
-server.listen({
-  port,
-});
+server.listen({ port });

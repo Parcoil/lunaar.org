@@ -1,6 +1,6 @@
 {
   "name": "native",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "The Future of Unblocked Gaming!",
   "type": "module",
   "engines": {
@@ -24,14 +24,15 @@
     "ejs": "^3.1.10",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
+    "http-proxy": "^1.18.1",
     "ultraviolet-static": "github:titaniumnetwork-dev/Ultraviolet-Static",
     "wisp-server-node": "^1.1.0",
     "ws": "^8.17.1"
   },
   "devDependencies": {
     "eslint": "^8.36.0",
-    "prettier": "^2.8.4",
-    "nodemon": "^2.0.18"
+    "nodemon": "^2.0.18",
+    "prettier": "^2.8.4"
   },
   "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"
 }
