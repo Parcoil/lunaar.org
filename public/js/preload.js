@@ -1,4 +1,4 @@
-const llogo = "[Native]";
+const llogo = "[Lunaar]";
 
 function loadCSS(href, onload) {
   var link = document.createElement("link");

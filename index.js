@@ -7,12 +7,11 @@ import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { join, dirname } from "node:path";
 import wisp from "wisp-server-node";
-import http from "node:http";
+
 import expressLayouts from "express-ejs-layouts";
 import { fileURLToPath } from "url";
 import packageJson from "./package.json" with { type: "json" };
 
-const httpserver = http.createServer();
 const cdnProxy = httpProxy.createProxyServer();
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -76,7 +75,7 @@ if (isNaN(port)) port = 8080;
 server.on("listening", () => {
   const address = server.address();
   console.clear();
-  console.log(chalk.green(`🚀 Native Listening on http://localhost:${address.port}`));
+  console.log(chalk.green(`🚀 Lunaar Listening on http://localhost:${address.port}`));
   console.log();
   console.log(chalk.magenta(`🌙 Made by the Parcoil Network`));
   console.log();
