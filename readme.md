@@ -1,8 +1,8 @@
 <div align=center>
 
-<img align="center" src="public/media/llbig.svg" width="600">
+<img align="center" src="public/media/LLBIG.svg" width="600">
 
-<h4 align="center">Lunaargames is a new unblocked games site that features a proxy, a wide selection of games, a sleek design, and much more for you to explore!</h4>
+<h4 align="center">Lunaar. is a new unblocked games site that features a proxy, a wide selection of games, a sleek design, and much more for you to explore!</h4>
 </div>
 
 ![Lunaar image](https://i.imgur.com/8LWMrXt.png)
