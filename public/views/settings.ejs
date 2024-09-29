@@ -128,25 +128,18 @@ function hmm() {
   }
   loadSettings();
   function resetSettings() {
-    
+
     const reset = confirm("Are you sure you want to reset all settings?")
     if (reset) {
    localStorage.clear();
     document.location.reload();
     } else {
-      
     }
- 
   }
 function aboutBlank() {
-    // Open a new about:blank window
     const newWindow = window.open();
-
-    // Set styles for the body of the new window
     newWindow.document.body.style.margin = "0";
     newWindow.document.body.style.height = "100vh";
-
-    // Create and style the iframe element
     const iframe = newWindow.document.createElement("iframe");
     iframe.style.border = "none";
     iframe.style.width = "100%";
@@ -156,8 +149,6 @@ function aboutBlank() {
     iframe.src = window.location.href;
     history.replaceState(null, '', '');
     window.location.replace('https://www.google.com/search?q=what+day+is+today')
-
-    // Append the iframe to the body of the new window
     newWindow.document.body.appendChild(iframe);
 }
 

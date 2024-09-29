@@ -56,7 +56,6 @@ const texts = [
   'Did you know lunaar.used to be a <a href="https://sites.google.com/view/thebestonlinegames/index?authuser=1">google site?</a>',
 ];
 
-// adds ip to rng text
 fetch("https://api.ipify.org?format=json")
   .then((response) => response.json())
   .then((data) => {
