@@ -12,7 +12,7 @@
       window.gamesData = games;
 
       displayGames(games);
-      updateSearchBarPlaceholder(games.length); // Update placeholder with total games
+      updateSearchBarPlaceholder(games.length);
     } catch (error) {
       console.error("Error fetching games:", error);
     }
@@ -31,7 +31,7 @@
       const gameDiv = document.createElement("div");
       gameDiv.className = "game";
       gameDiv.innerHTML = `
-        <img src="/cdn/${game.url}/${game.image}" alt="${game.name}" />
+        <img src="/cdn/${game.url}/${game.image}" alt="${game.name}" loading="lazy"/>
         <p>${game.name}</p>
       `;
 
@@ -49,7 +49,7 @@
     );
 
     displayGames(filteredGames);
-    updateSearchBarPlaceholder(filteredGames.length); // Update placeholder with filtered games count
+    updateSearchBarPlaceholder(filteredGames.length);
   }
 
   function updateSearchBarPlaceholder(count) {

@@ -45,6 +45,10 @@
         function displayApps(apps) {
           appsContainer.innerHTML = "";
 
+          if (apps.length === 0) {
+            appsContainer.innerHTML = "<p>No apps found</p>";
+          }
+
           apps.forEach((app) => {
             const appDiv = document.createElement("div");
             appDiv.className = "app";
