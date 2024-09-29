@@ -11,8 +11,8 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  transition: 0.2s;
   text-decoration: none;
-  /* list-style: none; */
   color: var(--textcolor);
 }
 :root {
@@ -35,6 +35,7 @@ body {
   position: fixed;
   bottom: 0;
 }
+/* Base styles */
 .nav {
   display: flex;
   align-items: center;
@@ -50,16 +51,42 @@ body {
   height: 4.2rem;
   border-radius: var(--rounded);
 }
+
 .lsans {
   font-family: Lunaar Sans;
   font-weight: 500;
 }
+
 .navlinks {
-  gap: 15px;
   display: flex;
   align-items: center;
+  gap: 15px;
   margin-left: auto;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 10px;
+    height: auto;
+  }
+
+  .navlinks {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navlinks a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 button {
   display: flex;
   flex-direction: row;
@@ -255,7 +282,7 @@ button .icon {
 }
 
 #particles-js {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

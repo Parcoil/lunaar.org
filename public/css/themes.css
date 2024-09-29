@@ -197,7 +197,7 @@ body[theme="candy"] {
   --bg: #bdb2ff;
   --textcolor: #fefcfb;
   --button: #ffc6ff;
-  --alt: rgb(255, 255, 255);
+  --alt: rgb(218, 151, 250);
   --border: var(--button);
 }
 body[theme="yellow"] {
@@ -213,7 +213,7 @@ body[theme="yellow"] {
 body[theme="yellow"] .btn {
   border-radius: 0px;
 }
-body[theme="yellow"] #tsparticles {
+body[theme="yellow"] #particles-js {
   filter: invert(100%);
 }
 
@@ -223,7 +223,7 @@ body[theme="light"] {
   --alt: #222121;
   --button: #000;
 }
-body[theme="light"] #tsparticles {
+body[theme="light"] #particles-js {
   filter: invert(100%);
 }
 body[theme="light"] input[type="text"],
