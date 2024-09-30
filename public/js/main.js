@@ -72,3 +72,20 @@ fetch("https://api.ipify.org?format=json")
 function getRandomText() {
   return texts[Math.floor(Math.random() * texts.length)];
 }
+
+const websites = [
+  "YouTube",
+  "Facebook",
+  "Reddit",
+  "X",
+  "TikTok",
+  "Twitch",
+  "my lost socks",
+  "Wikipedia",
+  "Instagram",
+  "Wikipedia",
+  "Amazon",
+];
+const randomWebsite = websites[Math.floor(Math.random() * websites.length)];
+const uvaddress = document.getElementById("uv-address");
+uvaddress.placeholder = `Try Searching "${randomWebsite}"`;

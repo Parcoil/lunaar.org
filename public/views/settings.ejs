@@ -1,120 +1,145 @@
-
 <main>
   <h1>Settings</h1>
 
-<div class="cards">
-<div class="card">
-  <h1>Themes</h1>
-  <p>Changes the theme of lunaar.</p>
-  <select id="theme-select">
-    <option value="default">Main Theme</option>
-    <option value="grey">Cool Grey</option>
-    <option value="light">Light (NEW)</option>
-    <option value="mocha">Mocha (NEW)</option>
-    <option value="new" hidden>???</option>
-    <option value="orange">Orange (NEW)</option>
-    <option value="youtube-dark">Youtube Dark (NEW)</option>
-    <option value="greyblack">Grey black Theme</option>
-    <option value="3kh0">3kh0</option>
-    <option value="artclass">Artclass</option>
-    <option value="bone">BONELAB theme</option>
-    <option value="ghost">Black &amp; Red Theme</option>
-    <option value="gb">Greyish Blue</option>
-    <option value="gg">Greyish Green</option>
-    <option value="brown">Brown</option>
-    <option value="dg">Dark Orange</option>
-    <option value="moon">Moon</option>
-    <option value="red">Red Theme (static)</option>
-    <option value="sblue">Sahara Blue Theme</option>
-    <option value="candy">Cotton Candy Theme</option>
+  <div class="cards">
+    <div class="card">
+      <h1>Themes</h1>
+      <p>Changes the theme of Lunaar.</p>
+      <select id="theme-select">
+        <option value="default">Main Theme</option>
+        <option value="grey">Cool Grey</option>
+        <option value="light">Light (NEW)</option>
+        <option value="mocha">Mocha (NEW)</option>
+        <option value="new" hidden>???</option>
+        <option value="orange">Orange (NEW)</option>
+        <option value="youtube-dark">Youtube Dark (NEW)</option>
+        <option value="greyblack">Grey Black Theme</option>
+        <option value="3kh0">3kh0</option>
+        <option value="artclass">Artclass</option>
+        <option value="bone">BONELAB Theme</option>
+        <option value="ghost">Black & Red Theme</option>
+        <option value="gb">Greyish Blue</option>
+        <option value="gg">Greyish Green</option>
+        <option value="brown">Brown</option>
+        <option value="dg">Dark Orange</option>
+        <option value="moon">Moon</option>
+        <option value="red">Red Theme (static)</option>
+        <option value="sblue">Sahara Blue Theme</option>
+        <option value="candy">Cotton Candy Theme</option>
+      </select>
+    </div>
 
-  </select>
-</div>
-<div class="card">
-  <h1>About:blank</h1>
-  <p> Opens Lunaar in About:blank</p>
- <button onclick="aboutBlank()">Launch</button>
-</div>
-<div class="card">
-  <h1>Tab Cloak</h1>
-  <p>Cloaks the tab bar of Lunaar</p>
-  <select name="cloak" id="cloakSelect">
-  <option value="default">Default Cloak</option>
-  <option value="drive">Google Drive</option>
-  <option value="classroom">Google Classroom</option>
-  <option value="zoom">Zoom</option>
-</select>
-<p  class="small">Made with <a href="https://github.com/Parcoil/cloak">CloakJS</a></p>
-</div>
-<div class="card">
-  <h1>Search Engine</h1>
-  <p>Changes the search engine of Lunaar</p>
-<select name="" id="seToggle">
-  <option value="google">Google</option>
-    <option value="bing">Bing</option>
-      <option value="brave">Brave</option>
+    <div class="card">
+      <h1>About:blank</h1>
+      <p>Opens Lunaar in About:blank.</p>
+      <button onclick="aboutBlank()">Launch</button>
+    </div>
+
+    <div class="card">
+      <h1>Panic Key</h1>
+      <p>When you press the set key, it will take you to the set URL.</p>
+      <form>
+        <label for="panic-key">Key:</label>
+        <input
+          id="panic-key"
+          onchange="setKey(this.value)"
+          type="text"
+          placeholder="~"
+          class="card-input"
+          maxlength="1"
+        />
+        <label for="panic-url">URL:</label>
+        <input
+          id="panic-url"
+          onchange="setSite(this.value)"
+          type="text"
+          placeholder="https://google.com"
+          class="card-input"
+        />
+      </form>
+    </div>
+
+    <div class="card">
+      <h1>Tab Cloak</h1>
+      <p>Cloaks the tab bar of Lunaar.</p>
+      <select id="cloakSelect">
+        <option value="default">Default Cloak</option>
+        <option value="drive">Google Drive</option>
+        <option value="classroom">Google Classroom</option>
+        <option value="zoom">Zoom</option>
+      </select>
+      <p class="small">
+        Made with <a href="https://github.com/Parcoil/cloak">CloakJS</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h1>Search Engine</h1>
+      <p>Changes the search engine of Lunaar.</p>
+      <select id="seToggle">
+        <option value="google">Google</option>
+        <option value="bing">Bing</option>
+        <option value="brave">Brave</option>
         <option value="ddg">DuckDuckGo</option>
-</select>
-</div>
-<div class="card">
-  <h1>Stars Toggle</h1>
-  <p>Toggles the display of stars in the background of Lunaar</p>
-  <button class="filled" onclick='setStars("on")'>Set on</button>
-  <button class="filled" onclick='setStars("off")''>Set off</button>
-</div>
-<div class="card">
-  <h1>Reset Settings</h1>
-  <p>Resets all settings to their default values</p>
-  <button class="filled" onclick='resetSettings()'>Reset</button>
-</div>
-<div class="card">
-  <h1>???</h1>
-  <p>???</p>
-  <button class="filled" onclick='hmm()'>???</button>
-</div>
-</div>
+      </select>
+    </div>
+
+    <div class="card">
+      <h1>Stars Toggle</h1>
+      <p>Toggles the display of stars in the background of Lunaar.</p>
+      <button class="filled" onclick="setStars('on')">Set On</button>
+      <button class="filled" onclick="setStars('off')">Set Off</button>
+    </div>
+
+    <div class="card">
+      <h1>Reset Settings</h1>
+      <p>Resets all settings to their default values.</p>
+      <button class="filled" onclick="resetSettings()">Reset</button>
+    </div>
+
+    <div class="card">
+      <h1>???</h1>
+      <p>???</p>
+      <button class="filled" onclick="hmm()">???</button>
+    </div>
+  </div>
 
   <div class="footer">
     <a id="version" href="https://github.com/parcoil/lunaar.org"
       >Loading version</a
     >
   </div>
-  
-</main> 
+</main>
+
 <script>
-  const searchengine = localStorage.getItem('se');
-  const seToggle = document.getElementById('seToggle')
+  const searchengine = localStorage.getItem("se");
+  const seToggle = document.getElementById("seToggle");
+
   seToggle.addEventListener("change", (event) => {
     localStorage.setItem("se", event.target.value);
-  })
+  });
 
-</script>
-<script>   
-function setStars(state) {
-  if (state === "on") {
-    console.log(llogo,state)
-    localStorage.setItem("stars", true)
-  } else {
-    console.log(llogo,state)
-    localStorage.setItem("stars", false)
+  function setStars(state) {
+    console.log("Stars state:", state);
+    localStorage.setItem("stars", state === "on");
+    document.location.reload();
   }
-   document.location.reload();
-}
-function hmm() {
-  let checkTheme = localStorage.getItem("theme");
 
-  if (checkTheme === "new") {
-    alert("01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01100100 01110011 01100011 00101110 01100111 01100111 00101111 01110000 01100001 01110010 01100011 01101111 01101001 01101100");
-  } else {
+  function hmm() {
+    const checkTheme = localStorage.getItem("theme");
 
-    localStorage.setItem("theme", "new");
-    window.location.reload();
+    if (checkTheme === "new") {
+      alert(
+        "01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01100100 01110011 01100011 00101110 01100111 01100111 00101111 01110000 01100001 01110010 01100011 01101111 01101001 01101100"
+      );
+    } else {
+      localStorage.setItem("theme", "new");
+      window.location.reload();
+    }
   }
-}
+  const panickey = document.getElementById("panic-key");
+  const panicurl = document.getElementById("panic-url");
 
-</script>
-<script>
-  const theme = localStorage.getItem("theme");
   const themeSelect = document.getElementById("theme-select");
   themeSelect.addEventListener("change", (event) => {
     localStorage.setItem("theme", event.target.value);
@@ -122,52 +147,61 @@ function hmm() {
   });
 
   function loadSettings() {
-    const themeSelect = document.getElementById("theme-select");
-    const seToggle = document.getElementById('seToggle')
-    const searchengine = localStorage.getItem('se');
-    themeSelect.value = theme;
-    seToggle.value = searchengine;
+    themeSelect.value = localStorage.getItem("theme");
+    seToggle.value = localStorage.getItem("se");
+    panickey.value = localStorage.getItem("panicKey");
+    panicurl.value = localStorage.getItem("panicSite");
   }
-  loadSettings();
-  function resetSettings() {
 
-    const reset = confirm("Are you sure you want to reset all settings?")
+  loadSettings();
+
+  function resetSettings() {
+    const reset = confirm("Are you sure you want to reset all settings?");
     if (reset) {
-   localStorage.clear();
-    document.location.reload();
-    } else {
+      localStorage.clear();
+      document.location.reload();
     }
   }
-function aboutBlank() {
+
+  function aboutBlank() {
     const newWindow = window.open();
     newWindow.document.body.style.margin = "0";
     newWindow.document.body.style.height = "100vh";
+
     const iframe = newWindow.document.createElement("iframe");
     iframe.style.border = "none";
     iframe.style.width = "100%";
     iframe.style.height = "100%";
-    iframe.referrerpolicy = "no-referrer";
-    iframe.style.margin = "0";
+    iframe.referrerPolicy = "no-referrer";
     iframe.src = window.location.href;
-    history.replaceState(null, '', '');
-    window.location.replace('https://www.google.com/search?q=what+day+is+today')
-    newWindow.document.body.appendChild(iframe);
-}
 
-</script>
-<script>
-    const cloaks = [
-    { name: "default", icon: "./media/logo.svg", title: "Lunaar" },
-    { name: "drive", icon: "./media/cloaks/googledrive.png", title: "Home - Google Drive" },
-    { name: "classroom", icon: "./media/cloaks/classroom.png", title: "Home" },
-    { name: "zoom", icon: "./media/cloaks/zoom.png", title: "Zoom" },
-  ];
-</script><script>
-  document.body.style.overflow = "hidden";
+    newWindow.document.body.appendChild(iframe);
+    window.location.replace(
+      "https://www.google.com/search?q=what+day+is+today"
+    );
+  }
+
+  function setKey(key) {
+    localStorage.setItem("panicKey", key);
+  }
+  function setSite(site) {
+    localStorage.setItem("panicSite", site);
+  }
 
   fetch("../package.json")
     .then((response) => response.json())
     .then((data) => {
       document.getElementById("version").textContent = data.version;
     });
+
+  const cloaks = [
+    { name: "default", icon: "./media/logo.svg", title: "Lunaar" },
+    {
+      name: "drive",
+      icon: "./media/cloaks/googledrive.png",
+      title: "Home - Google Drive",
+    },
+    { name: "classroom", icon: "./media/cloaks/classroom.png", title: "Home" },
+    { name: "zoom", icon: "./media/cloaks/zoom.png", title: "Zoom" },
+  ];
 </script>

@@ -36,6 +36,11 @@ if (!hasVisited) {
   console.log("FIRST VISIT");
 }
 
+if (!localStorage.getItem("panicSite") && !localStorage.getItem("panicKey")) {
+  localStorage.setItem("panicSite", "https://www.google.com");
+  localStorage.setItem("panicKey", "`");
+}
+
 const stars = localStorage.getItem("stars");
 
 if (stars === "true") {

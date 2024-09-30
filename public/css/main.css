@@ -44,6 +44,7 @@ body {
   padding: 20px;
   border: 1px solid var(--alt);
   top: 0;
+  position: sticky;
   gap: 10px;
   width: calc(100vw - 40px);
   margin: 20px;
@@ -160,20 +161,27 @@ main {
   flex-direction: column;
 }
 input[type="text"] {
-  width: 100%;
   padding: 1rem;
   background-color: var(--button);
   border: 1px solid var(--alt);
   border-radius: var(--rounded);
   outline: none;
-  width: 20rem;
+
   height: 3.3rem;
   margin-bottom: 10px;
 }
 input[type="text"]::placeholder {
   color: var(--alt-text);
 }
+.card-input {
+  text-align: center;
+}
+#searchBar,
+#search {
+  width: 20rem;
+}
 #uv-address {
+  width: 20rem;
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
   border-right: none;

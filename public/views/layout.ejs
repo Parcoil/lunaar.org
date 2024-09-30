@@ -57,6 +57,19 @@
         }
       });
     });
+    document.addEventListener("keydown", (i) => {
+      try {
+        const panicKey = localStorage.getItem("panicKey");
+        const panicSite = localStorage.getItem("panicSite");
+
+        if (i.key === panicKey) {
+          window.open(panicSite, "_self");
+        }
+      } catch (error) {
+        console.error(error);
+        alert(error);
+      }
+    });
   </script>
 
   <script
