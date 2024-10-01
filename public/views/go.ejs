@@ -3,6 +3,8 @@
     let prxurl = sessionStorage.getItem("lpurl");
     let frame = document.getElementById("frame");
     let rawurl = sessionStorage.getItem("rawurl");
+    let bareWarning = sessionStorage.getItem("bareWarning");
+
     let nav = document.querySelector(".nav");
     let inspectstate = false;
     const address = document.getElementById("uv-address");
@@ -74,6 +76,14 @@
       window.prxfullscreen = prxfullscreen;
       window.prxinspect = prxinspect;
       window.prxwindow = prxwindow;
+    }
+    if (!bareWarning) {
+      window.alert(
+        'IF YOU GET A ERROR SAYING "there are no bare clients" RELOAD THE PAGE'
+      );
+      sessionStorage.setItem("bareWarning", true);
+    } else {
+      return;
     }
   });
 </script>
