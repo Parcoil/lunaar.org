@@ -42,6 +42,7 @@ const texts = [
   "Bonelab = Garys mod",
   "Elden Ring on top - wavy ",
   "Insert text here",
+  "Request games in our discord server!",
   "Rip Native",
   'Join our Discord: <a href="https://dsc.gg/parcoil">https://dsc.gg/parcoil</a>',
   'Join our Discord For <a href="https://dsc.gg/parcoil">Links</a>',
@@ -53,7 +54,7 @@ const texts = [
   "Activate Lunaar.",
   "Rip Nativegames",
   "Rip Native",
-  'Did you know lunaar.used to be a <a href="https://sites.google.com/view/thebestonlinegames/index?authuser=1">google site?</a>',
+  'Did you know lunaar used to be a <a href="https://sites.google.com/view/thebestonlinegames/index?authuser=1">google site?</a>',
 ];
 
 fetch("https://api.ipify.org?format=json")
@@ -73,6 +74,10 @@ function getRandomText() {
   return texts[Math.floor(Math.random() * texts.length)];
 }
 
+if (navigator.userAgent.indexOf("Firefox") > 0) {
+  alert("Firefox is not supported. Please use a Chromium-based browser.");
+}
+
 const websites = [
   "YouTube",
   "Facebook",
@@ -86,6 +91,7 @@ const websites = [
   "Wikipedia",
   "Amazon",
 ];
+
 const randomWebsite = websites[Math.floor(Math.random() * websites.length)];
 const uvaddress = document.getElementById("uv-address");
 uvaddress.placeholder = `Try Searching "${randomWebsite}"`;
