@@ -1,4 +1,7 @@
 "use strict";
+
+const { localsName } = require("ejs");
+
 /**
  * @type {HTMLFormElement}
  */

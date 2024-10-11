@@ -246,7 +246,7 @@ body[theme="mocha"] {
 body[theme="orange"] {
   --bg: #000;
   --button: rgb(255, 166, 0);
-  --alt: #000000;
+  --alt: rgb(185, 121, 0);
   --logo: orange;
 }
 body[theme="orange"] .st0 {

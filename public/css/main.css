@@ -504,3 +504,11 @@ input:checked + .slider:before {
     transform: scaleY(-1) rotate(-135deg);
   }
 }
+.badge {
+  background-color: var(--alt);
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 10px;
+}
