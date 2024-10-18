@@ -10,6 +10,11 @@
     "image": "/./media/apps/nowgg.png"
   },
   {
+    "name": "x",
+    "url": "https://x.com",
+    "image": "/./media/apps/x.jpg"
+  },
+  {
     "name": "Geforce NOW (BETA)",
     "url": "https://play.geforcenow.com/mall/",
     "image": "/./media/apps/GFN.png"
@@ -18,6 +23,11 @@
     "name": "Telegram (a)",
     "url": "https://web.telegram.org/a/",
     "image": "/./media/apps/Telegram.png"
+  },
+  {
+    "name": "Discord",
+    "url": "https://discord.com/app",
+    "image": "/./media/apps/discord.jpeg"
   },
   {
     "name": "Chess.com",

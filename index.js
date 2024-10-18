@@ -7,7 +7,6 @@ import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { join, dirname } from "node:path";
 import wisp from "wisp-server-node";
-
 import expressLayouts from "express-ejs-layouts";
 import { fileURLToPath } from "url";
 import packageJson from "./package.json" with { type: "json" };

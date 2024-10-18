@@ -16,10 +16,19 @@
       </button>
     </form>
   </div>
+  <div class="footer" style="left: 10px; font-size: 20px">
+    <a href="https://github.com/Parcoil/lunaar.org"
+      ><i class="fa-brands fa-github"></i
+    ></a>
+    <a href="htts://dsc.gg/parcoil"><i class="fa-brands fa-discord"></i></a>
+  </div>
   <div class="footer">
     <a id="version" href="https://github.com/parcoil/lunaar.org"
       >Loading version</a
     >
+  </div>
+  <div class="footer" style="right: 10px">
+    <p>&copy; 2022-2024 Parcoil Network All rights reserved</p>
   </div>
 </main>
 <iframe src="" frameborder="0" id="frame"></iframe>
@@ -29,6 +38,10 @@
   fetch("../package.json")
     .then((response) => response.json())
     .then((data) => {
-      document.getElementById("version").textContent = data.version;
+      $("#version").text(`v${data.version}`);
+      $("#version").attr(
+        "href",
+        `https://github.com/Parcoil/lunaar.org/releases/tag/${data.version}`
+      );
     });
 </script>

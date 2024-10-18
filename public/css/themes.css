@@ -42,12 +42,10 @@ body[theme="new"] {
 }
 body[theme="default"] {
   --background-filter: blur(3px) brightness(80%);
-
   --bg: #3b039c;
   --alt: rgb(69, 9, 174);
   --logo: #6b09ac;
-  --button: #36028f;
-
+  --button: rgb(180, 105, 255);
   --textcolor: #fff;
   .st0 {
     fill: rgb(93, 0, 255) !important;
@@ -56,6 +54,7 @@ body[theme="default"] {
     fill: rgb(75, 0, 206) !important;
   }
 }
+
 body[theme="new"] .card {
   background: var(--background-filter);
   backdrop-filter: var(--background-filter);
@@ -108,16 +107,9 @@ body[theme="ghost"] {
   --alt: #00000054;
   background-attachment: fixed;
 }
-/* body[theme="yourthemename"] {
-  --background-filter: blur(3px) brightness(80%);
-  --bg: #00b6ad4b;
-  --alt: rgba(27, 27, 27, 0.5);
-  --button: #444444;
-  --textcolor: #fff;
-} */
+
 body[theme="bone"] {
   --background-filter: blur(3px) brightness(80%);
-
   --logo: #888888;
   --background-filter: blur(3px) brightness(80%);
   font-family: "bone" !important;
@@ -239,7 +231,8 @@ body[theme="mocha"] {
   --logo: var(--button);
   --button: #caa6f7;
   --textcolor: #cdd6f4;
-  --alt: #45475a;
+  --textcolor2: #313131;
+  --alt: #a789ca;
   --rounded: 40px !important;
   --rounded2: 40px !important;
 }

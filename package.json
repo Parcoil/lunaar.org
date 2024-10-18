@@ -1,6 +1,6 @@
 {
   "name": "lunaar.org",
-  "version": "5.3.0",
+  "version": "5.3.1",
   "description": "The Future of Unblocked Gaming!",
   "type": "module",
   "engines": {
@@ -25,7 +25,6 @@
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
     "http-proxy": "^1.18.1",
-    "ultraviolet-static": "github:titaniumnetwork-dev/Ultraviolet-Static",
     "wisp-server-node": "^1.1.0",
     "ws": "^8.17.1"
   },
