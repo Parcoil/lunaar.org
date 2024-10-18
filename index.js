@@ -10,7 +10,7 @@ import wisp from "wisp-server-node";
 import expressLayouts from "express-ejs-layouts";
 import { fileURLToPath } from "url";
 import packageJson from "./package.json" with { type: "json" };
-
+import compression from "compression";
 const cdnProxy = httpProxy.createProxyServer();
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -21,6 +21,8 @@ app.use(express.static(publicPath));
 app.set("view engine", "ejs");
 app.set("views", join(__dirname, "public/views"));
 app.use(expressLayouts);
+app.use(compression());
+app.disable('x-powered-by');
 app.use("/uv/", express.static(uvPath));
 app.use("/epoxy/", express.static(epoxyPath));
 app.use("/baremux/", express.static(baremuxPath));

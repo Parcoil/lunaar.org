@@ -12,7 +12,7 @@
       <div class="apps"></div>
     </main>
 
-    <script>
+    <script defer>
       document.addEventListener("DOMContentLoaded", () => {
         const appsContainer = document.querySelector(".apps");
         const searchInput = document.querySelector("#search");
@@ -66,6 +66,8 @@
             const image = document.createElement("img");
             image.src = app.image;
             image.alt = app.name;
+            image.width = "200";
+            image.height = "200";
 
             const title = document.createElement("h2");
             title.textContent = app.name;

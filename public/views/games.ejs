@@ -4,7 +4,7 @@
   <div class="games"></div>
 </main>
 
-<script>
+<script defer>
   async function fetchGames() {
     try {
       const response = await fetch("./json/games.json");
@@ -34,7 +34,7 @@
         ? `/media/games/${game.image}`
         : `/cdn/${game.url}/${game.image}`;
       gameDiv.innerHTML = `
-        <img src="${gameImage}" alt="${game.name}" loading="lazy"/>
+        <img src="${gameImage}" alt="${game.name}" loading="lazy" width="200" height="200" />
         <p>${game.name}</p>
       `;
 

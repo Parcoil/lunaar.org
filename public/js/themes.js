@@ -1,4 +1,4 @@
-console.log("themes.js");
+console.log(llogo, "themes.js");
 
 const currentTheme = localStorage.getItem("theme");
 
@@ -18,5 +18,5 @@ if (isOctober && currentTheme !== "orange") {
   setTheme("orange");
   window.location.reload();
 } else {
-  console.log("It's not October or the theme is already orange.");
+  console.log(llogo, "It's not October or the theme is already orange.");
 }

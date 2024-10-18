@@ -23,7 +23,7 @@ loadScript("/./js/themes.js", true);
 loadScript("/./js/particles.js", true);
 loadCSS("/./css/themes.css");
 
-console.log("preload.js");
+console.log(llogo, "preload.js");
 
 const hasVisited = localStorage.getItem("hasVisited");
 if (!hasVisited) {
@@ -33,7 +33,7 @@ if (!hasVisited) {
   localStorage.setItem("se", "google");
   localStorage.setItem("cloakFavicon", "./media/cloaks/classroom.png");
   localStorage.setItem("cloakTitle", "Home");
-  console.log("FIRST VISIT");
+  console.log(llogo, "FIRST VISIT");
 }
 
 if (!localStorage.getItem("panicSite") && !localStorage.getItem("panicKey")) {
@@ -49,5 +49,5 @@ if (stars === "true") {
   document.body.appendChild(particles);
   console.log(llogo, "loaded ");
 } else {
-  console.log("ADSDSDSKLDSJD");
+  console.log(llogo, "ADSDSDSKLDSJD");
 }

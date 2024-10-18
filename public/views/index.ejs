@@ -2,7 +2,7 @@
   <div class="home">
     <!-- <%- include('../components/logo') -%> -->
     <h1>🎃</h1>
-    <h1 class="lsans main-logo" id="sitetext">lunaar.</h1>
+    <h1 class="lsans main-logo sitetext">lunaar.</h1>
     <p id="rng"></p>
     <form id="uv-form">
       <input
@@ -32,16 +32,12 @@
   </div>
 </main>
 <iframe src="" frameborder="0" id="frame"></iframe>
-<script>
+<script defer>
   document.body.style.overflow = "hidden";
 
   fetch("../package.json")
     .then((response) => response.json())
     .then((data) => {
       $("#version").text(`v${data.version}`);
-      $("#version").attr(
-        "href",
-        `https://github.com/Parcoil/lunaar.org/releases/tag/${data.version}`
-      );
     });
 </script>

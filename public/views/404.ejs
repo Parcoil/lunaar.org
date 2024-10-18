@@ -1,7 +1,16 @@
 <main class="home">
   <h1>404</h1>
-  <p>Page not Found</p>
+  <br />
+  <p id="errinfo">Page not Found</p>
+  <br />
   <button>
     <a onclick="history.back()">Go Back</a>
+    <p></p>
   </button>
 </main>
+<script>
+  $(document).ready(function () {
+    const location = window.location.pathname.slice(1);
+    $("#errinfo").text(`Page ${location} not found`);
+  });
+</script>
