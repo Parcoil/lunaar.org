@@ -58,7 +58,7 @@
             "lpurl",
             __uv$config.prefix + __uv$config.encodeUrl(game.url)
           );
-          sessionStorage.setItem("rawurl", `lunaar://${game.name}`);
+          sessionStorage.setItem("rawurl", `${game.url}`);
           window.location.href = "/./go";
         } else {
           window.location.href = `./play?game=${game.url}`;
