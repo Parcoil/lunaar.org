@@ -63,6 +63,10 @@
         gameDiv.querySelector("p").innerHTML +=
           ' <span class="badge">🧪</span>';
       }
+      if (game.updated) {
+        gameDiv.querySelector("p").innerHTML +=
+          ' <span class="badge">🆕 Updated</span>';
+      }
 
       const imageElement = gameDiv.querySelector("img");
       imageElement.addEventListener("click", () => {

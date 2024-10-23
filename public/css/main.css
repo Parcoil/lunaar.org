@@ -288,6 +288,7 @@ button .icon {
   text-align: center;
   justify-content: center;
 }
+
 .game,
 .app {
   width: 200px;
@@ -300,12 +301,17 @@ button .icon {
 .app:hover {
   transform: scale(0.9);
 }
+
+.game:hover img {
+  border: 5px solid var(--button);
+}
 .game img,
 .app img {
   max-width: 200px;
   max-height: 200px;
   min-height: 200px;
   border-radius: var(--rounded);
+  border: 0px solid var(--alt);
 }
 .search {
   margin-top: 1rem;
@@ -405,7 +411,7 @@ input:checked + .slider:before {
 }
 ::selection {
   color: var(--textcolor);
-  background: var(--alt);
+  background: var(--button);
 }
 .small {
   font-size: 0.6rem;
@@ -415,6 +421,7 @@ input:checked + .slider:before {
   z-index: 2;
   border-radius: var(--rounded);
   width: 70%;
+  border: 1px solid var(--button);
   display: flex;
   flex-direction: column;
   justify-content: center;
