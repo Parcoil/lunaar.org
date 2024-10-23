@@ -202,8 +202,8 @@ main {
 }
 input[type="text"] {
   padding: 1rem;
-  background-color: var(--button);
-  border: 1px solid var(--alt);
+  background-color: var(--alt);
+  border: 1px solid var(--button);
   border-radius: var(--rounded);
   outline: none;
 
@@ -225,6 +225,8 @@ input[type="text"]::placeholder {
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
   border-right: none;
+  background-color: var(--button);
+  border-color: var(--alt);
 }
 #uv-form {
   display: flex;

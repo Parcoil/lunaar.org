@@ -1,84 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App List</title>
-  </head>
-  <body>
-    <main>
-      <h1>Apps</h1>
-      <input type="text" id="search" placeholder="Search apps..." />
-      <div class="apps"></div>
-    </main>
+<main>
+  <h1>Apps</h1>
 
-    <script defer>
-      document.addEventListener("DOMContentLoaded", () => {
-        const appsContainer = document.querySelector(".apps");
-        const searchInput = document.querySelector("#search");
+  <input type="text" id="search" placeholder="Search apps..." />
+  <script type="text/javascript">
+    atOptions = {
+      key: "13def82c028e7c80ebeecd26958279a7",
+      format: "iframe",
+      height: 90,
+      width: 728,
+      params: {},
+    };
+  </script>
+  <script
+    type="text/javascript"
+    src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
+  ></script>
+  <div class="apps"></div>
+</main>
 
-        let appsData = [];
+<script defer>
+  document.addEventListener("DOMContentLoaded", () => {
+    const appsContainer = document.querySelector(".apps");
+    const searchInput = document.querySelector("#search");
 
-        fetch("./json/apps.json")
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.json();
-          })
-          .then((data) => {
-            appsData = data;
-            displayApps(appsData);
-          })
-          .catch((error) => console.error("Error fetching apps data:", error));
+    let appsData = [];
 
-        searchInput.addEventListener("input", (event) => {
-          const query = event.target.value.toLowerCase();
-          const filteredApps = appsData.filter(
-            (app) =>
-              app.name.toLowerCase().includes(query) ||
-              app.url.toLowerCase().includes(query)
+    fetch("./json/apps.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        appsData = data;
+        displayApps(appsData);
+      })
+      .catch((error) => console.error("Error fetching apps data:", error));
+
+    searchInput.addEventListener("input", (event) => {
+      const query = event.target.value.toLowerCase();
+      const filteredApps = appsData.filter(
+        (app) =>
+          app.name.toLowerCase().includes(query) ||
+          app.url.toLowerCase().includes(query)
+      );
+      displayApps(filteredApps);
+    });
+
+    function displayApps(apps) {
+      appsContainer.innerHTML = "";
+
+      if (apps.length === 0) {
+        appsContainer.innerHTML = "<p>No apps found</p>";
+      }
+
+      apps.forEach((app) => {
+        const appDiv = document.createElement("div");
+        appDiv.className = "app";
+
+        // Add onclick event to the appDiv to handle navigation
+        appDiv.addEventListener("click", () => {
+          sessionStorage.setItem(
+            "lpurl",
+            __uv$config.prefix + __uv$config.encodeUrl(app.url)
           );
-          displayApps(filteredApps);
+          sessionStorage.setItem("rawurl", app.url);
+          window.location.href = "/./go";
         });
 
-        function displayApps(apps) {
-          appsContainer.innerHTML = "";
+        const image = document.createElement("img");
+        image.src = app.image;
+        image.alt = app.name;
+        image.width = "200";
+        image.height = "200";
 
-          if (apps.length === 0) {
-            appsContainer.innerHTML = "<p>No apps found</p>";
-          }
+        const title = document.createElement("h2");
+        title.textContent = app.name;
 
-          apps.forEach((app) => {
-            const appDiv = document.createElement("div");
-            appDiv.className = "app";
+        appDiv.appendChild(image);
+        appDiv.appendChild(title);
 
-            // Add onclick event to the appDiv to handle navigation
-            appDiv.addEventListener("click", () => {
-              sessionStorage.setItem(
-                "lpurl",
-                __uv$config.prefix + __uv$config.encodeUrl(app.url)
-              );
-              sessionStorage.setItem("rawurl", app.url);
-              window.location.href = "/./go";
-            });
-
-            const image = document.createElement("img");
-            image.src = app.image;
-            image.alt = app.name;
-            image.width = "200";
-            image.height = "200";
-
-            const title = document.createElement("h2");
-            title.textContent = app.name;
-
-            appDiv.appendChild(image);
-            appDiv.appendChild(title);
-
-            appsContainer.appendChild(appDiv);
-          });
-        }
+        appsContainer.appendChild(appDiv);
       });
-    </script>
-  </body>
-</html>
+    }
+  });
+</script>

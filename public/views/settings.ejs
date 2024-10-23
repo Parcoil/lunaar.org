@@ -1,31 +1,43 @@
 <main>
   <h1>Settings</h1>
-
+  <script type="text/javascript">
+    atOptions = {
+      key: "13def82c028e7c80ebeecd26958279a7",
+      format: "iframe",
+      height: 90,
+      width: 728,
+      params: {},
+    };
+  </script>
+  <script
+    type="text/javascript"
+    src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
+  ></script>
   <div class="cards">
     <div class="card">
       <h1>Themes</h1>
       <p>Changes the theme of Lunaar.</p>
       <select id="theme-select">
-        <option value="default">Main Theme</option>
+        <option value="default">Default</option>
         <option value="grey">Cool Grey</option>
-        <option value="light">Light (NEW)</option>
-        <option value="mocha">Mocha (NEW)</option>
-        <option value="new" hidden>???</option>
-        <option value="orange">Orange (NEW)</option>
-        <option value="youtube-dark">Youtube Dark (NEW)</option>
-        <option value="greyblack">Grey Black Theme</option>
+                <option value="new">Cool Purple</option>
+        <option value="light">Light</option>
+        <option value="mocha">Mocha</option>
+        <option value="orange">Orange</option>
+        <option value="youtube-dark">YouTube Dark</option>
+        <option value="greyblack">Grey Black</option>
         <option value="3kh0">3kh0</option>
-        <option value="artclass">Artclass</option>
-        <option value="bone">BONELAB Theme</option>
-        <option value="ghost">Black & Red Theme</option>
+        <option value="artclass">Art Class</option>
+        <option value="bone">Bonelab</option>
+        <option value="ghost">Black & Red</option>
         <option value="gb">Greyish Blue</option>
         <option value="gg">Greyish Green</option>
         <option value="brown">Brown</option>
         <option value="dg">Dark Orange</option>
         <option value="moon">Moon</option>
-        <option value="red">Red Theme (static)</option>
-        <option value="sblue">Sahara Blue Theme</option>
-        <option value="candy">Cotton Candy Theme</option>
+        <option value="red">Red</option>
+        <option value="sblue">Sahara Blue</option>
+        <option value="candy">Cotton Candy</option>
       </select>
     </div>
 
@@ -97,12 +109,6 @@
       <button class="filled" onclick="resetSettings()">Reset</button>
     </div>
 
-    <div class="card">
-      <h1>???</h1>
-      <p>???</p>
-      <button class="filled" onclick="hmm()">???</button>
-    </div>
-  </div>
 
   <div class="footer">
     <a id="version" href="https://github.com/parcoil/lunaar.org"
@@ -125,18 +131,6 @@
     document.location.reload();
   }
 
-  function hmm() {
-    const checkTheme = localStorage.getItem("theme");
-
-    if (checkTheme === "new") {
-      alert(
-        "01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01100100 01110011 01100011 00101110 01100111 01100111 00101111 01110000 01100001 01110010 01100011 01101111 01101001 01101100"
-      );
-    } else {
-      localStorage.setItem("theme", "new");
-      window.location.reload();
-    }
-  }
   const panickey = document.getElementById("panic-key");
   const panicurl = document.getElementById("panic-url");
 

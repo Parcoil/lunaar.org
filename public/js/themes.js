@@ -14,9 +14,11 @@ function setTheme(theme) {
 
 const isOctober = new Date().getMonth() === 9;
 
-if (isOctober && currentTheme !== "orange") {
+const isHalloween = new Date().getMonth() === 9 && new Date().getDate() === 31;
+
+if (isHalloween && currentTheme !== "orange") {
   setTheme("orange");
   window.location.reload();
 } else {
-  console.log(llogo, "It's not October or the theme is already orange.");
+  console.log(llogo, "It's not Halloween or the theme is already orange.");
 }
