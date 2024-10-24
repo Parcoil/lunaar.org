@@ -18,14 +18,16 @@ const publicPath = join(__dirname, "public");
 
 app.use(express.static(publicPath));
 
+
+app.use("/uv/", express.static(uvPath));
+app.use("/epoxy/", express.static(epoxyPath));
+app.use("/baremux/", express.static(baremuxPath));
 app.set("view engine", "ejs");
 app.set("views", join(__dirname, "public/views"));
 app.use(expressLayouts);
 app.use(compression());
 app.disable('x-powered-by');
-app.use("/uv/", express.static(uvPath));
-app.use("/epoxy/", express.static(epoxyPath));
-app.use("/baremux/", express.static(baremuxPath));
+
 
 app.get("/", (req, res) => {
   res.render("index");

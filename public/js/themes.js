@@ -1,4 +1,4 @@
-console.log(llogo, "themes.js");
+console.log("[Lunaar]", "themes.js");
 
 const currentTheme = localStorage.getItem("theme");
 
@@ -20,5 +20,5 @@ if (isHalloween && currentTheme !== "orange") {
   setTheme("orange");
   window.location.reload();
 } else {
-  console.log(llogo, "It's not Halloween or the theme is already orange.");
+  console.log("[Lunaar]", "It's not Halloween or the theme is already orange.");
 }

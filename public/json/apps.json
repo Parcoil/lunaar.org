@@ -1,5 +1,10 @@
 [
   {
+    "name": "Netflix",
+    "url": "https://www.netflix.com",
+    "image": "/./media/apps/netflix.png"
+  },
+  {
     "name": "Youtube",
     "url": "https://www.youtube.com",
     "image": "/./media/apps/youtube.jpg"

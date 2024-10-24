@@ -1,5 +1,3 @@
-const llogo = "[Lunaar]";
-
 function loadCSS(href, onload) {
   var link = document.createElement("link");
   link.type = "text/css";
@@ -23,7 +21,7 @@ loadScript("/./js/themes.js", true);
 loadScript("/./js/particles.js", true);
 loadCSS("/./css/themes.css");
 
-console.log(llogo, "preload.js");
+console.log("[Lunaar]", "preload.js");
 
 const hasVisited = localStorage.getItem("hasVisited");
 if (!hasVisited) {
@@ -33,7 +31,7 @@ if (!hasVisited) {
   localStorage.setItem("se", "google");
   localStorage.setItem("cloakFavicon", "./media/cloaks/classroom.png");
   localStorage.setItem("cloakTitle", "Home");
-  console.log(llogo, "FIRST VISIT");
+  console.log("[Lunaar]", "FIRST VISIT");
 }
 
 if (!localStorage.getItem("panicSite") && !localStorage.getItem("panicKey")) {
@@ -47,7 +45,7 @@ if (stars === "true") {
   const particles = document.createElement("div");
   particles.id = "particles-js";
   document.body.appendChild(particles);
-  console.log(llogo, "loaded ");
+  console.log("[Lunaar]", "loaded ");
 } else {
-  console.log(llogo, "ADSDSDSKLDSJD");
+  console.log("[Lunaar]", "ADSDSDSKLDSJD");
 }

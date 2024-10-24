@@ -1,4 +1,4 @@
-console.log(llogo, "main.js");
+console.log("[Lunaar]", "main.js");
 
 function se() {
   try {
@@ -15,7 +15,7 @@ function se() {
       seElement.value = "https://search.brave.com/search?q=%s";
     }
   } catch (err) {
-    console.log(llogo, "Something bad happened", err);
+    console.log("[Lunaar]", "Something bad happened", err);
   }
 }
 
@@ -70,7 +70,7 @@ fetch("https://api.ipify.org?format=json")
     try {
       document.getElementById("rng").innerHTML = getRandomText();
     } catch (e) {
-      console.warn(llogo, "Failed to set RNG Text.");
+      console.warn("[Lunaar]", "Failed to set RNG Text.");
     }
   });
 
@@ -101,7 +101,7 @@ const siteurl = window.location.hostname;
 $(document).ready(function () {
   if (window.location.hostname.includes("nativegames")) {
     $(".sitetext").text("native.");
-    console.log(llogo, "Site: nativegames");
+    console.log("[Lunaar]", "Site: nativegames");
   }
 });
 const randomWebsite = websites[Math.floor(Math.random() * websites.length)];
@@ -110,5 +110,5 @@ const uvaddress = document.getElementById("uv-address");
 try {
   uvaddress.placeholder = `Try Searching "${randomWebsite}"`;
 } catch (e) {
-  console.warn(llogo, "Failed to set Dynamic placeholder");
+  console.warn("[Lunaar]", "Failed to set Dynamic placeholder");
 }

@@ -196,51 +196,59 @@
   },
   {
     "name": "Bad Ice Cream",
-    "image": "bad-ice-cream.png",
-    "url": "bad-ice-cream",
-    "new": false
+    "image": "badicecream.png",
+    "url": "https://7fb1fd45-24ce-4ade-b5c4-9ee55ec99526.poki-gdn.com/403f9f7f-52b0-4fa1-a4c2-c46883d239b6/index.html?country=US&ccpaApplies=0&url_referrer=https%3A%2F%2Fwww.nitrome.com%2F&game_id=7fb1fd45-24ce-4ade-b5c4-9ee55ec99526&game_version_id=403f9f7f-52b0-4fa1-a4c2-c46883d239b6&inspector=0",
+    "new": false,
+    "proxy": true,
+    "updated": true
   },
   {
     "name": "Bad Ice Cream 2",
-    "image": "bad-ice-cream-2.png",
-    "url": "bad-ice-cream-2",
-    "new": false
+    "image": "badicecream2.png",
+    "url": "https://f1a2e68b-413f-4ed0-896c-e14bd97e30c3.poki-gdn.com/6dd890f7-a0fc-4b3f-94b0-5a72a476d61f/index.html?country=US&ccpaApplies=0&url_referrer=https%3A%2F%2Fwww.nitrome.com%2F&game_id=f1a2e68b-413f-4ed0-896c-e14bd97e30c3&game_version_id=6dd890f7-a0fc-4b3f-94b0-5a72a476d61f&inspector=0",
+    "new": false,
+    "proxy": true,
+    "updated": true
   },
   {
     "name": "Bad Ice Cream 3",
-    "image": "bad-ice-cream-3.png",
-    "url": "bad-ice-cream-3",
-    "new": false
+    "image": "badicecream3.png",
+    "url": "https://games.poki.com/458768/5b5f8af1-684b-4557-a71b-a865cf564b1d?tag=pg-f0e2210ee52f43a739fcb9af425ccdc48e0f4e6f&site_id=3&iso_lang=en&country=US&poki_url=https://poki.com/en/g/bad-ice-cream-3&hoist=yes&nonPersonalized=n&familyFriendly=n&categories=38,72,103,750,792,839,1154,1156,1180,1191,1194,1197,1201&ab=6b2076f9c2fa162199fe491f83ee1f2f273f2222&experiment=a-d50e9ec5&special_condition=landing",
+    "new": false,
+    "proxy": true,
+    "updated": true
   },
   {
     "name": "Baldi's Basics",
-    "image": "splash.png",
-    "url": "baldis-basics",
-    "new": false
-  },
-  {
-    "name": "Ballistic Chickens",
-    "image": "logo.png",
-    "url": "ballistic-chickens",
-    "new": false
+    "image": "baldi.png",
+    "url": "https://gamepotty.com/games/baldis-basics/",
+    "new": false,
+    "proxy": true,
+    "updated": true
   },
   {
     "name": "Basket Random",
-    "image": "splash.jpeg",
-    "url": "basket-random",
-    "new": false
+    "image": "basketrandom.jpeg",
+    "url": "https://files.twoplayergames.org/files/games/other/Basket_Random/index.html",
+    "new": false,
+    "proxy": true,
+    "updated": true
   },
   {
     "name": "Basketball Stars",
-    "image": "assets/images/basketball-stars.png",
-    "url": "basketball-stars",
-    "new": false
+    "image": "basketballstars.png",
+    "url": "https://5dd33196-015f-11ea-ad56-9cb6d0d995f7.poki-gdn.com/36935933-5052-4dad-80ac-ae6f13020276/index.html?country=US&ccpaApplies=0&url_referrer=https%3A%2F%2Fpoki.com%2F&tag=pg-f0e2210ee52f43a739fcb9af425ccdc48e0f4e6f&site_id=3&iso_lang=en&poki_url=https%3A%2F%2Fpoki.com%2Fen%2Fg%2Fbasketball-stars&hoist=yes&nonPersonalized=n&familyFriendly=n&categories=2%2C76%2C130%2C750%2C775%2C929%2C1103%2C1109%2C1123%2C1139%2C1140%2C1147%2C1168%2C1193%2C1201%2C1202&ab=6b2076f9c2fa162199fe491f83ee1f2f273f2222&experiment=a-d50e9ec5&special_condition=landing&game_id=5dd33196-015f-11ea-ad56-9cb6d0d995f7&game_version_id=36935933-5052-4dad-80ac-ae6f13020276&inspector=0&csp=1",
+    "new": false,
+    "proxy": true,
+    "updated": true
   },
   {
     "name": "Basketbros.io",
-    "image": "thumb.jpg",
-    "url": "basketbros-io",
-    "new": false
+    "image": "baasketbros.jpg",
+    "url": "https://basketbros.io/",
+    "new": false,
+    "proxy": true,
+    "updated": true
   },
   {
     "name": "Battle for Gondor",
@@ -256,9 +264,11 @@
   },
   {
     "name": "BitLife",
-    "image": "splash.png",
-    "url": "bitlife",
-    "new": false
+    "image": "bitlife.png",
+    "url": "https://bitlifesimulator.io/game/bitlife/",
+    "new": false,
+    "proxy": true,
+    "updated": true
   },
   {
     "name": "Black Hole Square",
@@ -1278,6 +1288,13 @@
     "image": "splash.png",
     "url": "ruffle",
     "new": false
+  },
+  {
+    "name": "Super Mario 64",
+    "image": "sm64.jpg",
+    "url": "https://augustberchelmann.com/mario/",
+    "new": true,
+    "proxy": true
   },
   {
     "name": "Stick Slasher",
