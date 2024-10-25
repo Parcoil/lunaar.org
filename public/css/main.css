@@ -317,7 +317,12 @@ button .icon {
   margin-top: 1rem;
 }
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--button);
+  border-radius: 10px;
 }
 #gameFrame {
   width: 1024px;
@@ -328,9 +333,7 @@ button .icon {
   width: 100vw;
   height: 100vh;
 }
-.noscroll {
-  overflow: hidden;
-}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -426,7 +429,6 @@ input:checked + .slider:before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   margin-bottom: 10px;
 }
 #gameiframe {

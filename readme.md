@@ -1,8 +1,7 @@
 <div align=center>
 
-<kbd><img align="center" src="public/media/logo.svg" width="100"></kbd>
-
-<h4 align="center">Lunaar. is a new unblocked games site that features a proxy, a wide selection of games, a sleek design, and much more for you to explore!</h4>
+<img src="https://github.com/Parcoil/lunaar.org/blob/main/public/media/LLBIG.svg" height="250px">
+<h4 align="center">Lunaar is the ultimate proxy with added games and features.</h4>
 </div>
 
 ![Lunaar image](https://i.imgur.com/8LWMrXt.png)
@@ -10,15 +9,17 @@
 > [!IMPORTANT]
 > If you fork Lunaar, please give it a star.
 
-Also Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
+Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
 
 ## Features
 
-- Clean UI 🧽
-- Built-in Proxy 🚀
-- 200+ Built-in Games 🎮
-- Theme Support 🖌️
-- And much more! 🤯
+- Clean UI
+- Fast Built-in Proxy
+- 200+ Built-in Games
+- Theme Support
+- And much more!
+- Inspect element
+- Tab cloaker
 
 ## Deployment
 
@@ -30,6 +31,44 @@ Also Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
 [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Parcoil/lunaar.org)
 [![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Parcoil/lunaar.org&branch=main&name=Lunaar)
 <a target="_blank" href="https://glitch.com/edit/#!/import/github/parcoil/lunaar.org"><img alt="Remix on Glitch" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg"></a>
+
+### Local / Server Deployment
+
+#### Prerequisites:
+
+- Node 20.x
+
+To get started you need to clone the repo
+
+```bash
+git clone https://github.com/Parcoil/lunaar.org
+cd lunaar.org
+```
+
+Next you need to enable pnpm
+
+```bash
+corepack enable pnpm
+```
+
+Now install the required packages
+
+```bash
+pnpm install
+```
+
+Now start lunaar
+
+```bash
+pnpm start
+```
+
+#### Updating Lunaar
+
+```bash
+cd lunaar.org
+git pull --force
+```
 
 ## Issues
 
