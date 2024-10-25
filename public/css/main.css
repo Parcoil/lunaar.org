@@ -73,29 +73,23 @@ body {
   gap: 15px;
   margin-left: auto;
 }
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    margin: 10px;
-    height: auto;
+.navlinks i {
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+@media only screen and (max-width: 600px) {
+  .navlinks i {
+    font-size: 1.4rem;
+    margin-right: 0;
   }
-
-  .navlinks {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+  .navlinks p {
+    display: none;
   }
-
-  .navlinks a {
-    padding: 10px;
-    width: 100%;
-    text-align: center;
+  .footer-right {
+    display: none;
   }
 }
+
 i {
   color: var(--textcolor2);
 }
@@ -215,6 +209,8 @@ input[type="text"]::placeholder {
 }
 .card-input {
   text-align: center;
+  background-color: var(--button) !important;
+  border: none !important;
 }
 #searchBar,
 #search {
@@ -268,7 +264,7 @@ button .icon {
   backdrop-filter: blur(2px);
   padding: 20px;
   display: flex;
-  margin: 20px;
+  margin: 5px;
   width: 20rem;
   min-width: 20rem;
   max-width: 30rem;
@@ -319,11 +315,14 @@ button .icon {
 ::-webkit-scrollbar {
   width: 10px;
 }
-
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 ::-webkit-scrollbar-thumb {
   background: var(--button);
   border-radius: 10px;
 }
+
 #gameFrame {
   width: 1024px;
   height: 576px;
@@ -563,4 +562,52 @@ input:checked + .slider:before {
   text-align: center;
   border-radius: 5px;
   margin-left: 10px;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border-radius: 50%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+input:checked + .slider {
+  background-color: var(--button);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--button);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }

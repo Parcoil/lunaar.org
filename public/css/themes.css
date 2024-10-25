@@ -1,10 +1,3 @@
-/*
-This file defines CSS variables for different color themes on the site.
-
-There are currently two themes defined - 'main' and 'grey'. More themes can be added by defining new CSS rules.
-
-To use a theme, add the 'theme' attribute to the <body> tag, e.g. <body theme="grey">
-*/
 @font-face {
   font-family: "bone";
   src: url("../media/nasalization-rg.otf") format("opentype");
@@ -64,7 +57,7 @@ body[theme="grey"] {
   --textcolor: #fff;
   --alt: #333333;
   --logo: #888888;
-  --button: rgb(56, 56, 56);
+  --button: rgb(107, 107, 107);
   --bg: #141414;
   --rounded: 30.4px;
   --rounded2: 10px;
@@ -217,6 +210,9 @@ body[theme="light"] {
 }
 body[theme="light"] #particles-js {
   filter: invert(100%);
+}
+body[theme="light"] .card {
+  background-color: transparent;
 }
 body[theme="light"] input[type="text"],
 body[theme="light"] .search-right,

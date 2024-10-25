@@ -49,18 +49,18 @@
 
     <div class="card">
       <h1>Panic Key</h1>
-      <p>When you press the set key, it will take you to the set URL.</p>
+      <p>When you press the set key, it will take you to the site you entered.</p>
       <form>
-        <label for="panic-key">Key:</label>
+ 
         <input
           id="panic-key"
           onchange="setKey(this.value)"
           type="text"
-          placeholder="~"
+          placeholder="`"
           class="card-input"
           maxlength="1"
         />
-        <label for="panic-url">URL:</label>
+  
         <input
           id="panic-url"
           onchange="setSite(this.value)"
@@ -73,13 +73,17 @@
 
     <div class="card">
       <h1>Tab Cloak</h1>
-      <p>Cloaks the tab bar of Lunaar.</p>
+      <p>Changes the icon and title of Lunaar.</p>
       <select id="cloakSelect">
         <option value="default">Default Cloak</option>
+        <option value="canvas">Canvas</option>
+               <option value="wikipedia">Wikipedia</option>
+        <option value="edpuzzle">Edpuzzle</option>
         <option value="drive">Google Drive</option>
         <option value="classroom">Google Classroom</option>
         <option value="zoom">Zoom</option>
       </select>
+      <button onclick="resetCloak()">Reset</button>
       <p class="small">
         Made with <a href="https://github.com/Parcoil/cloak">CloakJS</a>
       </p>
@@ -99,8 +103,12 @@
     <div class="card">
       <h1>Stars Toggle</h1>
       <p>Toggles the display of stars in the background of Lunaar.</p>
-      <button class="filled" onclick="setStars('on')">Set On</button>
-      <button class="filled" onclick="setStars('off')">Set Off</button>
+ <!--      <button class="filled" onclick="setStars('on')">Set On</button>
+      <button class="filled" onclick="setStars('off')">Set Off</button> -->
+  <label class="switch">
+  <input type="checkbox" id="starsToggle" checked>
+  <span class="slider round"></span>
+</label>
     </div>
 
     <div class="card">
@@ -120,9 +128,14 @@
 <script>
   const searchengine = localStorage.getItem("se");
   const seToggle = document.getElementById("seToggle");
+  const starsToggle = document.getElementById("starsToggle");
 
   seToggle.addEventListener("change", (event) => {
     localStorage.setItem("se", event.target.value);
+  });
+
+  starsToggle.addEventListener("change", (event) => {
+    setStars(event.target.checked ? "on" : "off");
   });
 
   function setStars(state) {
@@ -140,11 +153,18 @@
     setTheme(event.target.value);
   });
 
+  function resetCloak() {
+    localStorage.removeItem("cloakFavicon");
+    localStorage.removeItem("cloakTitle");
+    document.location.reload();
+  }
+
   function loadSettings() {
     themeSelect.value = localStorage.getItem("theme");
     seToggle.value = localStorage.getItem("se");
     panickey.value = localStorage.getItem("panicKey");
     panicurl.value = localStorage.getItem("panicSite");
+    starsToggle.checked = localStorage.getItem("stars") !== "false";
   }
 
   loadSettings();
@@ -189,11 +209,27 @@
     });
 
   const cloaks = [
-    { name: "default", icon: "./media/logo.svg", title: "Lunaar" },
+
     {
       name: "drive",
       icon: "./media/cloaks/googledrive.png",
       title: "Home - Google Drive",
+    },
+     {
+      name: "edpuzzle",
+      icon: "./media/cloaks/edpuzzle.png",
+      title: "Edpuzzle",
+    },
+         {
+      name: "wikipedia",
+      icon: "./media/cloaks/wikipedia.ico",
+      title: "Wikipedia",
+    },
+
+    {
+      name: "canvas",
+      icon: "./media/cloaks/canvas.png",
+      title: "Dashboard",
     },
     { name: "classroom", icon: "./media/cloaks/classroom.png", title: "Home" },
     { name: "zoom", icon: "./media/cloaks/zoom.png", title: "Zoom" },
