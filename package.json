@@ -26,6 +26,7 @@
     "ejs": "^3.1.10",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
+    "express-http-proxy": "^2.1.1",
     "http-proxy": "^1.18.1",
     "wisp-server-node": "^1.1.0",
     "ws": "^8.17.1"

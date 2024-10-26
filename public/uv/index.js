@@ -13,9 +13,8 @@ const errorCode = document.getElementById("uv-error-code");
     "://" +
     location.host +
     "/wisp/";
-  if ((await connection.getTransport()) !== "/epoxy/index.mjs") {
-    await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
-  }
+
+  await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
 })();
 
 try {
