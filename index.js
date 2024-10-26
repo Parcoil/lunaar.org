@@ -1,7 +1,7 @@
 import express from "express";
 import { createServer } from "node:http";
 import chalk from "chalk";
-import proxy from "express-http-proxy";
+import httpProxy from 'http-proxy';
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
@@ -11,7 +11,7 @@ import expressLayouts from "express-ejs-layouts";
 import { fileURLToPath } from "url";
 import packageJson from "./package.json" with { type: "json" };
 import compression from "compression";
-
+const cdnProxy = httpProxy.createProxyServer();
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicPath = join(__dirname, "public");
@@ -32,12 +32,12 @@ app.disable('x-powered-by');
 app.get("/", (req, res) => {
   res.render("index");
 });
-app.use(
-	'/cdn',
-	proxy(`https://glcdn.githack.com`, {
-		proxyReqPathResolver: (req) => `/Thedogecraft/assets/-/raw/main/public/${req.url}`,
-	})
-);
+app.use('/cdn', (req, res) => {
+  cdnProxy.web(req, res, {
+    target: 'https://glcdn.githack.com/Thedogecraft/assets/-/raw/main/public/',
+    changeOrigin: true
+  });
+});
 app.get("/science", (req, res) => {
   res.render("games");
 });
