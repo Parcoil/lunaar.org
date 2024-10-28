@@ -103,20 +103,11 @@
     <div class="card">
       <h1>Stars Toggle</h1>
       <p>Toggles the display of stars in the background of Lunaar.</p>
- <!--      <button class="filled" onclick="setStars('on')">Set On</button>
-      <button class="filled" onclick="setStars('off')">Set Off</button> -->
   <label class="switch">
   <input type="checkbox" id="starsToggle" checked>
   <span class="slider round"></span>
 </label>
     </div>
-
-    <div class="card">
-      <h1>Reset Settings</h1>
-      <p>Resets all settings to their default values.</p>
-      <button class="filled" onclick="resetSettings()">Reset</button>
-    </div>
-
 
   <div class="footer">
     <a id="version" href="https://github.com/parcoil/lunaar.org"
@@ -169,13 +160,7 @@
 
   loadSettings();
 
-  function resetSettings() {
-    const reset = confirm("Are you sure you want to reset all settings?");
-    if (reset) {
-      localStorage.clear();
-      document.location.reload();
-    }
-  }
+
 
   function aboutBlank() {
     const newWindow = window.open();
