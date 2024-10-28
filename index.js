@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 });
 app.use('/cdn', (req, res) => {
   cdnProxy.web(req, res, {
-    target: 'https://glcdn.githack.com/Thedogecraft/assets/-/raw/main/public/',
+    target: 'https://assets-epeh.onrender.com/',
     changeOrigin: true
   });
 });
