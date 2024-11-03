@@ -17,7 +17,6 @@ function loadScript(src, onload) {
   document.head.appendChild(script);
 }
 
-loadScript("/./js/themes.js", true);
 loadScript("/./js/particles.js", true);
 loadCSS("/./css/themes.css");
 

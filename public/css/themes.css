@@ -274,3 +274,11 @@ body[theme="artclass"] {
   --button: #0284d4;
   --textcolor: #fff;
 }
+body[theme="starlight"] {
+  --bg: #121c22;
+  --button: #155e75;
+  --logo: #155e75;
+  --alt: #186d86;
+  --textcolor: #fff;
+  --rounded: 40px !important;
+}
