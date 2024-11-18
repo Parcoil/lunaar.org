@@ -1,62 +1,62 @@
 [
-  {
-    "name": "Netflix",
-    "url": "https://www.netflix.com",
-    "image": "/./media/apps/netflix.png"
-  },
-  {
-    "name": "Youtube",
-    "url": "https://www.youtube.com",
-    "image": "/./media/apps/youtube.jpg"
-  },
-  {
-    "name": "now.gg",
-    "url": "https://now.gg",
-    "image": "/./media/apps/nowgg.png"
-  },
-  {
-    "name": "x",
-    "url": "https://x.com",
-    "image": "/./media/apps/x.jpg"
-  },
-  {
-    "name": "Geforce NOW (BETA)",
-    "url": "https://play.geforcenow.com/mall/",
-    "image": "/./media/apps/GFN.png"
-  },
-  {
-    "name": "Telegram (a)",
-    "url": "https://web.telegram.org/a/",
-    "image": "/./media/apps/Telegram.png"
-  },
-  {
-    "name": "Discord",
-    "url": "https://discord.com/app",
-    "image": "/./media/apps/discord.jpeg"
-  },
-  {
-    "name": "Chess.com",
-    "url": "https://chess.com",
-    "image": "/./media/apps/chess.png"
-  },
-  {
-    "name": "Spotify",
-    "url": "https://open.spotify.com/",
-    "image": "/./media/apps/spotify.png"
-  },
-  {
-    "name": "Reddit",
-    "url": "https://reddit.com/",
-    "image": "/./media/apps/reddit.png"
-  },
-  {
-    "name": "TikTok",
-    "url": "https://www.tiktok.com/en/",
-    "image": "/./media/apps/tiktok.jpg"
-  },
-  {
-    "name": "SFlix",
-    "url": "https://sflix.to/",
-    "image": "/./media/apps/sflix.png"
-  }
+	{
+		"name": "Netflix",
+		"url": "https://www.netflix.com",
+		"image": "/./media/apps/netflix.png"
+	},
+	{
+		"name": "Youtube",
+		"url": "https://www.youtube.com",
+		"image": "/./media/apps/youtube.jpg"
+	},
+	{
+		"name": "now.gg",
+		"url": "https://now.gg",
+		"image": "/./media/apps/nowgg.png"
+	},
+	{
+		"name": "x",
+		"url": "https://x.com",
+		"image": "/./media/apps/x.jpg"
+	},
+	{
+		"name": "Geforce NOW (BETA)",
+		"url": "https://play.geforcenow.com/mall/",
+		"image": "/./media/apps/GFN.png"
+	},
+	{
+		"name": "Telegram (a)",
+		"url": "https://web.telegram.org/a/",
+		"image": "/./media/apps/Telegram.png"
+	},
+	{
+		"name": "Discord",
+		"url": "https://discord.com/app",
+		"image": "/./media/apps/discord.jpeg"
+	},
+	{
+		"name": "Chess.com",
+		"url": "https://chess.com",
+		"image": "/./media/apps/chess.png"
+	},
+	{
+		"name": "Spotify",
+		"url": "https://open.spotify.com/",
+		"image": "/./media/apps/spotify.png"
+	},
+	{
+		"name": "Reddit",
+		"url": "https://reddit.com/",
+		"image": "/./media/apps/reddit.png"
+	},
+	{
+		"name": "TikTok",
+		"url": "https://www.tiktok.com/en/",
+		"image": "/./media/apps/tiktok.jpg"
+	},
+	{
+		"name": "SFlix",
+		"url": "https://sflix.to/",
+		"image": "/./media/apps/sflix.png"
+	}
 ]
