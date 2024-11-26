@@ -30,6 +30,7 @@ Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
 
 [![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Parcoil/lunaar.org)
 [![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Parcoil/lunaar.org&branch=main&name=Lunaar)
+[![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repositoryurl=https://github.com/Parcoil/lunaar.org)
 <a target="_blank" href="https://glitch.com/edit/#!/import/github/parcoil/lunaar.org"><img alt="Remix on Glitch" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg"></a>
 
 ### Local / Server Deployment
