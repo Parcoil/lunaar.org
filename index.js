@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 });
 app.use("/cdn", (req, res) => {
 	cdnProxy.web(req, res, {
-		target: "https://assets-epeh.onrender.com/",
+		target: "https://gms.parcoil.com/",
 		changeOrigin: true,
 	});
 });
