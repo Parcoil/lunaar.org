@@ -1,52 +1,95 @@
 <main>
-  <div class="playcontainer">
-    <div class="loader"></div>
-    <iframe id="gameiframe" src="" frameborder="0"> </iframe>
-    <div class="gameinfo">
-      <h1 id="gametitle"></h1>
-      <button
-        title="Fullscreen's the game"
-        style="font-size: 30px"
-        onclick="tryFullscreen()"
-      >
-        <i class="fa-solid fa-expand"></i>
-      </button>
+  <div class="game-frame">
+    <iframe src="" frameborder="0"></iframe>
+    <div>
+      <h2 id="game-name">game name</h2>
+      <div class="button-flex">
+        <button class="play-button" id="fullscreen">
+          <i class="fa-solid fa-expand"></i>
+        </button>
+        <button class="play-button" id="reload-button">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+      </div>
     </div>
   </div>
+  <script type="text/javascript">
+    atOptions = {
+      key: "13def82c028e7c80ebeecd26958279a7",
+      format: "iframe",
+      height: 90,
+      width: 728,
+      params: {},
+    };
+  </script>
+  <script
+    type="text/javascript"
+    src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
+  ></script>
 </main>
 
 <script>
-  function tryFullscreen() {
-    const gameIframeElement = document.getElementById("gameiframe");
-    try {
-      gameIframeElement.requestFullscreen();
-    } catch (err) {
-      alert(`there was a error: ${err}`);
-    }
-  }
-  const url = new URL(window.location.href);
-  const gameUrl = url.searchParams.get("game");
+  const urlParams = new URLSearchParams(window.location.search);
+  const gameUrl = urlParams.get("game");
+  const buttonFullscreen = document.getElementById("fullscreen");
+  const buttonReload = document.getElementById("reload-button");
+  const iframe = document.querySelector("iframe");
+  buttonFullscreen.addEventListener("click", () => {
+    iframe.requestFullscreen();
+  });
+  buttonReload.addEventListener("click", () => {
+    const oldurl = iframe.src;
+    console.log(oldurl);
+    iframe.src = "https://parcoil.com";
+    setTimeout(() => {
+      console.log(oldurl);
+      iframe.src = oldurl;
+    }, 300);
+  });
 
-  async function setGameContent() {
-    try {
-      const response = await fetch("./json/games.json");
-      const games = await response.json();
+  iframe.src = `/cdn/${gameUrl}/index.html`;
 
-      const gameData = games.find((game) => game.url === gameUrl);
-
-      if (gameData) {
-        const gameTitleElement = document.getElementById("gametitle");
-        gameTitleElement.innerText = gameData.name;
-
-        const gameIframeElement = document.getElementById("gameiframe");
-        gameIframeElement.src = `/cdn/${gameData.url}/index.html`;
-      } else {
-        console.error("Game not found in games.json");
-      }
-    } catch (error) {
-      console.error("Error fetching games.json:", error);
-    }
-  }
-
-  setGameContent();
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("/json/games.json")
+      .then((response) => response.json())
+      .then((games) => {
+        const game = games.find((g) => g.url === gameUrl);
+        if (game) {
+          document.getElementById("game-name").textContent = game.name;
+        }
+      })
+      .catch((error) => console.error("Error loading game name:", error));
+  });
 </script>
+
+<style>
+  .game-frame {
+    width: 50%;
+    height: 150%;
+    padding: 10px;
+    backdrop-filter: blur(10px) brightness(0.5);
+    z-index: 2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .game-frame iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .play-button {
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+  }
+  .button-flex {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+</style>

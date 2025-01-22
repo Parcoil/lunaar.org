@@ -1,23 +1,35 @@
-<main class="main">
+<main>
+  <script type="text/javascript">
+    atOptions = {
+      key: "13def82c028e7c80ebeecd26958279a7",
+      format: "iframe",
+      height: 90,
+      width: 728,
+      params: {},
+    };
+  </script>
+  <script
+    type="text/javascript"
+    src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
+  ></script>
   <h1>Games</h1>
-  <input type="text" id="searchBar" placeholder="Search games..." />
-  <div>
-    <script type="text/javascript">
-      atOptions = {
-        key: "13def82c028e7c80ebeecd26958279a7",
-        format: "iframe",
-        height: 90,
-        width: 728,
-        params: {},
-      };
-    </script>
-    <script
-      type="text/javascript"
-      src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
-    ></script>
+
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Search for games"
+      class="search"
+      id="search-input"
+    />
   </div>
 
-  <div class="games"></div>
+  <div class="game-container" id="game-container"></div>
+  <div class="footer footer-right" style="right: 10px; font-size: 20px">
+    <a href="https://github.com/Parcoil/lunaar.org"
+      ><i class="fa-brands fa-github"></i
+    ></a>
+    <a href="htts://dsc.gg/parcoil"><i class="fa-brands fa-discord"></i></a>
+  </div>
 </main>
 
 <script defer>
@@ -35,7 +47,7 @@
   }
 
   function displayGames(games) {
-    const gamesContainer = document.querySelector(".games");
+    const gamesContainer = document.getElementById("game-container");
     gamesContainer.innerHTML = "";
 
     const newTopGames = games.filter((game) => game.new || game.top);
@@ -102,13 +114,137 @@
   }
 
   function updateSearchBarPlaceholder(count) {
-    const searchBar = document.getElementById("searchBar");
+    const searchBar = document.getElementById("search-input");
     searchBar.placeholder = `Search for ${count} games`;
   }
 
-  document.getElementById("searchBar").addEventListener("input", (event) => {
+  document.getElementById("search-input").addEventListener("input", (event) => {
     searchGames(event.target.value);
   });
 
   fetchGames();
 </script>
+
+<style>
+  /* #notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    animation: fadein 2s;
+  } */
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  const notifications = [
+    'Have a issue? create a ticket in our <a href="https://discord.gg/parcoil" class="link">Discord Server</a>',
+    'Try our our other proxy <a href="https://gostarlight.xyz" class="link">Starlight</a>',
+    'Dont forget to star lunaar on <a href="https://github.com/Parcoil/lunaar" class="link">Github</a>',
+    'Join the <a href="https://discord.gg/parcoil" class="link">Discord Server</a>',
+    "🧀",
+    "idk what to put here",
+    'GTA 6 FREE <a class="link" href="/uv/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-wctah%3Dv%3FxtFXjm5RgE0">DOWNLOAD</a>',
+
+    // "support lunaar by disabling adblock",
+    // "lunaar is free because of ads",
+    // "please consider whitelisting lunaar in your adblocker",
+  ];
+
+  function getRandomNotification() {
+    const index = Math.floor(Math.random() * notifications.length);
+    return notifications[index];
+  }
+
+  function showNotification() {
+    const notificationDiv = document.getElementById("notification");
+    if (!notificationDiv) return;
+
+    const message = getRandomNotification();
+    notificationDiv.innerHTML = `
+    <i class="fa-solid fa-circle-info"></i>
+    &nbsp;
+      ${message}
+      <span class="close-btn">&times;</span>
+    `;
+    notificationDiv.classList.remove("hide");
+    notificationDiv.classList.add("show");
+  }
+
+  function hideNotification() {
+    const notificationDiv = document.getElementById("notification");
+    if (!notificationDiv) return;
+
+    notificationDiv.classList.remove("show");
+    notificationDiv.classList.add("hide");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const notificationDiv = document.getElementById("notification");
+
+    notificationDiv.addEventListener("click", (e) => {
+      if (e.target.classList.contains("close-btn")) {
+        hideNotification();
+      }
+    });
+
+    showNotification();
+    setInterval(showNotification, 15000);
+  });
+</script>
+
+<style>
+  #notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 40px 15px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(150%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  #notification.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  #notification.hide {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .close-btn:hover {
+    opacity: 0.8;
+  }
+</style>
+
+<div id="notification"></div>

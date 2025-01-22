@@ -1,91 +1,91 @@
 <main>
+  <script type="text/javascript">
+    atOptions = {
+      key: "13def82c028e7c80ebeecd26958279a7",
+      format: "iframe",
+      height: 90,
+      width: 728,
+      params: {},
+    };
+  </script>
+  <script
+    type="text/javascript"
+    src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
+  ></script>
   <h1>Apps</h1>
 
-  <input type="text" id="search" placeholder="Search apps..." />
-  <div>
-    <script type="text/javascript">
-      atOptions = {
-        key: "13def82c028e7c80ebeecd26958279a7",
-        format: "iframe",
-        height: 90,
-        width: 728,
-        params: {},
-      };
-    </script>
-    <script
-      type="text/javascript"
-      src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
-    ></script>
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Search for apps"
+      class="search"
+      id="search-input"
+    />
   </div>
 
-  <div class="apps"></div>
+  <div class="app-container" id="app-container"></div>
+  <div class="footer footer-left" style="left: 10px; font-size: 20px">
+    <a href="https://github.com/Parcoil/lunaar.org"
+      ><i class="fa-brands fa-github"></i
+    ></a>
+    <a href="htts://dsc.gg/parcoil"><i class="fa-brands fa-discord"></i></a>
+  </div>
+  <div class="footer">
+    <a id="version" href="https://github.com/parcoil/lunaar.org">v0.0.0</a>
+  </div>
+  <div class="footer footer-right" style="right: 10px">
+    <a href="https://parcoil.com">© 2022-2025 Parcoil Network All rights reserved</p>
+  </div>
 </main>
+<script>
+  fetch("/json/apps.json")
+    .then((response) => response.json())
+    .then((apps) => {
+      function renderApps(filteredApps) {
+        const appContainer = document.getElementById("app-container");
+        appContainer.innerHTML = "";
 
-<script defer>
-  document.addEventListener("DOMContentLoaded", () => {
-    const appsContainer = document.querySelector(".apps");
-    const searchInput = document.querySelector("#search");
+        filteredApps.forEach((data) => {
+          const appDiv = document.createElement("div");
+          appDiv.classList.add("app");
+          appDiv.setAttribute("key", data.id);
 
-    let appsData = [];
+          const img = document.createElement("img");
+          img.src = `${data.image}`;
 
-    fetch("./json/apps.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        appsData = data;
-        displayApps(appsData);
-      })
-      .catch((error) => console.error("Error fetching apps data:", error));
+          img.alt = data.name;
 
-    searchInput.addEventListener("input", (event) => {
-      const query = event.target.value.toLowerCase();
-      const filteredApps = appsData.filter(
-        (app) =>
-          app.name.toLowerCase().includes(query) ||
-          app.url.toLowerCase().includes(query)
-      );
-      displayApps(filteredApps);
-    });
-
-    function displayApps(apps) {
-      appsContainer.innerHTML = "";
-
-      if (apps.length === 0) {
-        appsContainer.innerHTML = "<p>No apps found</p>";
+          const p = document.createElement("p");
+          p.textContent = data.name;
+          img.onclick = function () {
+            sessionStorage.setItem(
+              "lpurl",
+              __uv$config.prefix + __uv$config.encodeUrl(data.url)
+            );
+            location.href = "/go/";
+            sessionStorage.setItem("rawurl", data.url);
+          };
+          appDiv.appendChild(img);
+          appDiv.appendChild(p);
+          appContainer.appendChild(appDiv);
+        });
       }
 
-      apps.forEach((app) => {
-        const appDiv = document.createElement("div");
-        appDiv.className = "app";
+      renderApps(apps);
 
-        // Add onclick event to the appDiv to handle navigation
-        appDiv.addEventListener("click", () => {
-          sessionStorage.setItem(
-            "lpurl",
-            __uv$config.prefix + __uv$config.encodeUrl(app.url)
+      document
+        .getElementById("search-input")
+        .addEventListener("input", function () {
+          const query = this.value.toLowerCase();
+          const filteredApps = apps.filter((app) =>
+            app.name.toLowerCase().includes(query)
           );
-          sessionStorage.setItem("rawurl", app.url);
-          window.location.href = "/./go";
+          renderApps(filteredApps);
         });
-
-        const image = document.createElement("img");
-        image.src = app.image;
-        image.alt = app.name;
-        image.width = "200";
-        image.height = "200";
-
-        const title = document.createElement("h2");
-        title.textContent = app.name;
-
-        appDiv.appendChild(image);
-        appDiv.appendChild(title);
-
-        appsContainer.appendChild(appDiv);
-      });
-    }
-  });
+    })
+    .catch((error) => {
+      console.error("Error fetching the apps data:", error);
+      const appContainer = document.getElementById("app-container");
+      appContainer.innerHTML = "<p>Error loading apps data.</p>";
+    });
 </script>

@@ -4,7 +4,7 @@
 <h4 align="center">Lunaar is the ultimate proxy with added games and features.</h4>
 </div>
 
-![Lunaar image](https://i.imgur.com/8LWMrXt.png)
+![Lunaar image](https://i.imgur.com/j3QKeVE.png)
 
 > [!IMPORTANT]
 > If you fork Lunaar, please give it a star.
@@ -19,7 +19,9 @@ Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
 - Theme Support
 - And much more!
 - Inspect element
-- Tab cloaker
+- Tab cloaker [(Using cloakjs)](https://github.com/Parcoil/cloak)
+- Panic Key
+- Forum (On official domains!)
 
 ## Deployment
 
@@ -49,7 +51,7 @@ cd lunaar.org
 Next you need to enable pnpm
 
 ```bash
-corepack enable pnpm
+corepack enable pnpm 
 ```
 
 Now install the required packages

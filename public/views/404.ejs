@@ -1,16 +1,101 @@
-<main class="home">
-  <h1>404</h1>
-  <br />
-  <p id="errinfo">Page not Found</p>
-  <br />
-  <button>
-    <a onclick="history.back()">Go Back</a>
-    <p></p>
-  </button>
+<main>
+  <div class="error-container">
+    <h1>404</h1>
+    <p id="errinfo">Page not found</p>
+    <script type="text/javascript">
+      atOptions = {
+        key: "13def82c028e7c80ebeecd26958279a7",
+        format: "iframe",
+        height: 90,
+        width: 728,
+        params: {},
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
+    ></script>
+    <p id="errinfo">
+      if you are trying to use the proxy and see this refresh the page
+    </p>
+    <div class="button-container">
+      <button onclick="history.back()" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+        Go Back
+      </button>
+      <button class="discord-btn">
+        <a href="https://dsc.gg/parcoil">
+          <i class="fa-brands fa-discord"></i>
+          Join our Discord
+        </a>
+      </button>
+    </div>
+  </div>
+  <div class="footer footer-left" style="left: 10px; font-size: 20px">
+    <a href="https://github.com/Parcoil/lunaar.org"
+      ><i class="fa-brands fa-github"></i
+    ></a>
+    <a href="htts://dsc.gg/parcoil"><i class="fa-brands fa-discord"></i></a>
+  </div>
+  <div class="footer">
+    <a id="version" href="https://github.com/parcoil/lunaar.org">v0.0.0</a>
+  </div>
+  <div class="footer footer-right" style="right: 10px">
+    <a href="https://parcoil.com">© 2022-2025 Parcoil Network All rights reserved</p>
+  </div>
 </main>
-<script>
-  $(document).ready(function () {
-    const location = window.location.pathname.slice(1);
-    $("#errinfo").text(`Page ${location} not found`);
-  });
-</script>
+
+<style>
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+  }
+
+  .error-container h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+
+  #errinfo {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 1rem;
+  }
+  /* 
+  button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  } */
+
+  button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  button a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+</style>
