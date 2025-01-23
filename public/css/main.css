@@ -19,7 +19,6 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-
 }
 @view-transition {
   navigation: auto;
@@ -37,7 +36,7 @@ body {
   background-attachment: fixed;
 }
 ::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 html {
   font-family: "Poppins", sans-serif;
@@ -225,7 +224,7 @@ main {
   justify-content: center;
   gap: 20px;
   margin-top: 40px;
-  /* max-width: 1000px; */
+  max-width: 96%;
 }
 .game,
 .app {
@@ -257,7 +256,6 @@ main {
 .game p,
 .app p {
   margin: 0;
-
 
   position: static;
   z-index: 3;
@@ -319,7 +317,7 @@ button.logo {
   color: white;
   font-size: 12px;
   padding: 2px 8px;
-  margin-left: 5px;
+
   border-radius: 5px;
 }
 
@@ -421,6 +419,9 @@ select {
 input::placeholder {
   color: var(--textcolor);
 }
+.navbar-item-home {
+  display: none;
+}
 @media screen and (max-width: 800px) {
   .navbar-logo {
     display: none;
@@ -432,8 +433,12 @@ input::placeholder {
     gap: 20px;
   }
   .navbar-item {
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 20px;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
   }
   .navbar {
     justify-content: center;
@@ -446,6 +451,9 @@ input::placeholder {
   }
   .proxy-bar {
     display: none !important;
+  }
+  .navbar-item-home {
+    display: flex;
   }
 }
 @media screen and (max-width: 897px) {
