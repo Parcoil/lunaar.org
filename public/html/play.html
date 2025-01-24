@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play | Lunaar</title>
+    <link rel="icon" href="/media/logo.svg" type="image/x-icon" id="favicon" />
+    <link rel="stylesheet" href="/./css/main.css" />
+    <meta
+      name="description"
+      content="Discover the top unblocked games like Slope, 1v1.lol, Cookie Clicker, Geometry Dash, and more. Enjoy seamless gaming experiences at school or work."
+    />
+    <meta
+      name="keywords"
+      content="unblocked games, slope unblocked, 1v1.lol unblocked, cookie clicker unblocked, geometry dash unblocked, roblox unblocked, minecraft unblocked, tetris unblocked, retro bowl unblocked, unblocked anime websites, unblockedgames, ubg100, ubg, nativegames, lunaar, free online games, unblocked games 66, unblocked games wtf, online gaming, play games unblocked, browser games, unblocked flash games, mobile unblocked games, top unblocked games, action games, puzzle games, multiplayer unblocked games, fun unblocked games"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/Parcoil/cloak@main/src/index.js"></script>
+    <script src="/./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W8NZMM8WN9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-W8NZMM8WN9");
+    </script>
+    <script src="/./js/themes.js"></script>
+  </head>
+  <body>
+    <div id="blobs">
+      <div class="gradint"></div>
+      <div class="gradint2"></div>
+    </div>
+    <div id="particles-js"></div>
+    <main>
+      <div class="game-frame">
+        <iframe src="" frameborder="0"><span class="loader"></span></iframe>
+        <div>
+          <h2 id="game-name"><span class="loader"></span></h2>
+          <div class="button-flex">
+            <button class="play-button" id="fullscreen">
+              <i class="fa-solid fa-expand"></i>
+            </button>
+            <button class="play-button" id="reload-button">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        atOptions = {
+          key: "13def82c028e7c80ebeecd26958279a7",
+          format: "iframe",
+          height: 90,
+          width: 728,
+          params: {},
+        };
+      </script>
+      <script
+        type="text/javascript"
+        src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
+      ></script>
+    </main>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const gameUrl = urlParams.get("game");
+      const buttonFullscreen = document.getElementById("fullscreen");
+      const buttonReload = document.getElementById("reload-button");
+      const iframe = document.querySelector("iframe");
+      buttonFullscreen.addEventListener("click", () => {
+        iframe.requestFullscreen();
+      });
+      buttonReload.addEventListener("click", () => {
+        const oldurl = iframe.src;
+        console.log(oldurl);
+        iframe.src = "https://parcoil.com";
+        setTimeout(() => {
+          console.log(oldurl);
+          iframe.src = oldurl;
+        }, 300);
+      });
+
+      iframe.src = `/cdn/${gameUrl}/index.html`;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("/json/games.json")
+          .then((response) => response.json())
+          .then((games) => {
+            const game = games.find((g) => g.url === gameUrl);
+            if (game) {
+              document.getElementById("game-name").textContent = game.name;
+            }
+          })
+          .catch((error) => console.error("Error loading game name:", error));
+      });
+    </script>
+
+    <style>
+      .game-frame {
+        width: 50%;
+        height: 150%;
+        padding: 10px;
+        backdrop-filter: blur(10px) brightness(0.5);
+        z-index: 2;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .game-frame iframe {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+      .play-button {
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 25px;
+      }
+      .button-flex {
+        margin-top: 5px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #fff;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 160, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#000000" },
+            polygon: { nb_sides: 5 },
+            image: { src: "img/github.svg", width: 100, height: 100 },
+          },
+          opacity: {
+            value: 1,
+            random: true,
+            anim: { enable: false, speed: 1, opacity_min: 0, sync: false },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: { enable: false, speed: 4, size_min: 0.3, sync: false },
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: { enable: false, rotateX: 600, rotateY: 600 },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: false, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 400, line_linked: { opacity: 1 } },
+            bubble: {
+              distance: 250,
+              size: 0,
+              duration: 2,
+              opacity: 0,
+              speed: 3,
+            },
+            repulse: { distance: 400, duration: 0.4 },
+            push: { particles_nb: 4 },
+            remove: { particles_nb: 2 },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+    <script src="/baremux/index.js" defer></script>
+    <script src="/uv/uv.bundle.js" defer></script>
+    <script src="/uv/uv.config.js" defer></script>
+    <script src="/uv/register-sw.js" defer></script>
+    <script src="/uv/search.js" defer></script>
+    <script src="/uv/proxy.js" defer></script>
+    <script
+      type="text/javascript"
+      src="//rethinkexercisesupplement.com/f7/32/53/f73253aa6c42bc3c0dc426d6f074a5dd.js"
+    ></script>
+    <script
+      async="async"
+      data-cfasync="false"
+      src="//rethinkexercisesupplement.com/42ee10223c0f6e4a57d694b19aa2a7ee/invoke.js"
+    ></script>
+    <div id="container-42ee10223c0f6e4a57d694b19aa2a7ee"></div>
+  </body>
+</html>

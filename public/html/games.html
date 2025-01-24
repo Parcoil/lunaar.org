@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games | Lunaar</title>
+    <link rel="icon" href="/media/logo.svg" type="image/x-icon" id="favicon" />
+    <link rel="stylesheet" href="/./css/main.css" />
+    <meta
+      name="description"
+      content="Discover the top unblocked games like Slope, 1v1.lol, Cookie Clicker, Geometry Dash, and more. Enjoy seamless gaming experiences at school or work."
+    />
+    <meta
+      name="keywords"
+      content="unblocked games, slope unblocked, 1v1.lol unblocked, cookie clicker unblocked, geometry dash unblocked, roblox unblocked, minecraft unblocked, tetris unblocked, retro bowl unblocked, unblocked anime websites, unblockedgames, ubg100, ubg, nativegames, lunaar, free online games, unblocked games 66, unblocked games wtf, online gaming, play games unblocked, browser games, unblocked flash games, mobile unblocked games, top unblocked games, action games, puzzle games, multiplayer unblocked games, fun unblocked games"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/Parcoil/cloak@main/src/index.js"></script>
+    <script src="/./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W8NZMM8WN9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-W8NZMM8WN9");
+    </script>
+    <script src="/./js/themes.js"></script>
+  </head>
+  <body>
+    <div id="blobs">
+      <div class="gradint"></div>
+      <div class="gradint2"></div>
+    </div>
+    <div id="particles-js"></div>
+    <main>
+      <script type="text/javascript">
+        atOptions = {
+          key: "13def82c028e7c80ebeecd26958279a7",
+          format: "iframe",
+          height: 90,
+          width: 728,
+          params: {},
+        };
+      </script>
+      <script
+        type="text/javascript"
+        src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
+      ></script>
+      <h1>Games</h1>
+
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search for games"
+          class="search"
+          id="search-input"
+        />
+      </div>
+
+      <div class="game-container" id="game-container"></div>
+      <div class="footer footer-right" style="right: 10px; font-size: 20px">
+        <a href="https://github.com/Parcoil/lunaar.org"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="htts://dsc.gg/parcoil"><i class="fa-brands fa-discord"></i></a>
+      </div>
+    </main>
+
+    <script defer>
+      async function fetchGames() {
+        try {
+          const response = await fetch("./json/games.json");
+          const games = await response.json();
+          window.gamesData = games;
+
+          displayGames(games);
+          updateSearchBarPlaceholder(games.length);
+        } catch (error) {
+          console.error("Error fetching games:", error);
+        }
+      }
+
+      function displayGames(games) {
+        const gamesContainer = document.getElementById("game-container");
+        gamesContainer.innerHTML = "";
+
+        const newTopGames = games.filter((game) => game.new || game.top);
+        const otherGames = games.filter((game) => !game.new && !game.top);
+        const allGames = [...newTopGames, ...otherGames];
+
+        allGames.forEach((game) => {
+          const gameDiv = document.createElement("div");
+          gameDiv.className = "game";
+
+          const gameImage = game.proxy
+            ? `/media/games/${game.image}`
+            : `/cdn/${game.url}/${game.image}`;
+          gameDiv.innerHTML = `
+        <img src="${gameImage}" alt="${game.name}" loading="lazy" width="200" height="200" />
+        <p>${game.name}</p>
+      `;
+
+          if (game.new) {
+            gameDiv.querySelector("p").innerHTML +=
+              ' <span class="badge">New</span>';
+          }
+          if (game.top) {
+            gameDiv.querySelector("p").innerHTML +=
+              ' <span class="badge">Hot 🔥</span>';
+          }
+          if (game.exp) {
+            gameDiv.querySelector("p").innerHTML +=
+              ' <span class="badge">🧪</span>';
+          }
+          if (game.updated) {
+            gameDiv.querySelector("p").innerHTML +=
+              ' <span class="badge">🆕 Updated</span>';
+          }
+
+          const imageElement = gameDiv.querySelector("img");
+          imageElement.addEventListener("click", () => {
+            if (game.proxy) {
+              sessionStorage.setItem(
+                "lpurl",
+                __uv$config.prefix + __uv$config.encodeUrl(game.url)
+              );
+              sessionStorage.setItem("rawurl", `${game.url}`);
+              window.location.href = "/./go";
+            } else {
+              window.location.href = `./play?game=${game.url}`;
+            }
+            if (game.exp) {
+              alert("this game is experimental 🧪");
+            }
+          });
+
+          gamesContainer.appendChild(gameDiv);
+        });
+      }
+
+      function searchGames(searchTerm) {
+        const filteredGames = window.gamesData.filter((game) =>
+          game.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        displayGames(filteredGames);
+        updateSearchBarPlaceholder(filteredGames.length);
+      }
+
+      function updateSearchBarPlaceholder(count) {
+        const searchBar = document.getElementById("search-input");
+        searchBar.placeholder = `Search for ${count} games`;
+      }
+
+      document
+        .getElementById("search-input")
+        .addEventListener("input", (event) => {
+          searchGames(event.target.value);
+        });
+
+      fetchGames();
+    </script>
+
+    <style>
+      /* #notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    animation: fadein 2s;
+  } */
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <script>
+      const notifications = [
+        'Have a issue? create a ticket in our <a href="https://discord.gg/parcoil" class="link">Discord Server</a>',
+        'Try our our other proxy <a href="https://gostarlight.xyz" class="link">Starlight</a>',
+        'Dont forget to star lunaar on <a href="https://github.com/Parcoil/lunaar" class="link">Github</a>',
+        'Join the <a href="https://discord.gg/parcoil" class="link">Discord Server</a>',
+        "🧀",
+        "idk what to put here",
+        'GTA 6 FREE <a class="link" href="/uv/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-wctah%3Dv%3FxtFXjm5RgE0">DOWNLOAD</a>',
+
+        // "support lunaar by disabling adblock",
+        // "lunaar is free because of ads",
+        // "please consider whitelisting lunaar in your adblocker",
+      ];
+
+      function getRandomNotification() {
+        const index = Math.floor(Math.random() * notifications.length);
+        return notifications[index];
+      }
+
+      function showNotification() {
+        const notificationDiv = document.getElementById("notification");
+        if (!notificationDiv) return;
+
+        const message = getRandomNotification();
+        notificationDiv.innerHTML = `
+    <i class="fa-solid fa-circle-info"></i>
+    &nbsp;
+      ${message}
+      <span class="close-btn">&times;</span>
+    `;
+        notificationDiv.classList.remove("hide");
+        notificationDiv.classList.add("show");
+      }
+
+      function hideNotification() {
+        const notificationDiv = document.getElementById("notification");
+        if (!notificationDiv) return;
+
+        notificationDiv.classList.remove("show");
+        notificationDiv.classList.add("hide");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const notificationDiv = document.getElementById("notification");
+
+        notificationDiv.addEventListener("click", (e) => {
+          if (e.target.classList.contains("close-btn")) {
+            hideNotification();
+          }
+        });
+
+        showNotification();
+        setInterval(showNotification, 15000);
+      });
+    </script>
+
+    <style>
+      #notification {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 15px 40px 15px 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        transform: translateY(150%);
+        opacity: 0;
+        transition: all 0.5s ease;
+      }
+
+      #notification.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #notification.hide {
+        transform: translateY(150%);
+        opacity: 0;
+      }
+
+      .close-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 20px;
+        padding: 5px;
+      }
+
+      .close-btn:hover {
+        opacity: 0.8;
+      }
+    </style>
+
+    <div id="notification"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 160, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#000000" },
+            polygon: { nb_sides: 5 },
+            image: { src: "img/github.svg", width: 100, height: 100 },
+          },
+          opacity: {
+            value: 1,
+            random: true,
+            anim: { enable: false, speed: 1, opacity_min: 0, sync: false },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: { enable: false, speed: 4, size_min: 0.3, sync: false },
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: { enable: false, rotateX: 600, rotateY: 600 },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: false, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 400, line_linked: { opacity: 1 } },
+            bubble: {
+              distance: 250,
+              size: 0,
+              duration: 2,
+              opacity: 0,
+              speed: 3,
+            },
+            repulse: { distance: 400, duration: 0.4 },
+            push: { particles_nb: 4 },
+            remove: { particles_nb: 2 },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+    <script src="/baremux/index.js" defer></script>
+    <script src="/uv/uv.bundle.js" defer></script>
+    <script src="/uv/uv.config.js" defer></script>
+    <script src="/uv/register-sw.js" defer></script>
+    <script src="/uv/search.js" defer></script>
+    <script src="/uv/proxy.js" defer></script>
+    <script
+      type="text/javascript"
+      src="//rethinkexercisesupplement.com/f7/32/53/f73253aa6c42bc3c0dc426d6f074a5dd.js"
+    ></script>
+    <script
+      async="async"
+      data-cfasync="false"
+      src="//rethinkexercisesupplement.com/42ee10223c0f6e4a57d694b19aa2a7ee/invoke.js"
+    ></script>
+    <div id="container-42ee10223c0f6e4a57d694b19aa2a7ee"></div>
+  </body>
+</html>

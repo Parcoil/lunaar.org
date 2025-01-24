@@ -1,6 +1,5 @@
 import wisp from "wisp-server-node";
 import { createBareServer } from "@tomphttp/bare-server-node";
-import expressLayouts from "express-ejs-layouts";
 import httpProxy from "http-proxy";
 import chalk from "chalk";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
@@ -20,18 +19,17 @@ const __dirname = join(fileURLToPath(import.meta.url), "..");
 const app = express();
 const publicPath = "public";
 
-app.set("views", join(__dirname, "public/views"));
-app.set("view engine", "ejs");
+app.set("views", join(__dirname, publicPath, "html"));
+
 app.use(express.static(publicPath));
 app.use("/uv/", express.static(uvPath));
-app.use(expressLayouts);
 app.use("/epoxy/", express.static(epoxyPath));
 app.use("/baremux/", express.static(baremuxPath));
 app.use("/libcurl/", express.static(libcurlPath));
 app.use("/bareasmodule/", express.static(bareModulePath));
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.sendFile(join(__dirname,  publicPath, "html", "index.html"));
 });
 app.use("/cdn", (req, res) => {
   cdnProxy.web(req, res, {
@@ -40,28 +38,28 @@ app.use("/cdn", (req, res) => {
   });
 });
 app.get("/science", (req, res) => {
-  res.render("games");
+  res.sendFile(join(__dirname, publicPath, "html", "games.html"));
 });
 app.get("/play", (req, res) => {
-  res.render("play");
+  res.sendFile(join(__dirname, publicPath, "html", "play.html"));
 });
 app.get("/forum", (req, res) => {
-  res.render("forum");
+  res.sendFile(join(__dirname, publicPath, "html", "forum.html"));
 });
 app.get("/math", (req, res) => {
-  res.render("apps");
+  res.sendFile(join(__dirname, publicPath, "html", "apps.html"));
 });
 app.get("/settings", (req, res) => {
-  res.render("settings");
+  res.sendFile(join(__dirname, publicPath, "html", "settings.html"));
 });
 app.get("/go", (req, res) => {
-  res.render("go");
+  res.sendFile(join(__dirname, publicPath, "html", "go.html"));
 });
 app.get("/package.json", (req, res) => {
   res.json(packageJson);
 });
 app.get("*", (req, res) => {
-  res.render("404");
+  res.sendFile(join(__dirname, publicPath, "html", "404.html"));
 });
 const server = createServer();
 

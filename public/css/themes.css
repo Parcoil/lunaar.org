@@ -4,13 +4,13 @@
 }
 
 body[theme="greypurple"] {
-    --bg: linear-gradient(
+  --bg: linear-gradient(
     148deg,
     rgba(43, 43, 43, 1) 0%,
     rgba(0, 0, 0, 1) 49%,
     rgba(42, 42, 42, 1) 100%
   );
-  
+
   --textcolor: #fff;
 }
 body[theme="new"] {
@@ -48,7 +48,10 @@ body[theme="grey"] {
   --rounded: 30.4px;
   --rounded2: 10px;
 }
-
+body[theme="ssb"] {
+  --button: #00b5cf;
+  --alt: #008599;
+}
 .st0 {
   fill: var(--alt) !important;
 }

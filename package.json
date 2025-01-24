@@ -1,6 +1,6 @@
 {
   "name": "lunaar.org",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "description": "The Future of Unblocked Gaming!",
   "type": "module",
   "engines": {
@@ -27,9 +27,7 @@
     "@tomphttp/bare-server-node": "^2.0.5",
     "chalk": "^5.4.1",
     "compression": "^1.7.5",
-    "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "express-ejs-layouts": "^2.5.1",
     "http-proxy": "^1.18.1",
     "wisp-server-node": "^1.1.7"
   },
