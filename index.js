@@ -9,57 +9,62 @@ import { bareModulePath } from "@mercuryworkshop/bare-as-module3";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import express from "express";
 import { createServer } from "node:http";
-import { join } from "node:path";
 import packageJson from "./package.json" with { type: "json" };
-import { fileURLToPath } from "node:url";
 
 const cdnProxy = httpProxy.createProxyServer();
 const bare = createBareServer("/bare/");
-const __dirname = join(fileURLToPath(import.meta.url), "..");
+const __dirname = process.cwd();
 const app = express();
-const publicPath = "public";
 
-app.set("views", join(__dirname, publicPath, "html"));
+app.use(express.static("public"));
 
-app.use(express.static(publicPath));
 app.use("/uv/", express.static(uvPath));
 app.use("/epoxy/", express.static(epoxyPath));
 app.use("/baremux/", express.static(baremuxPath));
 app.use("/libcurl/", express.static(libcurlPath));
 app.use("/bareasmodule/", express.static(bareModulePath));
 
-app.get("/", (req, res) => {
-  res.sendFile(join(__dirname,  publicPath, "html", "index.html"));
-});
 app.use("/cdn", (req, res) => {
   cdnProxy.web(req, res, {
     target: "https://gms.parcoil.com/",
     changeOrigin: true,
   });
 });
+
+app.get("/", (req, res) => {
+  res.sendFile("/public/html/index.html", { root: __dirname });
+});
+
 app.get("/science", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "games.html"));
+  res.sendFile("/public/html/games.html", { root: __dirname });
 });
+
 app.get("/play", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "play.html"));
+  res.sendFile("/public/html/play.html", { root: __dirname });
 });
+
 app.get("/forum", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "forum.html"));
+  res.sendFile("/public/html/forum.html", { root: __dirname });
 });
+
 app.get("/math", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "apps.html"));
+  res.sendFile("/public/html/apps.html", { root: __dirname });
 });
+
 app.get("/settings", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "settings.html"));
+  res.sendFile("/public/html/settings.html", { root: __dirname });
 });
+
 app.get("/go", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "go.html"));
+  res.sendFile("/public/html/go.html", { root: __dirname });
 });
+
 app.get("/package.json", (req, res) => {
   res.json(packageJson);
 });
+
 app.get("*", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "404.html"));
+  res.sendFile("/public/html/404.html", { root: __dirname });
 });
 const server = createServer();
 
