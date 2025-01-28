@@ -33,7 +33,12 @@ body[theme="new"] {
   background-attachment: fixed;
   height: 100%;
 }
-
+body[theme="pink"] {
+  --bg: #000;
+  --textcolor: #fff;
+  --button: #ff0099;
+  --alt: rgb(84, 35, 82);
+}
 body[theme="new"] .card {
   background: var(--background-filter);
   backdrop-filter: var(--background-filter);

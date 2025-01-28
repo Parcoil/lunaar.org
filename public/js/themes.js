@@ -2,9 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("[Lunaar]", "themes.js");
 
   const currentTheme = localStorage.getItem("theme") || "default";
-
+  const getsavedImage = localStorage.getItem("backgroundImage");
   function getSavedTheme() {
     document.body.setAttribute("theme", currentTheme);
+    if (getsavedImage) {
+      document.body.style.backgroundImage = `url("${getsavedImage}")`;
+      console.log("[Lunaar]", "background image set");
+    }
   }
   getSavedTheme();
 

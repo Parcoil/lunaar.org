@@ -71,6 +71,7 @@
       <select id="theme-select">
         <option value="default">Default</option>
         <option value="grey">Cool Grey</option>
+        <option value="pink">Pink</option>
         <option value="ssb">Surf Shark Blue</option>
         <option value="new">Cool Purple</option>
         <option value="greypurple">Grey Purple (NEW)</option>
@@ -104,6 +105,12 @@
       <p>When this key is pressed it takes you to the defined site</p>
       <input class="input" id="panicUrl" type="text" placeholder="URL" />
       <input class="input" id="panicKey" type="text" placeholder="KEY" />
+    </div>
+    <div  class="settings-card">
+      <h1>Background Image</h1>
+      <p>Changes the background image on lunaar</p>
+   <input class="input" id="bgiminput" type="text" placeholder="IMAGE URL" style="height: 1rem;"/>
+  <button class="button" id="bgimbutton">Reset</button>
     </div>
     <div class="settings-card">
       <h1>Transport</h1>
@@ -174,12 +181,19 @@
 <style>
   .settings-card {
     backdrop-filter: blur(10px) brightness(0.6);
-    width: 300px;
-    height: 250px;
+    width: 310px;
+    height: 260px;
     border-radius: 10px;
     display: flex;
     padding: 10px;
     flex-direction: column;
+  }
+  .settings-card h1 {
+    font-size: 30px;
+  }
+  .settings-card input {
+
+    height: 1rem;
   }
   .card-container {
     display: flex;
@@ -200,11 +214,11 @@
   const transportSelect = document.getElementById("transport-select");
   const searchEngineSelect = document.getElementById("search-engine-select");
   const panicurlInput = document.getElementById("panicUrl");
+  const bgiminput = document.getElementById("bgiminput");
   const panickeyInput = document.getElementById("panicKey");
   const getpanicKey = localStorage.getItem("panicKey") || "`";
-  const getpanicUrl =
-    localStorage.getItem("panicUrl") ||
-    "https://www.google.com/search?q=elon+musk";
+  const bgimbutton = document.getElementById("bgimbutton");
+  const getpanicUrl = localStorage.getItem("panicUrl") || "https://www.google.com/search?q=elon+musk";
 
   if (!currentTheme) {
     localStorage.setItem("theme", "default");
@@ -241,6 +255,22 @@
     panicurlInput.value.includes("http://")
       ? localStorage.setItem("panicUrl", panicurlInput.value)
       : localStorage.setItem("panicUrl", `https://${panicurlInput.value}`);
+  });
+
+  bgiminput.value = localStorage.getItem("backgroundImage") || "";
+  bgiminput.addEventListener("change", () => {
+    if (bgiminput.value == "") {
+      localStorage.removeItem("backgroundImage");
+      document.body.style.backgroundImage = `url(${bgiminput.value})`;
+    } else {
+      localStorage.setItem("backgroundImage", bgiminput.value);
+      document.body.style.backgroundImage = `url(${bgiminput.value})`;
+    }
+  });
+  bgimbutton.addEventListener("click", ( ) => {
+   console.log("[Lunaar]", "resetting background image");
+    localStorage.removeItem("backgroundImage");
+    document.body.style.backgroundImage = `url()`;
   });
   function toggleBlobs() {
     const blobs = document.getElementById("blobs");
