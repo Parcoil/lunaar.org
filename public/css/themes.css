@@ -166,14 +166,6 @@ body[theme="sblue"] {
   --button: rgb(0, 72, 180);
   --border: var(--button);
 }
-body[theme="candy"] {
-  --background-filter: blur(3px) brightness(80%);
-  --bg: #bdb2ff;
-  --textcolor: #fefcfb;
-  --button: #ffc6ff;
-  --alt: rgb(218, 151, 250);
-  --border: var(--button);
-}
 body[theme="yellow"] {
   --bg: #fff248;
   --logo: var(--button);

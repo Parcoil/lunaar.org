@@ -63,9 +63,14 @@
     src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
   ></script>
   <h1>Settings</h1>
-
+ <div class="tabs-container">
+   <button class="tab-button active" id="appearance-tab">Appearance</button>
+   <button class="tab-button " id="proxy-tab">Proxy</button>
+   <button class="tab-button " id="cloak-tab">Cloaks</button>
+ </div>
+<div class="tab" data-tab-name="appearance" >
   <div class="card-container">
-    <div class="settings-card">
+      <div class="settings-card" data-themes="">
       <h1>Theme</h1>
       <p>Changes the theme on lunaar</p>
       <select id="theme-select">
@@ -92,27 +97,32 @@
         <option value="moon">Moon</option>
         <option value="red">Red</option>
         <option value="sblue">Sahara Blue</option>
-        <option value="candy">Cotton Candy</option>
       </select>
     </div>
-    <div class="settings-card">
-      <h1>About:blank</h1>
-      <p>Opens Lunaar in About:blank.</p>
-      <button onclick="aboutBlank()">Launch</button>
-    </div>
-    <div class="settings-card">
-      <h1>Panic Key</h1>
-      <p>When this key is pressed it takes you to the defined site</p>
-      <input class="input" id="panicUrl" type="text" placeholder="URL" />
-      <input class="input" id="panicKey" type="text" placeholder="KEY" />
-    </div>
-    <div  class="settings-card">
+  <div class="settings-card" data-bgimg="">
       <h1>Background Image</h1>
       <p>Changes the background image on lunaar</p>
    <input class="input" id="bgiminput" type="text" placeholder="IMAGE URL" style="height: 1rem;"/>
   <button class="button" id="bgimbutton">Reset</button>
     </div>
-    <div class="settings-card">
+      <div class="settings-card" data-blobs="">
+      <h1>Blobs</h1>
+      <p>Enables and disables moving blobs</p>
+      <h4>Not all themes support blobs</h4>
+      <button onclick="toggleBlobs()">Toggle Blobs</button>
+    </div>
+    <div class="settings-card" data-particles="">
+      <h1>Particles</h1>
+      <p>Enables and disables moving Particles</p>
+
+      <button onclick="toggleStars()">Toggle Particles</button>
+    </div>
+  </div>
+</div>
+<div class="tab" data-tab-name="proxy" style="display: none;">
+
+<div class="card-container">    
+  <div class="settings-card">
       <h1>Transport</h1>
       <p>Changes the transport on lunaar</p>
       <select name="" id="transport-select">
@@ -120,18 +130,6 @@
         <option value="epoxy">Epoxy</option>
         <option value="bare">Bare</option>
       </select>
-    </div>
-    <div class="settings-card">
-      <h1>Blobs</h1>
-      <p>Enables and disables moving blobs</p>
-      <h4>Not all themes support blobs</h4>
-      <button onclick="toggleBlobs()">Toggle Blobs</button>
-    </div>
-    <div class="settings-card">
-      <h1>Particles</h1>
-      <p>Enables and disables moving Particles</p>
-
-      <button onclick="toggleStars()">Toggle Particles</button>
     </div>
     <div class="settings-card">
       <h1>Search Engine</h1>
@@ -144,6 +142,10 @@
         <option value="brave">Brave</option>
       </select>
     </div>
+</div>
+</div>
+<div class="tab" data-tab-name="cloak" style="display: none;">
+   <div class="card-container">
     <div class="settings-card">
       <h1>Cloak</h1>
       <p>Changes the title and site icon</p>
@@ -162,7 +164,21 @@
       </select>
       <button onclick="resetCloak()">Reset</button>
     </div>
+  <div class="card-container">
+    <div class="settings-card">
+      <h1>About:blank</h1>
+      <p>Opens Lunaar in About:blank.</p>
+      <button onclick="aboutBlank()">Launch</button>
+    </div>
+    <div class="settings-card">
+      <h1>Panic Key</h1>
+      <p>When this key is pressed it takes you to the defined site</p>
+      <input class="input" id="panicUrl" type="text" placeholder="URL" />
+      <input class="input" id="panicKey" type="text" placeholder="KEY" />
+    </div>
   </div>
+   </div>
+</div>
   <p>ads help keep lunaar up and running!</p>
   <div class="footer footer-left" style="left: 10px; font-size: 20px">
     <a href="https://github.com/Parcoil/lunaar.org"
@@ -205,6 +221,21 @@
     margin: 0;
     gap: 1rem;
   }
+  .tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    backdrop-filter: blur(10px) brightness(0.6);
+    padding: 10px;
+   
+    margin: 10px;
+    border-radius: var(--rounded);
+  }
+   .tab-button.active {
+    background: var(--alt);
+    color: var(--text);
+    border-color: var(--button);
+  }
 </style>
 <script>
   const currentTheme = localStorage.getItem("theme");
@@ -219,7 +250,28 @@
   const getpanicKey = localStorage.getItem("panicKey") || "`";
   const bgimbutton = document.getElementById("bgimbutton");
   const getpanicUrl = localStorage.getItem("panicUrl") || "https://www.google.com/search?q=elon+musk";
+  const tabs = document.querySelectorAll(".tab");
+  const tabButtons = document.querySelectorAll(".tab-button");
+ 
 
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      tabButtons.forEach((button) => button.classList.remove("active"));
+      button.classList.add("active");
+      tabs.forEach((tab) => tab.style.display = "none");
+      document.querySelector(`[data-tab-name="${button.id.replace("-tab", "")}"]`).style.display = "block";
+      localStorage.setItem("activeSettingstab", button.id.replace("-tab", ""));
+    });
+  });
+
+  const activeTab = localStorage.getItem("activeSettingstab");
+
+  if (activeTab) {
+    document.querySelector(`#${activeTab}-tab`).click();
+  } else {
+    document.querySelector("#appearance-tab").click();
+  }
+  
   if (!currentTheme) {
     localStorage.setItem("theme", "default");
     select.value = currentTheme;
@@ -382,10 +434,7 @@
     },
   ];
 </script>
-
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-
     <script src="/baremux/index.js" defer></script>
     <script src="/uv/uv.bundle.js" defer></script>
     <script src="/uv/uv.config.js" defer></script>

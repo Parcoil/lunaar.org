@@ -21,6 +21,7 @@ const error = document.getElementById("proxy-error");
 const errorCode = document.getElementById("proxy-error-code");
 
 const connection = new BareMux.BareMuxConnection("/baremux/worker.js");
+
 const wispUrl =
   (location.protocol === "https:" ? "wss" : "ws") +
   "://" +
