@@ -10,11 +10,10 @@
       name="description"
       content="Discover the top unblocked games like Slope, 1v1.lol, Cookie Clicker, Geometry Dash, and more. Enjoy seamless gaming experiences at school or work."
     />
-    <meta 
-  name="keywords" 
-  content="unblocked games, slope unblocked, 1v1.lol unblocked, cookie clicker unblocked, geometry dash unblocked, roblox unblocked, minecraft unblocked, tetris unblocked, retro bowl unblocked, unblocked anime websites, unblockedgames, ubg100, ubg, nativegames, lunaar, free online games, unblocked games 66, unblocked games wtf, online gaming, play games unblocked, browser games, unblocked flash games, mobile unblocked games, top unblocked games, action games, puzzle games, multiplayer unblocked games, fun unblocked games"
->
-
+    <meta
+      name="keywords"
+      content="unblocked games, slope unblocked, 1v1.lol unblocked, cookie clicker unblocked, geometry dash unblocked, roblox unblocked, minecraft unblocked, tetris unblocked, retro bowl unblocked, unblocked anime websites, unblockedgames, ubg100, ubg, nativegames, lunaar, free online games, unblocked games 66, unblocked games wtf, online gaming, play games unblocked, browser games, unblocked flash games, mobile unblocked games, top unblocked games, action games, puzzle games, multiplayer unblocked games, fun unblocked games"
+    />
 
     <link
       rel="stylesheet"
@@ -38,117 +37,66 @@
       gtag("config", "G-W8NZMM8WN9");
     </script>
     <script src="/./js/themes.js"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
-     crossorigin="anonymous"></script>
-</head>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
+      crossorigin="anonymous"
+    ></script>
+  </head>
   <body>
-
     <div id="blobs">
       <div class="gradint"></div>
       <div class="gradint2"></div>
     </div>
     <div id="particles-js"></div>
-<main>
-  <script type="text/javascript">
-    atOptions = {
-      key: "13def82c028e7c80ebeecd26958279a7",
-      format: "iframe",
-      height: 90,
-      width: 728,
-      params: {},
-    };
-  </script>
-  <script
-    type="text/javascript"
-    src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
-  ></script>
-  <h1>Apps</h1>
+    <main>
+      <script type="text/javascript">
+        atOptions = {
+          key: "13def82c028e7c80ebeecd26958279a7",
+          format: "iframe",
+          height: 90,
+          width: 728,
+          params: {},
+        };
+      </script>
+      <script
+        type="text/javascript"
+        src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
+      ></script>
+      <h1>Apps</h1>
 
-  <div class="search-container">
-    <input
-      type="text"
-      placeholder="Search for apps"
-      class="search"
-      id="search-input"
-    />
-  </div>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search for apps"
+          class="search"
+          id="search-input"
+        />
+      </div>
 
-  <div class="app-container" id="app-container"></div>
-  <div class="footer footer-left" style="left: 10px; font-size: 20px">
-    <a href="https://github.com/Parcoil/lunaar.org"
-      ><i class="fa-brands fa-github"></i
-    ></a>
-    <a href="htts://dsc.gg/parcoil"><i class="fa-brands fa-discord"></i></a>
-  </div>
-  <div class="footer">
-    <a id="version" href="https://github.com/parcoil/lunaar.org">v0.0.0</a>
-  </div>
-  <div class="footer footer-right" style="right: 10px">
-    <a href="https://parcoil.com">© 2022-2025 Parcoil Network All rights reserved</p>
-  </div>
-</main>
-<script>
-  fetch("/json/apps.json")
-    .then((response) => response.json())
-    .then((apps) => {
-      function renderApps(filteredApps) {
-        const appContainer = document.getElementById("app-container");
-        appContainer.innerHTML = "";
-
-        filteredApps.forEach((data) => {
-          const appDiv = document.createElement("div");
-          appDiv.classList.add("app");
-          appDiv.setAttribute("key", data.id);
-
-          const img = document.createElement("img");
-          img.src = `${data.image}`;
-
-          img.alt = data.name;
-
-          const p = document.createElement("p");
-          p.textContent = data.name;
-          img.onclick = function () {
-            sessionStorage.setItem(
-              "lpurl",
-              __uv$config.prefix + __uv$config.encodeUrl(data.url)
-            );
-            location.href = "/go/";
-            sessionStorage.setItem("rawurl", data.url);
-          };
-          appDiv.appendChild(img);
-          appDiv.appendChild(p);
-          appContainer.appendChild(appDiv);
-        });
-      }
-
-      renderApps(apps);
-
-      document
-        .getElementById("search-input")
-        .addEventListener("input", function () {
-          const query = this.value.toLowerCase();
-          const filteredApps = apps.filter((app) =>
-            app.name.toLowerCase().includes(query)
-          );
-          renderApps(filteredApps);
-        });
-    })
-    .catch((error) => {
-      console.error("Error fetching the apps data:", error);
-      const appContainer = document.getElementById("app-container");
-      appContainer.innerHTML = "<p>Error loading apps data.</p>";
-    });
-</script>
-
+      <div class="app-container" id="app-container"></div>
+      <div class="footer footer-left" style="left: 10px; font-size: 20px">
+        <a href="https://github.com/Parcoil/lunaar.org"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="htts://dsc.gg/parcoil"><i class="fa-brands fa-discord"></i></a>
+      </div>
+      <div class="footer">
+        <a id="version" href="https://github.com/parcoil/lunaar.org">v0.0.0</a>
+      </div>
+      <div class="footer footer-right" style="right: 10px">
+        <a href="https://parcoil.com"
+          >© 2022-2025 Parcoil Network All rights reserved</a
+        >
+      </div>
+    </main>
+    <script src="/./js/apps.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-
     <script src="/baremux/index.js" defer></script>
     <script src="/uv/uv.bundle.js" defer></script>
     <script src="/uv/uv.config.js" defer></script>
     <script src="/uv/register-sw.js" defer></script>
     <script src="/uv/search.js" defer></script>
     <script src="/uv/proxy.js" defer></script>
-    
   </body>
 </html>

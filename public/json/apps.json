@@ -1,67 +1,67 @@
 [
-  {
-    "name": "Netflix",
-    "url": "https://www.netflix.com",
-    "image": "/./media/apps/netflix.webp"
-  },
-  {
-    "name": "Youtube",
-    "url": "https://www.youtube.com",
-    "image": "/./media/apps/youtube.webp"
-  },
-  {
-    "name": "now.gg",
-    "url": "https://now.gg",
-    "image": "/./media/apps/nowgg.webp"
-  },
-  {
-    "name": "x",
-    "url": "https://x.com",
-    "image": "/./media/apps/x.webp"
-  },
-  {
-    "name": "Gmail",
-    "url": "https://mail.google.com",
-    "image": "/./media/apps/gmail.webp"
-  },
-  {
-    "name": "Geforce NOW (BETA)",
-    "url": "https://play.geforcenow.com/mall/",
-    "image": "/./media/apps/GFN.webp"
-  },
-  {
-    "name": "Telegram (a)",
-    "url": "https://web.telegram.org/a/",
-    "image": "/./media/apps/Telegram.webp"
-  },
-  {
-    "name": "Discord",
-    "url": "https://discord.com/app",
-    "image": "/./media/apps/discord.webp"
-  },
-  {
-    "name": "Chess.com",
-    "url": "https://chess.com",
-    "image": "/./media/apps/chess.webp"
-  },
-  {
-    "name": "Spotify",
-    "url": "https://open.spotify.com/",
-    "image": "/./media/apps/spotify.webp"
-  },
-  {
-    "name": "Reddit",
-    "url": "https://reddit.com/",
-    "image": "/./media/apps/reddit.webp"
-  },
-  {
-    "name": "TikTok",
-    "url": "https://www.tiktok.com/en/",
-    "image": "/./media/apps/tiktok.webp"
-  },
-  {
-    "name": "SFlix",
-    "url": "https://sflix.to/",
-    "image": "/./media/apps/sflix.webp"
-  }
+	{
+		"name": "Netflix",
+		"url": "https://www.netflix.com",
+		"image": "/./media/apps/netflix.webp"
+	},
+	{
+		"name": "Youtube",
+		"url": "https://www.youtube.com",
+		"image": "/./media/apps/youtube.webp"
+	},
+	{
+		"name": "now.gg",
+		"url": "https://now.gg",
+		"image": "/./media/apps/nowgg.webp"
+	},
+	{
+		"name": "x",
+		"url": "https://x.com",
+		"image": "/./media/apps/x.webp"
+	},
+	{
+		"name": "Gmail",
+		"url": "https://mail.google.com",
+		"image": "/./media/apps/gmail.webp"
+	},
+	{
+		"name": "Geforce NOW (BETA)",
+		"url": "https://play.geforcenow.com/mall/",
+		"image": "/./media/apps/GFN.webp"
+	},
+	{
+		"name": "Telegram (a)",
+		"url": "https://web.telegram.org/a/",
+		"image": "/./media/apps/Telegram.webp"
+	},
+	{
+		"name": "Discord",
+		"url": "https://discord.com/app",
+		"image": "/./media/apps/discord.webp"
+	},
+	{
+		"name": "Chess.com",
+		"url": "https://chess.com",
+		"image": "/./media/apps/chess.webp"
+	},
+	{
+		"name": "Spotify",
+		"url": "https://open.spotify.com/",
+		"image": "/./media/apps/spotify.webp"
+	},
+	{
+		"name": "Reddit",
+		"url": "https://reddit.com/",
+		"image": "/./media/apps/reddit.webp"
+	},
+	{
+		"name": "TikTok",
+		"url": "https://www.tiktok.com/en/",
+		"image": "/./media/apps/tiktok.webp"
+	},
+	{
+		"name": "SFlix",
+		"url": "https://sflix.to/",
+		"image": "/./media/apps/sflix.webp"
+	}
 ]

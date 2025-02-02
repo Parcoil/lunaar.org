@@ -2,7 +2,10 @@
   font-family: "bone";
   src: url("../media/nasalization-rg.otf") format("opentype");
 }
-
+@font-face {
+  font-family: "audi";
+  src: url("../media/auditype_extendednormal.ttf") format("truetype");
+}
 body[theme="greypurple"] {
   --bg: linear-gradient(
     148deg,
@@ -12,6 +15,25 @@ body[theme="greypurple"] {
   );
 
   --textcolor: #fff;
+}
+body[theme="audi"] {
+  font-family: "audi", sans-serif;
+  --bg: rgb(36, 38, 39);
+  --button: rgb(245, 5, 55);
+  --logo: rgb(245, 5, 55);
+  --alt: rgb(245, 5, 55);
+  --textcolor: #fff;
+  --border: var(--button);
+}
+body[theme="audi"] h1,
+body[theme="audi"] h4,
+body[theme="audi"] a,
+body[theme="audi"] p,
+body[theme="audi"] span,
+body[theme="audi"] select,
+body[theme="audi"] button,
+body[theme="audi"] input {
+  font-family: "audi" !important;
 }
 body[theme="new"] {
   --background-filter: blur(3px) brightness(80%);
@@ -31,7 +53,8 @@ body[theme="new"] {
   );
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 body[theme="pink"] {
   --bg: #000;
@@ -76,7 +99,10 @@ body[theme="greyblack"] {
   --alt: rgba(27, 27, 27, 0.5);
   --button: #707070;
   --textcolor: #fff;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 body[theme="ghost"] {
@@ -92,7 +118,10 @@ body[theme="ghost"] {
   --button: rgb(160, 85, 85);
   --logo: #ffffff;
   --alt: #8d5e3f85;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 body[theme="bone"] {

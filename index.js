@@ -18,7 +18,6 @@ const bare = createBareServer("/bare/");
 const __dirname = join(fileURLToPath(import.meta.url), "..");
 const app = express();
 const publicPath = "public";
-
 app.set("views", join(__dirname, publicPath, "html"));
 
 app.use(express.static(publicPath));
@@ -29,56 +28,56 @@ app.use("/libcurl/", express.static(libcurlPath));
 app.use("/bareasmodule/", express.static(bareModulePath));
 
 app.get("/", (req, res) => {
-  res.sendFile(join(__dirname,  publicPath, "html", "index.html"));
+	res.sendFile(join(__dirname, publicPath, "html", "index.html"));
 });
 app.use("/cdn", (req, res) => {
-  cdnProxy.web(req, res, {
-    target: "https://gms.parcoil.com/",
-    changeOrigin: true,
-  });
+	cdnProxy.web(req, res, {
+		target: "https://gms.parcoil.com/",
+		changeOrigin: true,
+	});
 });
 app.get("/science", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "games.html"));
+	res.sendFile(join(__dirname, publicPath, "html", "games.html"));
 });
 app.get("/play", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "play.html"));
+	res.sendFile(join(__dirname, publicPath, "html", "play.html"));
 });
 app.get("/forum", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "forum.html"));
+	res.sendFile(join(__dirname, publicPath, "html", "forum.html"));
 });
 app.get("/math", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "apps.html"));
+	res.sendFile(join(__dirname, publicPath, "html", "apps.html"));
 });
 app.get("/settings", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "settings.html"));
+	res.sendFile(join(__dirname, publicPath, "html", "settings.html"));
 });
 app.get("/go", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "go.html"));
+	res.sendFile(join(__dirname, publicPath, "html", "go.html"));
 });
 app.get("/package.json", (req, res) => {
-  res.json(packageJson);
+	res.json(packageJson);
 });
 app.get("*", (req, res) => {
-  res.sendFile(join(__dirname, publicPath, "html", "404.html"));
+	res.sendFile(join(__dirname, publicPath, "html", "404.html"));
 });
 const server = createServer();
 
 server.on("request", (req, res) => {
-  if (bare.shouldRoute(req)) {
-    bare.routeRequest(req, res);
-  } else {
-    app(req, res);
-  }
+	if (bare.shouldRoute(req)) {
+		bare.routeRequest(req, res);
+	} else {
+		app(req, res);
+	}
 });
 
 server.on("upgrade", (req, socket, head) => {
-  if (req.url.endsWith("/wisp/")) {
-    wisp.routeRequest(req, socket, head);
-  } else if (bare.shouldRoute(req)) {
-    bare.routeUpgrade(req, socket, head);
-  } else {
-    socket.end();
-  }
+	if (req.url.endsWith("/wisp/")) {
+		wisp.routeRequest(req, socket, head);
+	} else if (bare.shouldRoute(req)) {
+		bare.routeUpgrade(req, socket, head);
+	} else {
+		socket.end();
+	}
 });
 
 let port = parseInt(process.env.PORT || "");
@@ -86,9 +85,9 @@ let port = parseInt(process.env.PORT || "");
 if (isNaN(port)) port = 8080;
 
 server.on("listening", () => {
-  const address = server.address();
-  console.log("Listening on:");
-  console.clear();
+	const address = server.address();
+	console.log("Listening on:");
+	console.clear();
 	console.log(
 		chalk.green(`🚀 Lunaar V6 Listening on http://localhost:${address.port}`),
 	);
@@ -102,12 +101,12 @@ process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 
 function shutdown() {
-  console.log("SIGTERM signal received: closing HTTP server");
-  server.close();
-  bare.close();
-  process.exit(0);
+	console.log("SIGTERM signal received: closing HTTP server");
+	server.close();
+	bare.close();
+	process.exit(0);
 }
 
 server.listen({
-  port,
+	port,
 });

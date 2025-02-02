@@ -36,6 +36,14 @@
     "proxy": true
   },
   {
+    "name": "The Surreptitious Operation",
+    "image": "thesurreptitiouspoeration.webp",
+    "url": "https://html-classic.itch.zone/html/11709191/index.html",
+    "new": true,
+
+    "proxy": true
+  },
+  {
     "name": "Block Blast",
     "image": "blockblast.webp",
     "url": "https://block-blast.io/game/block-blast/",
