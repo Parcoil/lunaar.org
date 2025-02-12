@@ -40,7 +40,20 @@
     "image": "thesurreptitiouspoeration.webp",
     "url": "https://html-classic.itch.zone/html/11709191/index.html",
     "new": true,
-
+    "proxy": true
+  },
+  {
+    "name": "Ragdoll Archers",
+    "image": "ragdollarchers.webp",
+    "url": "https://bitlifeonline.github.io/ragdoll-archers/",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Air Dogs of WW2",
+    "image": "airdogsofww2.webp",
+    "url": "https://www.friv.com/z/games/airdogsofww2/index-x.html",
+    "new": true,
     "proxy": true
   },
   {
