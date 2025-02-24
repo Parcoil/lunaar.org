@@ -70,6 +70,11 @@
     "image": "/./media/apps/tiktok.webp"
   },
   {
+    "name": "Poki",
+    "url": "https://www.poki.com/",
+    "image": "/./media/apps/poki.webp"
+  },
+  {
     "name": "SFlix",
     "url": "https://sflix.to/",
     "image": "/./media/apps/sflix.webp"

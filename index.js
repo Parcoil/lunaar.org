@@ -42,7 +42,7 @@ app.get("/science", (req, res) => {
 app.get("/play", (req, res) => {
 	res.sendFile(join(__dirname, publicPath, "html", "play.html"));
 });
-app.get("/forum", (req, res) => {
+app.get("/forum*/*", (req, res) => {
 	res.sendFile(join(__dirname, publicPath, "html", "forum.html"));
 });
 app.get("/math", (req, res) => {
