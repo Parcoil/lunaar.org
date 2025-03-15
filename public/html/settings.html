@@ -245,6 +245,37 @@
     </main>
 
     <style>
+      @keyframes slideDown {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      #tabs-container {
+        animation: slideFadeIn 0.5s ease-out;
+      }
+      /* Settings Cards Slide Up */
+      @keyframes slideUp {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .settings-card {
+        animation: slideUp 0.5s ease-out;
+        opacity: 1;
+      }
+
       .settings-card {
         backdrop-filter: blur(10px) brightness(0.6);
         width: 320px;
