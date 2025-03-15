@@ -39,6 +39,9 @@ app.use("/cdn", (req, res) => {
 app.get("/science", (req, res) => {
 	res.sendFile(join(__dirname, publicPath, "html", "games.html"));
 });
+app.get("/search", (req, res) => {
+	res.sendFile(join(__dirname, publicPath, "html", "search.html"));
+});
 app.get("/play", (req, res) => {
 	res.sendFile(join(__dirname, publicPath, "html", "play.html"));
 });

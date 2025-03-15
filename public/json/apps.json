@@ -60,6 +60,11 @@
     "image": "/./media/apps/spotify.webp"
   },
   {
+    "name": "Pandora",
+    "url": "https://www.pandora.com/",
+    "image": "/./media/apps/pandora.webp"
+  },
+  {
     "name": "Reddit",
     "url": "https://reddit.com/",
     "image": "/./media/apps/reddit.webp"

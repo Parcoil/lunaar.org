@@ -72,6 +72,69 @@
     "proxy": true
   },
   {
+    "name": "Gears Of Babies",
+    "image": "gearsofbabies.webp",
+    "url": "https://html-classic.itch.zone/html/7508667/index.html?v=1732313656",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Henry Stickman Collection",
+    "image": "henrystickman.webp",
+    "url": "https://henrystickmin.io/",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Rocket Dancer",
+    "image": "rocketdancer.webp",
+    "url": "https://www.coolmathgames.com/0-rocket-dancer/play",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Football Bros",
+    "image": "footballbros.webp",
+    "url": "https://fb.dunkinthe.net/",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "YoHoHo",
+    "image": "yohoho-io.webp",
+    "url": "https://yohoho.io/",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Sprunki Pyramixed",
+    "image": "SP.webp",
+    "url": "https://wowtbc.net/sprunkin/sprunki-pyramixed/index.html",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Legends of IdleOn",
+    "image": "lpio.webp",
+    "url": "https://www.legendsofidleon.com/ytGl5oc/",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Ship Lander",
+    "image": "lander.webp",
+    "url": "https://ehmorris.com/lander/",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Tradecraft",
+    "image": "tradecraft.webp",
+    "url": "https://www.coolmathgames.com/0-tradecraft/play",
+    "new": true,
+    "proxy": true
+  },
+  {
     "name": "Ragdoll Archers",
     "image": "ragdollarchers.webp",
     "url": "https://bitlifeonline.github.io/ragdoll-archers/",

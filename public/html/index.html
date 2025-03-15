@@ -20,7 +20,7 @@
       href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
     />
     <script src="https://cdn.jsdelivr.net/gh/Parcoil/cloak@main/src/index.js"></script>
-    <script src="/./js/main.js"></script>
+    <script src="/./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <!-- Google tag (gtag.js) -->
     <script
@@ -60,24 +60,11 @@
         </div>
       </h1>
       <p class="slogan">A fast and secure web proxy.</p>
-
-      <div class="search-container">
-        <img src="/media/cloaks/google.png" alt="" id="search-icon" />
-
-        <form id="proxy-form">
-          <input
-            id="proxy-search-engine"
-            value="https://www.google.com/search?q=%s"
-            type="hidden"
-          />
-          <input
-            id="proxy-address"
-            type="text"
-            placeholder="Search the the web with Google"
-            class="search"
-          />
-        </form>
-      </div>
+      <a href="/search"
+        ><button>
+          <i class="fa-regular fa-magnifying-glass"></i> &nbsp; Search
+        </button></a
+      >
       <div>
         <p id="proxy-error"></p>
         <pre id="proxy-error-code"></pre>
@@ -126,6 +113,7 @@
       }
       .slogan {
         margin-top: 10px;
+        margin-bottom: 10px;
       }
       .typing-container {
         display: inline-flex;
