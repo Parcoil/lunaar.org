@@ -57,6 +57,55 @@
 		"proxy": true
 	},
 	{
+		"name": "Run 3",
+		"image": "run3.webp",
+		"url": "https://www.coolmathgames.com/0-run-3/play",
+		"new": true,
+		"proxy": true
+	},
+	{
+		"name": "Territorial.io",
+		"image": "territorialio.webp",
+		"url": "https://territorial.io/",
+		"new": true,
+		"proxy": true
+	},
+	{
+		"name": "Two Hands of Satan",
+		"image": "twohandsofsatan.webp",
+		"url": "https://html-classic.itch.zone/html/11888883/index.html",
+		"new": true,
+		"proxy": true
+	},
+	{
+		"name": "Baby The Great",
+		"image": "babythegreat.webp",
+		"url": "https://html-classic.itch.zone/html/9184803/index.html",
+		"new": true,
+		"proxy": true
+	},
+	{
+		"name": "Soldier of Ruins",
+		"image": "soilderofruins.webp",
+		"url": "https://html-classic.itch.zone/html/13108166/index.html",
+		"new": true,
+		"proxy": true
+	},
+	{
+		"name": "Time shooter 2",
+		"image": "timeshooter.webp",
+		"url": "https://games.crazygames.com/en_US/time-shooter-2/index.html?v=1.326",
+		"new": true,
+		"proxy": true
+	},
+	{
+		"name": "Five Nights at Freddy's 1",
+		"image": "freddy.webp",
+		"url": "https://run3.io/popgame/fnaf/fnaf1/",
+		"new": true,
+		"proxy": true
+	},
+	{
 		"name": "Bit Planes",
 		"image": "bitplanes.webp",
 		"url": "https://html-classic.itch.zone/html/10450244/index.html",
