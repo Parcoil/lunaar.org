@@ -25,6 +25,11 @@
 		"image": "/./media/apps/gmail.webp"
 	},
 	{
+		"name": "Pinterest",
+		"url": "https://www.pinterest.com/",
+		"image": "/./media/apps/pinterest.webp"
+	},
+	{
 		"name": "Geforce NOW (BETA)",
 		"url": "https://play.geforcenow.com/mall/",
 		"image": "/./media/apps/GFN.webp"

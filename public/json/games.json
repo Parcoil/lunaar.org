@@ -71,6 +71,20 @@
 		"proxy": true
 	},
 	{
+		"name": "Sandbox City",
+		"image": "sandbox-city.webp",
+		"url": "https://games.crazygames.com/en_US/sandbox-city---cars-zombies-ragdolls/index.html?v=1.327",
+		"new": true,
+		"proxy": true
+	},
+	{
+		"name": "Slice Master",
+		"image": "slicemaster.webp",
+		"url": "https://www.coolmathgames.com/0-slice-master/play",
+		"new": true,
+		"proxy": true
+	},
+	{
 		"name": "Two Hands of Satan",
 		"image": "twohandsofsatan.webp",
 		"url": "https://html-classic.itch.zone/html/11888883/index.html",
@@ -102,6 +116,13 @@
 		"name": "Five Nights at Freddy's 1",
 		"image": "freddy.webp",
 		"url": "https://run3.io/popgame/fnaf/fnaf1/",
+		"new": true,
+		"proxy": true
+	},
+	{
+		"name": "Five Nights at Freddy's 2",
+		"image": "freddy2.webp",
+		"url": "https://run3.io/popgame/fnaf/fnaf2.html",
 		"new": true,
 		"proxy": true
 	},
