@@ -11,6 +11,7 @@ import express from "express";
 import { createServer } from "node:http";
 import { join } from "node:path";
 import packageJson from "./package.json" with { type: "json" };
+import compression from "compression";
 import { fileURLToPath } from "node:url";
 
 const cdnProxy = httpProxy.createProxyServer();
@@ -18,8 +19,9 @@ const bare = createBareServer("/bare/");
 const __dirname = join(fileURLToPath(import.meta.url), "..");
 const app = express();
 const publicPath = "public";
-app.set("views", join(__dirname, publicPath, "html"));
 
+app.set("views", join(__dirname, publicPath, "html"));
+app.use(compression());
 app.use(express.static(publicPath));
 app.use("/uv/", express.static(uvPath));
 app.use("/epoxy/", express.static(epoxyPath));

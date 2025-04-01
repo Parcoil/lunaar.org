@@ -83,7 +83,7 @@
         height: 100px;
         background: transparent;
         backdrop-filter: blur(10px) brightness(70%);
-        transition: transform 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         align-items: center;
         justify-content: center;
         display: flex;
@@ -97,13 +97,15 @@
 
       .search-item img {
         border-radius: 10px;
+        user-select: none;
       }
-
       .search-item:hover {
         background-color: rgba(104, 104, 104, 0.384);
         transform: scale(1.05);
       }
-
+      .search-item:active {
+        transform: scale(0.91);
+      }
       .search-item-text {
         position: absolute;
         bottom: -50px;
