@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Appes | Learnaar</title>
+    <title>Apps | Lunaar</title>
     <link rel="icon" href="/media/logo.svg" type="image/x-icon" id="favicon" />
     <link rel="stylesheet" href="/./css/main.css" />
     <meta
@@ -42,39 +42,6 @@
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1565760898646999"
       crossorigin="anonymous"
     ></script>
-
-    <style>
-      img,
-      .game img,
-      .app img {
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        -o-filter: grayscale(100%);
-      }
-
-      .app-container,
-      .game-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0 !important;
-        margin-top: 40px;
-        max-width: 96%;
-      }
-
-      .app,
-      .game {
-        margin: 0;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-      }
-    </style>
   </head>
   <body>
     <div id="blobs">
@@ -116,7 +83,7 @@
       <div class="title-icon">
         <i class="fa-solid fa-grid-2"></i>
       </div>
-      <h1>apes</h1>
+      <h1>Apps</h1>
 
       <div class="search-container">
         <input
@@ -139,7 +106,7 @@
       </div>
       <div class="footer footer-right" style="right: 10px">
         <a href="https://parcoil.com"
-          >© 2006-2011 Poopspring internetz some rights reserved</a
+          >© 2022-2025 Parcoil Network All rights reserved</a
         >
       </div>
     </main>
@@ -148,28 +115,6 @@
         font-size: 50px;
       }
     </style>
-
-    <script>
-      window.addEventListener("load", function () {
-        function getRandomInt(min, max) {
-          return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-
-        setTimeout(function () {
-          const appItems = document.querySelectorAll(".app");
-
-          appItems.forEach((item) => {
-            const topMargin = getRandomInt(5, 40);
-            const rightMargin = getRandomInt(5, 40);
-            const bottomMargin = getRandomInt(5, 40);
-            const leftMargin = getRandomInt(5, 40);
-
-            item.style.margin = `${topMargin}px ${rightMargin}px ${bottomMargin}px ${leftMargin}px`;
-          });
-        }, 500);
-      });
-    </script>
-
     <script src="/./js/apps.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="/baremux/index.js" defer></script>
