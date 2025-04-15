@@ -84,13 +84,13 @@ document.getElementById("search-input").addEventListener("input", (event) => {
 });
 
 const notifications = [
-	'Have a issue? create a ticket in our <a href="https://discord.gg/parcoil" class="link">Discord Server</a>',
-	'Try our our other proxy <a href="https://gostarlight.xyz" class="link">Starlight</a>',
-	'Dont forget to star lunaar on <a href="https://github.com/Parcoil/lunaar" class="link">Github</a>',
-	'Join the <a href="https://discord.gg/parcoil" class="link">Discord Server</a>',
+	'Have a issue? create a ticket in our <a href="https://discord.gg/parcoil" class="link">&#x44;&#x69;&#x73;&#x63;&#x6F;&#x72;&#x64; Server</a>',
+	'Try our our other &#x70;&#x72;&#x6F;&#x78;&#x79; <a href="https://gostarlight.xyz" class="link">&#x53;&#x74;&#x61;&#x72;&#x6C;&#x69;&#x67;&#x68;&#x74;</a>',
+	'Dont forget to star &#x6C;&#x75;&#x6E;&#x61;&#x61;&#x72; on <a href="https://github.com/Parcoil/lunaar" class="link">&#x47;&#x69;&#x74;&#x68;&#x75;&#x62;</a>',
+	'Join the <a href="https://discord.gg/parcoil" class="link">&#x44;&#x69;&#x73;&#x63;&#x6F;&#x72;&#x64; Server</a>',
 	"🧀",
 	"idk what to put here",
-	'GTA 6 FREE <a class="link" href="/uv/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-wctah%3Dv%3FxtFXjm5RgE0">DOWNLOAD</a>',
+	
 ];
 
 function getRandomNotification() {

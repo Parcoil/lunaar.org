@@ -28,6 +28,34 @@
     "proxy": true
   },
   {
+    "name": "Pokemon Emerald",
+    "image": "pokemon.webp",
+    "url": "https://chiboga.github.io/chilibowlflash/GBA-gh-pages/launcher.html#pokemonemerald",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "House of Hazards",
+    "image": "houseofhazards.webp",
+    "url": "https://kdata1.com/2020/10/House_of_Hazards/",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Babel Tower",
+    "image": "babeltower.webp",
+    "url": "https://www.coolmathgames.com/0-babel-tower/play",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Game of life",
+    "image": "gameoflife.webp",
+    "url": "https://playgameoflife.com/",
+    "new": true,
+    "proxy": true
+  },
+  {
     "name": "Space Waves",
     "image": "spacewaves.webp",
     "url": "https://games.crazygames.com/en_US/space-waves/index.html",
@@ -74,6 +102,13 @@
     "name": "Sandbox City",
     "image": "sandbox-city.webp",
     "url": "https://games.crazygames.com/en_US/sandbox-city---cars-zombies-ragdolls/index.html?v=1.327",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "GeoFS Flight Simulator",
+    "image": "geofs.webp",
+    "url": "https://www.geo-fs.com/geofs.php?v=3.9",
     "new": true,
     "proxy": true
   },

@@ -5,7 +5,7 @@ const texts = [
 	"Freedom",
 	"Perfection",
 	"The Future",
-	"The Ultimate Proxy",
+	"The Ultimate Experience",
 	"The best site!",
 	"Speed",
 	"Privacy",

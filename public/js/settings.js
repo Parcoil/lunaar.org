@@ -12,7 +12,7 @@ const bgimbutton = document.getElementById("bgimbutton");
 const bgimgselect = document.getElementById("bgimgselect");
 const getpanicUrl =
 	localStorage.getItem("panicUrl") ||
-	"https://www.google.com/search?q=elon+musk";
+	"https://www.google.com/search?q=nasa";
 document.addEventListener("DOMContentLoaded", function () {
 	const tabButtons = document.querySelectorAll(".tab-button");
 	const tabs = document.querySelectorAll(".tab");
@@ -193,7 +193,7 @@ const cloaks = [
 	{
 		name: "default",
 		icon: "./media/logo.svg",
-		title: "Lunaar",
+		title: "&#x4C;&#x75;&#x6E;&#x61;&#x61;&#x72;",
 	},
 	{
 		name: "drive",

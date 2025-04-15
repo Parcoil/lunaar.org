@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="/science">
           <div class="navbar-item" id="games">
             <i class="fa-regular fa-gamepad"></i>
-            <span>Games</span>
+            <span>&#x47;&#x61;&#x6D;&#x65;&#x73;</span>
           </div>
         </a>
              <a href="/search">
