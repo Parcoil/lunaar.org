@@ -25,6 +25,11 @@
     "image": "/./media/apps/gmail.webp"
   },
   {
+    "name": "SoundCloud",
+    "url": "https://soundcloud.com/",
+    "image": "/./media/apps/soundcloud.webp"
+  },
+  {
     "name": "Pinterest",
     "url": "https://www.pinterest.com/",
     "image": "/./media/apps/pinterest.webp"

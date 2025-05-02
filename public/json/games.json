@@ -14,6 +14,21 @@
     "proxy": true
   },
   {
+    "name": "Crazy Cattle 3D",
+    "image": "crazycattle.webp",
+    "url": "https://yujiandemo.com/",
+    "new": true,
+    "proxy": true,
+    "top": true
+  },
+  {
+    "name": "Papa's Cheezeria",
+    "image": "papascheese.webp",
+    "url": "https://papasgamesfree.io/flipline/papas-cheeseria/",
+    "new": true,
+    "proxy": true
+  },
+  {
     "name": "Sausage Flip",
     "image": "sausageflip.webp",
     "url": "https://b1d3aec5-9ce6-4594-a03c-b16800650df0.poki-gdn.com/5ca822fd-ad50-4b5a-8817-91a4e4f0e1c1/index.html?country=US&amp;ccpaApplies=0&amp;url_referrer=https%3A%2F%2Fpoki.com%2F&amp;tag=pg-f0e2210ee52f43a739fcb9af425ccdc48e0f4e6f&amp;site_id=3&amp;iso_lang=en&amp;poki_url=https%3A%2F%2Fpoki.com%2Fen%2Fg%2Fsausage-flip&amp;hoist=yes&amp;nonPersonalized=n&amp;familyFriendly=n&amp;categories=9%2C37%2C103%2C839%2C1013%2C1137%2C1139%2C1140%2C1141%2C1190&amp;ab=6b2076f9c2fa162199fe491f83ee1f2f273f2222&amp;experiment=a-d50e9ec5&amp;game_id=b1d3aec5-9ce6-4594-a03c-b16800650df0&amp;game_version_id=5ca822fd-ad50-4b5a-8817-91a4e4f0e1c1&amp;inspector=0&amp;csp=1",
@@ -21,9 +36,31 @@
     "proxy": true
   },
   {
+    "name": "Bit Flappy Tower Tiny Square",
+    "image": "bigflappy.webp",
+    "url": "https://games.crazygames.com/en_US/big-flappy-tower-vs-tiny-square/index.html?skipPrerollFirstSessionExp25=&v=1.330",
+    "new": true,
+    "proxy": true
+  },
+  {
     "name": "BuildNow GG",
     "image": "buildnow-gg.webp",
     "url": "https://cloudirector.is-a.dev/BuildNowGG/",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Brain Rot Clicker",
+    "image": "brainrot.webp",
+    "url": "https://games.crazygames.com/en_US/italian-brainrot-clicker-usp/index.html",
+    "new": true,
+    "proxy": true,
+    "top": true
+  },
+  {
+    "name": "Speed Stars Racing",
+    "image": "speedstars.webp",
+    "url": "https://speedstarsgame.com/gg/speed-stars/",
     "new": true,
     "proxy": true
   },
@@ -45,6 +82,20 @@
     "name": "Babel Tower",
     "image": "babeltower.webp",
     "url": "https://www.coolmathgames.com/0-babel-tower/play",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Pokemon Ruby",
+    "image": "pokemonruby.webp",
+    "url": "https://static.arcadespot.com/retroemulator.php?system=gba&game=2015/12/pokemon-ruby.zip",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Grand Action Simulator New York",
+    "image": "grandaction.webp",
+    "url": "https://games.crazygames.com/en_US/grand-action-simulator-new-york-car-gang/index.html?skipPrerollFirstSessionExp25=true&v=1.330",
     "new": true,
     "proxy": true
   },
