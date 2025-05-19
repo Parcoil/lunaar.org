@@ -40,7 +40,10 @@
     "image": "bigflappy.webp",
     "url": "https://games.crazygames.com/en_US/big-flappy-tower-vs-tiny-square/index.html?skipPrerollFirstSessionExp25=&v=1.330",
     "new": true,
+    "crazy": true,
     "proxy": true
+    
+
   },
   {
     "name": "BuildNow GG",
@@ -55,6 +58,7 @@
     "url": "https://games.crazygames.com/en_US/italian-brainrot-clicker-usp/index.html",
     "new": true,
     "proxy": true,
+    "crazy": true,
     "top": true
   },
   {
@@ -93,16 +97,89 @@
     "proxy": true
   },
   {
-    "name": "Grand Action Simulator New York",
-    "image": "grandaction.webp",
-    "url": "https://games.crazygames.com/en_US/grand-action-simulator-new-york-car-gang/index.html?skipPrerollFirstSessionExp25=true&v=1.330",
+    "name": "Game of life",
+    "image": "gameoflife.webp",
+    "url": "https://playgameoflife.com/",
     "new": true,
     "proxy": true
   },
   {
-    "name": "Game of life",
-    "image": "gameoflife.webp",
-    "url": "https://playgameoflife.com/",
+    "name": "Gun Mayhem",
+    "image": "gunmayhem.webp",
+    "url": "https://gunmayhem.io/game/gun-mayhem/Gun_Mayhem",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Google baseball",
+    "image": "googlebaseball.webp",
+    "url": "https://www.google.com/logos/2019/july4th19/r6/july4th19.html?hl=en",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Cheese Chompers 3D",
+    "image": "cheesechompers.webp",
+    "url": "https://html-classic.itch.zone/html/13638568/CheeseChompers3dWebUpdate%20-%20Copy/index.html",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Globle Unlimited",
+    "image": "globleunlimited.webp",
+    "url": "https://html-classic.itch.zone/html/13638568/CheeseChompers3dWebUpdate%20-%20Copy/index.html",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Papas scooperia",
+    "image": "papascooperia.webp",
+    "url": "https://www.coolmathgames.com/0-papas-scooperia/play",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Polytrack",
+    "image": "polytrack.webp",
+    "url": "https://games.crazygames.com/en_US/polytrack/index.html?czyDynamicPriceFloorVariantsCZY_14537=portalandgameframe&v=1.331",
+    "new": true,
+    "crazy": true,
+    "proxy": true
+  },
+  {
+    "name": "Tennis Masters",
+    "image": "tennismasters.webp",
+    "url": "https://games.crazygames.com/en_US/tennis-masters/index.html?czyDynamicPriceFloorVariantsCZY_14537=portalandgameframe&v=1.331",
+    "new": true,
+    "crazy": true,
+    "proxy": true
+  },
+  {
+    "name": "Penalty Shootout",
+    "image": "penaltyshootout.webp",
+    "url": "https://games.crazygames.com/en_US/penalty-shootout-multi-league/index.html?czyDynamicPriceFloorVariantsCZY_14537=portalandgameframe&v=1.331",
+    "new": true,
+    "crazy": true,
+    "proxy": true
+  },
+  {
+    "name": "FPS Assault Shooter",
+    "image": "fpsassault.webp",
+    "url": "https://html5.gamedistribution.com/0eb473da1c0546f39e348d83219db5e7/?gdpr-targeting=1&gdpr-tracking=1&gdpr-third-party=1&euConsent=undefined&gd_sdk_referrer_url=https%3A%2F%2Fwww.bgames.com%2Fgame%2Ffps-assault-shooter%2F",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Eaglercraft",
+    "image": "eaglercraft.webp",
+    "url": "https://eaglercraft.su",
+    "new": true,
+    "proxy": true
+  },
+  {
+    "name": "Soccerbros",
+    "image": "soccerbros.webp",
+    "url": "https://soccerbros.gg/",
     "new": true,
     "proxy": true
   },
@@ -111,6 +188,7 @@
     "image": "spacewaves.webp",
     "url": "https://games.crazygames.com/en_US/space-waves/index.html",
     "new": true,
+    "crazy": true,
     "proxy": true
   },
   {
@@ -154,6 +232,7 @@
     "image": "sandbox-city.webp",
     "url": "https://games.crazygames.com/en_US/sandbox-city---cars-zombies-ragdolls/index.html?v=1.327",
     "new": true,
+    "crazy": true,
     "proxy": true
   },
   {
@@ -196,6 +275,7 @@
     "image": "timeshooter.webp",
     "url": "https://games.crazygames.com/en_US/time-shooter-2/index.html?v=1.326",
     "new": true,
+    "crazy": true,
     "proxy": true
   },
   {
@@ -1525,7 +1605,7 @@
   {
     "name": "Roblox (Now.gg)",
     "image": "roblox.webp",
-    "url": "https://now.gg/apps/a/10020/b.html",
+    "url": "https://websitesball.com/",
     "new": false,
     "proxy": true,
     "top": true,

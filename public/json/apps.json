@@ -15,9 +15,19 @@
     "image": "/./media/apps/nowgg.webp"
   },
   {
+    "name": "Coolmathgames",
+    "url": "https://www.coolmathgames.com/",
+    "image": "/./media/apps/coolmathgames.webp"
+  },
+  {
     "name": "x",
     "url": "https://x.com",
     "image": "/./media/apps/x.webp"
+  },
+  {
+    "name": "Gauth AI",
+    "url": "https://www.gauthmath.com/",
+    "image": "/./media/apps/gauth.webp"
   },
   {
     "name": "Gmail",

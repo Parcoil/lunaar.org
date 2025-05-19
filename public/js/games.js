@@ -41,6 +41,8 @@ function displayGames(games) {
 		if (game.exp) {
 			gameDiv.querySelector("p").innerHTML += ' <span class="badge">🧪</span>';
 		}
+		
+		
 		if (game.updated) {
 			gameDiv.querySelector("p").innerHTML +=
 				' <span class="badge">🆕 Updated</span>';
@@ -59,6 +61,9 @@ function displayGames(games) {
 			}
 			if (game.exp) {
 				alert("this game is experimental 🧪");
+			}
+			if (game.crazy) {
+				alert("You must click 'Continue Offline' to play this game");
 			}
 		});
 		gamesContainer.appendChild(gameDiv);
