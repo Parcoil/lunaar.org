@@ -15,13 +15,12 @@ Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
 
 - Clean UI
 - Fast Built-in Proxy
-- 200+ Built-in Games
+- 350+ Built-in Games
 - Theme Support
 - And much more!
 - Inspect element
 - Tab cloaker [(Using cloakjs)](https://github.com/Parcoil/cloak)
 - Panic Key
-- Forum (On official domains!)
 
 ## Deployment
 
@@ -51,7 +50,7 @@ cd lunaar.org
 Next you need to enable pnpm
 
 ```bash
-corepack enable pnpm 
+npm install -g pnpm@latest-10
 ```
 
 Now install the required packages
