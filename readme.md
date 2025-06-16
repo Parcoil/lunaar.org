@@ -2,7 +2,12 @@
 
 <img src="https://github.com/Parcoil/lunaar.org/blob/main/public/media/LLBIG.svg" height="250px">
 <h4 align="center">Lunaar is the ultimate proxy with added games and features.</h4>
+
+[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1dh3v.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
+
 </div>
+
+
 
 ![Lunaar image](https://i.imgur.com/j3QKeVE.png)
 
@@ -24,7 +29,12 @@ Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
 
 ## Demo
 
-[lunaar.org](https://lunaar.org)
+
+
+[lunaar.org](https://lunaar.org) [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1dh3v.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
+
+
+
 
 ## Deployment
 

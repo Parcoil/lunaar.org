@@ -18,6 +18,7 @@ const cdnProxy = httpProxy.createProxyServer();
 const bare = createBareServer("/bare/");
 const __dirname = join(fileURLToPath(import.meta.url), "..");
 const app = express();
+app.disable('x-powered-by');
 const publicPath = "public";
 
 app.set("views", join(__dirname, publicPath, "html"));

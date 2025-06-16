@@ -7,6 +7,34 @@
     "proxy": true
   },
   {
+    "name": "Survival Karts",
+    "image": "survivalkarts.webp",
+    "url": "https://freezenova.cdn.msnfun.com/9mxlkjlsf9bg/v11/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwMjFFMDg1MTE1NTY2RTBDMDM3NTFFNUMxNEI4NkZEMSIsImxvY2FsZSI6ImVuLXVzIiwiZW50cnlQb2ludElkIjoiIn0",
+    "top": false,
+    "proxy": true
+  },
+  {
+    "name": "neal.fun",
+    "image": "nealfun.webp",
+    "url": "https://neal.fun/",
+    "top": true,
+    "proxy": true
+  },
+  {
+    "name": "Soccer Legends",
+    "image": "soccerlegends.webp",
+    "url": "https://games.crazygames.com/en_US/soccer-legends-2021/index.html?czyDynamicPriceFloorVariantsCZY_14537=portal&czyEPBPooling_CZY_14716=enabled&enableAdmiral=0&ssrDevice=desktop&v=1.333",
+    "top": true,
+    "proxy": true
+  },
+  {
+    "name": "Stone Grass",
+    "image": "stonegrass.webp",
+    "url": "https://games.crazygames.com/en_US/stone-grass-mowing-simulator/index.html?czyDynamicPriceFloorVariantsCZY_14537=portal&czyEPBPooling_CZY_14716=enabled&enableAdmiral=0&ssrDevice=desktop&v=1.333",
+    "top": true,
+    "proxy": true
+  },
+  {
     "name": "Monkey Mart",
     "image": "monkey-mart-1-optimized.webp",
     "url": "https://www.rapidwebapp.com/game/monkeymart/index.html",
@@ -42,8 +70,6 @@
     "new": true,
     "crazy": true,
     "proxy": true
-    
-
   },
   {
     "name": "BuildNow GG",
@@ -1704,14 +1730,15 @@
     "url": "ruffle",
     "new": false
   },
+
   {
     "name": "Super Mario 64",
     "image": "sm64.webp",
     "url": "https://augustberchelmann.com/mario/",
-
     "top": true,
     "proxy": true
   },
+
   {
     "name": "Stick Slasher",
     "image": "stickslasher.webp",
