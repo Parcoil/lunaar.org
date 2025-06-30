@@ -208,5 +208,12 @@
     <script src="/uv/register-sw.js" defer></script>
     <script src="/uv/search.js" defer></script>
     <script src="/uv/proxy.js" defer></script>
+    <script>
+      const anonID = localStorage.getItem('anon_id') || crypto.randomUUID();
+      localStorage.setItem('anon_id', anonID);
+      posthog.identify(anonID);
+      posthog.capture('pageview');
+      posthog.register({ browser_id: anonID });
+    </script>
   </body>
 </html>

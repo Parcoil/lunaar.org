@@ -343,5 +343,12 @@
     src="//rethinkexercisesupplement.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
   ></script>
 </div>
+    <script>
+      const anonID = localStorage.getItem('anon_id') || crypto.randomUUID();
+      localStorage.setItem('anon_id', anonID);
+      posthog.identify(anonID);
+      posthog.capture('pageview');
+      posthog.register({ browser_id: anonID });
+    </script>
   </body>
 </html>
