@@ -196,13 +196,6 @@
     "proxy": true
   },
   {
-    "name": "Eaglercraft",
-    "image": "eaglercraft.webp",
-    "url": "https://eaglercraft.su",
-    "new": true,
-    "proxy": true
-  },
-  {
     "name": "Soccerbros",
     "image": "soccerbros.webp",
     "url": "https://soccerbros.gg/",
@@ -1416,30 +1409,6 @@
     "name": "Mine Blocks",
     "image": "splash.png",
     "url": "mineblocks",
-    "new": false
-  },
-  {
-    "name": "Minecraft 1.5",
-    "image": "splash.jpeg",
-    "url": "minecraft-15",
-    "new": false
-  },
-  {
-    "name": "Minecraft 1.8",
-    "image": "splash.png",
-    "url": "minecraft-18",
-    "new": false
-  },
-  {
-    "name": "Minecraft Classic",
-    "image": "pack.png",
-    "url": "minecraft-classic",
-    "new": false
-  },
-  {
-    "name": "Minecraft Beta",
-    "image": "bg_main.png",
-    "url": "minecraftbeta",
     "new": false
   },
   {
