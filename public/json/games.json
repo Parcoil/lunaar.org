@@ -3,8 +3,15 @@
     "name": "Request a game",
     "image": "gforms.webp",
     "url": "https://forms.gle/19kup3CDeHMgBw696",
-    "new": true,
+    "new": false,
     "proxy": true
+  },
+  {
+    "name": "Plants vs Zombies",
+    "image": "cover.png",
+    "url": "pvz",
+    "new": true,
+    "top": false
   },
   {
     "name": "Survival Karts",
@@ -38,14 +45,14 @@
     "name": "Monkey Mart",
     "image": "monkey-mart-1-optimized.webp",
     "url": "https://www.rapidwebapp.com/game/monkeymart/index.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Crazy Cattle 3D",
     "image": "crazycattle.webp",
     "url": "https://yujiandemo.com/",
-    "new": true,
+    "new": false,
     "proxy": true,
     "top": true
   },
@@ -53,21 +60,21 @@
     "name": "Papa's Cheezeria",
     "image": "papascheese.webp",
     "url": "https://papasgamesfree.io/flipline/papas-cheeseria/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Sausage Flip",
     "image": "sausageflip.webp",
     "url": "https://b1d3aec5-9ce6-4594-a03c-b16800650df0.poki-gdn.com/5ca822fd-ad50-4b5a-8817-91a4e4f0e1c1/index.html?country=US&amp;ccpaApplies=0&amp;url_referrer=https%3A%2F%2Fpoki.com%2F&amp;tag=pg-f0e2210ee52f43a739fcb9af425ccdc48e0f4e6f&amp;site_id=3&amp;iso_lang=en&amp;poki_url=https%3A%2F%2Fpoki.com%2Fen%2Fg%2Fsausage-flip&amp;hoist=yes&amp;nonPersonalized=n&amp;familyFriendly=n&amp;categories=9%2C37%2C103%2C839%2C1013%2C1137%2C1139%2C1140%2C1141%2C1190&amp;ab=6b2076f9c2fa162199fe491f83ee1f2f273f2222&amp;experiment=a-d50e9ec5&amp;game_id=b1d3aec5-9ce6-4594-a03c-b16800650df0&amp;game_version_id=5ca822fd-ad50-4b5a-8817-91a4e4f0e1c1&amp;inspector=0&amp;csp=1",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Bit Flappy Tower Tiny Square",
     "image": "bigflappy.webp",
     "url": "https://games.crazygames.com/en_US/big-flappy-tower-vs-tiny-square/index.html?skipPrerollFirstSessionExp25=&v=1.330",
-    "new": true,
+    "new": false,
     "crazy": true,
     "proxy": true
   },
@@ -75,14 +82,14 @@
     "name": "BuildNow GG",
     "image": "buildnow-gg.webp",
     "url": "https://cloudirector.is-a.dev/BuildNowGG/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Brain Rot Clicker",
     "image": "brainrot.webp",
     "url": "https://games.crazygames.com/en_US/italian-brainrot-clicker-usp/index.html",
-    "new": true,
+    "new": false,
     "proxy": true,
     "crazy": true,
     "top": true
@@ -91,84 +98,84 @@
     "name": "Speed Stars Racing",
     "image": "speedstars.webp",
     "url": "https://speedstarsgame.com/gg/speed-stars/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Pokemon Emerald",
     "image": "pokemon.webp",
     "url": "https://chiboga.github.io/chilibowlflash/GBA-gh-pages/launcher.html#pokemonemerald",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "House of Hazards",
     "image": "houseofhazards.webp",
     "url": "https://kdata1.com/2020/10/House_of_Hazards/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Babel Tower",
     "image": "babeltower.webp",
     "url": "https://www.coolmathgames.com/0-babel-tower/play",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Pokemon Ruby",
     "image": "pokemonruby.webp",
     "url": "https://static.arcadespot.com/retroemulator.php?system=gba&game=2015/12/pokemon-ruby.zip",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Game of life",
     "image": "gameoflife.webp",
     "url": "https://playgameoflife.com/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Gun Mayhem",
     "image": "gunmayhem.webp",
     "url": "https://gunmayhem.io/game/gun-mayhem/Gun_Mayhem",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Google baseball",
     "image": "googlebaseball.webp",
     "url": "https://www.google.com/logos/2019/july4th19/r6/july4th19.html?hl=en",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Cheese Chompers 3D",
     "image": "cheesechompers.webp",
     "url": "https://html-classic.itch.zone/html/13638568/CheeseChompers3dWebUpdate%20-%20Copy/index.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Globle Unlimited",
     "image": "globleunlimited.webp",
     "url": "https://html-classic.itch.zone/html/13638568/CheeseChompers3dWebUpdate%20-%20Copy/index.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Papas scooperia",
     "image": "papascooperia.webp",
     "url": "https://www.coolmathgames.com/0-papas-scooperia/play",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Polytrack",
     "image": "polytrack.webp",
     "url": "https://games.crazygames.com/en_US/polytrack/index.html?czyDynamicPriceFloorVariantsCZY_14537=portalandgameframe&v=1.331",
-    "new": true,
+    "new": false,
     "crazy": true,
     "proxy": true
   },
@@ -176,7 +183,7 @@
     "name": "Tennis Masters",
     "image": "tennismasters.webp",
     "url": "https://games.crazygames.com/en_US/tennis-masters/index.html?czyDynamicPriceFloorVariantsCZY_14537=portalandgameframe&v=1.331",
-    "new": true,
+    "new": false,
     "crazy": true,
     "proxy": true
   },
@@ -184,7 +191,7 @@
     "name": "Penalty Shootout",
     "image": "penaltyshootout.webp",
     "url": "https://games.crazygames.com/en_US/penalty-shootout-multi-league/index.html?czyDynamicPriceFloorVariantsCZY_14537=portalandgameframe&v=1.331",
-    "new": true,
+    "new": false,
     "crazy": true,
     "proxy": true
   },
@@ -192,21 +199,21 @@
     "name": "FPS Assault Shooter",
     "image": "fpsassault.webp",
     "url": "https://html5.gamedistribution.com/0eb473da1c0546f39e348d83219db5e7/?gdpr-targeting=1&gdpr-tracking=1&gdpr-third-party=1&euConsent=undefined&gd_sdk_referrer_url=https%3A%2F%2Fwww.bgames.com%2Fgame%2Ffps-assault-shooter%2F",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Soccerbros",
     "image": "soccerbros.webp",
     "url": "https://soccerbros.gg/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Space Waves",
     "image": "spacewaves.webp",
     "url": "https://games.crazygames.com/en_US/space-waves/index.html",
-    "new": true,
+    "new": false,
     "crazy": true,
     "proxy": true
   },
@@ -214,21 +221,21 @@
     "name": "Gats.io",
     "image": "gatsio.webp",
     "url": "https://gats.io/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Taming.io",
     "image": "tamingio.webp",
     "url": "https://taming.io/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Baby Sniper In Vietnam",
     "image": "babysniper.webp",
     "url": "https://html-classic.itch.zone/html/10450244/index.html",
-    "new": true,
+    "new": false,
     "top": true,
     "proxy": true
   },
@@ -236,21 +243,21 @@
     "name": "Run 3",
     "image": "run3.webp",
     "url": "https://www.coolmathgames.com/0-run-3/play",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Territorial.io",
     "image": "territorialio.webp",
     "url": "https://territorial.io/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Sandbox City",
     "image": "sandbox-city.webp",
     "url": "https://games.crazygames.com/en_US/sandbox-city---cars-zombies-ragdolls/index.html?v=1.327",
-    "new": true,
+    "new": false,
     "crazy": true,
     "proxy": true
   },
@@ -258,42 +265,42 @@
     "name": "GeoFS Flight Simulator",
     "image": "geofs.webp",
     "url": "https://www.geo-fs.com/geofs.php?v=3.9",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Slice Master",
     "image": "slicemaster.webp",
     "url": "https://www.coolmathgames.com/0-slice-master/play",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Two Hands of Satan",
     "image": "twohandsofsatan.webp",
     "url": "https://html-classic.itch.zone/html/11888883/index.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Baby The Great",
     "image": "babythegreat.webp",
     "url": "https://html-classic.itch.zone/html/9184803/index.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Soldier of Ruins",
     "image": "soilderofruins.webp",
     "url": "https://html-classic.itch.zone/html/13108166/index.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Time shooter 2",
     "image": "timeshooter.webp",
     "url": "https://games.crazygames.com/en_US/time-shooter-2/index.html?v=1.326",
-    "new": true,
+    "new": false,
     "crazy": true,
     "proxy": true
   },
@@ -301,21 +308,21 @@
     "name": "Five Nights at Freddy's 1",
     "image": "freddy.webp",
     "url": "https://run3.io/popgame/fnaf/fnaf1/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Five Nights at Freddy's 2",
     "image": "freddy2.webp",
     "url": "https://run3.io/popgame/fnaf/fnaf2.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Bit Planes",
     "image": "bitplanes.webp",
     "url": "https://html-classic.itch.zone/html/10450244/index.html",
-    "new": true,
+    "new": false,
     "top": true,
     "proxy": true
   },
@@ -323,112 +330,112 @@
     "name": "The Surreptitious Operation",
     "image": "thesurreptitiouspoeration.webp",
     "url": "https://html-classic.itch.zone/html/11709191/index.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Gears Of Babies",
     "image": "gearsofbabies.webp",
     "url": "https://html-classic.itch.zone/html/7508667/index.html?v=1732313656",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Henry Stickman Collection",
     "image": "henrystickman.webp",
     "url": "https://henrystickmin.io/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Rocket Dancer",
     "image": "rocketdancer.webp",
     "url": "https://www.coolmathgames.com/0-rocket-dancer/play",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Football Bros",
     "image": "footballbros.webp",
     "url": "https://fb.dunkinthe.net/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "YoHoHo",
     "image": "yohoho-io.webp",
     "url": "https://yohoho.io/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Sprunki Pyramixed",
     "image": "SP.webp",
     "url": "https://wowtbc.net/sprunkin/sprunki-pyramixed/index.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Legends of IdleOn",
     "image": "lpio.webp",
     "url": "https://www.legendsofidleon.com/ytGl5oc/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Ship Lander",
     "image": "lander.webp",
     "url": "https://ehmorris.com/lander/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Tradecraft",
     "image": "tradecraft.webp",
     "url": "https://www.coolmathgames.com/0-tradecraft/play",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Ragdoll Archers",
     "image": "ragdollarchers.webp",
     "url": "https://bitlifeonline.github.io/ragdoll-archers/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Air Dogs of WW2",
     "image": "airdogsofww2.webp",
     "url": "https://www.friv.com/z/games/airdogsofww2/index-x.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Block Blast",
     "image": "blockblast.webp",
     "url": "https://block-blast.io/game/block-blast/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Snow Rider 3D",
     "image": "snowrider3d.webp",
     "url": "https://tylerpalko.github.io/gamehub/snowrider3d/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Free Simon",
     "image": "freesimon.webp",
     "url": "https://block-blast.io/game/block-blast/",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
     "name": "Burrito Bison: Launcha Libre",
     "image": "burritobisonlauncha.webp",
     "url": "https://zayaruzostreetorgan.com/uploads/5/5/6/7/5567194/custom_themes/607721921917323670/burrito-bison-ll.html",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
@@ -487,6 +494,12 @@
     "image": "favicon.ico",
     "url": "DogeMiner",
     "new": false
+  },
+  {
+    "name": "DogeMiner2",
+    "image": "img/dogeminer2.webp",
+    "url": "dogeminer2/play",
+    "new": true
   },
   {
     "name": "HexGL",
@@ -764,7 +777,7 @@
     "name": "Chibi Knight",
     "image": "chibiknight.webp",
     "url": "https://chibi-knight.game-files.crazygames.com/ruffle/chibiknight.html?v=1.307",
-    "new": true,
+    "new": false,
     "proxy": true
   },
   {
