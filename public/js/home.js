@@ -1,7 +1,7 @@
 document.body.style.overflow = "hidden";
 
 const texts = [
-	"Lunaar",
+	"Vboi's Games",
 	"Freedom",
 	"Perfection",
 	"The Future",
@@ -10,7 +10,6 @@ const texts = [
 	"Speed",
 	"Privacy",
 	"Security",
-	"Pickles Pickles Pickles Pickles Pickles Pickles Pickles Pickles Pickles Pickles Pickles Pickles Pickles Pickles Pickles",
 ];
 const typingSpeed = 90;
 const delayBetweenTexts = 1500;
