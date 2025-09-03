@@ -78,7 +78,7 @@
         </div>
       </h1>
       <p class="slogan">
-        &#x41;&#x20;&#x66;&#x61;&#x73;&#x74;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x73;&#x65;&#x63;&#x75;&#x72;&#x65;&#x20;&#x77;&#x65;&#x62;&#x20;&#x70;&#x72;&#x6F;&#x78;&#x79;&#x2E;&#xA;
+        The new and improved version of Vboi's Games!
       </p>
       <a href="/search"
         ><button>
@@ -104,8 +104,7 @@
       </div>
       <div class="footer footer-right" style="right: 10px">
         <a href="https://github.com/VIN07grinder-ALT/VboisOfficial">
-          &copy;&#x20;&#x32;&#x30;&#x32;&#x35;&#x20;&#x50;&#x61;&#x72;&#x63;&#x6F;&#x69;&#x6C;&#x20;&#x4E;&#x65;&#x74;&#x77;&#x6F;&#x72;&#x6B;
-          
+          &copy; 2025 Vboi&#39;s Games Project
       </div>
     </div>
 
@@ -151,12 +150,5 @@
     <script src="/uv/register-sw.js" defer></script>
     <script src="/uv/search.js" defer></script>
     <script src="/uv/proxy.js" defer></script>
-    <script>
-      const anonID = localStorage.getItem('anon_id') || crypto.randomUUID();
-      localStorage.setItem('anon_id', anonID);
-      posthog.identify(anonID);
-      posthog.capture('pageview');
-      posthog.register({ browser_id: anonID });
-    </script>
   </body>
 </html>
