@@ -1,22 +1,21 @@
-async function fetchGames() {
-  try {
-    const response = await fetch("./json/games.json");
-    const games = await response.json();
-    window.gamesData = games;
+console.log(
+  `%cLunaar%c v7 - games.js Loaded`,
+  "font-size: 16px; background-color: #9282fb; border-top-left-radius: 5px; border-bottom-left-radius: 5px; padding: 4px; font-weight: bold;",
+  "font-size: 16px; background-color: #090810; font-weight: bold; padding: 4px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;"
+);
 
-    displayGames(games);
-    updateSearchBarPlaceholder(games.length);
-  } catch (error) {
-    console.error("Error fetching games:", error);
+let allGames = [];
+
+function renderGames(games) {
+  const gamesList = document.getElementById("games-list");
+  if (!gamesList) {
+    console.error('Element with id "games-list" not found.');
+    return;
   }
-}
-
-function displayGames(games) {
-  const gamesContainer = document.getElementById("game-container");
-  gamesContainer.innerHTML = "";
-  if (!games || games.length == 0) {
-    const html = `<div><i class="fa-solid fa-circle-exclamation big-icon"></i><h1>No games found. </h1></div>`;
-    gamesContainer.innerHTML = html;
+  gamesList.innerHTML = "";
+  if (games.length === 0) {
+    gamesList.innerHTML =
+      '<p style="color:var(--text-color);opacity:0.7;"><i <i class="fa-solid fa-circle-exclamation"></i> No games found.</p>';
     return;
   }
 
@@ -24,9 +23,11 @@ function displayGames(games) {
     if (a.name === "Request a game") return -1;
     if (b.name === "Request a game") return 1;
 
+    //hot games
     if (a.top && !b.top) return -1;
     if (!a.top && b.top) return 1;
 
+    // new games
     if (a.new && !b.new) return -1;
     if (!a.new && b.new) return 1;
 
@@ -34,123 +35,95 @@ function displayGames(games) {
   });
 
   sortedGames.forEach((game) => {
-    const gameDiv = document.createElement("div");
-    gameDiv.className = "game fade-in";
-    const firstSegment = game.url.split("/")[0];
-    const gameImage = game.proxy
-      ? `/media/games/${game.image}`
-      : `/cdn/${firstSegment}/${game.image}`;
+    const gameItem = document.createElement("div");
+    gameItem.className = "game-item";
 
-    gameDiv.innerHTML = `
-        <img src="${gameImage}" alt="${game.name}" loading="lazy" width="200" height="200" />
-        <p>${game.name}</p>
-      `;
-
-    if (game.new) {
-      gameDiv.querySelector("p").innerHTML += ' <span class="badge">New</span>';
+    const img = document.createElement("img");
+    img.alt = game.name;
+    img.loading = "lazy";
+    if (game.proxy) {
+      img.src = `/media/games/${game.image}`;
+    } else {
+      const firstSegment = game.url.split("/")[0];
+      img.src = `/cdn/${firstSegment}/${game.image}`;
     }
+    gameItem.appendChild(img);
+    const badgeContainer = document.createElement("div");
+    badgeContainer.className = "badge-container";
+    gameItem.appendChild(badgeContainer);
     if (game.top) {
-      gameDiv.querySelector("p").innerHTML +=
-        ' <span class="badge">Hot 🔥</span>';
+      const badge = document.createElement("span");
+      badge.innerHTML = `<i class="fa-solid fa-fire"></i> HOT`;
+      badge.className = "badge";
+      badgeContainer.appendChild(badge);
+    }
+    if (game.new) {
+      const badge = document.createElement("span");
+      badge.innerHTML = `<i class="fa-solid fa-sparkles"></i> NEW`;
+      badge.className = "badge";
+      badgeContainer.appendChild(badge);
     }
     if (game.exp) {
-      gameDiv.querySelector("p").innerHTML += ' <span class="badge">🧪</span>';
+      const badge = document.createElement("span");
+      badge.innerHTML = `<i class="fa-solid fa-vial"></i> EXP`;
+      badge.className = "badge";
+      badgeContainer.appendChild(badge);
     }
-
     if (game.updated) {
-      gameDiv.querySelector("p").innerHTML +=
-        ' <span class="badge">🆕 Updated</span>';
+      const badge = document.createElement("span");
+      badge.innerHTML = `<i class="fa-solid fa-sparkles"></i> UPDATED`;
+      badge.className = "badge";
+      badgeContainer.appendChild(badge);
     }
-    const imageElement = gameDiv.querySelector("img");
-    imageElement.addEventListener("click", () => {
-      if (game.proxy) {
-        sessionStorage.setItem(
-          "lpurl",
-          __uv$config.prefix + __uv$config.encodeUrl(game.url)
-        );
-        sessionStorage.setItem("rawurl", `${game.url}`);
-        window.location.href = "/./go";
-      } else {
-        window.location.href = `./play?game=${game.url}`;
-      }
-      if (game.exp) {
-        alert("this game is experimental 🧪");
-      }
-      if (game.crazy) {
-        alert("You must click 'Continue Offline' to play this game");
-      }
-    });
-    gamesContainer.appendChild(gameDiv);
+    const name = document.createElement("p");
+    name.className = "game-link";
+    name.textContent = game.name;
+    gameItem.appendChild(name);
+
+    if (game.proxy) {
+      img.onclick = (e) => {
+        e.preventDefault();
+        if (localStorage.getItem("proxy-backend") === "scramjet") {
+          const tmp = window.sjEncodeAndGo(game.url);
+          sessionStorage.setItem("lpurl", tmp);
+          window.location.href = "/go";
+        } else {
+          sessionStorage.setItem(
+            "lpurl",
+            __uv$config.prefix + __uv$config.encodeUrl(game.url)
+          );
+          sessionStorage.setItem("rawurl", game.url);
+          window.location.href = "/go";
+        }
+      };
+    } else {
+      img.onclick = (e) => {
+        e.preventDefault();
+        sessionStorage.setItem("lpurl", game.url);
+        window.location.href = "/go";
+      };
+    }
+
+    gamesList.appendChild(gameItem);
   });
 }
 
-function searchGames(searchTerm) {
-  const filteredGames = window.gamesData.filter((game) =>
-    game.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  displayGames(filteredGames);
-  updateSearchBarPlaceholder(filteredGames.length);
-}
-
-function updateSearchBarPlaceholder(count) {
-  document.getElementById(
-    "search-input"
-  ).placeholder = `Search for ${count} games`;
-}
-
-document.getElementById("search-input").addEventListener("input", (event) => {
-  searchGames(event.target.value);
-});
-
-const notifications = [
-  'Have a issue? create a ticket in our <a href="https://discord.gg/parcoil" class="link">&#x44;&#x69;&#x73;&#x63;&#x6F;&#x72;&#x64; Server</a>',
-  'Try our our other &#x70;&#x72;&#x6F;&#x78;&#x79; <a href="https://gostarlight.xyz" class="link">&#x53;&#x74;&#x61;&#x72;&#x6C;&#x69;&#x67;&#x68;&#x74;</a>',
-  'Dont forget to star &#x6C;&#x75;&#x6E;&#x61;&#x61;&#x72; on <a href="https://github.com/Parcoil/lunaar" class="link">&#x47;&#x69;&#x74;&#x68;&#x75;&#x62;</a>',
-  'Join the <a href="https://discord.gg/parcoil" class="link">&#x44;&#x69;&#x73;&#x63;&#x6F;&#x72;&#x64; Server</a>',
-  "🧀",
-  "idk what to put here",
-];
-
-function getRandomNotification() {
-  const index = Math.floor(Math.random() * notifications.length);
-  return notifications[index];
-}
-
-function showNotification() {
-  const notificationDiv = document.getElementById("notification");
-  if (!notificationDiv) return;
-
-  const message = getRandomNotification();
-  notificationDiv.innerHTML = `
-    <i class="fa-solid fa-circle-info"></i>
-    &nbsp;
-      ${message}
-      <span class="close-btn">&times;</span>
-    `;
-  notificationDiv.classList.remove("hide");
-  notificationDiv.classList.add("show");
-}
-
-function hideNotification() {
-  const notificationDiv = document.getElementById("notification");
-  if (!notificationDiv) return;
-
-  notificationDiv.classList.remove("show");
-  notificationDiv.classList.add("hide");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const notificationDiv = document.getElementById("notification");
-
-  notificationDiv.addEventListener("click", (e) => {
-    if (e.target.classList.contains("close-btn")) {
-      hideNotification();
-    }
+fetch("json/games.json")
+  .then((response) => response.json())
+  .then((data) => {
+    allGames = data;
+    const searchInput = document.getElementById("search-input");
+    searchInput.placeholder = `Search for ${allGames.length} games`;
+    renderGames(allGames);
   });
 
-  showNotification();
-  setInterval(showNotification, 15000);
-
-  fetchGames();
-});
+const searchInput = document.getElementById("search-input");
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    const value = e.target.value.toLowerCase();
+    const filtered = allGames.filter((game) =>
+      game.name.toLowerCase().includes(value)
+    );
+    renderGames(filtered);
+  });
+}

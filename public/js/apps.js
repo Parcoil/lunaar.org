@@ -1,56 +1,74 @@
-fetch("/json/apps.json")
-	.then((response) => response.json())
-	.then((apps) => {
-		function renderApps(filteredApps) {
-			const appContainer = document.getElementById("app-container");
-			appContainer.innerHTML = "";
+console.log(
+  `%cLunaar%c v7 - apps.js Loaded`,
+  "font-size: 16px; background-color: #9282fb; border-top-left-radius: 5px; border-bottom-left-radius: 5px; padding: 4px; font-weight: bold;",
+  "font-size: 16px; background-color: #090810; font-weight: bold; padding: 4px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;"
+);
 
-			if (!filteredApps || filteredApps.length === 0) {
-				const html = `<div><i class="fa-solid fa-circle-exclamation big-icon"></i><h1>No Apps found. </h1></div>`;
-				appContainer.innerHTML = html;
-				return;
-			}
+let allApps = [];
 
-			filteredApps.forEach((data) => {
-				const appDiv = document.createElement("div");
-				appDiv.classList.add("app", "fade-in");
+function renderApps(apps) {
+  const appsList = document.getElementById("apps-list");
+  if (!appsList) {
+    console.error('Element with id "apps-list" not found.');
+    return;
+  }
+  appsList.innerHTML = "";
+  if (apps.length === 0) {
+    appsList.innerHTML =
+      '<p style="color:var(--text-color);opacity:0.7;"><i class="fa-solid fa-circle-exclamation"></i> No apps found.</p>';
+    return;
+  }
 
-				const img = document.createElement("img");
-				img.src = data.image;
-				img.alt = data.name;
+  apps.forEach((app) => {
+    const appItem = document.createElement("div");
+    appItem.className = "app-item";
 
-				const p = document.createElement("p");
-				p.textContent = data.name;
+    const img = document.createElement("img");
+    img.alt = app.name;
+    img.loading = "lazy";
+    img.src = app.image;
+    appItem.appendChild(img);
 
-				img.onclick = function () {
-					sessionStorage.setItem(
-						"lpurl",
-						__uv$config.prefix + __uv$config.encodeUrl(data.url),
-					);
-					sessionStorage.setItem("rawurl", data.url);
-					location.href = "/go/";
-				};
+    const name = document.createElement("p");
+    name.className = "app-link";
+    name.textContent = app.name;
+    appItem.appendChild(name);
 
-				appDiv.appendChild(img);
-				appDiv.appendChild(p);
-				appContainer.appendChild(appDiv);
-			});
-		}
+    appItem.onclick = (e) => {
+      e.preventDefault();
+      if (localStorage.getItem("proxy-backend") === "scramjet") {
+        const tmp = window.sjEncodeAndGo(app.url);
+        sessionStorage.setItem("lpurl", tmp);
+        window.location.href = "/go";
+      } else {
+        sessionStorage.setItem(
+          "lpurl",
+          __uv$config.prefix + __uv$config.encodeUrl(app.url)
+        );
+        window.location.href = "/go";
+      }
+    };
 
-		renderApps(apps);
+    appsList.appendChild(appItem);
+  });
+}
 
-		document
-			.getElementById("search-input")
-			.addEventListener("input", function () {
-				const query = this.value.toLowerCase();
-				const filteredApps = apps.filter((app) =>
-					app.name.toLowerCase().includes(query),
-				);
-				renderApps(filteredApps);
-			});
-	})
-	.catch((error) => {
-		console.error("Error fetching the apps data:", error);
-		document.getElementById("app-container").innerHTML =
-			"<p>Error loading apps data.</p>";
-	});
+fetch("json/apps.json")
+  .then((response) => response.json())
+  .then((data) => {
+    allApps = data;
+    const searchInput = document.getElementById("search-input");
+    searchInput.placeholder = `Search for ${allApps.length} apps`;
+    renderApps(allApps);
+  });
+
+const searchInput = document.getElementById("search-input");
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    const value = e.target.value.toLowerCase();
+    const filtered = allApps.filter((app) =>
+      app.name.toLowerCase().includes(value)
+    );
+    renderApps(filtered);
+  });
+}

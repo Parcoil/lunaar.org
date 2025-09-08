@@ -1,89 +1,63 @@
 <div align=center>
 
-<img src="https://github.com/Parcoil/lunaar.org/blob/main/public/media/LLBIG.svg" height="250px">
-<h4 align="center">Lunaar is the ultimate proxy with added games and features.</h4>
+<img src="./public/media/logo.svg" height="60px">
+<h1>Lunaar V7</h1>
+<h4 align="center">the best unblocked proxy.</h4>
 
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1dh3v.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 
 </div>
 
-
-
-![Lunaar image](https://i.imgur.com/j3QKeVE.png)
+![Lunaar image](https://api.microlink.io/?url=https%3A%2F%2Flunaar.org&screenshot=true&embed=screenshot.url)
 
 > [!IMPORTANT]
 > If you fork Lunaar, please give it a star.
 
 Join our [Discord Server](https://dsc.gg/parcoil) for links and more!
 
-## Features
+## V7 Features
 
-- Clean UI
+- Modern UI
 - Fast Built-in Proxy
 - 350+ Built-in Games
 - Theme Support
-- And much more!
+- AI Chatbot
 - Inspect element
 - Tab cloaker [(Using cloakjs)](https://github.com/Parcoil/cloak)
 - Panic Key
+- And much more!
 
 ## Demo
 
-
-
 [lunaar.org](https://lunaar.org) [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/1dh3v.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 
-
-
+[Lunaar Docs](https://docs.lunaar.org)
 
 ## Deployment
 
 > [!IMPORTANT]
 > You cannot deploy Lunaar to a static host, such as GitHub Pages or Cloudflare Pages.
 
-### You can click the button below to quickly deploy to a platform.
+## Deploying your own version of lunaar
 
-[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Parcoil/lunaar.org)
-[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Parcoil/lunaar.org&branch=main&name=Lunaar)
-[![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repositoryurl=https://github.com/Parcoil/lunaar.org)
-<a target="_blank" href="https://glitch.com/edit/#!/import/github/parcoil/lunaar.org"><img alt="Remix on Glitch" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg"></a>
+[Click here to host lunaar](https://github.com/parcoil/lunaar-deploy)
 
-### Local / Server Deployment
+# 🤖 Luna AI
 
-#### Prerequisites:
+### 1. Get a Groq API Key
 
-- Node 20.x
+1. Visit [Groq Console](https://console.groq.com/)
+2. Sign up or log in to your account
+3. Navigate to API Keys section
+4. Create a new API key
+5. Copy the API key (it starts with `gsk_`)
 
-To get started you need to clone the repo
+### 2. Configure Environment Variables
 
-```bash
-git clone https://github.com/Parcoil/lunaar.org
-cd lunaar.org
-```
-
-Next you need to enable pnpm
+Create a `.env` file in your project root with:
 
 ```bash
-npm install -g pnpm@latest-10
-```
-
-Now install the required packages
-
-```bash
-pnpm install
-```
-
-Now start lunaar
-
-```bash
-pnpm start
-```
-
-#### Updating Lunaar
-
-```bash
-cd lunaar.org
-git pull --force
+GROQ_API_KEY=your_actual_groq_api_key_here
 ```
 
 ## Issues

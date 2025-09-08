@@ -1,0 +1,525 @@
+/* Font Imports */
+@font-face {
+  font-family: "bone";
+  src: url("../media/nasalization-rg.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "audi";
+  src: url("../media/auditype_extendednormal.ttf") format("truetype");
+}
+
+:root {
+  --primary-color: #9282fb;
+  --secondary-color: #613367;
+  --accent-color: #b263a6;
+  --bg-2-color: #171527;
+  --bg-color: #090810;
+  --text-color: #e5e4f2;
+  --text-secondary-color: #b0b0b0;
+  --text-placeholder-color: #6c6c6c;
+  --border-color: #2c2c3f;
+  --font-family: "Poppins", sans-serif;
+  --font-size: 16px;
+  --border-radius: 12px;
+  /* --blob-1: var(--primary-color);
+  --blob-2: var(--accent-color);
+  --blob-3: var(--secondary-color); */
+}
+
+/* Light Theme */
+body[theme="light"] {
+  --primary-color: #6700ac;
+  --secondary-color: #a54ae2;
+  --accent-color: #ae91ff;
+  --bg-2-color: #f8f8f8;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --text-secondary-color: #666666;
+  --text-placeholder-color: #999999;
+  --border-color: #dddddd;
+}
+/* body[theme="light"] {
+  --primary-color: #4a90e2;
+  --secondary-color: #00c3ff;
+  --accent-color: #23eef5;
+  --bg-2-color: #f8f8f8;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --text-secondary-color: #666666;
+  --text-placeholder-color: #999999;
+  --border-color: #dddddd;
+} */
+
+body[theme="v6"] {
+  --primary-color: rgb(132, 1, 255);
+  --secondary-color: #9940ff;
+  --accent-color: rgb(132, 1, 255);
+  --bg-2-color: rgb(40, 0, 80);
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: rgb(68, 0, 156);
+  --border-radius: 15px;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  --blob-1: rgb(132, 1, 255);
+  --blob-2: rgb(132, 1, 255);
+  --blob-3: rgb(132, 1, 255);
+}
+
+/* Grey Purple Theme */
+body[theme="greypurple"] {
+  --primary-color: #2b2b2b;
+  --secondary-color: #333333;
+  --accent-color: #2a2a2a;
+  --bg-2-color: #1a1a1a;
+  --bg-color: #2b2b2b;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #444444;
+  background: linear-gradient(
+    148deg,
+    rgba(43, 43, 43, 1) 0%,
+    rgba(0, 0, 0, 1) 49%,
+    rgba(42, 42, 42, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  --blob-1: rgb(132, 1, 255);
+  --blob-2: rgb(132, 1, 255);
+  --blob-3: rgb(132, 1, 255);
+}
+
+/* Audi Theme */
+body[theme="audi"] {
+  --primary-color: #f50537;
+  --secondary-color: #242627;
+  --accent-color: #f50537;
+  --bg-2-color: #480404;
+  --bg-color: #242627;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #f50537;
+  --font-family: "audi", sans-serif;
+}
+
+/* New Theme */
+body[theme="new"] {
+  --primary-color: #aa09ac;
+  --secondary-color: #8700ff;
+  --accent-color: #8700ff;
+  --bg-2-color: #66026b;
+  --bg-color: #8700ff;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #aa09ac;
+  --border-radius: 30px;
+  background: linear-gradient(
+    180deg,
+    hsla(256, 100%, 43%, 1) 0%,
+    hsla(280, 99%, 50%, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Pink Theme */
+body[theme="pink"] {
+  --primary-color: #ff0099;
+  --secondary-color: #a84b8c;
+  --accent-color: #a23ac2;
+  --bg-2-color: #790a57;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #ff0099;
+}
+
+/* Grey Theme */
+body[theme="grey"] {
+  --primary-color: #6b6b6b;
+  --secondary-color: #141414;
+  --accent-color: #333333;
+  --bg-2-color: #1a1a1a;
+  --bg-color: #141414;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #6b6b6b;
+  --border-radius: 20px;
+}
+
+/* SSB Theme */
+body[theme="ssb"] {
+  --primary-color: #00b5cf;
+  --secondary-color: #329b8d;
+  --accent-color: #008599;
+  --bg-2-color: #1f7085;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #00b5cf;
+}
+
+/* Grey Black Theme */
+body[theme="greyblack"] {
+  --primary-color: #707070;
+  --secondary-color: #6a6161;
+  --accent-color: #1b1b1b;
+  --bg-2-color: #3d3c3c;
+  --bg-color: #6a6161;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #707070;
+  background: linear-gradient(
+    156deg,
+    rgba(106, 97, 97, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Ghost Theme */
+body[theme="ghost"] {
+  --primary-color: #a05555;
+  --secondary-color: #613e3e;
+  --accent-color: #8d5e3f;
+  --bg-2-color: #551717;
+  --bg-color: #3f1c1c;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #a05555;
+  background: linear-gradient(
+    153deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(149, 43, 43, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Blue Theme */
+body[theme="blue"] {
+  --primary-color: #2700ff;
+  --secondary-color: #2e497c;
+  --accent-color: #0058ff;
+  --bg-2-color: #19347c;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #2700ff;
+}
+
+/* Bone Theme */
+body[theme="bone"] {
+  --primary-color: #818181;
+  --secondary-color: #252525;
+  --accent-color: #383838;
+  --bg-2-color: #1a1a1a;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #494949;
+  --font-family: "bone", sans-serif;
+}
+
+/* GB Theme */
+body[theme="gb"] {
+  --primary-color: #22223b;
+  --secondary-color: #404357;
+  --accent-color: #080b2b;
+  --bg-2-color: #5e6283;
+  --bg-color: #4a4e69;
+  --text-color: #f2e9e4;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #22223b;
+}
+
+/* GG Theme */
+body[theme="gg"] {
+  --primary-color: #5e999b;
+  --secondary-color: #2f3e46;
+  --accent-color: #48606d;
+  --bg-2-color: rgb(38, 56, 61);
+  --bg-color: #2f3e46;
+  --text-color: #cad2c5;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #5e999b;
+}
+
+/* Brown Theme */
+body[theme="brown"] {
+  --primary-color: #8a817c;
+  --secondary-color: #463f3a;
+  --accent-color: rgb(49, 49, 49);
+  --bg-2-color: #5c5252;
+  --bg-color: #463f3a;
+  --text-color: #f4f3ee;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #8a817c;
+}
+
+/* DG Theme */
+body[theme="dg"] {
+  --primary-color: #ee6c4d;
+  --secondary-color: #293241;
+  --accent-color: #f08f77;
+  --bg-2-color: #9b5743;
+  --bg-color: #293241;
+  --text-color: #e0fbfc;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #ee6c4d;
+}
+
+/* Moon Theme */
+body[theme="moon"] {
+  --primary-color: #4a4e69;
+  --secondary-color: #22223b;
+  --accent-color: #37375f;
+  --bg-2-color: #262435;
+  --bg-color: #22223b;
+  --text-color: #f2e9e4;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #4a4e69;
+}
+
+/* Red Theme */
+body[theme="red"] {
+  --primary-color: #430708;
+  --secondary-color: #a4161a;
+  --accent-color: #470000;
+  --bg-2-color: #8f1212;
+  --bg-color: #a4161a;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #660708;
+}
+
+/* SBlue Theme */
+body[theme="sblue"] {
+  --primary-color: #0048b4;
+  --secondary-color: #001f54;
+  --accent-color: #034078;
+  --bg-2-color: #0e2649;
+  --bg-color: #001f54;
+  --text-color: #fefcfb;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #0048b4;
+}
+
+/* Yellow Theme */
+/* body[theme="yellow"] {
+  --primary-color: #8a8701;
+  --secondary-color: #fff248;
+  --accent-color: #776f00;
+  --bg-2-color: #1a1a1a;
+  --bg-color: #fff248;
+  --text-color: #000000;
+  --text-secondary-color: #333333;
+  --text-placeholder-color: #666666;
+  --border-color: #8a8701;
+  --border-radius: 0px;
+} */
+
+/* Mocha Theme */
+body[theme="mocha"] {
+  --primary-color: #caa6f7;
+  --secondary-color: #1e1e2e;
+  --accent-color: #a789ca;
+  --bg-2-color: #181825;
+  --bg-color: #1e1e2e;
+  --text-color: #cdd6f4;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #45475a;
+  --border-radius: 25px;
+}
+
+/* Orange Theme */
+body[theme="orange"] {
+  --primary-color: #ffa600;
+  --secondary-color: #9e773d;
+  --accent-color: #b97900;
+  --bg-2-color: #432302;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #ffa600;
+}
+
+/* YouTube Dark Theme */
+body[theme="youtube-dark"] {
+  --primary-color: #af0000;
+  --secondary-color: #460101;
+  --accent-color: #b90000;
+  --bg-2-color: #250404;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #3b0909;
+}
+
+/* 3kh0 Theme */
+body[theme="3kh0"] {
+  --primary-color: #22c55e;
+  --secondary-color: #121212;
+  --accent-color: #1caa50;
+  --bg-2-color: #0e331e;
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #22c55e;
+}
+
+/* Art Class Theme */
+body[theme="artclass"] {
+  --primary-color: #0284d4;
+  --secondary-color: #1a2023;
+  --accent-color: #0567a3;
+  --bg-2-color: #092a3d;
+  --bg-color: #1a2023;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #0284d4;
+}
+
+/* Starlight Theme */
+body[theme="starlight"] {
+  --primary-color: #155e75;
+  --secondary-color: #121c22;
+  --accent-color: #186d86;
+  --bg-2-color: #102b31;
+  --bg-color: #121c22;
+  --text-color: #ffffff;
+  --text-secondary-color: #cccccc;
+  --text-placeholder-color: #999999;
+  --border-color: #155e75;
+  --border-radius: 25px;
+}
+
+/* SVG Fill Colors */
+.st0 {
+  fill: var(--accent-color) !important;
+}
+
+.st1 {
+  fill: var(--primary-color) !important;
+}
+
+/* Special Theme Overrides */
+body[theme="light"] #particles-js {
+  filter: invert(100%);
+}
+/* 
+body[theme="light"] .card {
+  background-color: transparent;
+} */
+
+/* body[theme="light"] button,
+body[theme="light"] select {
+  background-color: transparent !important;
+  border: #000 1px solid;
+} */
+
+body[theme="light"] .navbar-item {
+  color: #000;
+}
+
+body[theme="light"] .navbar-item.active {
+  color: #ffffff;
+}
+
+body[theme="yellow"] .btn {
+  border-radius: 0px;
+}
+
+body[theme="yellow"] #particles-js {
+  filter: invert(100%);
+}
+
+body[theme="new"] .card,
+body[theme="grey"] .card,
+body[theme="greyblack"] .card,
+body[theme="ghost"] .card,
+body[theme="bone"] .card,
+body[theme="gb"] .card,
+body[theme="gg"] .card,
+body[theme="brown"] .card,
+body[theme="dg"] .card,
+body[theme="moon"] .card,
+body[theme="red"] .card,
+body[theme="sblue"] .card,
+body[theme="mocha"] .card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px) brightness(80%);
+}
+
+/* Add background-filter to themes that originally had it */
+body[theme="grey"],
+body[theme="greyblack"],
+body[theme="ghost"],
+body[theme="bone"],
+body[theme="gb"],
+body[theme="gg"],
+body[theme="brown"],
+body[theme="dg"],
+body[theme="moon"],
+body[theme="red"],
+body[theme="sblue"] {
+  --background-filter: blur(3px) brightness(80%);
+}
+
+/* Font Family Overrides */
+body[theme="audi"] h1,
+body[theme="audi"] h4,
+body[theme="audi"] a,
+body[theme="audi"] p,
+body[theme="audi"] span,
+body[theme="audi"] select,
+body[theme="audi"] button,
+body[theme="audi"] input {
+  font-family: "audi" !important;
+}
+
+body[theme="bone"] h1,
+body[theme="bone"] a,
+body[theme="bone"] p,
+body[theme="bone"] span,
+body[theme="bone"] select,
+body[theme="bone"] input {
+  font-family: "bone" !important;
+}
