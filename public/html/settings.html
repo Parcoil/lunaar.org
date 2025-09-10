@@ -56,6 +56,11 @@
         defaults: "2025-05-24",
       });
     </script>
+    <script
+      id="aclib"
+      type="text/javascript"
+      src="//acscdn.com/script/aclib.js"
+    ></script>
   </head>
   <body>
     <div class="navbar-container"></div>
@@ -242,6 +247,19 @@
           </p>
         </div>
         <div class="card settings-card">
+          <h1>About Cloak</h1>
+          <p>Hides your lunaar tab</p>
+          <p>(replaces this tab with wikipedia)</p>
+          <div class="settings-item">
+            <button
+              class="btn"
+              onclick="cloak.aboutBlank('https://wikipedia.org')"
+            >
+              Launch
+            </button>
+          </div>
+        </div>
+        <div class="card settings-card">
           <h1>Panic Key</h1>
           <p>When this key is pressed it takes you to the defined site</p>
           <div class="settings-item">
@@ -302,18 +320,10 @@
       </div>
       <div class="ad">
         <script type="text/javascript">
-          atOptions = {
-            key: "13def82c028e7c80ebeecd26958279a7",
-            format: "iframe",
-            height: 90,
-            width: 728,
-            params: {},
-          };
+          aclib.runBanner({
+            zoneId: "9438742",
+          });
         </script>
-        <script
-          type="text/javascript"
-          src="//inclinedallusionnearby.com/13def82c028e7c80ebeecd26958279a7/invoke.js"
-        ></script>
       </div>
     </main>
     <script
@@ -633,7 +643,7 @@
           });
         });
 
-        const activeTab = localStorage.getItem("activeSettingstab");
+        const activeTab = localStorage.getItem("activeSettingstab") || "style";
         if (activeTab) {
           document.getElementById(`${activeTab}-tab`).click();
         } else {
