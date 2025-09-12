@@ -8,6 +8,31 @@
     "proxy": true
   },
   {
+    "name": "Slow Roads",
+    "image": "slowroads.webp",
+    "url": "https://slowroads.io/",
+    "new": true,
+    "top": false,
+    "proxy": true
+  },
+  {
+    "name": "Poxel.io",
+    "image": "poxelio.webp",
+    "url": "https://poxel.io/",
+    "new": true,
+    "top": false,
+    "proxy": true
+  },
+
+  {
+    "name": "Capybara  Clicker",
+    "image": "cappyclicker.webp",
+    "url": "https://games.crazygames.com/en_US/capybara-clicker/index.html?isNewUser=false&skipPrerollFirstSession=true&v=1.339",
+    "new": true,
+    "top": false,
+    "proxy": true
+  },
+  {
     "name": "Plants vs Zombies",
     "image": "cover.png",
     "url": "pvz",
@@ -25,21 +50,21 @@
     "name": "neal.fun",
     "image": "nealfun.webp",
     "url": "https://neal.fun/",
-    "top": true,
+    "top": false,
     "proxy": true
   },
   {
     "name": "Soccer Legends",
     "image": "soccerlegends.webp",
     "url": "https://games.crazygames.com/en_US/soccer-legends-2021/index.html?czyDynamicPriceFloorVariantsCZY_14537=portal&czyEPBPooling_CZY_14716=enabled&enableAdmiral=0&ssrDevice=desktop&v=1.333",
-    "top": true,
+    "top": false,
     "proxy": true
   },
   {
     "name": "Stone Grass",
     "image": "stonegrass.webp",
     "url": "https://games.crazygames.com/en_US/stone-grass-mowing-simulator/index.html?czyDynamicPriceFloorVariantsCZY_14537=portal&czyEPBPooling_CZY_14716=enabled&enableAdmiral=0&ssrDevice=desktop&v=1.333",
-    "top": true,
+    "top": false,
     "proxy": true
   },
   {

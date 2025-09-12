@@ -23,13 +23,13 @@ function renderGames(games) {
     if (a.name === "Request a game") return -1;
     if (b.name === "Request a game") return 1;
 
-    //hot games
-    if (a.top && !b.top) return -1;
-    if (!a.top && b.top) return 1;
-
-    // new games
+    // new games first
     if (a.new && !b.new) return -1;
     if (!a.new && b.new) return 1;
+
+    // then hot games
+    if (a.top && !b.top) return -1;
+    if (!a.top && b.top) return 1;
 
     return 0;
   });

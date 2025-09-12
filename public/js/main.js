@@ -179,4 +179,12 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("panicUrl", "https://google.com");
     localStorage.setItem("panicKey", "~");
   }
+
+  const panicBtn = document.getElementById("panicBtn");
+
+  if (panicBtn) {
+    panicBtn.addEventListener("click", () => {
+      window.location.href = panicUrl;
+    });
+  }
 });

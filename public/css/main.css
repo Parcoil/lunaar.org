@@ -872,3 +872,25 @@ input:checked + .slider:before {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+#panicBtn {
+  position: fixed;
+  display: none;
+  top: 0;
+  padding: 5px;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-bottom-right-radius: 10px;
+  z-index: 10;
+  font-family: inherit;
+  border: none;
+}
+#panicBtn:active {
+  background-color: aqua;
+}
+
+@media (max-width: 1100px) {
+  #panicBtn {
+    display: block;
+  }
+}
