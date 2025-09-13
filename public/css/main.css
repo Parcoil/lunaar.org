@@ -865,6 +865,13 @@ input:checked + .slider:before {
 .ad {
   margin: 5px;
 }
+
+.left-ad iframe,
+.right-ad iframe,
+.ad iframe {
+  border-radius: 10px;
+}
+
 .modalTip {
   font-size: 0.8rem;
   color: var(--text-secondary-color);
